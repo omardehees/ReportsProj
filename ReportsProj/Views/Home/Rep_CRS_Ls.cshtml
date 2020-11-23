@@ -1,0 +1,23 @@
+﻿
+<link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
+<link rel="stylesheet" href="~/css/designer.part.bundle.css" />
+<script src="~/js/viewer.part.bundle.js"></script>
+<script src="~/js/designer.part.bundle.js"></script>
+
+@{
+    //  Declare Report
+    ReportsProj.Reports.CSR.Rep_CRS_Ls MyReport = new ReportsProj.Reports.CSR.Rep_CRS_Ls();
+
+    //Add DatSource
+    MyReport.DataSource = TempData["MyDatasource"];
+
+    // Specify the report properties
+    MyReport.FilterString = "[Code] In (" + TempData["P_SelectedCodes"] + ")";
+    MyReport.Parameters["UserName"].Value = TempData["P_UserName"];
+    MyReport.RequestParameters = false;
+
+    //Go To Print
+    @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(MyReport)
+
+}
+

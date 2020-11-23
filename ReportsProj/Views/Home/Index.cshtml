@@ -1,0 +1,32 @@
+﻿@*@using ReportsProj.Models.ViewModel;
+
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Index</h1>
+
+<link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
+<link rel="stylesheet" href="~/css/designer.part.bundle.css" />
+<script src="~/js/viewer.part.bundle.js"></script>
+<script src="~/js/designer.part.bundle.js"></script>
+
+
+
+@{
+
+    ReportsProj.Reports.Rep_Organization_Id report_Organization = new ReportsProj.Reports.Rep_Organization_Id();
+    ReportsProj.Reports.Rep_Organaization_Ls report_Organization_Ls = new ReportsProj.Reports.Rep_Organaization_Ls();
+    ReportsProj.Reports.Rep_Organization_All Rep_Organization_All = new ReportsProj.Reports.Rep_Organization_All();
+
+
+    Rep_Organization_All.DataSource = TempData["MyDatasource"];
+
+
+    @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(Rep_Organization_All)
+
+
+}*@
+
+
+
+

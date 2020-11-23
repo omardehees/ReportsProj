@@ -1,0 +1,34 @@
+﻿
+@*@using DevExpress.XtraReports.Parameters;*@
+
+<link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
+<link rel="stylesheet" href="~/css/designer.part.bundle.css" />
+<script src="~/js/viewer.part.bundle.js"></script>
+<script src="~/js/designer.part.bundle.js"></script>
+
+@{
+    //  Declare Report
+    ReportsProj.Reports.Rep_Organaization_Ls MyReport = new ReportsProj.Reports.Rep_Organaization_Ls();
+
+    //Add DatSource
+    MyReport.DataSource = TempData["MyDatasource"];
+
+    // Specify the report properties
+    MyReport.FilterString = "[Id] In (" + TempData["P_Id"] + ")";
+    MyReport.Parameters["UserName"].Value = TempData["P_UserName"];
+    MyReport.RequestParameters = false;
+
+    //Go To Print
+    @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(MyReport)
+
+
+
+    // Add the parameter to the report.
+    //Parameter param1 = new Parameter();
+    //param1.Name = "OrgId";
+    //param1.Type = typeof(string);
+    //MyReport.Parameters.Add(param1);
+    //MyReport.Parameters["OrgId"].Value = TempData["P_Id"];
+
+}
+

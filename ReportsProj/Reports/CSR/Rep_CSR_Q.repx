@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="20.1.4.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Rep_CSR_Q" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" Margins="0, 8, 0, 3" PaperKind="Custom" PageWidth="598" PageHeight="600" Version="20.1" FilterString="[Id] = 11" DataMember="cCSR" DataSource="#Ref-0" Dpi="254">
+  <Bands>
+    <Item1 Ref="2" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="0" Dpi="254" />
+    <Item2 Ref="3" ControlType="DetailBand" Name="detailBand1" HeightF="505.354156" Dpi="254">
+      <HierarchyPrintOptions Ref="4" Indent="50.8" />
+      <Controls>
+        <Item1 Ref="5" ControlType="XRLabel" Name="label6" Multiline="true" Text="التاريخ" TextAlignment="MiddleCenter" SizeF="243.416672,58.4200439" LocationFloat="0,388.514069" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="5,5,0,0,254">
+          <StylePriority Ref="6" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="7" ControlType="XRLabel" Name="label5" Multiline="true" Text="النوع" TextAlignment="MiddleCenter" SizeF="161.395828,58.4200134" LocationFloat="243.416672,388.514069" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="5,5,0,0,254">
+          <StylePriority Ref="8" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="9" ControlType="XRLabel" Name="label4" Multiline="true" Text="الكود" TextAlignment="MiddleCenter" SizeF="185.1875,58.4200134" LocationFloat="404.8125,388.514069" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,0,0,96">
+          <StylePriority Ref="10" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="11" ControlType="XRLabel" Name="label3" Multiline="true" Text="label3" TextAlignment="MiddleCenter" SizeF="185.1875,58.4200134" LocationFloat="404.8125,446.9341" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,0,0,96">
+          <ExpressionBindings>
+            <Item1 Ref="12" EventName="BeforePrint" PropertyName="Text" Expression="[Code]" />
+          </ExpressionBindings>
+          <StylePriority Ref="13" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="14" ControlType="XRLabel" Name="label2" Multiline="true" Text="label2" TextAlignment="MiddleCenter" SizeF="161.395828,58.4200134" LocationFloat="243.416672,446.9341" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,0,0,96">
+          <ExpressionBindings>
+            <Item1 Ref="15" EventName="BeforePrint" PropertyName="Text" Expression="[Type]" />
+          </ExpressionBindings>
+          <StylePriority Ref="16" UseFont="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="17" ControlType="XRLabel" Name="label1" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="label1" TextAlignment="MiddleCenter" SizeF="243.416672,58.4200134" LocationFloat="0,446.934143" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,0,0,96">
+          <ExpressionBindings>
+            <Item1 Ref="18" EventName="BeforePrint" PropertyName="Text" Expression="[CurrentStatus_At]" />
+          </ExpressionBindings>
+          <StylePriority Ref="19" UseFont="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="20" ControlType="XRBarCode" Name="barCode1" Module="5.08" AutoModule="true" ShowText="false" SizeF="395.666656,363.514069" LocationFloat="96.43751,0" Dpi="254" Padding="10,10,0,0,96">
+          <Symbology Ref="21" Name="QRCode" CompactionMode="Byte" />
+          <ExpressionBindings>
+            <Item1 Ref="22" EventName="BeforePrint" PropertyName="Text" Expression="[Code]" />
+          </ExpressionBindings>
+        </Item7>
+      </Controls>
+    </Item2>
+    <Item3 Ref="23" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="3" Dpi="254" />
+  </Bands>
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v20.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IkNTUiIgRnJvbUFwcENvbmZpZz0idHJ1ZSIgLz48UXVlcnkgVHlwZT0iU2VsZWN0UXVlcnkiIE5hbWU9ImNDU1IiPjxUYWJsZXM+PFRhYmxlIE5hbWU9ImNDU1IiIC8+PC9UYWJsZXM+PENvbHVtbnM+PENvbHVtbiBUYWJsZT0iY0NTUiIgTmFtZT0iSWQiIC8+PENvbHVtbiBUYWJsZT0iY0NTUiIgTmFtZT0iSXNFbmFibGVkIiAvPjxDb2x1bW4gVGFibGU9ImNDU1IiIE5hbWU9IklzRGVmYXVsdCIgLz48Q29sdW1uIFRhYmxlPSJjQ1NSIiBOYW1lPSJOb3RlcyIgLz48Q29sdW1uIFRhYmxlPSJjQ1NSIiBOYW1lPSJUeXBlIiAvPjxDb2x1bW4gVGFibGU9ImNDU1IiIE5hbWU9IkNvZGUiIC8+PENvbHVtbiBUYWJsZT0iY0NTUiIgTmFtZT0iUmVsYXRpb25zaGlwIiAvPjxDb2x1bW4gVGFibGU9ImNDU1IiIE5hbWU9IlRoZVVzZXIiIC8+PENvbHVtbiBUYWJsZT0iY0NTUiIgTmFtZT0iQ3JlYXRpb25EYXRlIiAvPjxDb2x1bW4gVGFibGU9ImNDU1IiIE5hbWU9IlN1YmplY3QiIC8+PENvbHVtbiBUYWJsZT0iY0NTUiIgTmFtZT0iUGF0aWVudENvZGUiIC8+PENvbHVtbiBUYWJsZT0iY0NTUiIgTmFtZT0iUGF0aWVudE5hbWUiIC8+PENvbHVtbiBUYWJsZT0iY0NTUiIgTmFtZT0iUGF0aWVudFBob25lIiAvPjxDb2x1bW4gVGFibGU9ImNDU1IiIE5hbWU9IlBhdGllbnROYXRpb25hbElkIiAvPjxDb2x1bW4gVGFibGU9ImNDU1IiIE5hbWU9IlBhdGllbnRTZXgiIC8+PENvbHVtbiBUYWJsZT0iY0NTUiIgTmFtZT0iRGV0YWlscyIgLz48Q29sdW1uIFRhYmxlPSJjQ1NSIiBOYW1lPSJEZXBhcnRtZW50IiAvPjxDb2x1bW4gVGFibGU9ImNDU1IiIE5hbWU9IkVtcGxveWVlIiAvPjxDb2x1bW4gVGFibGU9ImNDU1IiIE5hbWU9IlNlcnZpY2UiIC8+PENvbHVtbiBUYWJsZT0iY0NTUiIgTmFtZT0iQ291bnRyeSIgLz48Q29sdW1uIFRhYmxlPSJjQ1NSIiBOYW1lPSJBdHRhY2htZW50c0ZpbGVzIiAvPjxDb2x1bW4gVGFibGU9ImNDU1IiIE5hbWU9IkF0dGFjaG1lbnRzRmlsZXNUaXRsZXNPbmx5IiAvPjxDb2x1bW4gVGFibGU9ImNDU1IiIE5hbWU9IkF0dGFjaG1lbnRzX0Rlc2NyaXB0aW9uIiAvPjxDb2x1bW4gVGFibGU9ImNDU1IiIE5hbWU9IkN1cnJlbnRTdGF0dXMiIC8+PENvbHVtbiBUYWJsZT0iY0NTUiIgTmFtZT0iQ3VycmVudFN0YXR1c19BdCIgLz48Q29sdW1uIFRhYmxlPSJjQ1NSIiBOYW1lPSJDdXJyZW50U3RhdHVzX0J5IiAvPjwvQ29sdW1ucz48L1F1ZXJ5PjxSZXN1bHRTY2hlbWE+PERhdGFTZXQgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9ImNDU1IiPjxGaWVsZCBOYW1lPSJJZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IklzRW5hYmxlZCIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iSXNEZWZhdWx0IiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJOb3RlcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJUeXBlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUmVsYXRpb25zaGlwIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRoZVVzZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ3JlYXRpb25EYXRlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlN1YmplY3QiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUGF0aWVudENvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUGF0aWVudE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUGF0aWVudFBob25lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlBhdGllbnROYXRpb25hbElkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlBhdGllbnRTZXgiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRGV0YWlscyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEZXBhcnRtZW50IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkVtcGxveWVlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNlcnZpY2UiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ291bnRyeSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBdHRhY2htZW50c0ZpbGVzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkF0dGFjaG1lbnRzRmlsZXNUaXRsZXNPbmx5IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkF0dGFjaG1lbnRzX0Rlc2NyaXB0aW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkN1cnJlbnRTdGF0dXMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ3VycmVudFN0YXR1c19BdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkN1cnJlbnRTdGF0dXNfQnkiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0PjwvUmVzdWx0U2NoZW1hPjxDb25uZWN0aW9uT3B0aW9ucyBDbG9zZUNvbm5lY3Rpb249InRydWUiIC8+PC9TcWxEYXRhU291cmNlPg==" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>

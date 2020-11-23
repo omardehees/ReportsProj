@@ -1,0 +1,15 @@
+﻿<link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
+<link rel="stylesheet" href="~/css/designer.part.bundle.css" />
+<script src="~/js/viewer.part.bundle.js"></script>
+<script src="~/js/designer.part.bundle.js"></script>
+@{
+    ReportsProj.Reports.Rep_CSRBarCodeQR MyReport = new ReportsProj.Reports.Rep_CSRBarCodeQR();
+    MyReport.Parameters["CSRCode"].Value = TempData["CSRCode"];
+    MyReport.Parameters["TheDate"].Value = TempData["TheDate"];
+    MyReport.Parameters["PatientFileNumber"].Value = TempData["PatientFileNumber"];
+    MyReport.Parameters["CSRType"].Value = TempData["CSRType"];
+    MyReport.Parameters["CSRSubject"].Value = TempData["CSRSubject"];
+    MyReport.RequestParameters = false;
+    @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(MyReport)
+
+}
