@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<XtraReportsLayoutSerializer SerializerVersion="20.1.4.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Rep_Organization_Id" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" Margins="0, 0, 0, 2" PaperKind="Custom" PageWidth="500" PageHeight="250" Version="20.1" Dpi="254">
+<XtraReportsLayoutSerializer SerializerVersion="20.1.4.0" Ref="0" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Rep_Organization_Id" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" Margins="0, 3, 0, 4" PaperKind="Custom" PageWidth="400" PageHeight="200" Version="20.1" Dpi="254">
   <Parameters>
     <Item1 Ref="2" Description="Parameter1" Name="CSRCode" />
     <Item2 Ref="3" Description="Parameter1" Name="TheDate" />
@@ -9,57 +9,57 @@
   </Parameters>
   <Bands>
     <Item1 Ref="7" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="0" Dpi="254" Visible="false" />
-    <Item2 Ref="8" ControlType="DetailBand" Name="detailBand1" HeightF="227.959381" Dpi="254">
+    <Item2 Ref="8" ControlType="DetailBand" Name="detailBand1" HeightF="190.9177" Dpi="254">
       <HierarchyPrintOptions Ref="9" Indent="50.8" />
       <Controls>
-        <Item1 Ref="10" ControlType="XRLabel" Name="label2" Multiline="true" Text=":رقم الطلب" TextAlignment="MiddleLeft" SizeF="132.134583,44.2191162" LocationFloat="346.6988,94.33032" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
+        <Item1 Ref="10" ControlType="XRLabel" Name="label2" Multiline="true" Text=":رقم الطلب" TextAlignment="MiddleRight" SizeF="136.780426,44.21912" LocationFloat="251.448792,45.7335625" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
           <StylePriority Ref="11" UseFont="false" UseTextAlignment="false" />
         </Item1>
-        <Item2 Ref="12" ControlType="XRLabel" Name="label5" Multiline="true" Text="111 1 1 1 11" TextAlignment="MiddleRight" SizeF="346.6988,44.2191162" LocationFloat="0,94.33032" Dpi="254" Font="Times New Roman, 9pt, charSet=0" Padding="5,5,0,0,254">
+        <Item2 Ref="12" ControlType="XRLabel" Name="label5" Multiline="true" Text="111 1 1 1 11" TextAlignment="MiddleRight" SizeF="238.21962,44.21912" LocationFloat="13.229167,45.7335625" Dpi="254" Font="Times New Roman, 8.25pt, charSet=0" Padding="5,5,0,0,254">
           <ExpressionBindings>
             <Item1 Ref="13" EventName="BeforePrint" PropertyName="Text" Expression="?CSRCode" />
           </ExpressionBindings>
           <StylePriority Ref="14" UseFont="false" UseTextAlignment="false" />
         </Item2>
-        <Item3 Ref="15" ControlType="XRLabel" Name="label1" Multiline="true" Text="علاقات المرضي" TextAlignment="MiddleLeft" SizeF="224.915146,50.48246" LocationFloat="132.366943,25.0000076" Dpi="254" Font="Times New Roman, 11.25pt, style=Bold, Underline, charSet=0" Padding="5,5,0,0,254">
+        <Item3 Ref="15" ControlType="XRLabel" Name="label1" Multiline="true" Text="علاقات المرضي" TextAlignment="MiddleLeft" SizeF="224.915161,37.2533" LocationFloat="66.11694,8.480264" Dpi="254" Font="Times New Roman, 11.25pt, style=Bold, Underline, charSet=0" Padding="5,5,0,0,254">
           <StylePriority Ref="16" UseFont="false" UseTextAlignment="false" />
         </Item3>
-        <Item4 Ref="17" ControlType="XRBarCode" Name="barCode1" Module="5.08" AutoModule="true" ShowText="false" SizeF="532.5681,8.480264" LocationFloat="29.0000057,0" Dpi="254" Padding="25,25,0,0,254" Visible="false">
+        <Item4 Ref="17" ControlType="XRBarCode" Name="barCode1" Module="5.08" AutoModule="true" ShowText="false" SizeF="346,8.480264" LocationFloat="29.0000057,0" Dpi="254" Padding="25,25,0,0,254" Visible="false">
           <Symbology Ref="18" Name="Code128" CharacterSet="CharsetAuto" />
           <ExpressionBindings>
             <Item1 Ref="19" EventName="BeforePrint" PropertyName="Text" Expression="?CSRCode" />
           </ExpressionBindings>
         </Item4>
-        <Item5 Ref="20" ControlType="XRLabel" Name="label10" Multiline="true" Text="111 1 1 1 11" TextAlignment="MiddleRight" SizeF="121.884979,44.2191162" LocationFloat="224.8138,138.549438" Dpi="254" Font="Times New Roman, 9pt, charSet=0" Padding="5,5,0,0,254">
+        <Item5 Ref="20" ControlType="XRLabel" Name="label10" Multiline="true" Text="111 1 1 1 11" TextAlignment="MiddleRight" SizeF="77.44754,44.2191238" LocationFloat="174.001251,89.95268" Dpi="254" Font="Times New Roman, 8.25pt, charSet=0" Padding="5,5,0,0,254">
           <ExpressionBindings>
             <Item1 Ref="21" EventName="BeforePrint" PropertyName="Text" Expression="?PatientFileNumber" />
           </ExpressionBindings>
           <StylePriority Ref="22" UseFont="false" UseTextAlignment="false" />
         </Item5>
-        <Item6 Ref="23" ControlType="XRLabel" Name="label11" Multiline="true" Text="2  2 2  2  22 2 2  " TextAlignment="MiddleRight" SizeF="142.950272,44.2191162" LocationFloat="0,138.549438" Dpi="254" Font="Times New Roman, 9pt, charSet=0" Padding="5,5,0,0,254">
+        <Item6 Ref="23" ControlType="XRLabel" Name="label11" Multiline="true" Text="2  2 2  2  22 2 2  " TextAlignment="MiddleRight" SizeF="78.9085846,44.2191238" LocationFloat="13.229167,89.95268" Dpi="254" Font="Times New Roman, 8.25pt, charSet=0" Padding="5,5,0,0,254">
           <ExpressionBindings>
             <Item1 Ref="24" EventName="BeforePrint" PropertyName="Text" Expression="?CSRType" />
           </ExpressionBindings>
           <StylePriority Ref="25" UseFont="false" UseTextAlignment="false" />
         </Item6>
-        <Item7 Ref="26" ControlType="XRLabel" Name="label12" Multiline="true" Text="التاريخ" TextAlignment="MiddleRight" SizeF="346.6988,45.1907959" LocationFloat="0,182.768555" Dpi="254" Font="Times New Roman, 9pt, charSet=0" Padding="5,5,0,0,254">
+        <Item7 Ref="26" ControlType="XRLabel" Name="label12" Multiline="true" Text="التاريخ" TextAlignment="MiddleRight" SizeF="275.261353,45.1907959" LocationFloat="13.229167,134.1718" Dpi="254" Font="Arial, 8.25pt, charSet=0" Padding="5,5,0,0,254">
           <ExpressionBindings>
             <Item1 Ref="27" EventName="BeforePrint" PropertyName="Text" Expression="?TheDate" />
           </ExpressionBindings>
           <StylePriority Ref="28" UseFont="false" UseTextAlignment="false" />
         </Item7>
-        <Item8 Ref="29" ControlType="XRLabel" Name="label6" Multiline="true" Text=":  التاريخ     " TextAlignment="MiddleLeft" SizeF="132.134583,45.1907959" LocationFloat="346.6988,182.768555" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
+        <Item8 Ref="29" ControlType="XRLabel" Name="label6" Multiline="true" Text=":التاريخ" TextAlignment="MiddleRight" SizeF="99.73871,45.1907959" LocationFloat="288.4905,134.1718" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
           <StylePriority Ref="30" UseFont="false" UseTextAlignment="false" />
         </Item8>
-        <Item9 Ref="31" ControlType="XRLabel" Name="label4" Multiline="true" Text=":النوع" TextAlignment="MiddleLeft" SizeF="81.8635254,44.2191162" LocationFloat="142.950272,138.549438" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
+        <Item9 Ref="31" ControlType="XRLabel" Name="label4" Multiline="true" Text=":النوع" TextAlignment="MiddleLeft" SizeF="81.8635254,44.2191162" LocationFloat="92.13775,89.9526749" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
           <StylePriority Ref="32" UseFont="false" UseTextAlignment="false" />
         </Item9>
-        <Item10 Ref="33" ControlType="XRLabel" Name="label3" Multiline="true" Text=":رقم الملف" TextAlignment="MiddleLeft" SizeF="132.134583,44.2191162" LocationFloat="346.6988,138.549438" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
+        <Item10 Ref="33" ControlType="XRLabel" Name="label3" Multiline="true" Text=":رقم الملف" TextAlignment="MiddleRight" SizeF="136.780426,44.2191238" LocationFloat="251.448792,89.95268" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
           <StylePriority Ref="34" UseFont="false" UseTextAlignment="false" />
         </Item10>
       </Controls>
     </Item2>
-    <Item3 Ref="35" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="1.81045151" Dpi="254" Visible="false" />
+    <Item3 Ref="35" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="3.87294674" Dpi="254" Visible="false" />
   </Bands>
   <ComponentStorage>
     <Item1 Ref="36" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v20.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9IlJlcG9ydHNfQ29ubmVjdGlvbiIgRnJvbUFwcENvbmZpZz0idHJ1ZSIgLz48UXVlcnkgVHlwZT0iU2VsZWN0UXVlcnkiIE5hbWU9ImNPcmdhbml6YXRpb24iPjxUYWJsZXM+PFRhYmxlIE5hbWU9ImNPcmdhbml6YXRpb24iIC8+PC9UYWJsZXM+PENvbHVtbnM+PENvbHVtbiBUYWJsZT0iY09yZ2FuaXphdGlvbiIgTmFtZT0iSWQiIC8+PENvbHVtbiBUYWJsZT0iY09yZ2FuaXphdGlvbiIgTmFtZT0iSXNFbmFibGVkIiAvPjxDb2x1bW4gVGFibGU9ImNPcmdhbml6YXRpb24iIE5hbWU9IklzRGVmYXVsdCIgLz48Q29sdW1uIFRhYmxlPSJjT3JnYW5pemF0aW9uIiBOYW1lPSJOb3RlcyIgLz48Q29sdW1uIFRhYmxlPSJjT3JnYW5pemF0aW9uIiBOYW1lPSJUaXRsZSIgLz48Q29sdW1uIFRhYmxlPSJjT3JnYW5pemF0aW9uIiBOYW1lPSJUaXRsZUVuIiAvPjxDb2x1bW4gVGFibGU9ImNPcmdhbml6YXRpb24iIE5hbWU9IkNvZGUiIC8+PENvbHVtbiBUYWJsZT0iY09yZ2FuaXphdGlvbiIgTmFtZT0iU2VjdG9yIiAvPjxDb2x1bW4gVGFibGU9ImNPcmdhbml6YXRpb24iIE5hbWU9IkNvdW50cnkiIC8+PENvbHVtbiBUYWJsZT0iY09yZ2FuaXphdGlvbiIgTmFtZT0iQ2l0eSIgLz48Q29sdW1uIFRhYmxlPSJjT3JnYW5pemF0aW9uIiBOYW1lPSJDb250YWN0IiAvPjxDb2x1bW4gVGFibGU9ImNPcmdhbml6YXRpb24iIE5hbWU9IkxvZ28iIC8+PENvbHVtbiBUYWJsZT0iY09yZ2FuaXphdGlvbiIgTmFtZT0iU2xvZ2FuIiAvPjxDb2x1bW4gVGFibGU9ImNPcmdhbml6YXRpb24iIE5hbWU9Ik93bmVyIiAvPjxDb2x1bW4gVGFibGU9ImNPcmdhbml6YXRpb24iIE5hbWU9Ik93bmVyUGhvbmUiIC8+PENvbHVtbiBUYWJsZT0iY09yZ2FuaXphdGlvbiIgTmFtZT0iT3duZXJFbWFpbCIgLz48Q29sdW1uIFRhYmxlPSJjT3JnYW5pemF0aW9uIiBOYW1lPSJSZWdpc3RyYXRpb25GaWxlcyIgLz48Q29sdW1uIFRhYmxlPSJjT3JnYW5pemF0aW9uIiBOYW1lPSJQYXJlbnRPcmdhbml6YXRpb24iIC8+PENvbHVtbiBUYWJsZT0iY09yZ2FuaXphdGlvbiIgTmFtZT0iUGFyZW50T3JnYW5pemF0aW9uQ29udGFjdCIgLz48Q29sdW1uIFRhYmxlPSJjT3JnYW5pemF0aW9uIiBOYW1lPSJJc0NoaWxlZE9yZ2FuaXphdGlvbiIgLz48L0NvbHVtbnM+PC9RdWVyeT48UmVzdWx0U2NoZW1hPjxEYXRhU2V0IE5hbWU9InNxbERhdGFTb3VyY2UxIj48VmlldyBOYW1lPSJjT3JnYW5pemF0aW9uIj48RmllbGQgTmFtZT0iSWQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJJc0VuYWJsZWQiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IklzRGVmYXVsdCIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iTm90ZXMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVGl0bGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVGl0bGVFbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDb2RlIiBUeXBlPSJHdWlkIiAvPjxGaWVsZCBOYW1lPSJTZWN0b3IiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ291bnRyeSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDaXR5IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNvbnRhY3QiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTG9nbyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTbG9nYW4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT3duZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT3duZXJQaG9uZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJPd25lckVtYWlsIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlJlZ2lzdHJhdGlvbkZpbGVzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlBhcmVudE9yZ2FuaXphdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQYXJlbnRPcmdhbml6YXRpb25Db250YWN0IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IklzQ2hpbGVkT3JnYW5pemF0aW9uIiBUeXBlPSJCb29sZWFuIiAvPjwvVmlldz48L0RhdGFTZXQ+PC9SZXN1bHRTY2hlbWE+PENvbm5lY3Rpb25PcHRpb25zIENsb3NlQ29ubmVjdGlvbj0idHJ1ZSIgLz48L1NxbERhdGFTb3VyY2U+" />

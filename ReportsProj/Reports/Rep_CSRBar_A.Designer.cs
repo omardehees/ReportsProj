@@ -18,16 +18,16 @@ namespace ReportsProj.Reports {
             this.topMarginBand1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.TopMarginBand>("topMarginBand1");
             this.detailBand1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.DetailBand>("detailBand1");
             this.bottomMarginBand1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.BottomMarginBand>("bottomMarginBand1");
+            this.label2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label2");
+            this.label5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label5");
+            this.label1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label1");
+            this.barCode1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRBarCode>("barCode1");
             this.label10 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label10");
             this.label11 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label11");
             this.label12 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label12");
             this.label6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label6");
             this.label4 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label4");
             this.label3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label3");
-            this.barCode1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRBarCode>("barCode1");
-            this.label1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label1");
-            this.label2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label2");
-            this.label5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label5");
 
             // Parameters
             this.CSRCode = reportInitializer.GetParameter("CSRCode");
@@ -42,21 +42,21 @@ namespace ReportsProj.Reports {
         private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
         private DevExpress.XtraReports.UI.DetailBand detailBand1;
         private DevExpress.XtraReports.UI.BottomMarginBand bottomMarginBand1;
+        private DevExpress.XtraReports.UI.XRLabel label2;
+        private DevExpress.XtraReports.UI.XRLabel label5;
+        private DevExpress.XtraReports.UI.XRLabel label1;
+        private DevExpress.XtraReports.UI.XRBarCode barCode1;
         private DevExpress.XtraReports.UI.XRLabel label10;
         private DevExpress.XtraReports.UI.XRLabel label11;
         private DevExpress.XtraReports.UI.XRLabel label12;
         private DevExpress.XtraReports.UI.XRLabel label6;
         private DevExpress.XtraReports.UI.XRLabel label4;
         private DevExpress.XtraReports.UI.XRLabel label3;
-        private DevExpress.XtraReports.UI.XRBarCode barCode1;
         private DevExpress.XtraReports.Parameters.Parameter CSRCode;
         private DevExpress.XtraReports.Parameters.Parameter TheDate;
         private DevExpress.XtraReports.Parameters.Parameter PatientFileNumber;
         private DevExpress.XtraReports.Parameters.Parameter CSRType;
         private DevExpress.XtraReports.Parameters.Parameter CSRSubject;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
-        private DevExpress.XtraReports.UI.XRLabel label1;
-        private DevExpress.XtraReports.UI.XRLabel label2;
-        private DevExpress.XtraReports.UI.XRLabel label5;
     }
 }

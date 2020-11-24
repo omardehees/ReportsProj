@@ -51,7 +51,7 @@ namespace ReportsProj.Controllers
                     //طباعة باركود فقط 3*6 سم
                     //p1="CSRCode",p2="PatientFileNumber",p3="CSRType",p4="CSRSubject"
                     TempData["CSRCode"] = p1;
-                    TempData["TheDate"] = DateTime.Now.ToString();
+                    TempData["TheDate"] = DateTime.Now.ToString("d/M/yyyy HH:mm");
                     TempData["PatientFileNumber"] = p2;
                     TempData["CSRType"] = p3;
                     TempData["CSRSubject"] = p4;
