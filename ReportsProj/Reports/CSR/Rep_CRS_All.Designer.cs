@@ -22,7 +22,6 @@ namespace ReportsProj.Reports.CSR {
             this.PageHeader = reportInitializer.GetControl<DevExpress.XtraReports.UI.PageHeaderBand>("PageHeader");
             this.label11 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label11");
             this.line2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line2");
-            this.xrLabel15 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel15");
             this.xrLabel30 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel30");
             this.xrLabel27 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel27");
             this.xrLabel36 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel36");
@@ -63,6 +62,7 @@ namespace ReportsProj.Reports.CSR {
             this.label8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label8");
             this.label9 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label9");
             this.line1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line1");
+            this.xrLabel15 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel15");
 
             // Parameters
             this.UserName = reportInitializer.GetParameter("UserName");
@@ -77,7 +77,6 @@ namespace ReportsProj.Reports.CSR {
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
         private DevExpress.XtraReports.UI.XRLabel label11;
         private DevExpress.XtraReports.UI.XRLine line2;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel15;
         private DevExpress.XtraReports.UI.XRLabel xrLabel30;
         private DevExpress.XtraReports.UI.XRLabel xrLabel27;
         private DevExpress.XtraReports.UI.XRLabel xrLabel36;
@@ -120,5 +119,6 @@ namespace ReportsProj.Reports.CSR {
         private DevExpress.XtraReports.UI.XRLine line1;
         private DevExpress.XtraReports.Parameters.Parameter UserName;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel15;
     }
 }
