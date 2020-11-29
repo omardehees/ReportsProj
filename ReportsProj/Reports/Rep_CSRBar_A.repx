@@ -12,10 +12,10 @@
     <Item2 Ref="8" ControlType="DetailBand" Name="detailBand1" HeightF="190.9177" Dpi="254">
       <HierarchyPrintOptions Ref="9" Indent="50.8" />
       <Controls>
-        <Item1 Ref="10" ControlType="XRLabel" Name="label2" Multiline="true" Text=":رقم الطلب" TextAlignment="MiddleRight" SizeF="136.780426,44.21912" LocationFloat="256.219543,45.7335625" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
+        <Item1 Ref="10" ControlType="XRLabel" Name="label2" Multiline="true" Text=":رقم الطلب" TextAlignment="MiddleRight" SizeF="107.756165,44.2191162" LocationFloat="256.219543,45.7335663" Dpi="254" Font="Times New Roman, 6.75pt, style=Bold, charSet=0" Padding="5,5,0,0,254">
           <StylePriority Ref="11" UseFont="false" UseTextAlignment="false" />
         </Item1>
-        <Item2 Ref="12" ControlType="XRLabel" Name="label5" Multiline="true" Text="111 1 1 1 11" TextAlignment="MiddleRight" SizeF="249.990372,44.21912" LocationFloat="6.229167,45.7335625" Dpi="254" Font="Times New Roman, 8.25pt, charSet=0" Padding="5,5,0,0,254">
+        <Item2 Ref="12" ControlType="XRLabel" Name="label5" Multiline="true" Text="111 1 1 1 11" TextAlignment="MiddleRight" SizeF="239.701019,44.2191162" LocationFloat="16.5185184,45.7335663" Dpi="254" Font="Times New Roman, 8.25pt, charSet=0" Padding="5,5,0,0,254">
           <ExpressionBindings>
             <Item1 Ref="13" EventName="BeforePrint" PropertyName="Text" Expression="?CSRCode" />
           </ExpressionBindings>
@@ -30,31 +30,31 @@
             <Item1 Ref="19" EventName="BeforePrint" PropertyName="Text" Expression="?CSRCode" />
           </ExpressionBindings>
         </Item4>
-        <Item5 Ref="20" ControlType="XRLabel" Name="label10" Multiline="true" Text="111 1 1 1 11" TextAlignment="MiddleRight" SizeF="82.21828,44.21913" LocationFloat="174.001266,89.95268" Dpi="254" Font="Times New Roman, 8.25pt, charSet=0" Padding="5,5,0,0,254">
+        <Item5 Ref="20" ControlType="XRLabel" Name="label10" Multiline="true" Text="111 1 1 1 11" TextAlignment="MiddleRight" SizeF="92.5076,44.21913" LocationFloat="163.711945,89.95268" Dpi="254" Font="Times New Roman, 8.25pt, charSet=0" Padding="5,5,0,0,254">
           <ExpressionBindings>
             <Item1 Ref="21" EventName="BeforePrint" PropertyName="Text" Expression="?PatientFileNumber" />
           </ExpressionBindings>
           <StylePriority Ref="22" UseFont="false" UseTextAlignment="false" />
         </Item5>
-        <Item6 Ref="23" ControlType="XRLabel" Name="label11" Multiline="true" Text="2  2 2  2  22 2 2  " TextAlignment="MiddleRight" SizeF="85.9085846,44.21913" LocationFloat="6.229167,89.95268" Dpi="254" Font="Times New Roman, 8.25pt, charSet=0" Padding="5,5,0,0,254">
+        <Item6 Ref="23" ControlType="XRLabel" Name="label11" Multiline="true" Text="2  2 2  2  22 2 2  " TextAlignment="MiddleRight" SizeF="85.9085846,44.21913" LocationFloat="16.5185165,89.95268" Dpi="254" Font="Times New Roman, 8.25pt, charSet=0" Padding="5,5,0,0,254">
           <ExpressionBindings>
             <Item1 Ref="24" EventName="BeforePrint" PropertyName="Text" Expression="?CSRType" />
           </ExpressionBindings>
           <StylePriority Ref="25" UseFont="false" UseTextAlignment="false" />
         </Item6>
-        <Item7 Ref="26" ControlType="XRLabel" Name="label12" Multiline="true" Text="التاريخ" TextAlignment="MiddleLeft" SizeF="299.073975,45.1907959" LocationFloat="6.229167,134.1718" Dpi="254" Font="Arial, 8.25pt, charSet=0" Padding="5,5,0,0,254">
+        <Item7 Ref="26" ControlType="XRLabel" Name="label12" Multiline="true" Text="التاريخ" TextAlignment="MiddleRight" SizeF="274.51358,45.1907959" LocationFloat="16.5185184,134.1718" Dpi="254" Font="Arial, 6.75pt, charSet=0" Padding="5,5,0,0,254">
           <ExpressionBindings>
             <Item1 Ref="27" EventName="BeforePrint" PropertyName="Text" Expression="?TheDate" />
           </ExpressionBindings>
           <StylePriority Ref="28" UseFont="false" UseTextAlignment="false" />
         </Item7>
-        <Item8 Ref="29" ControlType="XRLabel" Name="label6" Multiline="true" Text=":التاريخ" TextAlignment="MiddleRight" SizeF="87.69687,45.1907959" LocationFloat="305.3031,134.1718" Dpi="254" Font="Times New Roman, 8.25pt, style=Bold, charSet=0" Padding="5,5,0,0,254">
+        <Item8 Ref="29" ControlType="XRLabel" Name="label6" Multiline="true" Text=":التاريخ" TextAlignment="MiddleRight" SizeF="72.9436,45.1907959" LocationFloat="291.0321,134.1718" Dpi="254" Font="Times New Roman, 6pt, style=Bold, charSet=0" Padding="5,5,0,0,254">
           <StylePriority Ref="30" UseFont="false" UseTextAlignment="false" />
         </Item8>
-        <Item9 Ref="31" ControlType="XRLabel" Name="label4" Multiline="true" Text=":النوع" TextAlignment="MiddleLeft" SizeF="81.8635254,44.2191162" LocationFloat="92.13775,89.9526749" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
+        <Item9 Ref="31" ControlType="XRLabel" Name="label4" Multiline="true" Text=":النوع" TextAlignment="MiddleLeft" SizeF="61.2848434,44.2191162" LocationFloat="102.4271,89.95268" Dpi="254" Font="Times New Roman, 6.75pt, style=Bold, charSet=0" Padding="5,5,0,0,254">
           <StylePriority Ref="32" UseFont="false" UseTextAlignment="false" />
         </Item9>
-        <Item10 Ref="33" ControlType="XRLabel" Name="label3" Multiline="true" Text=":رقم الملف" TextAlignment="MiddleRight" SizeF="136.780426,44.2191238" LocationFloat="256.219543,89.95268" Dpi="254" Font="Times New Roman, 9.75pt, style=Bold" Padding="5,5,0,0,254">
+        <Item10 Ref="33" ControlType="XRLabel" Name="label3" Multiline="true" Text=":رقم الملف" TextAlignment="MiddleRight" SizeF="107.756165,44.21913" LocationFloat="256.219543,89.95268" Dpi="254" Font="Times New Roman, 6.75pt, style=Bold, charSet=0" Padding="5,5,0,0,254">
           <StylePriority Ref="34" UseFont="false" UseTextAlignment="false" />
         </Item10>
       </Controls>

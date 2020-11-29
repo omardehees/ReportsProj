@@ -35,7 +35,7 @@
           <StylePriority Ref="18" UseFont="false" UseTextAlignment="false" />
         </Item5>
         <Item6 Ref="19" ControlType="XRLabel" Name="xrLabel15" TextFormatString="{0:#}" Multiline="true" Text="xrLabel11" TextAlignment="MiddleCenter" SizeF="37.91882,23" LocationFloat="761.0812,0" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,0,0,100" BorderColor="Silver" Borders="None">
-          <Summary Ref="20" Running="Page" />
+          <Summary Ref="20" Running="Report" />
           <ExpressionBindings>
             <Item1 Ref="21" EventName="BeforePrint" PropertyName="Text" />
             <Item2 Ref="22" EventName="BeforePrint" PropertyName="Text" Expression="sumRecordNumber()" />
