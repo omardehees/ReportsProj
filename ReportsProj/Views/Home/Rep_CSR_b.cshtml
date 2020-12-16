@@ -12,6 +12,9 @@
     MyReport.Parameters["PatientFileNumber"].Value = TempData["PatientFileNumber"];
     MyReport.Parameters["CSRType"].Value = TempData["CSRType"];
     MyReport.Parameters["CSRSubject"].Value = TempData["CSRSubject"];
+    MyReport.Parameters["CSRCreatedDate"].Value = TempData["CSRCreatedDate"];
+    MyReport.Parameters["CSREditDate"].Value = TempData["CSREditDate"];
+    MyReport.Parameters["CSRStatus"].Value = TempData["CSRStatus"];
     MyReport.RequestParameters = false;
     @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(MyReport)
 }

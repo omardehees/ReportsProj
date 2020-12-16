@@ -19,7 +19,7 @@ namespace ReportsProj.Controllers
             _CSR_DBC = CSR_DBC;
         }
         public IActionResult Index(string App = "", string T = "",
-                                   string p1 = "", string p2 = "", string p3 = "", string p4 = "", string p5 = "", string p6 = "")
+                                   string p1 = "", string p2 = "", string p3 = "", string p4 = "", string p5 = "", string p6 = "", string p7 = "")
         {
             if ((string.IsNullOrWhiteSpace(App)) || (string.IsNullOrWhiteSpace(T)))
             {
@@ -48,13 +48,16 @@ namespace ReportsProj.Controllers
                 case "CSR_b":
                     //طباعة علاقات المرضي فقط 2*4 سم
                     // barcode Visible = false
-                    //Parameter >> ?App=CSR&T=CSR_b&p1="CSRCode"&p2="PatientFileNumber"&p3="CSRType"&p4="CSRSubject
-                    // Test Parameter >> ?App=CSR&T=CSR_b&p1=R-10000&p2=5&p3=إسترداد&p4=جلسة%20تجميل
+                    //Parameter >> ?App=CSR&T=CSR_b&p1="CSRCode"&p2="PatientFileNumber"&p3="CSRType"&p4="CSRSubject&p5="CSRCreatedDate&p6="CSREditDate&p7="CSRStatus
+                    // Test Parameter >> ?App=CSR&T=CSR_b&p1=R-10000&p2=1234567&p3=إسترداد&p4=جلسة%20تجميل&p5=16/12/2020 03:40 PM
                     TempData["CSRCode"] = p1;
                     TempData["TheDate"] = DateTime.Now.ToString("d/M/yyyy hh:mm tt");
                     TempData["PatientFileNumber"] = p2;
                     TempData["CSRType"] = p3;
                     TempData["CSRSubject"] = p4;
+                    TempData["CSRCreatedDate"] = p5;
+                    TempData["CSREditDate"] = p6;
+                    TempData["CSRStatus"] = p7;
                     return View("Rep_CSR_b");
 
                 case "CSR_R":

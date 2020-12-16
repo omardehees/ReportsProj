@@ -35,6 +35,9 @@ namespace ReportsProj.Reports {
             this.PatientFileNumber = reportInitializer.GetParameter("PatientFileNumber");
             this.CSRType = reportInitializer.GetParameter("CSRType");
             this.CSRSubject = reportInitializer.GetParameter("CSRSubject");
+            this.CSRCreatedDate = reportInitializer.GetParameter("CSRCreatedDate");
+            this.CSRStatus = reportInitializer.GetParameter("CSRStatus");
+            this.CSREditDate = reportInitializer.GetParameter("CSREditDate");
 
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
@@ -58,5 +61,8 @@ namespace ReportsProj.Reports {
         private DevExpress.XtraReports.Parameters.Parameter CSRType;
         private DevExpress.XtraReports.Parameters.Parameter CSRSubject;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
+        private DevExpress.XtraReports.Parameters.Parameter CSRCreatedDate;
+        private DevExpress.XtraReports.Parameters.Parameter CSRStatus;
+        private DevExpress.XtraReports.Parameters.Parameter CSREditDate;
     }
 }
