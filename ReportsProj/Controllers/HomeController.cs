@@ -71,6 +71,13 @@ namespace ReportsProj.Controllers
                     TempData["CSRSubject"] = p4;
                     return View("RepCSRBarCodeQR");
 
+                case "PM_EmpActions":
+                    //طباعة أوامر الموظف  
+                    // barcode Visible = false
+                    //Parameter >> ?App=PM&T=PM_EmpActions&p1="EmpId"
+                    // Test Parameter >> ?App=PM&T=PM_EmpActions&p1=126,137
+                    TempData["EmpId"] = p1;
+                    return View("EmpActions");
 
                     //case "CSR_Q":
                     //    //CSR

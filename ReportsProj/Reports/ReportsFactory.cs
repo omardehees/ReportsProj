@@ -27,8 +27,9 @@ namespace ReportsProj
             ["Rep_Organization_All"] = () => new Rep_Organization_All(),
             ["Rep_CSR_Id"] = () => new Reports.CSR.Rep_CSR_Id(),
             ["Rep_CRS_All"] = () => new Reports.CSR.Rep_CRS_All(),
-            ["Rep_CRS_Ls"] = () => new Reports.CSR.Rep_CRS_Ls()
+            ["Rep_CRS_Ls"] = () => new Reports.CSR.Rep_CRS_Ls(),
 
+            ["Rep_PM_EmployeeActions"] = () => new Reports.PM.Rep_EmployeeActions()
 
 
         };

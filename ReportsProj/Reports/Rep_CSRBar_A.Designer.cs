@@ -60,9 +60,9 @@ namespace ReportsProj.Reports {
         private DevExpress.XtraReports.Parameters.Parameter PatientFileNumber;
         private DevExpress.XtraReports.Parameters.Parameter CSRType;
         private DevExpress.XtraReports.Parameters.Parameter CSRSubject;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.Parameters.Parameter CSRCreatedDate;
         private DevExpress.XtraReports.Parameters.Parameter CSRStatus;
         private DevExpress.XtraReports.Parameters.Parameter CSREditDate;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
     }
 }

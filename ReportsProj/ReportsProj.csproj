@@ -17,6 +17,7 @@
     <None Remove="Reports\CSR\Rep_CSR_Id.repx" />
     <None Remove="Reports\CSR\Rep_CSR_Q.repx" />
     <None Remove="Reports\MyInvoices.repx" />
+    <None Remove="Reports\PM\Rep_EmployeeActions.repx" />
     <None Remove="Reports\Rep_CSRBarCodeQR - Copy.cs________" />
     <None Remove="Reports\Rep_CSRBarCodeQR - Copy.Designer.cs________" />
     <None Remove="Reports\Rep_CSRBarCodeQR.repx" />
@@ -35,6 +36,7 @@
     <EmbeddedResource Include="Reports\CSR\Rep_CSR_Id.repx" />
     <EmbeddedResource Include="Reports\CSR\Rep_CSR_Q.repx" />
     <EmbeddedResource Include="Reports\MyInvoices.repx" />
+    <EmbeddedResource Include="Reports\PM\Rep_EmployeeActions.repx" />
     <EmbeddedResource Include="Reports\Rep_CSRQR_A.repx" />
     <EmbeddedResource Include="Reports\Rep_CSRBar_A.repx" />
     <EmbeddedResource Include="Reports\Rep_Organaization_Ls.repx" />
@@ -97,6 +99,12 @@
     </Compile>
     <Compile Update="Reports\MyInvoices.Designer.cs">
       <DependentUpon>MyInvoices.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\PM\Rep_EmployeeActions.cs">
+      <DependentUpon>Rep_EmployeeActions.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\PM\Rep_EmployeeActions.Designer.cs">
+      <DependentUpon>Rep_EmployeeActions.repx</DependentUpon>
     </Compile>
     <Compile Update="Reports\Rep_CSRBarCodeQR - Copy.cs">
       <SubType>Component</SubType>

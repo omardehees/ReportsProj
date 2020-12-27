@@ -1,0 +1,18 @@
+﻿
+<link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
+<link rel="stylesheet" href="~/css/designer.part.bundle.css" />
+<script src="~/js/viewer.part.bundle.js"></script>
+<script src="~/js/designer.part.bundle.js"></script>
+
+@{
+    //Declare Report
+    ReportsProj.Reports.PM.Rep_EmployeeActions MyReport = new ReportsProj.Reports.PM.Rep_EmployeeActions();
+    // Specify the report properties
+    MyReport.FilterString = "[Id] In (" + TempData["EmpId"] + ")";
+    //MyReport.FilterString = "[Id] In (126,137)";
+
+
+    MyReport.RequestParameters = false;
+    // Go To Print
+    @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(MyReport)
+}
