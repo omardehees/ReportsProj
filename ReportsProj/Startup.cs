@@ -20,14 +20,13 @@ namespace ReportsProj
         }
         public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.aaa
+        // This method gets called by the runtime. Use this method to add services to the container.aaa Management
         //...
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<PM_DBC>(options =>
-            options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("PM").Value));
-            services.AddDbContext<CSR_DBC>(options =>
-            options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("CSR").Value));
+            services.AddDbContext<PM_DBC>(options =>options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("PM").Value));
+            services.AddDbContext<CSR_DBC>(options =>options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("CSR").Value));
+            services.AddDbContext<Management_DBC>(options => options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("Management").Value));
 
             services.AddControllersWithViews();
             services.AddDevExpressControls();

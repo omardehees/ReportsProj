@@ -16,16 +16,6 @@ namespace ReportsProj.DBC
         public PM_DBC(DbContextOptions<PM_DBC> options) : base(options)
         {            
         }
-        //private IConfiguration _Configuration { get; }
-        //public PM_DBC(IConfiguration Configuration)
-        //{
-        //    _Configuration = Configuration;
-        //}
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlServer(_Configuration.GetSection("ConnectionStrings").GetSection("PM").Value);
-        //}
-
         public  DbSet<cOrganization> cOrganization { get; set; }
         public DbSet<cCSR> cCSR { get; set; }
 

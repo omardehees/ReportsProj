@@ -16,16 +16,6 @@ namespace ReportsProj.DBC
         public CSR_DBC(DbContextOptions<CSR_DBC> options) : base(options)
         {            
         }
-        //private IConfiguration _Configuration { get; }
-        //public CSR_DBC(IConfiguration Configuration)
-        //{
-        //    _Configuration = Configuration;
-        //}
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.UseSqlServer(_Configuration.GetSection("ConnectionStrings").GetSection("PM").Value);
-        //}
-
         public  DbSet<cOrganization> cOrganization { get; set; }
         public DbSet<cCSR> cCSR { get; set; }
 

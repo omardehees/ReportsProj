@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Numerics;
-using System.Text;
+using ReportsProj.PM_Model;
 
 namespace ReportsProj.PM_Model
 {
