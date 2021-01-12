@@ -1,0 +1,28 @@
+﻿<link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
+<link rel="stylesheet" href="~/css/designer.part.bundle.css" />
+<script src="~/js/viewer.part.bundle.js"></script>
+<script src="~/js/designer.part.bundle.js"></script>
+
+@{
+    //Declare Report
+    ReportsProj.Reports.ManagementDef.Rep_Management_DatailsSelected MyReport = new ReportsProj.Reports.ManagementDef.Rep_Management_DatailsSelected();
+
+    // Add DataSource
+    MyReport.DataSource = TempData["MyDatasource"];
+
+    // Specify the report properties
+    MyReport.FilterString = "[Id] In (" + TempData["P_Id"] + ")";
+    MyReport.Parameters["P_UserName"].Value = TempData["P_User"];
+    MyReport.Parameters["P_RepHeader"].Value = TempData["P_T_Header"];
+
+    MyReport.Parameters["Col1"].Value = TempData["Col1"];
+    MyReport.Parameters["Col2"].Value = TempData["Col2"];
+    MyReport.Parameters["Col3"].Value = TempData["Col3"];
+    MyReport.Parameters["Col4"].Value = TempData["Col4"];
+    MyReport.Parameters["Col5"].Value = TempData["Col5"];
+
+    MyReport.RequestParameters = false;
+
+    // Go To Print
+    @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(MyReport)
+}

@@ -121,7 +121,7 @@
         <Item4 Ref="73" ControlType="XRLabel" Name="label1" RightToLeft="Yes" Text=":  Printed By " TextAlignment="MiddleLeft" SizeF="83.51829,23.0000076" LocationFloat="9.999998,2.08333325" Font="Arial, 9.75pt, charSet=0" Padding="2,2,0,0,100">
           <StylePriority Ref="74" UseFont="false" UseTextAlignment="false" />
         </Item4>
-        <Item5 Ref="75" ControlType="XRLabel" Name="label5" Multiline="true" Text="label5" TextAlignment="MiddleLeft" SizeF="150,23" LocationFloat="97.9954,2.08333325" Font="Arial, 9.75pt, charSet=0" Padding="2,2,0,0,100">
+        <Item5 Ref="75" ControlType="XRLabel" Name="label5" Multiline="true" Text="label5" TextAlignment="MiddleLeft" SizeF="201.041672,23" LocationFloat="97.99541,2.08333325" Font="Arial, 9.75pt, charSet=0" Padding="2,2,0,0,100">
           <ExpressionBindings>
             <Item1 Ref="76" EventName="BeforePrint" PropertyName="Text" Expression="?P_UserName" />
           </ExpressionBindings>

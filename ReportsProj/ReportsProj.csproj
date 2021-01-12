@@ -18,6 +18,7 @@
     <None Remove="Reports\CSR\Rep_CSR_Q.repx" />
     <None Remove="Reports\ManagementDef\Rep_ManagementAll.repx" />
     <None Remove="Reports\ManagementDef\Rep_ManagementSelected.repx" />
+    <None Remove="Reports\ManagementDef\Rep_Management_DatailsSelected.repx" />
     <None Remove="Reports\MyInvoices.repx" />
     <None Remove="Reports\PM\Rep_EmployeeActions.repx" />
     <None Remove="Reports\Rep_CSRBarCodeQR - Copy.cs________" />
@@ -39,6 +40,7 @@
     <EmbeddedResource Include="Reports\CSR\Rep_CSR_Q.repx" />
     <EmbeddedResource Include="Reports\ManagementDef\Rep_ManagementAll.repx" />
     <EmbeddedResource Include="Reports\ManagementDef\Rep_ManagementSelected.repx" />
+    <EmbeddedResource Include="Reports\ManagementDef\Rep_Management_DatailsSelected.repx" />
     <EmbeddedResource Include="Reports\MyInvoices.repx" />
     <EmbeddedResource Include="Reports\PM\Rep_EmployeeActions.repx" />
     <EmbeddedResource Include="Reports\Rep_CSRQR_A.repx" />
@@ -109,6 +111,12 @@
     </Compile>
     <Compile Update="Reports\ManagementDef\Rep_ManagementSelected.Designer.cs">
       <DependentUpon>Rep_ManagementSelected.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDef\Rep_Management_DatailsSelected.cs">
+      <DependentUpon>Rep_Management_DatailsSelected.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDef\Rep_Management_DatailsSelected.Designer.cs">
+      <DependentUpon>Rep_Management_DatailsSelected.repx</DependentUpon>
     </Compile>
     <Compile Update="Reports\MyInvoices.cs">
       <DependentUpon>MyInvoices.repx</DependentUpon>
