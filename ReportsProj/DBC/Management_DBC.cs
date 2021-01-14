@@ -14,7 +14,6 @@ namespace ReportsProj.DBC
         }
         public DbSet<Def_AcademicGradeType> Def_AcademicGradeType { get; set; }
         public DbSet<Def_AdditionType> Def_AdditionType { get; set; }
-        public DbSet<Def_AllowanceType> Def_AllowanceType { get; set; }
         public DbSet<Def_BusinessSector> Def_BusinessSector { get; set; }
         public DbSet<Def_CandidateStatusType> Def_CandidateStatusType { get; set; }
         public DbSet<Def_City> Def_City { get; set; }
@@ -32,12 +31,12 @@ namespace ReportsProj.DBC
         public DbSet<Def_MoneyPayTurnover> Def_MoneyPayTurnover { get; set; }
         public DbSet<Def_Nationality> Def_Nationality { get; set; }
         public DbSet<Def_RelativeType> Def_RelativeType { get; set; }
-        public DbSet<Def_def_Religion> Def_def_Religion { get; set; }
+        public DbSet<Def_Religion> Def_Religion { get; set; }
         public DbSet<Def_Salutation> Def_Salutation { get; set; }
         public DbSet<Def_Sex> Def_Sex { get; set; }
         public DbSet<Def_State> Def_State { get; set; }
         public DbSet<Def_University> Def_University { get; set; }
-        public DbSet<Def_State> Def_VacationType { get; set; }
+        public DbSet<Def_VacationType> Def_VacationType { get; set; }
         public DbSet<Def_EmployeesTree> Def_EmployeesTree { get; set; }
         public DbSet<Def_Employee> Def_Employee { get; set; }
 

@@ -79,9 +79,6 @@ namespace ReportsProj.Controllers
                 case "Def_AdditionType":
                     TempData["MyDatasource"] = _Management_DBC.Def_AdditionType.ToList();
                     break;
-                case "Def_AllowanceType":
-                    TempData["MyDatasource"] = _Management_DBC.Def_AllowanceType.ToList();
-                    break;
                 case "Def_BusinessSector":
                     TempData["MyDatasource"] = _Management_DBC.Def_BusinessSector.ToList();
                     break;
@@ -137,8 +134,8 @@ namespace ReportsProj.Controllers
                 case "Def_RelativeType":
                     TempData["MyDatasource"] = _Management_DBC.Def_RelativeType.ToList();
                     break;
-                case "Def_def_Religion":
-                    TempData["MyDatasource"] = _Management_DBC.Def_def_Religion.ToList();
+                case "Def_Religion":
+                    TempData["MyDatasource"] = _Management_DBC.Def_Religion.ToList();
                     break;
                 case "Def_Salutation":
                     TempData["MyDatasource"] = _Management_DBC.Def_Salutation.ToList();

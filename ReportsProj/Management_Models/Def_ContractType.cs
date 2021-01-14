@@ -8,6 +8,6 @@ namespace ReportsProj.Management_Models
     {
         public string Title { get; set; }
         public string TitleEn { get; set; }
-        public string TitleDescription { get; set; }
+        public string Description { get; set; }
     }
 }
