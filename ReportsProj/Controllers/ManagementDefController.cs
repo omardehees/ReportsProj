@@ -22,9 +22,9 @@ namespace ReportsProj.Controllers
         #endregion
 
         //-- Params Description-- p1=Report Method >>All or Selected or Details & P2=Id>>1,3 &p3=TableName>>Def_Country &P4>>Report Addressp & P5=UserName >>Admin
-        //-- Test_All  Params>> ?P1=All&P3=Def_Country&P4=عنوان التقرير&P5=admin&Col1=Title&Col2=TitleEn
-        //-- Test_Selected  Params>> ?P1=Selected&P2=1,2,4,5&P3=Def_Country&P4=عنوان التقرير&P5=admin&Col1=Title&Col2=TitleEn
-        //-- Test_Details  Params>> ?P1=Details&P2=1,2,4,5&P3=Def_Country&P4=عنوان التقرير&P5=admin&Col1=Title&Col2=TitleEn
+        //-- Test_All  Params>> /ManagementDef?P1=All&P3=Def_Country&P4=عنوان التقرير&P5=admin&Col1=Title&Col2=TitleEn
+        //-- Test_Selected  Params>> /ManagementDef?P1=Selected&P2=1,2,4,5&P3=Def_Country&P4=عنوان التقرير&P5=admin&Col1=Title&Col2=TitleEn
+        //-- Test_Details  Params>> /ManagementDef?P1=Details&P2=1,2,4,5&P3=Def_Country&P4=عنوان التقرير&P5=admin&Col1=Title&Col2=TitleEn
 
         public IActionResult Index( string P1 = "", string P2 = "", string P3 = "", string P4 = "", string P5="" ,
                                     string Col1="", string Col2 = "", string Col3 = "", string Col4 = "", string Col5 = "")
@@ -152,10 +152,18 @@ namespace ReportsProj.Controllers
                 case "Def_VacationType":
                     TempData["MyDatasource"] = _Management_DBC.Def_VacationType.ToList();
                     break;
-
-                //default:
-                //    View("ErrorPage");
-                //    break;
+                case "Def_Department":
+                    TempData["MyDatasource"] = _Management_DBC.Def_Department.ToList();
+                    break;
+                case "Def_Company":
+                    TempData["MyDatasource"] = _Management_DBC.Def_Company.ToList();
+                    break;
+                case "Def_Branch":
+                    TempData["MyDatasource"] = _Management_DBC.Def_Branch.ToList();
+                    break;
+                    //default:
+                    //    View("ErrorPage");
+                    //    break;
             }
         }
     }

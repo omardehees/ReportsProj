@@ -39,6 +39,11 @@ namespace ReportsProj.DBC
         public DbSet<Def_VacationType> Def_VacationType { get; set; }
         public DbSet<Def_EmployeesTree> Def_EmployeesTree { get; set; }
         public DbSet<Def_Employee> Def_Employee { get; set; }
+        public DbSet<Def_Department> Def_Department { get; set; }
+        public DbSet<Def_Branch> Def_Branch { get; set; }
+        public DbSet<Def_Company> Def_Company { get; set; }
+        public DbSet<Doc_EmploymentAdvertizement> Doc_EmploymentAdvertizement { get; set; }
+
 
     }
 }
