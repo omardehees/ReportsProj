@@ -42,6 +42,7 @@ namespace ReportsProj.DBC
         public DbSet<Def_Department> Def_Department { get; set; }
         public DbSet<Def_Branch> Def_Branch { get; set; }
         public DbSet<Def_Company> Def_Company { get; set; }
+        public DbSet<Def_Qualification> Def_Qualification { get; set; }
         public DbSet<Doc_EmploymentAdvertizement> Doc_EmploymentAdvertizement { get; set; }
 
 

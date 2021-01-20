@@ -161,6 +161,10 @@ namespace ReportsProj.Controllers
                 case "Def_Branch":
                     TempData["MyDatasource"] = _Management_DBC.Def_Branch.ToList();
                     break;
+                case "Def_Qualification":
+                    TempData["MyDatasource"] = _Management_DBC.Def_Qualification.ToList();
+                    break;
+
                     //default:
                     //    View("ErrorPage");
                     //    break;
