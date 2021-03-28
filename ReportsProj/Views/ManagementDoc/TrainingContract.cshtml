@@ -1,0 +1,30 @@
+﻿<link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
+<link rel="stylesheet" href="~/css/designer.part.bundle.css" />
+<script src="~/js/viewer.part.bundle.js"></script>
+<script src="~/js/designer.part.bundle.js"></script>
+
+@{
+    //Declare Report
+    ReportsProj.Reports.ManagementDoc.Rep_TrainingContract MyReport = new ReportsProj.Reports.ManagementDoc.Rep_TrainingContract();
+
+
+    // Specify the report properties  
+    MyReport.FilterString = "[Id] In (" + TempData["P_Id"] + ")";
+    MyReport.Parameters["P_UserName"].Value = TempData["P_User"];
+    MyReport.Parameters["P_RepHeader"].Value = TempData["P_T_Header"];
+
+    MyReport.Parameters["P_CompanyName"].Value = TempData["Company_Name"];
+    MyReport.Parameters["P_Address"].Value = TempData["Company_Address"];
+    MyReport.Parameters["P_CommercialRecord"].Value = TempData["Company_CommercialRecord"];
+    MyReport.Parameters["P_Neighborhood"].Value = TempData["Company_Neighborhood"];
+    MyReport.Parameters["P_Street"].Value = TempData["Company_Street"];
+    MyReport.Parameters["P_MailBox"].Value = TempData["Company_MailBox"];
+    MyReport.Parameters["P_Fax"].Value = TempData["Company_Fax"];
+    MyReport.Parameters["P_TrainingIssuerJob"].Value = TempData["TrainingIssuerJob"];
+
+
+    MyReport.RequestParameters = false;
+
+    // Go To Print
+    @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(MyReport)
+}

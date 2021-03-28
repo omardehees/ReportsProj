@@ -1,32 +1,59 @@
 ﻿@*@using ReportsProj.Models.ViewModel;
 
+    @{
+        ViewData["Title"] = "Index";
+    }
+    <h1>Index</h1>
+
+    <link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
+    <link rel="stylesheet" href="~/css/designer.part.bundle.css" />
+    <script src="~/js/viewer.part.bundle.js"></script>
+    <script src="~/js/designer.part.bundle.js"></script>
+
+
+
+    @{
+
+        ReportsProj.Reports.Rep_Organization_Id report_Organization = new ReportsProj.Reports.Rep_Organization_Id();
+        ReportsProj.Reports.Rep_Organaization_Ls report_Organization_Ls = new ReportsProj.Reports.Rep_Organaization_Ls();
+        ReportsProj.Reports.Rep_Organization_All Rep_Organization_All = new ReportsProj.Reports.Rep_Organization_All();
+
+
+        Rep_Organization_All.DataSource = TempData["MyDatasource"];
+
+
+        @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(Rep_Organization_All)
+
+
+    }*@
+
+
+
 @{
-    ViewData["Title"] = "Index";
+    Layout = null;
 }
-<h1>Index</h1>
+<!-- Add the following namespace usages: -->
+@using DevExpress.AspNetCore
+@using DevExpress.DashboardWeb
+@using DevExpress.DashboardAspNetCore
 
-<link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
-<link rel="stylesheet" href="~/css/designer.part.bundle.css" />
-<script src="~/js/viewer.part.bundle.js"></script>
-<script src="~/js/designer.part.bundle.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add bundled resources. -->
+    <link href="~/css/site.min.css" rel="stylesheet" />
+    @*<script src="~/js/site.min.js"></script>*@
 
-
-
-@{
-
-    ReportsProj.Reports.Rep_Organization_Id report_Organization = new ReportsProj.Reports.Rep_Organization_Id();
-    ReportsProj.Reports.Rep_Organaization_Ls report_Organization_Ls = new ReportsProj.Reports.Rep_Organaization_Ls();
-    ReportsProj.Reports.Rep_Organization_All Rep_Organization_All = new ReportsProj.Reports.Rep_Organization_All();
-
-
-    Rep_Organization_All.DataSource = TempData["MyDatasource"];
-
-
-    @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(Rep_Organization_All)
-
-
-}*@
-
-
-
-
+    <script src="~/js/site.min.js"></script>
+</head>
+<body>
+    <!-- Add the Web Dashboard with the "clientDashboardControl1" name to a View, specify its size, and set the Working Mode to Designer. -->
+    <div style="position: absolute; left:0;top:0;right:0;bottom:0;">
+        @(Html.DevExpress().Dashboard("clientDashboardControl1")
+        .WorkingMode(WorkingMode.Designer)
+        .Width("100%")
+        .Height("100%")
+        )
+    </div>
+</body>
+</html>
