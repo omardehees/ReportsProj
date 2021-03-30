@@ -20,6 +20,16 @@
     <None Remove="Reports\ManagementDef\Rep_ManagementSelected.repx" />
     <None Remove="Reports\ManagementDef\Rep_Management_DatailsSelected.repx" />
     <None Remove="Reports\ManagementDoc\Rep_All_EmploymentAdvertizement.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_ApplyToJob.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_EmpCard_V1.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_EmpCard_V2.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_EmployemntContract.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_FingerPrint.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_Interviews.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_Interview_All.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_TrainingContract.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_VacationRequest.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_VacationRequest_LS.repx" />
     <None Remove="Reports\MyInvoices.repx" />
     <None Remove="Reports\PM\Rep_EmployeeActions.repx" />
     <None Remove="Reports\Rep_CSRBarCodeQR - Copy.cs________" />
@@ -43,6 +53,16 @@
     <EmbeddedResource Include="Reports\ManagementDef\Rep_ManagementSelected.repx" />
     <EmbeddedResource Include="Reports\ManagementDef\Rep_Management_DatailsSelected.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_All_EmploymentAdvertizement.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_ApplyToJob.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_EmpCard_V1.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_EmpCard_V2.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_EmployemntContract.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_FingerPrint.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_Interviews.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_Interview_All.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_TrainingContract.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_VacationRequest.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_VacationRequest_LS.repx" />
     <EmbeddedResource Include="Reports\MyInvoices.repx" />
     <EmbeddedResource Include="Reports\PM\Rep_EmployeeActions.repx" />
     <EmbeddedResource Include="Reports\Rep_CSRQR_A.repx" />
@@ -64,6 +84,7 @@
 
   <ItemGroup>
     <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+    <PackageReference Include="DevExpress.AspNetCore.Dashboard" Version="20.1.4" />
     <PackageReference Include="DevExpress.AspNetCore.Reporting" Version="20.1.4" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.3" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.9" />
@@ -125,6 +146,66 @@
     </Compile>
     <Compile Update="Reports\ManagementDoc\Rep_All_EmploymentAdvertizement.Designer.cs">
       <DependentUpon>Rep_All_EmploymentAdvertizement.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_ApplyToJob.cs">
+      <DependentUpon>Rep_ApplyToJob.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_ApplyToJob.Designer.cs">
+      <DependentUpon>Rep_ApplyToJob.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_EmpCard_V1.cs">
+      <DependentUpon>Rep_EmpCard_V1.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_EmpCard_V1.Designer.cs">
+      <DependentUpon>Rep_EmpCard_V1.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_EmpCard_V2.cs">
+      <DependentUpon>Rep_EmpCard_V2.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_EmpCard_V2.Designer.cs">
+      <DependentUpon>Rep_EmpCard_V2.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_EmployemntContract.cs">
+      <DependentUpon>Rep_EmployemntContract.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_EmployemntContract.Designer.cs">
+      <DependentUpon>Rep_EmployemntContract.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_FingerPrint.cs">
+      <DependentUpon>Rep_FingerPrint.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_FingerPrint.Designer.cs">
+      <DependentUpon>Rep_FingerPrint.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_Interviews.cs">
+      <DependentUpon>Rep_Interviews.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_Interviews.Designer.cs">
+      <DependentUpon>Rep_Interviews.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_Interview_All.cs">
+      <DependentUpon>Rep_Interview_All.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_Interview_All.Designer.cs">
+      <DependentUpon>Rep_Interview_All.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_TrainingContract.cs">
+      <DependentUpon>Rep_TrainingContract.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_TrainingContract.Designer.cs">
+      <DependentUpon>Rep_TrainingContract.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_VacationRequest.cs">
+      <DependentUpon>Rep_VacationRequest.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_VacationRequest.Designer.cs">
+      <DependentUpon>Rep_VacationRequest.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_VacationRequest_LS.cs">
+      <DependentUpon>Rep_VacationRequest_LS.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_VacationRequest_LS.Designer.cs">
+      <DependentUpon>Rep_VacationRequest_LS.repx</DependentUpon>
     </Compile>
     <Compile Update="Reports\MyInvoices.cs">
       <DependentUpon>MyInvoices.repx</DependentUpon>
@@ -189,6 +270,10 @@
     <Compile Update="Reports\Rep_Organization_Id.Designer.cs">
       <DependentUpon>Rep_Organization_Id.repx</DependentUpon>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Images\" />
   </ItemGroup>
 
 </Project>

@@ -16,6 +16,13 @@ namespace ReportsProj.Management_Models
         public string CountryEn { get; set; }
         public string City { get; set; }
         public string CityEn { get; set; }
+
+        public string CommercialRecord { get; set; }
+        public string Neighborhood { get; set; }
+        public string Street { get; set; }
+        public string MailBox { get; set; }
+        public string Fax { get; set; }
+
         public string Logo { get; set; }
         public string Banner { get; set; }
         public string Owner { get; set; }

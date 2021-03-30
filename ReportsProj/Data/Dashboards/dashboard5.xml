@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="FingerPrint" />
+  <DataSources>
+    <SqlDataSource Name="DailyActivities_FingerPrintLog" ComponentName="sqlDataSource1">
+      <Connection Name="Management" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="DailyActivities_FingerPrintLog">
+        <Tables>
+          <Table Name="DailyActivities_FingerPrintLog" />
+        </Tables>
+        <Columns>
+          <Column Table="DailyActivities_FingerPrintLog" Name="Id" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="MachineNumber" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="MachineTitle" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="MachineTitleEn" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="IndRegID" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="IndRegName" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="FullNameAr" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="Job" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="JobPostionTree" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="Department" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="DateTimeRecord" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="TheType" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="IsOffday" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="AcceptedTimming" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="EarlyMinutes" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="LateMinutes" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="IsEnabled" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="IsDefault" />
+          <Column Table="DailyActivities_FingerPrintLog" Name="Notes" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="نوع البصمة والاقسام" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
+      <DataItems>
+        <Measure DataMember="Department" SummaryType="Count" DefaultId="DataItem0" />
+        <Dimension DataMember="TheType" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <TabContainer ComponentName="tabContainerDashboardItem1" Name="Tab Container 1">
+      <Pages>
+        <Page ComponentName="dashboardTabPage1" Name="Page 1" />
+      </Pages>
+    </TabContainer>
+    <Pie ComponentName="pieDashboardItem1" Name="نوع البصمة" ParentContainer="dashboardTabPage1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
+      <DataItems>
+        <Measure DataMember="Department" SummaryType="Count" DefaultId="DataItem0" />
+        <Dimension DataMember="TheType" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value DefaultId="DataItem0" />
+      </Values>
+    </Pie>
+    <Grid ComponentName="gridDashboardItem1" Name="Grid 1" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
+      <DataItems>
+        <Dimension DataMember="DateTimeRecord" DefaultId="DataItem0" />
+        <Dimension DataMember="FullNameAr" DefaultId="DataItem1" />
+        <Dimension DataMember="TheType" DefaultId="DataItem2" />
+      </DataItems>
+      <HiddenDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </HiddenDimensions>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem2" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+  </Items>
+  <Groups>
+    <Group ComponentName="groupDashboardItem1" Name="Group 1" />
+  </Groups>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical">
+        <LayoutGroup>
+          <LayoutItem DashboardItem="chartDashboardItem1" />
+          <LayoutGroup DashboardItem="groupDashboardItem1">
+            <LayoutItem DashboardItem="gridDashboardItem1" />
+          </LayoutGroup>
+        </LayoutGroup>
+        <LayoutTabContainer DashboardItem="tabContainerDashboardItem1">
+          <LayoutTabPage DashboardItem="dashboardTabPage1">
+            <LayoutItem DashboardItem="pieDashboardItem1" />
+          </LayoutTabPage>
+        </LayoutTabContainer>
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

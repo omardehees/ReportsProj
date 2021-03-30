@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="Advertisement" />
+  <DataSources>
+    <SqlDataSource Name="Doc_EmploymentAdvertizement" ComponentName="sqlDataSource1">
+      <Connection Name="Management" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="Doc_EmploymentAdvertizement">
+        <Tables>
+          <Table Name="Doc_EmploymentAdvertizement" />
+        </Tables>
+        <Columns>
+          <Column Table="Doc_EmploymentAdvertizement" Name="Id" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Code" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="IssuedBy" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="ApprovedBy" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="ApprovedAt" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="PublishedDateFrom" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="PublishedDateTo" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="InterviewDate" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Status" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyTitle" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyType" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyCode" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyLink" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyPerson" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyContact" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyCost" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyNotes" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Advertizement" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="AdvertizementEn" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Job" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="SaudiStandardJobCode" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Department" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Branch" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="ContractType" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Permanency" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="EmployeeCount" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="JobDescription" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="ForCitizensOnly" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="EstimatedStart" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="AgeFrom" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="AgeTo" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Languages" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="AcademicGradeType" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Qualification" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Specialization" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Certificates" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="YearsOfExperience" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Sex" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="MilitaryServiceStatus" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="HaveDrivingLicense" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="TheUser" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="IsEnabled" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="IsDefault" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Notes" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="الاعلانات حسب نوع العقد" DataSource="sqlDataSource1" DataMember="Doc_EmploymentAdvertizement">
+      <DataItems>
+        <Measure DataMember="Advertizement" SummaryType="Count" DefaultId="DataItem0" />
+        <Dimension DataMember="ContractType" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <TabContainer ComponentName="tabContainerDashboardItem1" Name="Tab Container 1">
+      <Pages>
+        <Page ComponentName="dashboardTabPage1" Name="Page 1" />
+      </Pages>
+    </TabContainer>
+    <Pie ComponentName="pieDashboardItem1" Name="الوظائف " ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="Doc_EmploymentAdvertizement">
+      <DataItems>
+        <Measure DataMember="Advertizement" SummaryType="Count" DefaultId="DataItem0" />
+        <Dimension DataMember="Job" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value DefaultId="DataItem0" />
+      </Values>
+    </Pie>
+  </Items>
+  <Groups>
+    <Group ComponentName="groupDashboardItem1" Name="الاعلانات حسب الوظيفة" />
+  </Groups>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical">
+        <LayoutGroup>
+          <LayoutItem DashboardItem="chartDashboardItem1" />
+          <LayoutGroup DashboardItem="groupDashboardItem1">
+            <LayoutItem DashboardItem="pieDashboardItem1" />
+          </LayoutGroup>
+        </LayoutGroup>
+        <LayoutTabContainer DashboardItem="tabContainerDashboardItem1">
+          <LayoutTabPage DashboardItem="dashboardTabPage1" />
+        </LayoutTabContainer>
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

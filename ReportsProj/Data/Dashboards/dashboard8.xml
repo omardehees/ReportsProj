@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="خطط الحضور" />
+  <DataSources>
+    <SqlDataSource Name="DailyActivities_AttendancePlan" ComponentName="sqlDataSource1">
+      <Connection Name="Management" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="DailyActivities_AttendancePlan">
+        <Tables>
+          <Table Name="DailyActivities_AttendancePlan" />
+        </Tables>
+        <Columns>
+          <AllColumns Table="DailyActivities_AttendancePlan" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+</Dashboard>

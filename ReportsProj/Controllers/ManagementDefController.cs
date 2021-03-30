@@ -164,10 +164,20 @@ namespace ReportsProj.Controllers
                 case "Def_Qualification":
                     TempData["MyDatasource"] = _Management_DBC.Def_Qualification.ToList();
                     break;
+                case "Def_Certification":
+                    TempData["MyDatasource"] = _Management_DBC.Def_Certification.ToList();
+                    break;
+                case "Def_Specialization":
+                    TempData["MyDatasource"] = _Management_DBC.Def_Specialization.ToList();
+                    break;
+                case "DailyActivities_DocType":
+                    TempData["MyDatasource"] = _Management_DBC.DailyActivities_DocType.ToList();
+                    break;
 
                     //default:
                     //    View("ErrorPage");
                     //    break;
+
             }
         }
     }

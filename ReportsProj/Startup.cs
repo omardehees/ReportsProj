@@ -3,27 +3,45 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
 using DevExpress.AspNetCore;
 using DevExpress.AspNetCore.Reporting;
 using DevExpress.XtraReports.Web.Extensions;
 using ReportsProj.DBC;
 using Microsoft.EntityFrameworkCore;
 
+using DevExpress.DashboardAspNetCore;//Dashboard
+using DevExpress.DashboardWeb;//Dashboard
+using Microsoft.Extensions.FileProviders;//Dashboard
+
 namespace ReportsProj
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public IConfiguration Configuration { get; }
+        public IFileProvider FileProvider { get; }   //Dashboard
+
+        public Startup(IConfiguration configuration,
+                       IWebHostEnvironment hostingEnvironment)  //Dashboard
+
         {
             Configuration = configuration;
+            FileProvider = hostingEnvironment.ContentRootFileProvider;
+
         }
-        public IConfiguration Configuration { get; }
+
+
 
         // This method gets called by the runtime. Use this method to add services to the container.aaa Management
         //...
         public void ConfigureServices(IServiceCollection services)
         {
+            // Dashboard
+            services.AddDevExpressControls().AddControllersWithViews()
+                .AddDefaultDashboardController(configurator => {
+                    configurator.SetDashboardStorage(new DashboardFileStorage(FileProvider.GetFileInfo("Data/Dashboards").PhysicalPath));
+                    configurator.SetConnectionStringsProvider(new DashboardConnectionStringsProvider(Configuration));
+                });
+
             services.AddDbContext<PM_DBC>(options =>options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("PM").Value));
             services.AddDbContext<CSR_DBC>(options =>options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("CSR").Value));
             services.AddDbContext<Management_DBC>(options => options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("Management").Value));
@@ -65,6 +83,9 @@ namespace ReportsProj
 
             app.UseAuthorization();
             app.UseEndpoints(endpoints => {
+                // Bleow Line To Maps the dashboard route .
+                EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "api/dashboards");
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

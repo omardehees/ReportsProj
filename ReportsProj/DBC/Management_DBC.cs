@@ -43,7 +43,13 @@ namespace ReportsProj.DBC
         public DbSet<Def_Branch> Def_Branch { get; set; }
         public DbSet<Def_Company> Def_Company { get; set; }
         public DbSet<Def_Qualification> Def_Qualification { get; set; }
+        public DbSet<Def_Specialization> Def_Specialization { get; set; }
+        public DbSet<Def_Certification> Def_Certification { get; set; }
         public DbSet<Doc_EmploymentAdvertizement> Doc_EmploymentAdvertizement { get; set; }
+        public DbSet<Doc_CVs> Doc_CVs { get; set; }
+        public DbSet<DailyActivities_DocType> DailyActivities_DocType { get; set; }
+        public DbSet<DailyActivities_VacationRequest> DailyActivities_VacationRequest { get; set; }
+        public DbSet<DailyActivities_FingerPrintLog> DailyActivities_FingerPrintLog { get; set; }
 
 
     }
