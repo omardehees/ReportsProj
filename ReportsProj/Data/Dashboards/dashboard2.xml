@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="سجل الحضور" />
+  <DataSources>
+    <SqlDataSource Name="DailyActivities_FingerPrintLog" ComponentName="sqlDataSource1">
+      <Connection Name="Management" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="DailyActivities_FingerPrintLog">
+        <Tables>
+          <Table Name="DailyActivities_FingerPrintLog" />
+        </Tables>
+        <Columns>
+          <AllColumns Table="DailyActivities_FingerPrintLog" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
+      <DataItems>
+        <Measure DataMember="FullNameAr" SummaryType="Count" DefaultId="DataItem0" />
+        <Dimension DataMember="DateTimeRecord" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem1" />
+        <Dimension DataMember="TheType" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="عدد البصمات" />
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <AxisX TitleVisible="true" Title="تاريخ البصمات" EnableZooming="true" />
+    </Chart>
+    <DateFilter ComponentName="dateFilterDashboardItem1" Name="التاريخ من إلي" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
+      <DataItems>
+        <Dimension DataMember="DateTimeRecord" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem0" />
+      </DataItems>
+      <Dimension DefaultId="DataItem0" />
+    </DateFilter>
+    <ListBox ComponentName="listBoxDashboardItem1" Name="نوع البصمة" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
+      <DataItems>
+        <Dimension DataMember="TheType" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ListBox>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Weight="1.8875965662399794">
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="1.1400554670755108" />
+        <LayoutGroup Orientation="Vertical" Weight="0.3458057154437695">
+          <LayoutItem DashboardItem="dateFilterDashboardItem1" />
+          <LayoutItem DashboardItem="listBoxDashboardItem1" Weight="0.3458057154437695" />
+        </LayoutGroup>
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

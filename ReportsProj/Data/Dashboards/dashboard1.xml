@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="خطط الحضور" />
+  <DataSources>
+    <SqlDataSource Name="DailyActivities_AttendancePlanPerEmployee" ComponentName="sqlDataSource1">
+      <Connection Name="Management" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="DailyActivities_AttendancePlanPerEmployee">
+        <Tables>
+          <Table Name="DailyActivities_AttendancePlanPerEmployee" />
+        </Tables>
+        <Columns>
+          <AllColumns Table="DailyActivities_AttendancePlanPerEmployee" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+    
+    <SqlDataSource Name="DailyActivities_AttendancePlan" ComponentName="sqlDataSource2">
+      <Connection Name="Management" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="DailyActivities_AttendancePlan">
+        <Tables>
+          <Table Name="DailyActivities_AttendancePlan" />
+        </Tables>
+        <Columns>
+          <AllColumns Table="DailyActivities_AttendancePlan" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" DataSource="sqlDataSource1" DataMember="DailyActivities_AttendancePlanPerEmployee">
+      <DataItems>
+        <Measure DataMember="EmployeeCode" SummaryType="Count" DefaultId="DataItem0" />
+        <Dimension DataMember="DateTo" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem1" />
+        <Dimension DataMember="AttendancePlanTitleAr" DefaultId="DataItem3" />
+        <Dimension DataMember="DateFrom" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem2" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem3" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+        <Argument DefaultId="DataItem2" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="عدد الأفراد" />
+          <Series>
+            <Simple SeriesType="StackedBar">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <AxisX Reverse="true" TitleVisible="true" Title="التاريخ من إلي" />
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="chartDashboardItem1" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
