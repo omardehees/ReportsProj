@@ -14,7 +14,6 @@
       </Query>
       <ConnectionOptions CloseConnection="true" />
     </SqlDataSource>
-    
     <SqlDataSource Name="DailyActivities_AttendancePlan" ComponentName="sqlDataSource2">
       <Connection Name="Management" FromAppConfig="true" />
       <Query Type="SelectQuery" Name="DailyActivities_AttendancePlan">
@@ -23,6 +22,192 @@
         </Tables>
         <Columns>
           <AllColumns Table="DailyActivities_AttendancePlan" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+    <SqlDataSource Name="Doc_CVs" ComponentName="sqlDataSource3">
+      <Connection Name="Management" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="Doc_CVs">
+        <Tables>
+          <Table Name="Doc_CVs" />
+        </Tables>
+        <Columns>
+          <Column Table="Doc_CVs" Name="Id" />
+          <Column Table="Doc_CVs" Name="CVCode" />
+          <Column Table="Doc_CVs" Name="FirstNameAr" />
+          <Column Table="Doc_CVs" Name="MiddleNameAr" />
+          <Column Table="Doc_CVs" Name="LastNameAr" />
+          <Column Table="Doc_CVs" Name="SurnameAr" />
+          <Column Table="Doc_CVs" Name="FirstNameEn" />
+          <Column Table="Doc_CVs" Name="MiddleNameEn" />
+          <Column Table="Doc_CVs" Name="LastNameEn" />
+          <Column Table="Doc_CVs" Name="SurnameEn" />
+          <Column Table="Doc_CVs" Name="SocialSurnameAr" />
+          <Column Table="Doc_CVs" Name="SocialSurnameEn" />
+          <Column Table="Doc_CVs" Name="FullNameAr" />
+          <Column Table="Doc_CVs" Name="FullNameEn" />
+          <Column Table="Doc_CVs" Name="Sex" />
+          <Column Table="Doc_CVs" Name="MaritalStatus" />
+          <Column Table="Doc_CVs" Name="Country" />
+          <Column Table="Doc_CVs" Name="State" />
+          <Column Table="Doc_CVs" Name="City" />
+          <Column Table="Doc_CVs" Name="Address" />
+          <Column Table="Doc_CVs" Name="Language" />
+          <Column Table="Doc_CVs" Name="IDDocumentType" />
+          <Column Table="Doc_CVs" Name="IDDocumentNumber" />
+          <Column Table="Doc_CVs" Name="IDDocumentIssuedFrom" />
+          <Column Table="Doc_CVs" Name="IDDocumentIssuedAt" />
+          <Column Table="Doc_CVs" Name="IDDocumentExpireAt" />
+          <Column Table="Doc_CVs" Name="IDDocumentNotes" />
+          <Column Table="Doc_CVs" Name="DateOfBirth" />
+          <Column Table="Doc_CVs" Name="PlaceOfBirth" />
+          <Column Table="Doc_CVs" Name="Height" />
+          <Column Table="Doc_CVs" Name="Weight" />
+          <Column Table="Doc_CVs" Name="Photo" />
+          <Column Table="Doc_CVs" Name="MilitaryServiceStatus" />
+          <Column Table="Doc_CVs" Name="AcademicGradeType" />
+          <Column Table="Doc_CVs" Name="Qualification" />
+          <Column Table="Doc_CVs" Name="Specialization" />
+          <Column Table="Doc_CVs" Name="Certificates" />
+          <Column Table="Doc_CVs" Name="Skills" />
+          <Column Table="Doc_CVs" Name="Univeristy" />
+          <Column Table="Doc_CVs" Name="GraduationDate" />
+          <Column Table="Doc_CVs" Name="GraduationGrade" />
+          <Column Table="Doc_CVs" Name="GraduationProject" />
+          <Column Table="Doc_CVs" Name="GraduationProjectGrade" />
+          <Column Table="Doc_CVs" Name="ForeignLanguage" />
+          <Column Table="Doc_CVs" Name="Religion" />
+          <Column Table="Doc_CVs" Name="YearsOfExperience" />
+          <Column Table="Doc_CVs" Name="CurrentCompany" />
+          <Column Table="Doc_CVs" Name="CurrentJob" />
+          <Column Table="Doc_CVs" Name="CurrentJobDescription" />
+          <Column Table="Doc_CVs" Name="CurrentJobFrom" />
+          <Column Table="Doc_CVs" Name="CurrentJobSalary" />
+          <Column Table="Doc_CVs" Name="TheUser" />
+          <Column Table="Doc_CVs" Name="Office" />
+          <Column Table="Doc_CVs" Name="DeliveryMethod" />
+          <Column Table="Doc_CVs" Name="TheDate" />
+          <Column Table="Doc_CVs" Name="JobAdvertizementCode" />
+          <Column Table="Doc_CVs" Name="Phone" />
+          <Column Table="Doc_CVs" Name="Mobile" />
+          <Column Table="Doc_CVs" Name="Email" />
+          <Column Table="Doc_CVs" Name="Google" />
+          <Column Table="Doc_CVs" Name="YouTube" />
+          <Column Table="Doc_CVs" Name="Microsoft" />
+          <Column Table="Doc_CVs" Name="Facebook" />
+          <Column Table="Doc_CVs" Name="Instagram" />
+          <Column Table="Doc_CVs" Name="Telegram" />
+          <Column Table="Doc_CVs" Name="WhatsApp" />
+          <Column Table="Doc_CVs" Name="LinkedIn" />
+          <Column Table="Doc_CVs" Name="EmployeeId" />
+          <Column Table="Doc_CVs" Name="EmployeeAccountNumber" />
+          <Column Table="Doc_CVs" Name="Company" />
+          <Column Table="Doc_CVs" Name="Department" />
+          <Column Table="Doc_CVs" Name="PracticeLicenseIssuedFrom" />
+          <Column Table="Doc_CVs" Name="PracticeLicenseNumber" />
+          <Column Table="Doc_CVs" Name="PracticeLicenseIssuedAt" />
+          <Column Table="Doc_CVs" Name="PracticeLicenseExpireAt" />
+          <Column Table="Doc_CVs" Name="PracticeLicenseNotes" />
+          <Column Table="Doc_CVs" Name="SyndicateIssuedFrom" />
+          <Column Table="Doc_CVs" Name="SyndicateNumber" />
+          <Column Table="Doc_CVs" Name="SyndicateIssuedAt" />
+          <Column Table="Doc_CVs" Name="SyndicateExpireAt" />
+          <Column Table="Doc_CVs" Name="SyndicateNotes" />
+          <Column Table="Doc_CVs" Name="PassportIssuedFrom" />
+          <Column Table="Doc_CVs" Name="PassportNumber" />
+          <Column Table="Doc_CVs" Name="PassportIssuedAt" />
+          <Column Table="Doc_CVs" Name="PassportExpireAt" />
+          <Column Table="Doc_CVs" Name="PassportNotes" />
+          <Column Table="Doc_CVs" Name="VisaIssuedFrom" />
+          <Column Table="Doc_CVs" Name="VisaNumber" />
+          <Column Table="Doc_CVs" Name="VisaIssuedAt" />
+          <Column Table="Doc_CVs" Name="VisaExpireAt" />
+          <Column Table="Doc_CVs" Name="VisaNotes" />
+          <Column Table="Doc_CVs" Name="ResidenceIssuedFrom" />
+          <Column Table="Doc_CVs" Name="ResidenceNumber" />
+          <Column Table="Doc_CVs" Name="ResidenceIssuedAt" />
+          <Column Table="Doc_CVs" Name="ResidenceExpireAt" />
+          <Column Table="Doc_CVs" Name="ResidenceNotes" />
+          <Column Table="Doc_CVs" Name="InsuranceIssuedFrom" />
+          <Column Table="Doc_CVs" Name="InsuranceClass" />
+          <Column Table="Doc_CVs" Name="InsuranceNumber" />
+          <Column Table="Doc_CVs" Name="InsuranceTerm" />
+          <Column Table="Doc_CVs" Name="InsuranceValue" />
+          <Column Table="Doc_CVs" Name="InsuranceIssuedAt" />
+          <Column Table="Doc_CVs" Name="InsuranceExpireAt" />
+          <Column Table="Doc_CVs" Name="InsuranceEmployeeSharePercentage" />
+          <Column Table="Doc_CVs" Name="InsuranceNotes" />
+          <Column Table="Doc_CVs" Name="DrivingLicenceIssuedFrom" />
+          <Column Table="Doc_CVs" Name="DrivingLicenceClass" />
+          <Column Table="Doc_CVs" Name="DrivingLicenceNumber" />
+          <Column Table="Doc_CVs" Name="DrivingLicenceIssuedAt" />
+          <Column Table="Doc_CVs" Name="DrivingLicenceExpireAt" />
+          <Column Table="Doc_CVs" Name="DrivingLicenceNotes" />
+          <Column Table="Doc_CVs" Name="Job" />
+          <Column Table="Doc_CVs" Name="JobTreePosition" />
+          <Column Table="Doc_CVs" Name="JobDescription" />
+          <Column Table="Doc_CVs" Name="SaudiStandardJobCode" />
+          <Column Table="Doc_CVs" Name="TrainingContractCode" />
+          <Column Table="Doc_CVs" Name="TrainingContractType" />
+          <Column Table="Doc_CVs" Name="TrainingContractWeekDays" />
+          <Column Table="Doc_CVs" Name="TrainingContractWeekHours" />
+          <Column Table="Doc_CVs" Name="TrainingContractIssuedFrom" />
+          <Column Table="Doc_CVs" Name="TrainingContractIssuedAt" />
+          <Column Table="Doc_CVs" Name="TrainingContractExpireAt" />
+          <Column Table="Doc_CVs" Name="TrainingContractStatus" />
+          <Column Table="Doc_CVs" Name="TrainingContractLatestDay" />
+          <Column Table="Doc_CVs" Name="TrainingContractFinalEvaluation" />
+          <Column Table="Doc_CVs" Name="TrainingContractFinalEvaluationFrom100" />
+          <Column Table="Doc_CVs" Name="TrainingContractBasicSalary" />
+          <Column Table="Doc_CVs" Name="TrainingContractBasicTerm" />
+          <Column Table="Doc_CVs" Name="TrainingContractNotes" />
+          <Column Table="Doc_CVs" Name="EmploymentContractCode" />
+          <Column Table="Doc_CVs" Name="EmploymentContractType" />
+          <Column Table="Doc_CVs" Name="EmploymentContractWeekDays" />
+          <Column Table="Doc_CVs" Name="EmploymentContractWeekHours" />
+          <Column Table="Doc_CVs" Name="EmploymentContractIssuedFrom" />
+          <Column Table="Doc_CVs" Name="EmploymentContractIssuedAt" />
+          <Column Table="Doc_CVs" Name="EmploymentContractFirstDay" />
+          <Column Table="Doc_CVs" Name="EmploymentContractExpireAt" />
+          <Column Table="Doc_CVs" Name="EmploymentContractStatus" />
+          <Column Table="Doc_CVs" Name="EmploymentContractLatestDay" />
+          <Column Table="Doc_CVs" Name="EmploymentContractLastEvaluation" />
+          <Column Table="Doc_CVs" Name="EmploymentContractCumulativeEvaluation" />
+          <Column Table="Doc_CVs" Name="EmploymentContractCumulativeEvaluationFrom100" />
+          <Column Table="Doc_CVs" Name="EmploymentContractBasicSalary" />
+          <Column Table="Doc_CVs" Name="EmploymentContractBasicSalaryTerm" />
+          <Column Table="Doc_CVs" Name="EmploymentContractIncomeShareValue" />
+          <Column Table="Doc_CVs" Name="EmploymentContractIncomeShareRoles" />
+          <Column Table="Doc_CVs" Name="EmploymentContractOOD" />
+          <Column Table="Doc_CVs" Name="EmploymentContractSalaryIncreamentValue" />
+          <Column Table="Doc_CVs" Name="EmploymentContractSalaryIncreamentRole" />
+          <Column Table="Doc_CVs" Name="AllowancesVacationPeriodInDays" />
+          <Column Table="Doc_CVs" Name="EmploymentContractNotes" />
+          <Column Table="Doc_CVs" Name="AllowancesHousingExists" />
+          <Column Table="Doc_CVs" Name="AllowancesHousingTerm" />
+          <Column Table="Doc_CVs" Name="AllowancesHousingValue" />
+          <Column Table="Doc_CVs" Name="AllowancesHousingNotes" />
+          <Column Table="Doc_CVs" Name="AllowancesTransferExists" />
+          <Column Table="Doc_CVs" Name="AllowancesTransferTerm" />
+          <Column Table="Doc_CVs" Name="AllowancesTransferValue" />
+          <Column Table="Doc_CVs" Name="AllowancesTransferNotes" />
+          <Column Table="Doc_CVs" Name="AllowancesFoodExists" />
+          <Column Table="Doc_CVs" Name="AllowancesFoodTerm" />
+          <Column Table="Doc_CVs" Name="AllowancesFoodValue" />
+          <Column Table="Doc_CVs" Name="AllowancesFoodNotes" />
+          <Column Table="Doc_CVs" Name="AllowancesFlightTicketExists" />
+          <Column Table="Doc_CVs" Name="AllowancesFlightTicketTerm" />
+          <Column Table="Doc_CVs" Name="AllowancesFlightTicketValue" />
+          <Column Table="Doc_CVs" Name="AllowancesFlightTicketNotes" />
+          <Column Table="Doc_CVs" Name="BankTitle" />
+          <Column Table="Doc_CVs" Name="BankIBAN" />
+          <Column Table="Doc_CVs" Name="BankCurrency" />
+          <Column Table="Doc_CVs" Name="BankAccountNumber" />
+          <Column Table="Doc_CVs" Name="IsEnabled" />
+          <Column Table="Doc_CVs" Name="IsDefault" />
+          <Column Table="Doc_CVs" Name="Notes" />
+          <AllColumns Table="Doc_CVs" />
         </Columns>
       </Query>
       <ConnectionOptions CloseConnection="true" />
@@ -55,10 +240,34 @@
       </Panes>
       <AxisX Reverse="true" TitleVisible="true" Title="التاريخ من إلي" />
     </Chart>
+    <Chart ComponentName="chartDashboardItem2" Name="Chart 2" DataSource="sqlDataSource3" DataMember="Doc_CVs">
+      <DataItems>
+        <Dimension DataMember="Doc_CVs_FirstNameAr" DefaultId="DataItem0" />
+        <Measure DataMember="Doc_CVs_EmploymentContractBasicSalary" DefaultId="DataItem1">
+          <NumericFormat FormatType="Currency" />
+        </Measure>
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple SeriesType="Spline">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <AxisX EnableZooming="true" />
+    </Chart>
   </Items>
   <LayoutTree>
     <LayoutGroup>
-      <LayoutItem DashboardItem="chartDashboardItem1" />
+      <LayoutGroup Orientation="Vertical">
+        <LayoutItem DashboardItem="chartDashboardItem1" />
+        <LayoutItem DashboardItem="chartDashboardItem2" />
+      </LayoutGroup>
     </LayoutGroup>
   </LayoutTree>
 </Dashboard>
