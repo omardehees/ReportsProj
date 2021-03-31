@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="دخل الموظف" />
+  <DataSources>
+    <SqlDataSource Name="DailyActivities_FingerPrintLog" ComponentName="sqlDataSource1">
+      <Connection Name="Management" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="DailyActivities_FingerPrintLog">
+        <Tables>
+          <Table Name="Doc_CVs" />
+          <Table Name="DailyActivities_EmployeesIncomeLog" />
+          <Relation Type="Inner" Parent="DailyActivities_EmployeesIncomeLog" Nested="Doc_CVs">
+            <KeyColumn Parent="CVCode" Nested="CVCode" />
+          </Relation>
+        </Tables>
+        <Columns>
+          <AllColumns Table="DailyActivities_EmployeesIncomeLog" />
+          <Column Table="Doc_CVs" Name="FullNameAr" />
+          <Column Table="Doc_CVs" Name="CVCode" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
+      <DataItems>
+        <Dimension DataMember="FullNameAr" DefaultId="DataItem0" />
+        <Dimension DataMember="TheDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem1" />
+        <Dimension DataMember="PaymentMethod" DefaultId="DataItem2" />
+        <Dimension DataMember="PaymentType" DefaultId="DataItem3" />
+        <Dimension DataMember="Value" DefaultId="DataItem4" />
+        <Measure DataMember="Value" DefaultId="DataItem5" />
+        <Dimension DataMember="TheDate" DateTimeGroupInterval="MonthYear" DefaultId="DataItem6" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem1" />
+        <SeriesDimension DefaultId="DataItem2" />
+        <SeriesDimension DefaultId="DataItem3" />
+        <SeriesDimension DefaultId="DataItem4" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+        <Argument DefaultId="DataItem6" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem5" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <AxisX EnableZooming="true" />
+    </Chart>
+    <DateFilter ComponentName="dateFilterDashboardItem1" Name="Date Filter 1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
+      <DataItems>
+        <Dimension DataMember="TheDate" DefaultId="DataItem0" />
+      </DataItems>
+      <Dimension DefaultId="DataItem0" />
+    </DateFilter>
+    <ComboBox ComponentName="comboBoxDashboardItem1" Name="Combo Box 1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
+      <DataItems>
+        <Dimension DataMember="FullNameAr" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutItem DashboardItem="dateFilterDashboardItem1" Weight="0.2634207240948814" />
+      <LayoutItem DashboardItem="comboBoxDashboardItem1" Weight="2.3245942571785267" />
+      <LayoutItem DashboardItem="chartDashboardItem1" Weight="2.3245942571785267" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

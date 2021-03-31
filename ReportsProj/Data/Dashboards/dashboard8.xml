@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="استحقاقات الموظف" />
+  <DataSources>
+    <SqlDataSource Name="DailyActivities_EmployeesIncomeLog" ComponentName="sqlDataSource1">
+      <Connection Name="Management" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="DailyActivities_EmployeesIncomeLog">
+        <Tables>
+          <Table Name="DailyActivities_EmployeesIncomeLog" />
+          <Table Name="Doc_CVs" />
+          <Relation Type="Inner" Parent="DailyActivities_EmployeesIncomeLog" Nested="Doc_CVs">
+            <KeyColumn Parent="CVCode" Nested="CVCode" />
+          </Relation>
+        </Tables>
+        <Columns>
+          <Column Table="Doc_CVs" Name="CVCode" />
+          <Column Table="Doc_CVs" Name="FirstNameAr" />
+          <Column Table="Doc_CVs" Name="FullNameAr" />
+          <Column Table="Doc_CVs" Name="FullNameEn" />
+          <Column Table="Doc_CVs" Name="Job" />
+          <AllColumns Table="DailyActivities_EmployeesIncomeLog" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <ColoringOptions MeasuresColoringMode="None" />
+      <DataItems>
+        <Dimension DataMember="TheDate" ColoringMode="None" DefaultId="DataItem3" />
+        <Measure DataMember="Value" DefaultId="DataItem1">
+          <Calculation>
+            <RunningTotal />
+          </Calculation>
+          <WindowDefinition>
+            <ChartWindowDefinition />
+          </WindowDefinition>
+        </Measure>
+        <Measure DataMember="Value" DefaultId="DataItem4" />
+        <Dimension DataMember="TheDate" DateTimeGroupInterval="Month" ColoringMode="Hue" DefaultId="DataItem2" />
+        <Dimension DataMember="PaymentType" ColoringMode="Hue" DefaultId="DataItem0" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem3" />
+        <Argument DefaultId="DataItem2" />
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem4" />
+            </Simple>
+            <Simple SeriesType="Spline">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <AxisX>
+        <NumericFormat FormatType="Currency" />
+      </AxisX>
+    </Chart>
+    <DateFilter ComponentName="dateFilterDashboardItem1" Name="Date Filter 1" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <DataItems>
+        <Dimension DataMember="TheDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem0" />
+      </DataItems>
+      <Dimension DefaultId="DataItem0" />
+    </DateFilter>
+    <ComboBox ComponentName="comboBoxDashboardItem1" Name="Combo Box 1" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <DataItems>
+        <Dimension DataMember="FullNameAr" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+  </Items>
+  <ColorScheme>
+    <Entry DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog" Color="-5530359">
+      <MeasureKey>
+        <Definition DataMember="Value">
+          <Calculation>
+            <RunningTotal />
+          </Calculation>
+          <WindowDefinition>
+            <ChartWindowDefinition />
+          </WindowDefinition>
+        </Definition>
+      </MeasureKey>
+    </Entry>
+  </ColorScheme>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical">
+        <LayoutItem DashboardItem="dateFilterDashboardItem1" />
+        <LayoutItem DashboardItem="comboBoxDashboardItem1" Weight="0.5280898876404494" />
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="1.4719101123595506" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
