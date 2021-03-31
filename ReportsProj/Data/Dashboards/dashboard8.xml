@@ -38,7 +38,7 @@
           </WindowDefinition>
         </Measure>
         <Measure DataMember="Value" DefaultId="DataItem4" />
-        <Dimension DataMember="TheDate" DateTimeGroupInterval="Month" ColoringMode="Hue" DefaultId="DataItem2" />
+        <Dimension DataMember="TheDate" DateTimeGroupInterval="Month" ColoringMode="None" DefaultId="DataItem2" />
         <Dimension DataMember="PaymentType" ColoringMode="Hue" DefaultId="DataItem0" />
       </DataItems>
       <Arguments>
@@ -49,10 +49,10 @@
       <Panes>
         <Pane Name="Pane 1">
           <Series>
-            <Simple>
+            <Simple Name="Value">
               <Value DefaultId="DataItem4" />
             </Simple>
-            <Simple SeriesType="Spline">
+            <Simple Name="Total" SeriesType="Spline">
               <Value DefaultId="DataItem1" />
             </Simple>
           </Series>
