@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="New Dashboard_test" />
+  <DataSources>
+    <SqlDataSource Name="DailyActivities_EmployeesIncomeLog" ComponentName="sqlDataSource1">
+      <Connection Name="Management" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="DailyActivities_EmployeesIncomeLog">
+        <Tables>
+          <Table Name="DailyActivities_EmployeesIncomeLog" />
+          <Table Name="Doc_CVs" />
+          <Relation Type="Inner" Parent="DailyActivities_EmployeesIncomeLog" Nested="Doc_CVs">
+            <KeyColumn Parent="CVCode" Nested="CVCode" />
+          </Relation>
+        </Tables>
+        <Columns>
+          <Column Table="Doc_CVs" Name="FullNameAr" />
+          <AllColumns Table="DailyActivities_EmployeesIncomeLog" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="الدخل والضرائب" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <DataItems>
+        <Measure DataMember="Value" DefaultId="DataItem0" />
+        <Dimension DataMember="PaymentType" DefaultId="DataItem1" />
+        <Dimension DataMember="TheDate" DefaultId="DataItem2" />
+        <Dimension DataMember="TheDate" DateTimeGroupInterval="Month" DefaultId="DataItem3" />
+        <Measure DataMember="Tax" DefaultId="DataItem4" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+        <Argument DefaultId="DataItem2" />
+        <Argument DefaultId="DataItem3" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem0" />
+            </Simple>
+            <Simple PlotOnSecondaryAxis="true" SeriesType="Area">
+              <Value DefaultId="DataItem4" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <AxisX EnableZooming="true" />
+    </Chart>
+    <DateFilter ComponentName="dateFilterDashboardItem1" Name="Date Filter 1" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <DataItems>
+        <Dimension DataMember="TheDate" DefaultId="DataItem0" />
+      </DataItems>
+      <Dimension DefaultId="DataItem0" />
+    </DateFilter>
+    <ComboBox ComponentName="comboBoxDashboardItem1" Name="Combo Box 1" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <DataItems>
+        <Dimension DataMember="FullNameAr" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+    <RangeFilter ComponentName="rangeFilterDashboardItem1" Name="Range Filter 1" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <DataItems>
+        <Measure DataMember="Value" DefaultId="DataItem0" />
+        <Dimension DataMember="Value" DefaultId="DataItem1" />
+      </DataItems>
+      <Argument DefaultId="DataItem1" />
+      <Series>
+        <Simple SeriesType="Line">
+          <Value DefaultId="DataItem0" />
+        </Simple>
+      </Series>
+    </RangeFilter>
+    <Chart ComponentName="chartDashboardItem3" Name="الضرائب" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <DataItems>
+        <Measure DataMember="Tax" SummaryType="Count" DefaultId="DataItem0" />
+        <Dimension DataMember="TheDate" DateTimeGroupInterval="Quarter" DefaultId="DataItem1" />
+        <Dimension DataMember="TheDate" DefaultId="DataItem2" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem2" />
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical">
+        <LayoutGroup Weight="0.40074906367041196">
+          <LayoutItem DashboardItem="dateFilterDashboardItem1" Weight="1.618170089444749" />
+          <LayoutItem DashboardItem="rangeFilterDashboardItem1" Weight="1.306252788127951" />
+          <LayoutItem DashboardItem="comboBoxDashboardItem1" Weight="0.6748280587568882" />
+        </LayoutGroup>
+        <LayoutGroup Weight="1.5992509363295881">
+          <LayoutItem DashboardItem="chartDashboardItem3" Weight="1.1936140236016033" />
+          <LayoutItem DashboardItem="chartDashboardItem1" Weight="2.004887849057573" />
+        </LayoutGroup>
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>
