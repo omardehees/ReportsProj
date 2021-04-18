@@ -1,102 +1,99 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard>
-  <Title Text="استحقاقات الموظف" />
+  <Title Text="تقييم الموظف" />
   <DataSources>
-    <SqlDataSource Name="DailyActivities_EmployeesIncomeLog" ComponentName="sqlDataSource1">
+    <SqlDataSource Name="DailyActivities_EmployeeEvaluation_x" ComponentName="sqlDataSource1">
       <Connection Name="Management" FromAppConfig="true" />
-      <Query Type="SelectQuery" Name="DailyActivities_EmployeesIncomeLog">
+      <Query Type="SelectQuery" Name="DailyActivities_EmployeeEvaluation_x">
         <Tables>
-          <Table Name="DailyActivities_EmployeesIncomeLog" />
-          <Table Name="Doc_CVs" />
-          <Relation Type="Inner" Parent="DailyActivities_EmployeesIncomeLog" Nested="Doc_CVs">
-            <KeyColumn Parent="CVCode" Nested="CVCode" />
-          </Relation>
+          <Table Name="DailyActivities_EmployeeEvaluation_x" />
         </Tables>
         <Columns>
-          <Column Table="Doc_CVs" Name="CVCode" />
-          <Column Table="Doc_CVs" Name="FirstNameAr" />
-          <Column Table="Doc_CVs" Name="FullNameAr" />
-          <Column Table="Doc_CVs" Name="FullNameEn" />
-          <Column Table="Doc_CVs" Name="Job" />
-          <AllColumns Table="DailyActivities_EmployeesIncomeLog" />
+          <AllColumns Table="DailyActivities_EmployeeEvaluation_x" />
         </Columns>
       </Query>
       <ConnectionOptions CloseConnection="true" />
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
-      <ColoringOptions MeasuresColoringMode="None" />
+    <ComboBox ComponentName="comboBoxDashboardItem1" Name="اسم الموظف" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeeEvaluation_x" EnableSearch="true" ComboBoxType="Checked">
+      <InteractivityOptions IgnoreMasterFilters="false" />
       <DataItems>
-        <Dimension DataMember="TheDate" ColoringMode="None" DefaultId="DataItem3" />
-        <Measure DataMember="Value" DefaultId="DataItem1">
-          <Calculation>
-            <RunningTotal />
-          </Calculation>
-          <WindowDefinition>
-            <ChartWindowDefinition />
-          </WindowDefinition>
-        </Measure>
-        <Measure DataMember="Value" DefaultId="DataItem4" />
-        <Dimension DataMember="TheDate" DateTimeGroupInterval="Month" ColoringMode="None" DefaultId="DataItem2" />
-        <Dimension DataMember="PaymentType" ColoringMode="Hue" DefaultId="DataItem0" />
-      </DataItems>
-      <Arguments>
-        <Argument DefaultId="DataItem3" />
-        <Argument DefaultId="DataItem2" />
-        <Argument DefaultId="DataItem0" />
-      </Arguments>
-      <Panes>
-        <Pane Name="Pane 1">
-          <Series>
-            <Simple Name="Value">
-              <Value DefaultId="DataItem4" />
-            </Simple>
-            <Simple Name="Total" SeriesType="Spline">
-              <Value DefaultId="DataItem1" />
-            </Simple>
-          </Series>
-        </Pane>
-      </Panes>
-      <AxisX>
-        <NumericFormat FormatType="Currency" />
-      </AxisX>
-    </Chart>
-    <DateFilter ComponentName="dateFilterDashboardItem1" Name="Date Filter 1" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
-      <DataItems>
-        <Dimension DataMember="TheDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem0" />
-      </DataItems>
-      <Dimension DefaultId="DataItem0" />
-    </DateFilter>
-    <ComboBox ComponentName="comboBoxDashboardItem1" Name="Combo Box 1" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
-      <DataItems>
-        <Dimension DataMember="FullNameAr" DefaultId="DataItem0" />
+        <Dimension DataMember="EmployeeFullNameAr" DefaultId="DataItem0" />
       </DataItems>
       <FilterDimensions>
         <Dimension DefaultId="DataItem0" />
       </FilterDimensions>
     </ComboBox>
+    <ComboBox ComponentName="comboBoxDashboardItem2" Name="حالة التقييم" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeeEvaluation_x" EnableSearch="true" ComboBoxType="Checked">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+      <DataItems>
+        <Dimension DataMember="Status" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+    <DateFilter ComponentName="dateFilterDashboardItem1" Name="التاريخ من/ إلى" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeeEvaluation_x">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+      <DataItems>
+        <Dimension DataMember="EvaluationAt" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem1" />
+      </DataItems>
+      <Dimension DefaultId="DataItem1" />
+    </DateFilter>
+    <Pie ComponentName="pieDashboardItem1" Name="نوع التقييم" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeeEvaluation_x" PieType="Donut" LabelContentType="Argument" TooltipContentType="Percent" ShowPieCaptions="false">
+      <InteractivityOptions MasterFilterMode="Single" />
+      <DataItems>
+        <Measure DataMember="EvaluationValue" DefaultId="DataItem1" />
+        <Dimension DataMember="EvaluationFactor" Name="Evaluation Typ" DefaultId="DataItem0" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <Values>
+        <Value DefaultId="DataItem1" />
+      </Values>
+    </Pie>
+    <Chart ComponentName="chartDashboardItem1" Name="عامل التقييم" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeeEvaluation_x">
+      <DataItems>
+        <Measure DataMember="EvaluationValue" SummaryType="Average" DefaultId="DataItem0" />
+        <Dimension DataMember="EvaluationFactor" Name="Evaluation Typ" ColoringMode="Hue" DefaultId="DataItem1" />
+        <Dimension DataMember="EvaluationAt" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem2">
+          <DateTimeFormat DateFormat="Long" />
+        </Dimension>
+        <Dimension DataMember="EvaluationByFullNameAr" DefaultId="DataItem3" />
+        <Dimension DataMember="AccumolativeMaxValue" DefaultId="DataItem4" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+        <Argument DefaultId="DataItem2" />
+        <Argument DefaultId="DataItem3" />
+        <Argument DefaultId="DataItem4" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="قيمة التقييم" />
+          <Series>
+            <Simple Name="Evaluation" SeriesType="Spline">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+      <AxisX TitleVisible="true" Title="التقييم التراكمي من/القائم بالتقييم/تاريخ التقييم/نوع التقييم" EnableZooming="true" />
+    </Chart>
   </Items>
-  <ColorScheme>
-    <Entry DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog" Color="-5530359">
-      <MeasureKey>
-        <Definition DataMember="Value">
-          <Calculation>
-            <RunningTotal />
-          </Calculation>
-          <WindowDefinition>
-            <ChartWindowDefinition />
-          </WindowDefinition>
-        </Definition>
-      </MeasureKey>
-    </Entry>
-  </ColorScheme>
   <LayoutTree>
-    <LayoutGroup>
-      <LayoutGroup Orientation="Vertical">
-        <LayoutItem DashboardItem="dateFilterDashboardItem1" />
-        <LayoutItem DashboardItem="comboBoxDashboardItem1" Weight="0.5280898876404494" />
-        <LayoutItem DashboardItem="chartDashboardItem1" Weight="1.4719101123595506" />
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup>
+        <LayoutItem DashboardItem="dateFilterDashboardItem1" Weight="1.3059125964010283" />
+        <LayoutItem DashboardItem="comboBoxDashboardItem2" Weight="0.7455012853470437" />
+        <LayoutItem DashboardItem="comboBoxDashboardItem1" Weight="0.948586118251928" />
+      </LayoutGroup>
+      <LayoutGroup Weight="2.3319916114192933">
+        <LayoutItem DashboardItem="pieDashboardItem1" Weight="0.9835249634495681" />
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="1.2812847149881714" />
       </LayoutGroup>
     </LayoutGroup>
   </LayoutTree>

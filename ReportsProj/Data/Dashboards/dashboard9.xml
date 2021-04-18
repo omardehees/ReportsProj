@@ -1,78 +1,123 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard>
-  <Title Text="دخل الموظف" />
+  <Title Text="المقابلات" />
   <DataSources>
-    <SqlDataSource Name="DailyActivities_FingerPrintLog" ComponentName="sqlDataSource1">
+    <SqlDataSource Name="Doc_Interview" ComponentName="sqlDataSource1">
       <Connection Name="Management" FromAppConfig="true" />
-      <Query Type="SelectQuery" Name="DailyActivities_FingerPrintLog">
+      <Query Type="SelectQuery" Name="Doc_Interview">
         <Tables>
-          <Table Name="Doc_CVs" />
-          <Table Name="DailyActivities_EmployeesIncomeLog" />
-          <Relation Type="Inner" Parent="DailyActivities_EmployeesIncomeLog" Nested="Doc_CVs">
-            <KeyColumn Parent="CVCode" Nested="CVCode" />
+          <Table Name="Doc_Interview" />
+          <Table Name="Doc_EmploymentAdvertizement" />
+          <Relation Type="Inner" Parent="Doc_Interview" Nested="Doc_EmploymentAdvertizement">
+            <KeyColumn Parent="EmploymentAdvertizementCode" Nested="Code" />
           </Relation>
         </Tables>
         <Columns>
-          <AllColumns Table="DailyActivities_EmployeesIncomeLog" />
-          <Column Table="Doc_CVs" Name="FullNameAr" />
-          <Column Table="Doc_CVs" Name="CVCode" />
+          <AllColumns Table="Doc_Interview" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyTitle" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyType" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Job" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Department" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Branch" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="ContractType" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Qualification" />
+          <Column Table="Doc_EmploymentAdvertizement" Name="Advertizement" />
         </Columns>
       </Query>
       <ConnectionOptions CloseConnection="true" />
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
+    <Grid ComponentName="gridDashboardItem1" Name="تفاصيل المقابلة" DataSource="sqlDataSource1" DataMember="Doc_Interview">
       <DataItems>
-        <Dimension DataMember="FullNameAr" DefaultId="DataItem0" />
-        <Dimension DataMember="TheDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem1" />
-        <Dimension DataMember="PaymentMethod" DefaultId="DataItem2" />
-        <Dimension DataMember="PaymentType" DefaultId="DataItem3" />
-        <Dimension DataMember="Value" DefaultId="DataItem4" />
-        <Measure DataMember="Value" DefaultId="DataItem5" />
-        <Dimension DataMember="TheDate" DateTimeGroupInterval="MonthYear" DefaultId="DataItem6" />
+        <Dimension DataMember="Interviewee" DefaultId="DataItem0" />
+        <Dimension DataMember="Title" DefaultId="DataItem1" />
+        <Dimension DataMember="TheType" DefaultId="DataItem2" />
+        <Dimension DataMember="Place" DefaultId="DataItem3" />
+        <Dimension DataMember="TheDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem5" />
+        <Dimension DataMember="ContractType" DefaultId="DataItem8" />
+        <Dimension DataMember="AgencyTitle" DefaultId="DataItem11" />
+        <Dimension DataMember="AgencyType" DefaultId="DataItem12" />
+        <Dimension DataMember="Recommendation" DefaultId="DataItem16" />
+        <Dimension DataMember="Interviewers" DefaultId="DataItem4" />
       </DataItems>
-      <SeriesDimensions>
-        <SeriesDimension DefaultId="DataItem1" />
-        <SeriesDimension DefaultId="DataItem2" />
-        <SeriesDimension DefaultId="DataItem3" />
-        <SeriesDimension DefaultId="DataItem4" />
-      </SeriesDimensions>
+      <GridColumns>
+        <GridDimensionColumn Name="اسم المقابلة" Weight="104.65116279069768">
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="المجري معه المقابلة" Weight="87.2093023255814">
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="نوع المقابلة" Weight="51.6795865633075">
+          <Dimension DefaultId="DataItem2" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="مكان المقابلة" Weight="124.67700258397936">
+          <Dimension DefaultId="DataItem3" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="المكلف بعمل المقابلة" Weight="90.81969566465692">
+          <Dimension DefaultId="DataItem4" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="التاريخ" Weight="107.8811369509044">
+          <Dimension DefaultId="DataItem5" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="نوع العقد" Weight="116.27906976744188">
+          <Dimension DefaultId="DataItem8" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="اسم وكالة الاعلان" Weight="75.00000000000001">
+          <Dimension DefaultId="DataItem11" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="نوع وكالة الاعلان" Weight="75.00000000000001">
+          <Dimension DefaultId="DataItem12" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="التوصيات" Weight="75.00000000000001">
+          <Dimension DefaultId="DataItem16" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="AutoFitToContents" />
+    </Grid>
+    <Pie ComponentName="pieDashboardItem1" Name="نتيجة المقابلة" DataSource="sqlDataSource1" DataMember="Doc_Interview" LabelContentType="Argument" TooltipContentType="Percent" ShowPieCaptions="false">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Measure DataMember="Status" SummaryType="Count" DefaultId="DataItem11" />
+        <Dimension DataMember="Status" DefaultId="DataItem0" />
+      </DataItems>
       <Arguments>
         <Argument DefaultId="DataItem0" />
-        <Argument DefaultId="DataItem6" />
+      </Arguments>
+      <Values>
+        <Value DefaultId="DataItem11" />
+      </Values>
+    </Pie>
+    <Chart ComponentName="chartDashboardItem1" Name="درجة تقييم المقابلة" DataSource="sqlDataSource1" DataMember="Doc_Interview">
+      <DataItems>
+        <Measure DataMember="RankOf100" DefaultId="DataItem0" />
+        <Dimension DataMember="TheDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem1" />
+        <Dimension DataMember="Interviewee" ColoringMode="Hue" DefaultId="DataItem3" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem3" />
+        <Argument DefaultId="DataItem1" />
       </Arguments>
       <Panes>
         <Pane Name="Pane 1">
+          <AxisY Title="درجة التقييم" />
           <Series>
-            <Simple>
-              <Value DefaultId="DataItem5" />
+            <Simple Name="Rank Of 100" SeriesType="StackedBar">
+              <Value DefaultId="DataItem0" />
             </Simple>
           </Series>
         </Pane>
       </Panes>
-      <AxisX EnableZooming="true" />
+      <ChartLegend Visible="false" />
     </Chart>
-    <DateFilter ComponentName="dateFilterDashboardItem1" Name="Date Filter 1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
-      <DataItems>
-        <Dimension DataMember="TheDate" DefaultId="DataItem0" />
-      </DataItems>
-      <Dimension DefaultId="DataItem0" />
-    </DateFilter>
-    <ComboBox ComponentName="comboBoxDashboardItem1" Name="Combo Box 1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
-      <DataItems>
-        <Dimension DataMember="FullNameAr" DefaultId="DataItem0" />
-      </DataItems>
-      <FilterDimensions>
-        <Dimension DefaultId="DataItem0" />
-      </FilterDimensions>
-    </ComboBox>
   </Items>
   <LayoutTree>
     <LayoutGroup Orientation="Vertical">
-      <LayoutItem DashboardItem="dateFilterDashboardItem1" Weight="0.2634207240948814" />
-      <LayoutItem DashboardItem="comboBoxDashboardItem1" Weight="2.3245942571785267" />
-      <LayoutItem DashboardItem="chartDashboardItem1" Weight="2.3245942571785267" />
+      <LayoutGroup>
+        <LayoutItem DashboardItem="pieDashboardItem1" />
+        <LayoutItem DashboardItem="gridDashboardItem1" />
+      </LayoutGroup>
+      <LayoutItem DashboardItem="chartDashboardItem1" />
     </LayoutGroup>
   </LayoutTree>
 </Dashboard>

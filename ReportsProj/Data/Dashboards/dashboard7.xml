@@ -1,195 +1,94 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard>
-  <Title Text="FingerPrint Dates" />
+  <Title Text="اعلانات التوظيف" />
   <DataSources>
-    <SqlDataSource Name="DailyActivities_FingerPrintLog" ComponentName="sqlDataSource1">
+    <SqlDataSource Name="Doc_EmploymentAdvertizement" ComponentName="sqlDataSource1">
       <Connection Name="Management" FromAppConfig="true" />
-      <Query Type="SelectQuery" Name="DailyActivities_FingerPrintLog">
+      <Query Type="SelectQuery" Name="Doc_EmploymentAdvertizement">
         <Tables>
-          <Table Name="DailyActivities_FingerPrintLog" />
+          <Table Name="Doc_EmploymentAdvertizement" />
         </Tables>
         <Columns>
-          <AllColumns Table="DailyActivities_FingerPrintLog" />
+          <AllColumns Table="Doc_EmploymentAdvertizement" />
         </Columns>
       </Query>
       <ConnectionOptions CloseConnection="true" />
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem1" Name="البصمات حسب النوع" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog" FilterString="[DataItem1] &gt;= #2021-01-01#">
+    <Chart ComponentName="chartDashboardItem1" Name="نوع العقد" DataSource="sqlDataSource1" DataMember="Doc_EmploymentAdvertizement">
       <DataItems>
-        <Dimension DataMember="DateTimeRecord" DateTimeGroupInterval="MonthYear" DefaultId="DataItem1">
-          <DateTimeFormat DateFormat="Short" />
-        </Dimension>
-        <Dimension DataMember="TheType" DefaultId="DataItem2" />
-        <Measure DataMember="TheType" SummaryType="Count" DefaultId="DataItem0" />
+        <Measure DataMember="ContractType" SummaryType="Count" DefaultId="DataItem1" />
+        <Dimension DataMember="Job" DefaultId="DataItem0" />
+        <Dimension DataMember="ContractType" DefaultId="DataItem2" />
+        <Dimension DataMember="PublishedDateFrom" DateTimeGroupInterval="MonthYear" DefaultId="DataItem3" />
       </DataItems>
       <SeriesDimensions>
         <SeriesDimension DefaultId="DataItem2" />
-      </SeriesDimensions>
-      <Arguments>
-        <Argument DefaultId="DataItem1" />
-      </Arguments>
-      <Panes>
-        <Pane Name="Pane 1">
-          <AxisY Title="عدد البصمات" />
-          <Series>
-            <Simple>
-              <Value DefaultId="DataItem0" />
-            </Simple>
-          </Series>
-        </Pane>
-      </Panes>
-      <AxisX TitleVisible="true" Title="تاريخ البصمات" />
-    </Chart>
-    <TabContainer ComponentName="tabContainerDashboardItem1" Name="Tab Container 1">
-      <Pages>
-        <Page ComponentName="dashboardTabPage1" Name="Page 1" />
-      </Pages>
-    </TabContainer>
-    <Chart ComponentName="chartDashboardItem3" Name="البصمات حسب الوظيفة" ParentContainer="dashboardTabPage1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog" FilterString="[DataItem2] &gt;= #2021-01-01#">
-      <DataItems>
-        <Measure DataMember="Job" SummaryType="Count" DefaultId="DataItem0" />
-        <Dimension DataMember="Job" DefaultId="DataItem1" />
-        <Dimension DataMember="DateTimeRecord" DateTimeGroupInterval="MonthYear" DefaultId="DataItem2" />
-      </DataItems>
-      <SeriesDimensions>
-        <SeriesDimension DefaultId="DataItem1" />
-      </SeriesDimensions>
-      <Arguments>
-        <Argument DefaultId="DataItem2" />
-      </Arguments>
-      <Panes>
-        <Pane Name="Pane 1">
-          <AxisY Title="عدد البصمات" />
-          <Series>
-            <Simple>
-              <Value DefaultId="DataItem0" />
-            </Simple>
-          </Series>
-        </Pane>
-      </Panes>
-      <AxisX TitleVisible="true" Title="تاريخ البصمات" />
-    </Chart>
-    <TabContainer ComponentName="tabContainerDashboardItem2" Name="Tab Container 2">
-      <Pages>
-        <Page ComponentName="dashboardTabPage2" Name="Page 1" />
-      </Pages>
-    </TabContainer>
-    <Chart ComponentName="chartDashboardItem4" Name="البصمات حسب القسم" ParentContainer="dashboardTabPage2" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog" FilterString="[DataItem1] &gt;= #2021-01-01#">
-      <DataItems>
-        <Measure DataMember="Department" SummaryType="Count" DefaultId="DataItem0" />
-        <Dimension DataMember="DateTimeRecord" DateTimeGroupInterval="MonthYear" DefaultId="DataItem1" />
-        <Dimension DataMember="Department" DefaultId="DataItem2" />
-      </DataItems>
-      <SeriesDimensions>
-        <SeriesDimension DefaultId="DataItem2" />
-      </SeriesDimensions>
-      <Arguments>
-        <Argument DefaultId="DataItem1" />
-      </Arguments>
-      <Panes>
-        <Pane Name="Pane 1">
-          <AxisY Title="عدد البصمات" />
-          <Series>
-            <Simple>
-              <Value DefaultId="DataItem0" />
-            </Simple>
-          </Series>
-        </Pane>
-      </Panes>
-      <AxisX TitleVisible="true" Title="تاريخ البصمات" />
-    </Chart>
-    <TabContainer ComponentName="tabContainerDashboardItem3" Name="Tab Container 3">
-      <Pages>
-        <Page ComponentName="dashboardTabPage3" Name="Page 1" />
-      </Pages>
-    </TabContainer>
-    <Chart ComponentName="chartDashboardItem2" Name="البصمات حسب الموظف" ParentContainer="dashboardTabPage3" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog" FilterString="[DataItem1] &gt;= #2021-01-01#">
-      <DataItems>
-        <Measure DataMember="FullNameAr" SummaryType="Count" DefaultId="DataItem0" />
-        <Dimension DataMember="DateTimeRecord" DateTimeGroupInterval="MonthYear" DefaultId="DataItem1" />
-        <Dimension DataMember="FullNameAr" DefaultId="DataItem2" />
-      </DataItems>
-      <SeriesDimensions>
-        <SeriesDimension DefaultId="DataItem2" />
-      </SeriesDimensions>
-      <Arguments>
-        <Argument DefaultId="DataItem1" />
-      </Arguments>
-      <Panes>
-        <Pane Name="Pane 1">
-          <AxisY Title="عدد البصمات" />
-          <Series>
-            <Simple>
-              <Value DefaultId="DataItem0" />
-            </Simple>
-          </Series>
-        </Pane>
-      </Panes>
-      <AxisX TitleVisible="true" Title="تاريخ البصمات" />
-    </Chart>
-    <TabContainer ComponentName="tabContainerDashboardItem4" Name="Tab Container 4">
-      <Pages>
-        <Page ComponentName="dashboardTabPage4" Name="Page 1" />
-      </Pages>
-    </TabContainer>
-    <Chart ComponentName="chartDashboardItem5" Name="البصمات حسب الماكينة" ParentContainer="dashboardTabPage4" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog" FilterString="[DataItem0] &gt;= #2021-01-01#">
-      <DataItems>
-        <Dimension DataMember="DateTimeRecord" DateTimeGroupInterval="MonthYear" DefaultId="DataItem0" />
-        <Dimension DataMember="MachineTitle" DateTimeGroupInterval="MonthYear" DefaultId="DataItem1" />
-        <Measure DataMember="MachineTitle" SummaryType="Count" DefaultId="DataItem2" />
-      </DataItems>
-      <SeriesDimensions>
-        <SeriesDimension DefaultId="DataItem1" />
       </SeriesDimensions>
       <Arguments>
         <Argument DefaultId="DataItem0" />
+        <Argument DefaultId="DataItem3" />
       </Arguments>
       <Panes>
         <Pane Name="Pane 1">
-          <AxisY Title="عدد البصمات" />
+          <AxisY Title="عدد العقود" />
           <Series>
-            <Simple>
-              <Value DefaultId="DataItem2" />
+            <Simple SeriesType="StackedBar">
+              <Value DefaultId="DataItem1" />
             </Simple>
           </Series>
         </Pane>
       </Panes>
-      <AxisX TitleVisible="true" Title="تاريخ البصمات" />
+      <AxisX TitleVisible="true" Title="الوظيفة والتاريخ" EnableZooming="true" />
+    </Chart>
+    <Pie ComponentName="pieDashboardItem2" Name="الاقسام" DataSource="sqlDataSource1" DataMember="Doc_EmploymentAdvertizement" PieType="Donut" ShowPieCaptions="false">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Measure DataMember="Department" SummaryType="Count" DefaultId="DataItem0" />
+        <Dimension DataMember="Department" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value DefaultId="DataItem0" />
+      </Values>
+    </Pie>
+    <Chart ComponentName="chartDashboardItem2" Name="الوظائف" DataSource="sqlDataSource1" DataMember="Doc_EmploymentAdvertizement">
+      <DataItems>
+        <Measure DataMember="Job" SummaryType="Count" DefaultId="DataItem1" />
+        <Dimension DataMember="AgencyTitle" DefaultId="DataItem0" />
+        <Dimension DataMember="Job" DefaultId="DataItem2" />
+        <Dimension DataMember="PublishedDateFrom" DateTimeGroupInterval="MonthYear" DefaultId="DataItem3" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+        <Argument DefaultId="DataItem3" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="عد الوظائف" />
+          <Series>
+            <Simple>
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <AxisX TitleVisible="true" Title="وكالة الاعلان والتاريخ" EnableZooming="true" />
     </Chart>
   </Items>
   <LayoutTree>
-    <LayoutGroup>
-      <LayoutGroup Orientation="Vertical">
-        <LayoutGroup>
-          <LayoutGroup Orientation="Vertical">
-            <LayoutItem DashboardItem="chartDashboardItem1" />
-            <LayoutTabContainer DashboardItem="tabContainerDashboardItem4">
-              <LayoutTabPage DashboardItem="dashboardTabPage4">
-                <LayoutItem DashboardItem="chartDashboardItem5" />
-              </LayoutTabPage>
-            </LayoutTabContainer>
-          </LayoutGroup>
-          <LayoutTabContainer DashboardItem="tabContainerDashboardItem1">
-            <LayoutTabPage DashboardItem="dashboardTabPage1">
-              <LayoutItem DashboardItem="chartDashboardItem3" />
-            </LayoutTabPage>
-          </LayoutTabContainer>
-        </LayoutGroup>
-        <LayoutGroup>
-          <LayoutTabContainer DashboardItem="tabContainerDashboardItem2">
-            <LayoutTabPage DashboardItem="dashboardTabPage2">
-              <LayoutItem DashboardItem="chartDashboardItem4" />
-            </LayoutTabPage>
-          </LayoutTabContainer>
-          <LayoutTabContainer DashboardItem="tabContainerDashboardItem3">
-            <LayoutTabPage DashboardItem="dashboardTabPage3">
-              <LayoutItem DashboardItem="chartDashboardItem2" />
-            </LayoutTabPage>
-          </LayoutTabContainer>
-        </LayoutGroup>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup>
+        <LayoutItem DashboardItem="pieDashboardItem2" />
+        <LayoutItem DashboardItem="chartDashboardItem1" />
       </LayoutGroup>
+      <LayoutItem DashboardItem="chartDashboardItem2" />
     </LayoutGroup>
   </LayoutTree>
 </Dashboard>

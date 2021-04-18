@@ -1,49 +1,132 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard>
-  <Title Text="products and images" />
+  <Title Text="سجل البصمات 3" />
   <DataSources>
-    <SqlDataSource Name="Categories" ComponentName="sqlDataSource1">
-      <Connection Name="nwind" FromAppConfig="true" />
-      <Query Type="SelectQuery" Name="Categories">
+    <SqlDataSource Name="DailyActivities_FingerPrintLog" ComponentName="sqlDataSource1">
+      <Connection Name="Management" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="DailyActivities_FingerPrintLog">
         <Tables>
-          <Table Name="Categories" />
+          <Table Name="DailyActivities_FingerPrintLog" />
         </Tables>
         <Columns>
-          <Column Table="Categories" Name="CategoryID" />
-          <Column Table="Categories" Name="CategoryName" />
-          <Column Table="Categories" Name="Description" />
-          <Column Table="Categories" Name="Picture" />
-          <Column Table="Categories" Name="Icon_17" />
-          <Column Table="Categories" Name="Icon_25" />
+          <AllColumns Table="DailyActivities_FingerPrintLog" />
         </Columns>
       </Query>
       <ConnectionOptions CloseConnection="true" />
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Grid ComponentName="gridDashboardItem1" Name="My Products" DataSource="sqlDataSource1" DataMember="Categories">
+    <Treemap ComponentName="treemapDashboardItem1" Name="تاريخ البصمات" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
       <DataItems>
-        <Dimension DataMember="CategoryName" DefaultId="DataItem0" />
-        <Dimension DataMember="Description" DefaultId="DataItem1" />
-        <Dimension DataMember="Picture" DefaultId="DataItem2" />
+        <Dimension DataMember="DateTimeRecord" DateTimeGroupInterval="Hour" DefaultId="DataItem0" />
+        <Measure DataMember="TheType" SummaryType="Count" DefaultId="DataItem1" />
+        <Dimension DataMember="DateTimeRecord" DateTimeGroupInterval="DateHourMinute" DefaultId="DataItem3" />
+        <Dimension DataMember="DateTimeRecord" DateTimeGroupInterval="DateHourMinute" DefaultId="DataItem2" />
+      </DataItems>
+      <Values>
+        <Value DefaultId="DataItem1" />
+      </Values>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+        <Argument DefaultId="DataItem2" />
+      </Arguments>
+    </Treemap>
+    <DateFilter ComponentName="dateFilterDashboardItem2" Name="التاريخ" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog" SelectedDateTimePeriodIndex="الشهر الحالي">
+      <DataItems>
+        <Dimension DataMember="DateTimeRecord" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem0" />
+      </DataItems>
+      <Dimension DefaultId="DataItem0" />
+      <DateTimePeriods>
+        <DateTimePeriod Name="الشهر الحالي">
+          <StartLimit>
+            <FlowDateTimePeriodLimit Interval="Month" />
+          </StartLimit>
+          <EndLimit>
+            <FlowDateTimePeriodLimit Interval="Month" Offset="1" />
+          </EndLimit>
+        </DateTimePeriod>
+      </DateTimePeriods>
+    </DateFilter>
+    <Grid ComponentName="gridDashboardItem1" Name="" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="FullNameAr" DefaultId="DataItem0" />
+        <Dimension DataMember="Department" DefaultId="DataItem1" />
+        <Dimension DataMember="Job" DefaultId="DataItem2" />
       </DataItems>
       <GridColumns>
-        <GridDimensionColumn>
-          <Dimension DefaultId="DataItem0" />
-        </GridDimensionColumn>
-        <GridDimensionColumn>
+        <GridDimensionColumn Name="القسم">
           <Dimension DefaultId="DataItem1" />
         </GridDimensionColumn>
-        <GridDimensionColumn DisplayMode="Image">
+        <GridDimensionColumn Name="الوظيفة">
           <Dimension DefaultId="DataItem2" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="اسم الموظف">
+          <Dimension DefaultId="DataItem0" />
         </GridDimensionColumn>
       </GridColumns>
       <GridOptions />
     </Grid>
+    <ComboBox ComponentName="comboBoxDashboardItem1" Name="القسم" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog" EnableSearch="true" ComboBoxType="Checked">
+      <DataItems>
+        <Dimension DataMember="Department" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+    <Chart ComponentName="chartDashboardItem2" Name="Chart 1" ShowCaption="false" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Dimension DataMember="DateTimeRecord" DateTimeGroupInterval="DateHour" DefaultId="DataItem2" />
+        <Measure DataMember="TheType" SummaryType="Count" FilterString="[DataItem0] = 'Check-In/حضور'" DefaultId="DataItem3" />
+        <Dimension DataMember="TheType" DefaultId="DataItem0" />
+        <Measure DataMember="TheType" SummaryType="Count" FilterString="[DataItem0] = 'Check-Out/إنصراف'" DefaultId="DataItem1" />
+        <Dimension DataMember="DateTimeRecord" DateTimeGroupInterval="Hour" DefaultId="DataItem4" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem4" />
+      </SeriesDimensions>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="عدد البصمات" />
+          <Series>
+            <Simple Name="CheckIn" IgnoreEmptyPoints="true" ShowPointMarkers="true" SeriesType="StackedBar">
+              <Value DefaultId="DataItem3" />
+            </Simple>
+            <Simple Name="CheckOut" IgnoreEmptyPoints="true" SeriesType="StackedBar">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+      <AxisX TitleVisible="true" Title="نوع البصمات" EnableZooming="true" />
+    </Chart>
   </Items>
+  <Groups>
+    <Group ComponentName="groupDashboardItem1" Name="الموظفين" ShowCaption="false" />
+  </Groups>
   <LayoutTree>
-    <LayoutGroup>
-      <LayoutItem DashboardItem="gridDashboardItem1" />
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup DashboardItem="groupDashboardItem1" Weight="2.3478954293628806">
+        <LayoutGroup Orientation="Vertical" Weight="0.614720513391644">
+          <LayoutGroup>
+            <LayoutItem DashboardItem="dateFilterDashboardItem2" Weight="0.9128092187873973" />
+            <LayoutItem DashboardItem="comboBoxDashboardItem1" Weight="0.7025665057912125" />
+          </LayoutGroup>
+          <LayoutGroup>
+            <LayoutItem DashboardItem="chartDashboardItem2" Weight="1.5673878706491922" />
+            <LayoutGroup Orientation="Vertical" Weight="1.202515891380554">
+              <LayoutItem DashboardItem="gridDashboardItem1" Weight="1.202515891380554" />
+              <LayoutItem DashboardItem="treemapDashboardItem1" Weight="1.5673878706491922" />
+            </LayoutGroup>
+          </LayoutGroup>
+        </LayoutGroup>
+      </LayoutGroup>
     </LayoutGroup>
   </LayoutTree>
 </Dashboard>

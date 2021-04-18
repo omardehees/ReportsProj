@@ -1,91 +1,121 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard>
-  <Title Text="Advertisement" />
+  <Title Text="عقود التوظيف" />
   <DataSources>
-    <SqlDataSource Name="Doc_EmploymentAdvertizement" ComponentName="sqlDataSource1">
+    <SqlDataSource Name="Doc_CVs" ComponentName="sqlDataSource1">
       <Connection Name="Management" FromAppConfig="true" />
-      <Query Type="SelectQuery" Name="Doc_EmploymentAdvertizement">
+      <Query Type="SelectQuery" Name="Doc_CVs">
         <Tables>
-          <Table Name="Doc_EmploymentAdvertizement" />
+          <Table Name="Doc_CVs" />
         </Tables>
         <Columns>
-          <Column Table="Doc_EmploymentAdvertizement" Name="Id" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="Code" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="IssuedBy" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="ApprovedBy" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="ApprovedAt" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="PublishedDateFrom" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="PublishedDateTo" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="InterviewDate" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="Status" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyTitle" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyType" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyCode" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyLink" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyPerson" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyContact" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyCost" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="AgencyNotes" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="Advertizement" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="AdvertizementEn" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="Job" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="SaudiStandardJobCode" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="Department" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="Branch" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="ContractType" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="Permanency" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="EmployeeCount" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="JobDescription" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="ForCitizensOnly" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="EstimatedStart" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="AgeFrom" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="AgeTo" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="Languages" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="AcademicGradeType" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="Qualification" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="Specialization" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="Certificates" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="YearsOfExperience" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="Sex" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="MilitaryServiceStatus" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="HaveDrivingLicense" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="TheUser" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="IsEnabled" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="IsDefault" />
-          <Column Table="Doc_EmploymentAdvertizement" Name="Notes" />
+          <AllColumns Table="Doc_CVs" />
         </Columns>
       </Query>
       <ConnectionOptions CloseConnection="true" />
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem1" Name="الاعلانات حسب نوع العقد" DataSource="sqlDataSource1" DataMember="Doc_EmploymentAdvertizement">
+    <Grid ComponentName="gridDashboardItem1" Name="بيانات الموظف" DataSource="sqlDataSource1" DataMember="Doc_CVs">
       <DataItems>
-        <Measure DataMember="Advertizement" SummaryType="Count" DefaultId="DataItem0" />
-        <Dimension DataMember="ContractType" DefaultId="DataItem1" />
+        <Dimension DataMember="FullNameAr" ColoringMode="Hue" DefaultId="DataItem0" />
+        <Measure DataMember="EmploymentContractBasicSalary" DefaultId="DataItem1" />
+        <Dimension DataMember="EmploymentContractExpireAt" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem2" />
+        <Dimension DataMember="Sex" DefaultId="DataItem3" />
+        <Dimension DataMember="MaritalStatus" DefaultId="DataItem4" />
+        <Dimension DataMember="Country" DefaultId="DataItem5" />
+        <Dimension DataMember="Religion" DefaultId="DataItem6" />
+        <Dimension DataMember="Mobile" DefaultId="DataItem7" />
+        <Dimension DataMember="Company" DefaultId="DataItem8" />
+        <Dimension DataMember="Job" DefaultId="DataItem9" />
+        <Dimension DataMember="Department" DefaultId="DataItem10" />
+        <Dimension DataMember="EmploymentContractFirstDay" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem12" />
+        <Dimension DataMember="Notes" DefaultId="DataItem13" />
       </DataItems>
-      <Arguments>
-        <Argument DefaultId="DataItem1" />
-      </Arguments>
-      <Panes>
-        <Pane Name="Pane 1">
-          <Series>
-            <Simple>
-              <Value DefaultId="DataItem0" />
-            </Simple>
-          </Series>
-        </Pane>
-      </Panes>
-    </Chart>
-    <TabContainer ComponentName="tabContainerDashboardItem1" Name="Tab Container 1">
-      <Pages>
-        <Page ComponentName="dashboardTabPage1" Name="Page 1" />
-      </Pages>
-    </TabContainer>
-    <Pie ComponentName="pieDashboardItem1" Name="الوظائف " ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="Doc_EmploymentAdvertizement">
+      <FormatRules>
+        <GridItemFormatRule Name="Format Rule 1" DataItem="DataItem1" DataItemApplyTo="DataItem1">
+          <FormatConditionValue Condition="BetweenOrEqual">
+            <AppearanceSettings AppearanceType="PaleGreen" />
+            <Value1 Type="System.Decimal" Value="2000" />
+            <Value2 Type="System.Decimal" Value="2999" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="Format Rule 2" DataItem="DataItem1" DataItemApplyTo="DataItem1">
+          <FormatConditionValue Condition="BetweenOrEqual">
+            <AppearanceSettings AppearanceType="PaleBlue" />
+            <Value1 Type="System.Decimal" Value="3000" />
+            <Value2 Type="System.Decimal" Value="3999" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="Format Rule 3" DataItem="DataItem1">
+          <FormatConditionValue Condition="BetweenOrEqual">
+            <AppearanceSettings AppearanceType="PalePurple" />
+            <Value1 Type="System.Decimal" Value="3000" />
+            <Value2 Type="System.Decimal" Value="3999" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="Format Rule 4" DataItem="DataItem1" DataItemApplyTo="DataItem1">
+          <FormatConditionValue Condition="BetweenOrEqual">
+            <AppearanceSettings AppearanceType="PaleOrange" />
+            <Value1 Type="System.Decimal" Value="4000" />
+            <Value2 Type="System.Decimal" Value="4999" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="Format Rule 5" DataItem="DataItem1" DataItemApplyTo="DataItem1">
+          <FormatConditionValue Condition="GreaterOrEqual">
+            <AppearanceSettings AppearanceType="Orange" />
+            <Value1 Type="System.Decimal" Value="5000" />
+          </FormatConditionValue>
+        </GridItemFormatRule>
+      </FormatRules>
+      <GridColumns>
+        <GridDimensionColumn Name="اسم الموظف" Weight="62.4031007751938">
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="الوظيفة" Weight="31.65374677002584">
+          <Dimension DefaultId="DataItem9" />
+        </GridDimensionColumn>
+        <GridMeasureColumn Name="الراتب" Weight="158.2687338501292">
+          <Measure DefaultId="DataItem1" />
+        </GridMeasureColumn>
+        <GridDimensionColumn Name="الجنس" Weight="30.74935400516796">
+          <Dimension DefaultId="DataItem3" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="الديانة" Weight="47.9328165374677">
+          <Dimension DefaultId="DataItem6" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="الجنسية" Weight="47.9328165374677">
+          <Dimension DefaultId="DataItem5" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="الحالة الاجتماعية" Weight="66.02067183462532">
+          <Dimension DefaultId="DataItem4" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="الچوال" Weight="48.83720930232558">
+          <Dimension DefaultId="DataItem7" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="الشركة" Weight="53.359173126614984">
+          <Dimension DefaultId="DataItem8" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="القسم" Weight="62.4031007751938">
+          <Dimension DefaultId="DataItem10" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="اول يوم عمل" Weight="117.57105943152455">
+          <Dimension DefaultId="DataItem12" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="انتهاء عقد العمل" Weight="175.45219638242895">
+          <Dimension DefaultId="DataItem2" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="ملاحظات" Weight="71.44702842377261">
+          <Dimension DefaultId="DataItem13" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions EnableBandedRows="true" ColumnWidthMode="AutoFitToContents" />
+    </Grid>
+    <Pie ComponentName="pieDashboardItem2" Name="الاقسام" DataSource="sqlDataSource1" DataMember="Doc_CVs" ShowPieCaptions="false">
+      <InteractivityOptions MasterFilterMode="Single" />
       <DataItems>
-        <Measure DataMember="Advertizement" SummaryType="Count" DefaultId="DataItem0" />
-        <Dimension DataMember="Job" DefaultId="DataItem1" />
+        <Measure DataMember="Department" Name="Department" SummaryType="Count" DefaultId="DataItem0" />
+        <Dimension DataMember="Department" DefaultId="DataItem1" />
       </DataItems>
       <Arguments>
         <Argument DefaultId="DataItem1" />
@@ -94,23 +124,48 @@
         <Value DefaultId="DataItem0" />
       </Values>
     </Pie>
+    <Chart ComponentName="chartDashboardItem2" Name="الرواتب" DataSource="sqlDataSource1" DataMember="Doc_CVs">
+      <InteractivityOptions IsDrillDownEnabled="true" />
+      <DataItems>
+        <Dimension DataMember="FullNameAr" ColoringMode="Hue" DefaultId="DataItem0" />
+        <Measure DataMember="EmploymentContractBasicSalary" DefaultId="DataItem1" />
+        <Measure DataMember="EmploymentContractBasicSalary" DefaultId="DataItem2">
+          <Calculation>
+            <RunningTotal />
+          </Calculation>
+          <WindowDefinition>
+            <ChartWindowDefinition />
+          </WindowDefinition>
+        </Measure>
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem0" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="إجمالي الرواتب" />
+          <SecondaryAxisY Title="الراتب" />
+          <Series>
+            <Simple Name="Salary" PlotOnSecondaryAxis="true">
+              <Value DefaultId="DataItem1" />
+            </Simple>
+            <Simple Name="Total Salaries" SeriesType="Spline">
+              <Value DefaultId="DataItem2" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <ChartLegend Visible="false" />
+      <AxisX EnableZooming="true" />
+    </Chart>
   </Items>
-  <Groups>
-    <Group ComponentName="groupDashboardItem1" Name="الاعلانات حسب الوظيفة" />
-  </Groups>
   <LayoutTree>
-    <LayoutGroup>
-      <LayoutGroup Orientation="Vertical">
-        <LayoutGroup>
-          <LayoutItem DashboardItem="chartDashboardItem1" />
-          <LayoutGroup DashboardItem="groupDashboardItem1">
-            <LayoutItem DashboardItem="pieDashboardItem1" />
-          </LayoutGroup>
-        </LayoutGroup>
-        <LayoutTabContainer DashboardItem="tabContainerDashboardItem1">
-          <LayoutTabPage DashboardItem="dashboardTabPage1" />
-        </LayoutTabContainer>
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup Weight="0.9342105263157896">
+        <LayoutItem DashboardItem="pieDashboardItem2" Weight="0.7189284264646193" />
+        <LayoutItem DashboardItem="gridDashboardItem1" Weight="0.7652820998511703" />
       </LayoutGroup>
+      <LayoutItem DashboardItem="chartDashboardItem2" Weight="1.0657894736842102" />
     </LayoutGroup>
   </LayoutTree>
 </Dashboard>

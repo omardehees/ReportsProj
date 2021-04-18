@@ -1,109 +1,106 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard>
-  <Title Text="FingerPrint" />
+  <Title Text="خطط الحضور والمواعيد" />
   <DataSources>
-    <SqlDataSource Name="DailyActivities_FingerPrintLog" ComponentName="sqlDataSource1">
+    <SqlDataSource Name="DailyActivities_AttendancePlan" ComponentName="sqlDataSource1">
       <Connection Name="Management" FromAppConfig="true" />
-      <Query Type="SelectQuery" Name="DailyActivities_FingerPrintLog">
+      <Query Type="SelectQuery" Name="DailyActivities_AttendancePlan">
         <Tables>
-          <Table Name="DailyActivities_FingerPrintLog" />
+          <Table Name="DailyActivities_AttendancePlan" />
+          <Table Name="DailyActivities_AttendancePlanPerEmployee" />
+          <Relation Type="Inner" Parent="DailyActivities_AttendancePlanPerEmployee" Nested="DailyActivities_AttendancePlan">
+            <KeyColumn Parent="AttendancePlanTitleAr" Nested="Title" />
+          </Relation>
         </Tables>
         <Columns>
-          <Column Table="DailyActivities_FingerPrintLog" Name="Id" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="MachineNumber" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="MachineTitle" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="MachineTitleEn" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="IndRegID" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="IndRegName" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="FullNameAr" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="Job" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="JobPostionTree" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="Department" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="DateTimeRecord" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="TheType" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="IsOffday" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="AcceptedTimming" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="EarlyMinutes" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="LateMinutes" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="IsEnabled" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="IsDefault" />
-          <Column Table="DailyActivities_FingerPrintLog" Name="Notes" />
+          <AllColumns Table="DailyActivities_AttendancePlanPerEmployee" />
+          <AllColumns Table="DailyActivities_AttendancePlan" />
         </Columns>
       </Query>
       <ConnectionOptions CloseConnection="true" />
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem1" Name="نوع البصمة والاقسام" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
+    <Grid ComponentName="gridDashboardItem2" Name="خطط الحضور" DataSource="sqlDataSource1" DataMember="DailyActivities_AttendancePlan">
+      <InteractivityOptions MasterFilterMode="Multiple" />
       <DataItems>
-        <Measure DataMember="Department" SummaryType="Count" DefaultId="DataItem0" />
-        <Dimension DataMember="TheType" DefaultId="DataItem1" />
+        <Dimension DataMember="AttendancePlanTypes" DefaultId="DataItem0" />
+        <Dimension DataMember="Title" DefaultId="DataItem1" />
+        <Dimension DataMember="DateFrom" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem2" />
+        <Dimension DataMember="DateTo" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem3" />
       </DataItems>
-      <Arguments>
-        <Argument DefaultId="DataItem1" />
-      </Arguments>
-      <Panes>
-        <Pane Name="Pane 1">
-          <Series>
-            <Simple>
-              <Value DefaultId="DataItem0" />
-            </Simple>
-          </Series>
-        </Pane>
-      </Panes>
-    </Chart>
-    <TabContainer ComponentName="tabContainerDashboardItem1" Name="Tab Container 1">
-      <Pages>
-        <Page ComponentName="dashboardTabPage1" Name="Page 1" />
-      </Pages>
-    </TabContainer>
-    <Pie ComponentName="pieDashboardItem1" Name="نوع البصمة" ParentContainer="dashboardTabPage1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
-      <DataItems>
-        <Measure DataMember="Department" SummaryType="Count" DefaultId="DataItem0" />
-        <Dimension DataMember="TheType" DefaultId="DataItem1" />
-      </DataItems>
-      <Arguments>
-        <Argument DefaultId="DataItem1" />
-      </Arguments>
-      <Values>
-        <Value DefaultId="DataItem0" />
-      </Values>
-    </Pie>
-    <Grid ComponentName="gridDashboardItem1" Name="Grid 1" ParentContainer="groupDashboardItem1" DataSource="sqlDataSource1" DataMember="DailyActivities_FingerPrintLog">
-      <DataItems>
-        <Dimension DataMember="DateTimeRecord" DefaultId="DataItem0" />
-        <Dimension DataMember="FullNameAr" DefaultId="DataItem1" />
-        <Dimension DataMember="TheType" DefaultId="DataItem2" />
-      </DataItems>
-      <HiddenDimensions>
-        <Dimension DefaultId="DataItem0" />
-      </HiddenDimensions>
+      <FormatRules>
+        <GridItemFormatRule Name="Format Rule 1" DataItem="DataItem3" DataItemApplyTo="DataItem1">
+          <FormatConditionExpression Expression="[DataItem3] &lt; Today()">
+            <AppearanceSettings AppearanceType="PaleRed" />
+          </FormatConditionExpression>
+        </GridItemFormatRule>
+        <GridItemFormatRule Name="Format Rule 2" DataItem="DataItem3" DataItemApplyTo="DataItem1">
+          <FormatConditionExpression Expression="[DataItem3] &gt;= Today()">
+            <AppearanceSettings AppearanceType="PaleGreen" />
+          </FormatConditionExpression>
+        </GridItemFormatRule>
+      </FormatRules>
       <GridColumns>
-        <GridDimensionColumn>
+        <GridDimensionColumn Name="نوع الخطة">
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="اسم الخطة">
           <Dimension DefaultId="DataItem1" />
         </GridDimensionColumn>
-        <GridDimensionColumn>
+        <GridDimensionColumn Name="من">
           <Dimension DefaultId="DataItem2" />
         </GridDimensionColumn>
+        <GridDimensionColumn Name="إلى">
+          <Dimension DefaultId="DataItem3" />
+        </GridDimensionColumn>
       </GridColumns>
-      <GridOptions />
+      <GridOptions ColumnWidthMode="AutoFitToContents" />
     </Grid>
+    <TabContainer ComponentName="tabContainerDashboardItem1" Name="Tab Container 1">
+      <Pages>
+        <Page ComponentName="dashboardTabPage1" Name="الموظفين" />
+      </Pages>
+    </TabContainer>
+    <Chart ComponentName="chartDashboardItem2" Name="Chart 2" ParentContainer="dashboardTabPage1" DataSource="sqlDataSource1" DataMember="DailyActivities_AttendancePlan">
+      <Panes>
+        <Pane Name="Pane 1" />
+      </Panes>
+    </Chart>
+    <Card ComponentName="cardDashboardItem1" Name="Cards 1" ShowCaption="false" ParentContainer="dashboardTabPage1" DataSource="sqlDataSource1" DataMember="DailyActivities_AttendancePlan" ContentArrangementMode="FixedRowCount">
+      <DataItems>
+        <Dimension DataMember="FullNameAr" TopNMeasure="DataItem0" DefaultId="DataItem1" />
+        <Dimension DataMember="Job" DefaultId="DataItem2" />
+        <Measure DataMember="FullNameAr" SummaryType="Count" DefaultId="DataItem0" />
+      </DataItems>
+      <SeriesDimensions>
+        <SeriesDimension DefaultId="DataItem2" />
+        <SeriesDimension DefaultId="DataItem1" />
+      </SeriesDimensions>
+      <Card>
+        <ActualValue DefaultId="DataItem0" />
+        <AbsoluteVariationNumericFormat />
+        <PercentVariationNumericFormat />
+        <PercentOfTargetNumericFormat />
+        <LayoutTemplate Type="Stretched">
+          <TopValue Visible="false" ValueType="ActualValue" DimensionIndex="0" />
+          <MainValue Visible="true" ValueType="Title" DimensionIndex="0" />
+          <SubValue Visible="true" ValueType="Subtitle" DimensionIndex="0" />
+          <BottomValue1 Visible="true" ValueType="PercentVariation" DimensionIndex="0" />
+          <BottomValue2 Visible="true" ValueType="AbsoluteVariation" DimensionIndex="0" />
+          <DeltaIndicator Visible="true" />
+          <Sparkline Visible="true" />
+        </LayoutTemplate>
+      </Card>
+    </Card>
   </Items>
-  <Groups>
-    <Group ComponentName="groupDashboardItem1" Name="Group 1" />
-  </Groups>
   <LayoutTree>
     <LayoutGroup>
       <LayoutGroup Orientation="Vertical">
-        <LayoutGroup>
-          <LayoutItem DashboardItem="chartDashboardItem1" />
-          <LayoutGroup DashboardItem="groupDashboardItem1">
-            <LayoutItem DashboardItem="gridDashboardItem1" />
-          </LayoutGroup>
-        </LayoutGroup>
-        <LayoutTabContainer DashboardItem="tabContainerDashboardItem1">
+        <LayoutItem DashboardItem="gridDashboardItem2" Weight="0.7702871410736577" />
+        <LayoutTabContainer DashboardItem="tabContainerDashboardItem1" Weight="1.2297128589263422">
           <LayoutTabPage DashboardItem="dashboardTabPage1">
-            <LayoutItem DashboardItem="pieDashboardItem1" />
+            <LayoutItem DashboardItem="cardDashboardItem1" />
           </LayoutTabPage>
         </LayoutTabContainer>
       </LayoutGroup>

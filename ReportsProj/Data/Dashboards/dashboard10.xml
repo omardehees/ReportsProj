@@ -1,106 +1,126 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard>
-  <Title Text="Dashboard11" />
+  <Title Text="إذن حضور وانصراف" />
   <DataSources>
-    <SqlDataSource Name="DailyActivities_EmployeesIncomeLog" ComponentName="sqlDataSource1">
+    <SqlDataSource Name="DailyActivities_AttendanceShiftRequest" ComponentName="sqlDataSource1">
       <Connection Name="Management" FromAppConfig="true" />
-      <Query Type="SelectQuery" Name="DailyActivities_EmployeesIncomeLog">
+      <Query Type="SelectQuery" Name="DailyActivities_AttendanceShiftRequest">
         <Tables>
-          <Table Name="DailyActivities_EmployeesIncomeLog" />
-          <Table Name="Doc_CVs" />
-          <Relation Type="Inner" Parent="DailyActivities_EmployeesIncomeLog" Nested="Doc_CVs">
-            <KeyColumn Parent="CVCode" Nested="CVCode" />
+          <Table Name="DailyActivities_AttendanceShiftRequest" />
+          <Table Name="DailyActivities_StatusLog" />
+          <Relation Type="Inner" Parent="DailyActivities_StatusLog" Nested="DailyActivities_AttendanceShiftRequest">
+            <KeyColumn Parent="DocumentCode" Nested="Code" />
           </Relation>
         </Tables>
         <Columns>
-          <Column Table="Doc_CVs" Name="FullNameAr" />
-          <AllColumns Table="DailyActivities_EmployeesIncomeLog" />
-          <Column Table="DailyActivities_EmployeesIncomeLog" Name="Id" />
-          <Column Table="DailyActivities_EmployeesIncomeLog" Name="CVCode" />
-          <Column Table="DailyActivities_EmployeesIncomeLog" Name="TheDate" />
-          <Column Table="DailyActivities_EmployeesIncomeLog" Name="Value" />
-          <Column Table="DailyActivities_EmployeesIncomeLog" Name="Tax" />
-          <Column Table="DailyActivities_EmployeesIncomeLog" Name="PaymentCode" />
-          <Column Table="DailyActivities_EmployeesIncomeLog" Name="PaymentType" />
-          <Column Table="DailyActivities_EmployeesIncomeLog" Name="PaymentMethod" />
-          <Column Table="DailyActivities_EmployeesIncomeLog" Name="Statement" />
-          <Column Table="DailyActivities_EmployeesIncomeLog" Name="IsEnabled" />
-          <Column Table="DailyActivities_EmployeesIncomeLog" Name="IsDefault" />
-          <Column Table="DailyActivities_EmployeesIncomeLog" Name="Notes" />
+          <AllColumns Table="DailyActivities_StatusLog" />
+          <AllColumns Table="DailyActivities_AttendanceShiftRequest" />
         </Columns>
       </Query>
       <ConnectionOptions CloseConnection="true" />
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+    <ComboBox ComponentName="comboBoxDashboardItem1" Name="اسم الموظف" DataSource="sqlDataSource1" DataMember="DailyActivities_AttendanceShiftRequest" EnableSearch="true" ComboBoxType="Checked">
+      <InteractivityOptions IgnoreMasterFilters="false" />
       <DataItems>
-        <Measure DataMember="Value" DefaultId="DataItem0" />
-        <Dimension DataMember="PaymentType" ColoringMode="Hue" DefaultId="DataItem2" />
-        <Dimension DataMember="TheDate" DefaultId="DataItem1" />
-        <Dimension DataMember="TheDate" DateTimeGroupInterval="Month" DefaultId="DataItem3" />
-        <Measure DataMember="Tax" DefaultId="DataItem5">
-          <NumericFormat FormatType="General" />
-        </Measure>
+        <Dimension DataMember="Name" DefaultId="DataItem0" />
+        <Measure DataMember="RequestType" SummaryType="Count" DefaultId="DataItem1" />
       </DataItems>
-      <Arguments>
-        <Argument DefaultId="DataItem2" />
-        <Argument DefaultId="DataItem1" />
-        <Argument DefaultId="DataItem3" />
-      </Arguments>
-      <Panes>
-        <Pane Name="Pane 1">
-          <AxisY Title="قيمة الدخل" />
-          <SecondaryAxisY Title="قيمة الضريبة" />
-          <Series>
-            <Simple>
-              <Value DefaultId="DataItem0" />
-            </Simple>
-            <Simple PlotOnSecondaryAxis="true" SeriesType="Area">
-              <Value DefaultId="DataItem5" />
-            </Simple>
-          </Series>
-        </Pane>
-      </Panes>
-      <ChartLegend Visible="false" />
-      <AxisX TitleVisible="true" Title="نوع الدخل والتاريخ" EnableZooming="true" />
-    </Chart>
-    <RangeFilter ComponentName="rangeFilterDashboardItem1" Name="القيمة من إلي" ShowCaption="true" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
-      <DataItems>
-        <Measure DataMember="Value" DefaultId="DataItem0" />
-        <Dimension DataMember="Value" DefaultId="DataItem1" />
-      </DataItems>
-      <Argument DefaultId="DataItem1" />
-      <Series>
-        <Simple SeriesType="Line">
-          <Value DefaultId="DataItem0" />
-        </Simple>
-      </Series>
-    </RangeFilter>
-    <ComboBox ComponentName="comboBoxDashboardItem1" Name="اسم الموظف" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
-      <DataItems>
-        <Dimension DataMember="FullNameAr" DefaultId="DataItem0" />
-      </DataItems>
+      <HiddenMeasures>
+        <Measure DefaultId="DataItem1" />
+      </HiddenMeasures>
       <FilterDimensions>
         <Dimension DefaultId="DataItem0" />
       </FilterDimensions>
     </ComboBox>
-    <DateFilter ComponentName="dateFilterDashboardItem1" Name="التاريخ من إلي" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+    <Grid ComponentName="gridDashboardItem1" Name="تفاصيل الإذن" DataSource="sqlDataSource1" DataMember="DailyActivities_AttendanceShiftRequest">
       <DataItems>
-        <Dimension DataMember="TheDate" DefaultId="DataItem0" />
+        <Dimension DataMember="Name" DefaultId="DataItem0" />
+        <Dimension DataMember="DailyActivities_AttendanceShiftRequest_Job" DefaultId="DataItem1" />
+        <Dimension DataMember="DailyActivities_AttendanceShiftRequest_Subject" DefaultId="DataItem2" />
+        <Dimension DataMember="RequestFromDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem3" />
+        <Dimension DataMember="RequestToDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem4" />
+        <Dimension DataMember="Peers" DefaultId="DataItem7" />
+        <Dimension DataMember="Status" DefaultId="DataItem8" />
+        <Dimension DataMember="FinalApprovalBy" DefaultId="DataItem9" />
+        <Dimension DataMember="StatusAt" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem10" />
+      </DataItems>
+      <GridColumns>
+        <GridDimensionColumn Name="الاسم">
+          <Dimension DefaultId="DataItem0" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="الوظيفة">
+          <Dimension DefaultId="DataItem1" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="التاريخ">
+          <Dimension DefaultId="DataItem10" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="الموضوع">
+          <Dimension DefaultId="DataItem2" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="حالة الإذن">
+          <Dimension DefaultId="DataItem8" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="التاريخ من">
+          <Dimension DefaultId="DataItem3" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="التاريخ إلي">
+          <Dimension DefaultId="DataItem4" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="البديل">
+          <Dimension DefaultId="DataItem7" />
+        </GridDimensionColumn>
+        <GridDimensionColumn Name="اعتمد الحالة">
+          <Dimension DefaultId="DataItem9" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions ColumnWidthMode="AutoFitToContents" />
+    </Grid>
+    <ComboBox ComponentName="comboBoxDashboardItem2" Name="الوظيفة" DataSource="sqlDataSource1" DataMember="DailyActivities_AttendanceShiftRequest" EnableSearch="true" ComboBoxType="Checked">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+      <DataItems>
+        <Dimension DataMember="DailyActivities_AttendanceShiftRequest_Job" Name="Job" DefaultId="DataItem0" />
+        <Measure DataMember="RequestType" SummaryType="Count" DefaultId="DataItem1" />
+      </DataItems>
+      <HiddenMeasures>
+        <Measure DefaultId="DataItem1" />
+      </HiddenMeasures>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+    <DateFilter ComponentName="dateFilterDashboardItem1" Name="التاريخ" DataSource="sqlDataSource1" DataMember="DailyActivities_AttendanceShiftRequest">
+      <InteractivityOptions IgnoreMasterFilters="false" />
+      <DataItems>
+        <Dimension DataMember="StatusAt" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem0" />
       </DataItems>
       <Dimension DefaultId="DataItem0" />
     </DateFilter>
+    <Pie ComponentName="pieDashboardItem1" Name="نوع الإذن" DataSource="sqlDataSource1" DataMember="DailyActivities_AttendanceShiftRequest" PieType="Donut" LabelContentType="Argument" TooltipContentType="Value" ShowPieCaptions="false">
+      <InteractivityOptions MasterFilterMode="Multiple" />
+      <DataItems>
+        <Measure DataMember="RequestType" SummaryType="Count" DefaultId="DataItem0" />
+        <Dimension DataMember="RequestType" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Values>
+        <Value DefaultId="DataItem0" />
+      </Values>
+    </Pie>
   </Items>
   <LayoutTree>
-    <LayoutGroup>
-      <LayoutGroup Orientation="Vertical">
-        <LayoutGroup Weight="0.33083645443196">
-          <LayoutItem DashboardItem="rangeFilterDashboardItem1" />
-          <LayoutItem DashboardItem="dateFilterDashboardItem1" Weight="1.5393258426966292" />
-          <LayoutItem DashboardItem="comboBoxDashboardItem1" />
-        </LayoutGroup>
-        <LayoutItem DashboardItem="chartDashboardItem1" Weight="1.66916354556804" />
+    <LayoutGroup Orientation="Vertical">
+      <LayoutGroup>
+        <LayoutItem DashboardItem="dateFilterDashboardItem1" Weight="1.1259640102827764" />
+        <LayoutItem DashboardItem="comboBoxDashboardItem2" Weight="0.8740359897172236" />
+        <LayoutItem DashboardItem="comboBoxDashboardItem1" />
+      </LayoutGroup>
+      <LayoutGroup>
+        <LayoutItem DashboardItem="pieDashboardItem1" Weight="0.7514995715509855" />
+        <LayoutItem DashboardItem="gridDashboardItem1" Weight="1.2485004284490144" />
       </LayoutGroup>
     </LayoutGroup>
   </LayoutTree>

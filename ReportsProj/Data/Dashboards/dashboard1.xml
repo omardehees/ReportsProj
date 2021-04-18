@@ -1,272 +1,124 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Dashboard>
-  <Title Text="خطط الحضور" />
+  <Title Text="استحقاقات وضرائب الموظف2" />
   <DataSources>
-    <SqlDataSource Name="DailyActivities_AttendancePlanPerEmployee" ComponentName="sqlDataSource1">
+    <SqlDataSource Name="DailyActivities_EmployeesIncomeLog" ComponentName="sqlDataSource1">
       <Connection Name="Management" FromAppConfig="true" />
-      <Query Type="SelectQuery" Name="DailyActivities_AttendancePlanPerEmployee">
+      <Query Type="SelectQuery" Name="DailyActivities_EmployeesIncomeLog">
         <Tables>
-          <Table Name="DailyActivities_AttendancePlanPerEmployee" />
-        </Tables>
-        <Columns>
-          <AllColumns Table="DailyActivities_AttendancePlanPerEmployee" />
-        </Columns>
-      </Query>
-      <ConnectionOptions CloseConnection="true" />
-    </SqlDataSource>
-    <SqlDataSource Name="DailyActivities_AttendancePlan" ComponentName="sqlDataSource2">
-      <Connection Name="Management" FromAppConfig="true" />
-      <Query Type="SelectQuery" Name="DailyActivities_AttendancePlan">
-        <Tables>
-          <Table Name="DailyActivities_AttendancePlan" />
-        </Tables>
-        <Columns>
-          <AllColumns Table="DailyActivities_AttendancePlan" />
-        </Columns>
-      </Query>
-      <ConnectionOptions CloseConnection="true" />
-    </SqlDataSource>
-    <SqlDataSource Name="Doc_CVs" ComponentName="sqlDataSource3">
-      <Connection Name="Management" FromAppConfig="true" />
-      <Query Type="SelectQuery" Name="Doc_CVs">
-        <Tables>
+          <Table Name="DailyActivities_EmployeesIncomeLog" />
           <Table Name="Doc_CVs" />
+          <Relation Type="Inner" Parent="DailyActivities_EmployeesIncomeLog" Nested="Doc_CVs">
+            <KeyColumn Parent="CVCode" Nested="CVCode" />
+          </Relation>
         </Tables>
         <Columns>
-          <Column Table="Doc_CVs" Name="Id" />
-          <Column Table="Doc_CVs" Name="CVCode" />
-          <Column Table="Doc_CVs" Name="FirstNameAr" />
-          <Column Table="Doc_CVs" Name="MiddleNameAr" />
-          <Column Table="Doc_CVs" Name="LastNameAr" />
-          <Column Table="Doc_CVs" Name="SurnameAr" />
-          <Column Table="Doc_CVs" Name="FirstNameEn" />
-          <Column Table="Doc_CVs" Name="MiddleNameEn" />
-          <Column Table="Doc_CVs" Name="LastNameEn" />
-          <Column Table="Doc_CVs" Name="SurnameEn" />
-          <Column Table="Doc_CVs" Name="SocialSurnameAr" />
-          <Column Table="Doc_CVs" Name="SocialSurnameEn" />
           <Column Table="Doc_CVs" Name="FullNameAr" />
-          <Column Table="Doc_CVs" Name="FullNameEn" />
-          <Column Table="Doc_CVs" Name="Sex" />
-          <Column Table="Doc_CVs" Name="MaritalStatus" />
-          <Column Table="Doc_CVs" Name="Country" />
-          <Column Table="Doc_CVs" Name="State" />
-          <Column Table="Doc_CVs" Name="City" />
-          <Column Table="Doc_CVs" Name="Address" />
-          <Column Table="Doc_CVs" Name="Language" />
-          <Column Table="Doc_CVs" Name="IDDocumentType" />
-          <Column Table="Doc_CVs" Name="IDDocumentNumber" />
-          <Column Table="Doc_CVs" Name="IDDocumentIssuedFrom" />
-          <Column Table="Doc_CVs" Name="IDDocumentIssuedAt" />
-          <Column Table="Doc_CVs" Name="IDDocumentExpireAt" />
-          <Column Table="Doc_CVs" Name="IDDocumentNotes" />
-          <Column Table="Doc_CVs" Name="DateOfBirth" />
-          <Column Table="Doc_CVs" Name="PlaceOfBirth" />
-          <Column Table="Doc_CVs" Name="Height" />
-          <Column Table="Doc_CVs" Name="Weight" />
-          <Column Table="Doc_CVs" Name="Photo" />
-          <Column Table="Doc_CVs" Name="MilitaryServiceStatus" />
-          <Column Table="Doc_CVs" Name="AcademicGradeType" />
-          <Column Table="Doc_CVs" Name="Qualification" />
-          <Column Table="Doc_CVs" Name="Specialization" />
-          <Column Table="Doc_CVs" Name="Certificates" />
-          <Column Table="Doc_CVs" Name="Skills" />
-          <Column Table="Doc_CVs" Name="Univeristy" />
-          <Column Table="Doc_CVs" Name="GraduationDate" />
-          <Column Table="Doc_CVs" Name="GraduationGrade" />
-          <Column Table="Doc_CVs" Name="GraduationProject" />
-          <Column Table="Doc_CVs" Name="GraduationProjectGrade" />
-          <Column Table="Doc_CVs" Name="ForeignLanguage" />
-          <Column Table="Doc_CVs" Name="Religion" />
-          <Column Table="Doc_CVs" Name="YearsOfExperience" />
-          <Column Table="Doc_CVs" Name="CurrentCompany" />
-          <Column Table="Doc_CVs" Name="CurrentJob" />
-          <Column Table="Doc_CVs" Name="CurrentJobDescription" />
-          <Column Table="Doc_CVs" Name="CurrentJobFrom" />
-          <Column Table="Doc_CVs" Name="CurrentJobSalary" />
-          <Column Table="Doc_CVs" Name="TheUser" />
-          <Column Table="Doc_CVs" Name="Office" />
-          <Column Table="Doc_CVs" Name="DeliveryMethod" />
-          <Column Table="Doc_CVs" Name="TheDate" />
-          <Column Table="Doc_CVs" Name="JobAdvertizementCode" />
-          <Column Table="Doc_CVs" Name="Phone" />
-          <Column Table="Doc_CVs" Name="Mobile" />
-          <Column Table="Doc_CVs" Name="Email" />
-          <Column Table="Doc_CVs" Name="Google" />
-          <Column Table="Doc_CVs" Name="YouTube" />
-          <Column Table="Doc_CVs" Name="Microsoft" />
-          <Column Table="Doc_CVs" Name="Facebook" />
-          <Column Table="Doc_CVs" Name="Instagram" />
-          <Column Table="Doc_CVs" Name="Telegram" />
-          <Column Table="Doc_CVs" Name="WhatsApp" />
-          <Column Table="Doc_CVs" Name="LinkedIn" />
-          <Column Table="Doc_CVs" Name="EmployeeId" />
-          <Column Table="Doc_CVs" Name="EmployeeAccountNumber" />
-          <Column Table="Doc_CVs" Name="Company" />
-          <Column Table="Doc_CVs" Name="Department" />
-          <Column Table="Doc_CVs" Name="PracticeLicenseIssuedFrom" />
-          <Column Table="Doc_CVs" Name="PracticeLicenseNumber" />
-          <Column Table="Doc_CVs" Name="PracticeLicenseIssuedAt" />
-          <Column Table="Doc_CVs" Name="PracticeLicenseExpireAt" />
-          <Column Table="Doc_CVs" Name="PracticeLicenseNotes" />
-          <Column Table="Doc_CVs" Name="SyndicateIssuedFrom" />
-          <Column Table="Doc_CVs" Name="SyndicateNumber" />
-          <Column Table="Doc_CVs" Name="SyndicateIssuedAt" />
-          <Column Table="Doc_CVs" Name="SyndicateExpireAt" />
-          <Column Table="Doc_CVs" Name="SyndicateNotes" />
-          <Column Table="Doc_CVs" Name="PassportIssuedFrom" />
-          <Column Table="Doc_CVs" Name="PassportNumber" />
-          <Column Table="Doc_CVs" Name="PassportIssuedAt" />
-          <Column Table="Doc_CVs" Name="PassportExpireAt" />
-          <Column Table="Doc_CVs" Name="PassportNotes" />
-          <Column Table="Doc_CVs" Name="VisaIssuedFrom" />
-          <Column Table="Doc_CVs" Name="VisaNumber" />
-          <Column Table="Doc_CVs" Name="VisaIssuedAt" />
-          <Column Table="Doc_CVs" Name="VisaExpireAt" />
-          <Column Table="Doc_CVs" Name="VisaNotes" />
-          <Column Table="Doc_CVs" Name="ResidenceIssuedFrom" />
-          <Column Table="Doc_CVs" Name="ResidenceNumber" />
-          <Column Table="Doc_CVs" Name="ResidenceIssuedAt" />
-          <Column Table="Doc_CVs" Name="ResidenceExpireAt" />
-          <Column Table="Doc_CVs" Name="ResidenceNotes" />
-          <Column Table="Doc_CVs" Name="InsuranceIssuedFrom" />
-          <Column Table="Doc_CVs" Name="InsuranceClass" />
-          <Column Table="Doc_CVs" Name="InsuranceNumber" />
-          <Column Table="Doc_CVs" Name="InsuranceTerm" />
-          <Column Table="Doc_CVs" Name="InsuranceValue" />
-          <Column Table="Doc_CVs" Name="InsuranceIssuedAt" />
-          <Column Table="Doc_CVs" Name="InsuranceExpireAt" />
-          <Column Table="Doc_CVs" Name="InsuranceEmployeeSharePercentage" />
-          <Column Table="Doc_CVs" Name="InsuranceNotes" />
-          <Column Table="Doc_CVs" Name="DrivingLicenceIssuedFrom" />
-          <Column Table="Doc_CVs" Name="DrivingLicenceClass" />
-          <Column Table="Doc_CVs" Name="DrivingLicenceNumber" />
-          <Column Table="Doc_CVs" Name="DrivingLicenceIssuedAt" />
-          <Column Table="Doc_CVs" Name="DrivingLicenceExpireAt" />
-          <Column Table="Doc_CVs" Name="DrivingLicenceNotes" />
-          <Column Table="Doc_CVs" Name="Job" />
-          <Column Table="Doc_CVs" Name="JobTreePosition" />
-          <Column Table="Doc_CVs" Name="JobDescription" />
-          <Column Table="Doc_CVs" Name="SaudiStandardJobCode" />
-          <Column Table="Doc_CVs" Name="TrainingContractCode" />
-          <Column Table="Doc_CVs" Name="TrainingContractType" />
-          <Column Table="Doc_CVs" Name="TrainingContractWeekDays" />
-          <Column Table="Doc_CVs" Name="TrainingContractWeekHours" />
-          <Column Table="Doc_CVs" Name="TrainingContractIssuedFrom" />
-          <Column Table="Doc_CVs" Name="TrainingContractIssuedAt" />
-          <Column Table="Doc_CVs" Name="TrainingContractExpireAt" />
-          <Column Table="Doc_CVs" Name="TrainingContractStatus" />
-          <Column Table="Doc_CVs" Name="TrainingContractLatestDay" />
-          <Column Table="Doc_CVs" Name="TrainingContractFinalEvaluation" />
-          <Column Table="Doc_CVs" Name="TrainingContractFinalEvaluationFrom100" />
-          <Column Table="Doc_CVs" Name="TrainingContractBasicSalary" />
-          <Column Table="Doc_CVs" Name="TrainingContractBasicTerm" />
-          <Column Table="Doc_CVs" Name="TrainingContractNotes" />
-          <Column Table="Doc_CVs" Name="EmploymentContractCode" />
-          <Column Table="Doc_CVs" Name="EmploymentContractType" />
-          <Column Table="Doc_CVs" Name="EmploymentContractWeekDays" />
-          <Column Table="Doc_CVs" Name="EmploymentContractWeekHours" />
-          <Column Table="Doc_CVs" Name="EmploymentContractIssuedFrom" />
-          <Column Table="Doc_CVs" Name="EmploymentContractIssuedAt" />
-          <Column Table="Doc_CVs" Name="EmploymentContractFirstDay" />
-          <Column Table="Doc_CVs" Name="EmploymentContractExpireAt" />
-          <Column Table="Doc_CVs" Name="EmploymentContractStatus" />
-          <Column Table="Doc_CVs" Name="EmploymentContractLatestDay" />
-          <Column Table="Doc_CVs" Name="EmploymentContractLastEvaluation" />
-          <Column Table="Doc_CVs" Name="EmploymentContractCumulativeEvaluation" />
-          <Column Table="Doc_CVs" Name="EmploymentContractCumulativeEvaluationFrom100" />
-          <Column Table="Doc_CVs" Name="EmploymentContractBasicSalary" />
-          <Column Table="Doc_CVs" Name="EmploymentContractBasicSalaryTerm" />
-          <Column Table="Doc_CVs" Name="EmploymentContractIncomeShareValue" />
-          <Column Table="Doc_CVs" Name="EmploymentContractIncomeShareRoles" />
-          <Column Table="Doc_CVs" Name="EmploymentContractOOD" />
-          <Column Table="Doc_CVs" Name="EmploymentContractSalaryIncreamentValue" />
-          <Column Table="Doc_CVs" Name="EmploymentContractSalaryIncreamentRole" />
-          <Column Table="Doc_CVs" Name="AllowancesVacationPeriodInDays" />
-          <Column Table="Doc_CVs" Name="EmploymentContractNotes" />
-          <Column Table="Doc_CVs" Name="AllowancesHousingExists" />
-          <Column Table="Doc_CVs" Name="AllowancesHousingTerm" />
-          <Column Table="Doc_CVs" Name="AllowancesHousingValue" />
-          <Column Table="Doc_CVs" Name="AllowancesHousingNotes" />
-          <Column Table="Doc_CVs" Name="AllowancesTransferExists" />
-          <Column Table="Doc_CVs" Name="AllowancesTransferTerm" />
-          <Column Table="Doc_CVs" Name="AllowancesTransferValue" />
-          <Column Table="Doc_CVs" Name="AllowancesTransferNotes" />
-          <Column Table="Doc_CVs" Name="AllowancesFoodExists" />
-          <Column Table="Doc_CVs" Name="AllowancesFoodTerm" />
-          <Column Table="Doc_CVs" Name="AllowancesFoodValue" />
-          <Column Table="Doc_CVs" Name="AllowancesFoodNotes" />
-          <Column Table="Doc_CVs" Name="AllowancesFlightTicketExists" />
-          <Column Table="Doc_CVs" Name="AllowancesFlightTicketTerm" />
-          <Column Table="Doc_CVs" Name="AllowancesFlightTicketValue" />
-          <Column Table="Doc_CVs" Name="AllowancesFlightTicketNotes" />
-          <Column Table="Doc_CVs" Name="BankTitle" />
-          <Column Table="Doc_CVs" Name="BankIBAN" />
-          <Column Table="Doc_CVs" Name="BankCurrency" />
-          <Column Table="Doc_CVs" Name="BankAccountNumber" />
-          <Column Table="Doc_CVs" Name="IsEnabled" />
-          <Column Table="Doc_CVs" Name="IsDefault" />
-          <Column Table="Doc_CVs" Name="Notes" />
-          <AllColumns Table="Doc_CVs" />
+          <AllColumns Table="DailyActivities_EmployeesIncomeLog" />
         </Columns>
       </Query>
       <ConnectionOptions CloseConnection="true" />
     </SqlDataSource>
   </DataSources>
   <Items>
-    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" DataSource="sqlDataSource1" DataMember="DailyActivities_AttendancePlanPerEmployee">
+    <Chart ComponentName="chartDashboardItem1" Name="الدخل" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <ColoringOptions MeasuresColoringMode="None" />
       <DataItems>
-        <Measure DataMember="EmployeeCode" SummaryType="Count" DefaultId="DataItem0" />
-        <Dimension DataMember="DateTo" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem1" />
-        <Dimension DataMember="AttendancePlanTitleAr" DefaultId="DataItem3" />
-        <Dimension DataMember="DateFrom" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem2" />
+        <Measure DataMember="Value" DefaultId="DataItem0" />
+        <Dimension DataMember="PaymentType" DefaultId="DataItem1" />
+        <Dimension DataMember="TheDate" DefaultId="DataItem2" />
+        <Dimension DataMember="TheDate" DateTimeGroupInterval="Month" ColoringMode="Hue" DefaultId="DataItem3" />
+        <Measure DataMember="Value" DefaultId="DataItem4">
+          <Calculation>
+            <RunningTotal />
+          </Calculation>
+          <WindowDefinition>
+            <ChartWindowDefinition />
+          </WindowDefinition>
+        </Measure>
       </DataItems>
-      <SeriesDimensions>
-        <SeriesDimension DefaultId="DataItem3" />
-      </SeriesDimensions>
       <Arguments>
-        <Argument DefaultId="DataItem1" />
         <Argument DefaultId="DataItem2" />
+        <Argument DefaultId="DataItem3" />
+        <Argument DefaultId="DataItem1" />
       </Arguments>
       <Panes>
         <Pane Name="Pane 1">
-          <AxisY Title="عدد الأفراد" />
+          <AxisY Title="قيمة الدخل التراكمي" />
+          <SecondaryAxisY Title="قيمة الدخل /التاريخ" />
           <Series>
-            <Simple SeriesType="StackedBar">
+            <Simple Name="Value" PlotOnSecondaryAxis="true">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+            <Simple Name="Total" SeriesType="Spline">
+              <Value DefaultId="DataItem4" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <AxisX TitleVisible="true" Title="تاريخ ونوع القيمة" EnableZooming="true" />
+    </Chart>
+    <DateFilter ComponentName="dateFilterDashboardItem1" Name="التاريخ من/إلي" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <DataItems>
+        <Dimension DataMember="TheDate" DefaultId="DataItem0" />
+      </DataItems>
+      <Dimension DefaultId="DataItem0" />
+    </DateFilter>
+    <ComboBox ComponentName="comboBoxDashboardItem1" Name="اسم الموظف" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <DataItems>
+        <Dimension DataMember="FullNameAr" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+    <RangeFilter ComponentName="rangeFilterDashboardItem1" Name="مدي القيمة" ShowCaption="true" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <DataItems>
+        <Measure DataMember="Value" DefaultId="DataItem0" />
+        <Dimension DataMember="Value" DefaultId="DataItem1" />
+      </DataItems>
+      <Argument DefaultId="DataItem1" />
+      <Series>
+        <Simple SeriesType="Line">
+          <Value DefaultId="DataItem0" />
+        </Simple>
+      </Series>
+    </RangeFilter>
+    <Chart ComponentName="chartDashboardItem3" Name="الضرائب" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <DataItems>
+        <Measure DataMember="Tax" DefaultId="DataItem0" />
+        <Dimension DataMember="TheDate" DateTimeGroupInterval="Month" DefaultId="DataItem1" />
+        <Dimension DataMember="TheDate" DefaultId="DataItem2" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem2" />
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="قيمة الضريبة" />
+          <Series>
+            <Simple Name="Tax">
               <Value DefaultId="DataItem0" />
             </Simple>
           </Series>
         </Pane>
       </Panes>
-      <AxisX Reverse="true" TitleVisible="true" Title="التاريخ من إلي" />
-    </Chart>
-    <Chart ComponentName="chartDashboardItem2" Name="Chart 2" DataSource="sqlDataSource3" DataMember="Doc_CVs">
-      <DataItems>
-        <Dimension DataMember="Doc_CVs_FirstNameAr" DefaultId="DataItem0" />
-        <Measure DataMember="Doc_CVs_EmploymentContractBasicSalary" DefaultId="DataItem1">
-          <NumericFormat FormatType="Currency" />
-        </Measure>
-      </DataItems>
-      <Arguments>
-        <Argument DefaultId="DataItem0" />
-      </Arguments>
-      <Panes>
-        <Pane Name="Pane 1">
-          <Series>
-            <Simple SeriesType="Spline">
-              <Value DefaultId="DataItem1" />
-            </Simple>
-          </Series>
-        </Pane>
-      </Panes>
-      <AxisX EnableZooming="true" />
+      <AxisX TitleVisible="true" Title="التوقيت" EnableZooming="true" />
     </Chart>
   </Items>
   <LayoutTree>
     <LayoutGroup>
       <LayoutGroup Orientation="Vertical">
-        <LayoutItem DashboardItem="chartDashboardItem1" />
-        <LayoutItem DashboardItem="chartDashboardItem2" />
+        <LayoutGroup Weight="0.40074906367041196">
+          <LayoutItem DashboardItem="dateFilterDashboardItem1" Weight="1.4978866391303922" />
+          <LayoutItem DashboardItem="rangeFilterDashboardItem1" Weight="1.229148012285415" />
+          <LayoutItem DashboardItem="comboBoxDashboardItem1" Weight="0.8722162849137811" />
+        </LayoutGroup>
+        <LayoutGroup Weight="1.5992509363295881">
+          <LayoutItem DashboardItem="chartDashboardItem3" Weight="1.327912731193977" />
+          <LayoutItem DashboardItem="chartDashboardItem1" Weight="1.8705891414651992" />
+        </LayoutGroup>
       </LayoutGroup>
     </LayoutGroup>
   </LayoutTree>

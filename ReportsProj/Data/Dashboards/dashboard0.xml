@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="استحقاقات وضرائب الموظف1" />
+  <DataSources>
+    <SqlDataSource Name="DailyActivities_EmployeesIncomeLog" ComponentName="sqlDataSource1">
+      <Connection Name="Management" FromAppConfig="true" />
+      <Query Type="SelectQuery" Name="DailyActivities_EmployeesIncomeLog">
+        <Tables>
+          <Table Name="DailyActivities_EmployeesIncomeLog" />
+          <Table Name="Doc_CVs" />
+          <Relation Type="Inner" Parent="DailyActivities_EmployeesIncomeLog" Nested="Doc_CVs">
+            <KeyColumn Parent="CVCode" Nested="CVCode" />
+          </Relation>
+        </Tables>
+        <Columns>
+          <Column Table="Doc_CVs" Name="FullNameAr" />
+          <AllColumns Table="DailyActivities_EmployeesIncomeLog" />
+          <Column Table="DailyActivities_EmployeesIncomeLog" Name="Id" />
+          <Column Table="DailyActivities_EmployeesIncomeLog" Name="CVCode" />
+          <Column Table="DailyActivities_EmployeesIncomeLog" Name="TheDate" />
+          <Column Table="DailyActivities_EmployeesIncomeLog" Name="Value" />
+          <Column Table="DailyActivities_EmployeesIncomeLog" Name="Tax" />
+          <Column Table="DailyActivities_EmployeesIncomeLog" Name="PaymentCode" />
+          <Column Table="DailyActivities_EmployeesIncomeLog" Name="PaymentType" />
+          <Column Table="DailyActivities_EmployeesIncomeLog" Name="PaymentMethod" />
+          <Column Table="DailyActivities_EmployeesIncomeLog" Name="Statement" />
+          <Column Table="DailyActivities_EmployeesIncomeLog" Name="IsEnabled" />
+          <Column Table="DailyActivities_EmployeesIncomeLog" Name="IsDefault" />
+          <Column Table="DailyActivities_EmployeesIncomeLog" Name="Notes" />
+        </Columns>
+      </Query>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Chart ComponentName="chartDashboardItem1" Name="Chart 1" ShowCaption="false" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <DataItems>
+        <Measure DataMember="Value" DefaultId="DataItem0" />
+        <Dimension DataMember="PaymentType" DefaultId="DataItem2" />
+        <Dimension DataMember="TheDate" ColoringMode="Hue" DefaultId="DataItem1" />
+        <Dimension DataMember="TheDate" DateTimeGroupInterval="Month" DefaultId="DataItem3" />
+        <Measure DataMember="Tax" DefaultId="DataItem5">
+          <NumericFormat FormatType="General" />
+        </Measure>
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+        <Argument DefaultId="DataItem3" />
+        <Argument DefaultId="DataItem2" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <AxisY Title="قيمة الدخل" />
+          <SecondaryAxisY Title="قيمة الضريبة" />
+          <Series>
+            <Simple Name="Value">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+            <Simple Name="Tax" PlotOnSecondaryAxis="true" SeriesType="Area">
+              <Value DefaultId="DataItem5" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+      <AxisX TitleVisible="true" Title="نوع الدخل والتاريخ" EnableZooming="true" />
+    </Chart>
+    <RangeFilter ComponentName="rangeFilterDashboardItem1" Name="القيمة من إلي" ShowCaption="true" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <DataItems>
+        <Measure DataMember="Value" DefaultId="DataItem0" />
+        <Dimension DataMember="Value" DefaultId="DataItem1" />
+      </DataItems>
+      <Argument DefaultId="DataItem1" />
+      <Series>
+        <Simple SeriesType="Line">
+          <Value DefaultId="DataItem0" />
+        </Simple>
+      </Series>
+    </RangeFilter>
+    <ComboBox ComponentName="comboBoxDashboardItem1" Name="اسم الموظف" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <DataItems>
+        <Dimension DataMember="FullNameAr" DefaultId="DataItem0" />
+      </DataItems>
+      <FilterDimensions>
+        <Dimension DefaultId="DataItem0" />
+      </FilterDimensions>
+    </ComboBox>
+    <DateFilter ComponentName="dateFilterDashboardItem1" Name="التاريخ من إلي" DataSource="sqlDataSource1" DataMember="DailyActivities_EmployeesIncomeLog">
+      <DataItems>
+        <Dimension DataMember="TheDate" DateTimeGroupInterval="DayMonthYear" DefaultId="DataItem0" />
+      </DataItems>
+      <Dimension DefaultId="DataItem0" />
+    </DateFilter>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutGroup Orientation="Vertical">
+        <LayoutGroup Weight="0.33083645443196">
+          <LayoutItem DashboardItem="rangeFilterDashboardItem1" />
+          <LayoutItem DashboardItem="dateFilterDashboardItem1" Weight="1.5393258426966292" />
+          <LayoutItem DashboardItem="comboBoxDashboardItem1" />
+        </LayoutGroup>
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="1.66916354556804" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

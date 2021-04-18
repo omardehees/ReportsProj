@@ -48,7 +48,7 @@ namespace ReportsProj.Controllers
 
 
         //---------  طلب اجازة  -------------------------------------
-        //-- Params Description-- p1 = PageName & P2=Emplpoyee Code &P3>>Report Address & P4=UserName & P5=Search From Date & P6=Search From Date & P7= Search Department & P8= Preview Or  DirectPrint &P9=MachineNumber &P10=FingerPrintType &p11=EmployeeName &P12=Job
+        //-- Params Description-- p1 = PageName & P2=Emplpoyee Code &P3>>Report Address & P4=UserName & P5=Search From Date & P6=Search To Date & P7= Search Department & P8= Preview Or  DirectPrint &P9=MachineNumber &P10=FingerPrintType &p11=EmployeeName &P12=Job
 
         //-- Test_VacationsRequests Preview Params>> /ManagementDoc?P1=P_VacationRequest&P2=1187D3C3-B755-4942-8D03-CF20E69F9AED&P3=طلب%20اجازة&P4=admin&P5=4/20/2021&P6=8/28/2021&P7=الطبي&P8=Preview&P9=عاجل&P10=طلب&P11=الجمال&P12=جلد
         //-- Test_VacationsRequests Print Params>> /ManagementDoc?P1=P_VacationRequest&P2=1187D3C3-B755-4942-8D03-CF20E69F9AED&P3=طلب%20اجازة&P4=admin&P5=4/20/2021&P6=8/28/2021&P7=الطبي&P8=Print&P9=عاجل&P10=طلب&P11=الجمال&P12=جلد
@@ -61,8 +61,8 @@ namespace ReportsProj.Controllers
         //--------- البصمات  -------------------------------------
         //-- Params Description-- p1 = PageName & P2=Emplpoyee Code &P3>>Report Address & P4=UserName & P5=Search From Date & P6=Search From Date & P7= Search Department & P8= Preview Or  DirectPrint &P9=MachineNumber &P10=FingerPrintType &p11=EmployeeName &P12=Job
 
-        //-- Test__FingerPrint Preview Params>> /ManagementDoc?P1=P_FingerPrint&P2=5&P3=سجل%20البصمات&P4=admin&P5=3/1/2021&P6=3/18/2021&P7=it&P8=Preview&P9=1&P10=حضور&P11=عمر&P12=مبرم
-        //-- Test__FingerPrint Print Params>> /ManagementDoc?P1=P_FingerPrint&P2=5&P3=سجل%20البصمات&P4=admin&P5=3/1/2021&P6=3/18/2021&P7=it&P8=Print&P9=1&P10=حضور&P11=عمر&P12=مبرم
+        //-- Test__FingerPrint Preview Params>> /ManagementDoc?P1=P_FingerPrint&P2=5&P3=سجل%20البصمات&P4=admin&P5=3/1/2021&P6=4/1/2021&P7=البرمجة&P8=Preview&P9=1&P10=حضور&P11=عمر
+        //-- Test__FingerPrint Print Params>> /ManagementDoc?P1=P_FingerPrint&P2=5&P3=سجل%20البصمات&P4=admin&P5=3/1/2021&P6=4/1/2021&P7=البرمجة&P8=Print&P9=1&P10=حضور&P11=عمر
 
         //--------- / البصمات  -------------------------------------
 
