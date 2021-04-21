@@ -46,8 +46,6 @@ namespace ReportsProj.Controllers
         //-- Test_AttendanceShiftRequest_All Preview Params>> /ManagementDoc?P1=P_AttendanceShiftRequest_LS&P3=طلب%20اذن&P4=admin&P8=Preview
         //-- Test_AttendanceShiftRequest_All Print Params>> /ManagementDoc?P1=P_AttendanceShiftRequest_LS&P3=طلب%20اذن&P4=admin&P8=Print
         //-- Test_AttendanceShiftRequest_Selected Preview Params>> /ManagementDoc?P1=P_AttendanceShiftRequest_Selected&P2=15,21&P3=طلب%20اذن&P4=admin&P8=Preview
-
-
         //---------/ طلب اذن  -------------------------------------
 
         //--------- البصمات  -------------------------------------
