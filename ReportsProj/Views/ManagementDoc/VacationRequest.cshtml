@@ -1,43 +1,4 @@
-﻿@*<link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
-    <link rel="stylesheet" href="~/css/designer.part.bundle.css" />
-    <script src="~/js/viewer.part.bundle.js"></script>
-    <script src="~/js/designer.part.bundle.js"></script>
-
-    @{
-        //Declare Report
-        ReportsProj.Reports.ManagementDoc.Rep_VacationRequest MyReport = new ReportsProj.Reports.ManagementDoc.Rep_VacationRequest();
-
-
-        //// Specify the report properties
-        if (!string.IsNullOrEmpty(TempData["P_P5"].ToString()) || !string.IsNullOrEmpty(TempData["P_P7"].ToString()))
-        {
-            if (string.IsNullOrEmpty(TempData["P_P5"].ToString()))
-            {
-                MyReport.FilterString = "[Department] ='"+ TempData["P_P7"] + "'";
-            }
-            else if (!string.IsNullOrEmpty(TempData["P_P5"].ToString()))
-            {
-                MyReport.FilterString = "[RequestFromDate] >= #" + TempData["P_P5"] + "# And [RequestToDate] <= #" + TempData["P_P6"] + "# ";
-            }
-            else if (!string.IsNullOrEmpty(TempData["P_P5"].ToString()) && !string.IsNullOrEmpty(TempData["P_P7"].ToString()))
-            {
-                MyReport.FilterString = "[RequestFromDate] >= #" + TempData["P_P5"] + "# And [RequestToDate] <= #" + TempData["P_P6"] + "# And [Department] ='" + TempData["P_P7"] + "'";
-            }
-        }
-        else
-        {
-            MyReport.FilterString = "[EmployeeCode] = {" + TempData["P_Id"] + "}";
-        }
-
-        MyReport.Parameters["P_UserName"].Value = TempData["P_User"];
-        MyReport.Parameters["P_RepHeader"].Value = TempData["P_T_Header"];
-
-        MyReport.RequestParameters = false;
-
-        // Go To Print
-        @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(MyReport)
-    }*@
-
+﻿
 <link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
 <link rel="stylesheet" href="~/css/designer.part.bundle.css" />
 <script src="~/js/viewer.part.bundle.js"></script>
@@ -47,52 +8,54 @@
     //--Declare Report
     ReportsProj.Reports.ManagementDoc.Rep_VacationRequest MyReport = new ReportsProj.Reports.ManagementDoc.Rep_VacationRequest();
 
-    //--Get Parmeters
-    string P2 = "", P3 = "", P4 = "", P5 = "", P6 = "", P7 = "", P9 = "", P10 = "", P11 = "", P12 = "";
-    P2 = TempData["P_Id"].ToString();
-    P3 = TempData["P_T_Header"].ToString();
-    P4 = TempData["P_User"].ToString();
-    P5 = TempData["P_P5"].ToString();
-    P6 = TempData["P_P6"].ToString();
-    P7 = TempData["P_P7"].ToString();
-    P9 = TempData["P_P9"].ToString();
-    P10 = TempData["P_P10"].ToString();
-    P11 = TempData["P_P11"].ToString();
-    P12 = TempData["P_P12"].ToString();
+    ////--Get Parmeters
+    //string P2 = "", P3 = "", P4 = "", P5 = "", P6 = "", P7 = "", P9 = "", P10 = "", P11 = "", P12 = "";
+    //P2 = TempData["P_Id"].ToString();
+    //P3 = TempData["P_T_Header"].ToString();
+    //P4 = TempData["P_User"].ToString();
+    //P5 = TempData["P_P5"].ToString();
+    //P6 = TempData["P_P6"].ToString();
+    //P7 = TempData["P_P7"].ToString();
+    //P9 = TempData["P_P9"].ToString();
+    //P10 = TempData["P_P10"].ToString();
+    //P11 = TempData["P_P11"].ToString();
+    //P12 = TempData["P_P12"].ToString();
 
-    //-- FilterString
-    string Query = "";
-    Query = "[RequestToDate] >= #" + P5 + "# And [RequestToDate] <= #" + P6 + "#";
-    if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P2))
-    {
-        Query = Query + "And [EmployeeCode] = {" + P2 + "}";
-    }
-    if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P7))
-    {
-        Query = Query + "And Contains([Department], '" + P7 + "')";
+    ////-- FilterString
+    //string Query = "";
+    //Query = "[RequestToDate] >= #" + P5 + "# And [RequestToDate] <= #" + P6 + "#";
+    //if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P2))
+    //{
+    //    Query = Query + "And [EmployeeCode] = {" + P2 + "}";
+    //}
+    //if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P7))
+    //{
+    //    Query = Query + "And Contains([Department], '" + P7 + "')";
 
-    }
-    if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P9))
-    {
-        Query = Query + "And Contains([Urgency], '" + P9 + "')";
-    }
-    if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P10))
-    {
-        Query = Query + "And Contains([RequestType], '" + P10 + "')";
-    }
-    if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P11))
-    {
-        Query = Query + "And Contains([Name], '" + P11 + "')";
-    }
-    if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P12))
-    {
-        Query = Query + "And Contains([Job], '" + P12 + "')";
-    }
-    MyReport.FilterString = Query;
+    //}
+    //if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P9))
+    //{
+    //    Query = Query + "And Contains([Urgency], '" + P9 + "')";
+    //}
+    //if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P10))
+    //{
+    //    Query = Query + "And Contains([RequestType], '" + P10 + "')";
+    //}
+    //if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P11))
+    //{
+    //    Query = Query + "And Contains([Name], '" + P11 + "')";
+    //}
+    //if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P12))
+    //{
+    //    Query = Query + "And Contains([Job], '" + P12 + "')";
+    //}
+    //MyReport.FilterString = Query;
+
+    MyReport.FilterString = "[Id] In (" + TempData["P_Id"] + ")";
 
     //--Set Header And Footer
-    MyReport.Parameters["P_RepHeader"].Value = P3;
-    MyReport.Parameters["P_UserName"].Value = P4;
+    MyReport.Parameters["P_RepHeader"].Value = TempData["P_T_Header"];
+    MyReport.Parameters["P_UserName"].Value = TempData["P_User"];
 
     //--Invisible Parameters Block
     MyReport.RequestParameters = false;
