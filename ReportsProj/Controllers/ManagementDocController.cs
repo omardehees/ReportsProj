@@ -22,31 +22,13 @@ namespace ReportsProj.Controllers
 
         //-- Test_adv_All  Params>> /ManagementDoc?P1=All&P3=اعلانات%20التوظيف&P4=admin  
         //-- Test_adv_Selected  Params>> /ManagementDoc?P1=Selected&P2=18,19,20&P3=اعلان%20التوظيف&P4=admin 
-        //-- Test_EmpCard_V1  Params>> /ManagementDoc?P1=P_EmpCard_V1&P2=171&P3=Employee20%Card&P4=admin 
-        //-- Test_EmpCard_V2  Params>> /ManagementDoc?P1=P_EmpCard_V2&P2=171&P3=Employee20%Card&P4=admin 
-        //-- Test_EmployemntContract  Params>> /ManagementDoc?P1=P_EmployemntContract&P2=171&P3=عقد%20توظيف&P4=admin  
+        //-- Test_EmpCard_V1  Params>> /ManagementDoc?P1=P_EmpCard_V1&P2=379&P3=Employee20%Card&P4=admin 
+        //-- Test_EmpCard_V2  Params>> /ManagementDoc?P1=P_EmpCard_V2&P2=379&P3=Employee20%Card&P4=admin 
+        //-- Test_EmployemntContract  Params>> /ManagementDoc?P1=P_EmployemntContract&P2=379&P3=عقد%20توظيف&P4=admin  
         //-- Test_EmployemntContract_All  Params>> /ManagementDoc?P1=P_All_EmploymentContract&P3=عقود%20التوظيف&P4=admin
         //-- Test_Interviews   Params>> /ManagementDoc?P1=P_Interviews&P2=1,2,3&P3=المقابلات&P4=admin
         //-- Test_Interviews_All   Params>> /ManagementDoc?P1=P_Interview_All&P3=المقابلات&P4=admin
-        //-- Test_ApplyToJob   Params>> /ManagementDoc?P1=P_ApplyToJob&P2=310&P3=التقدم%20لوظيفة&P4=admin
-        //--------- xxطلب اجازة xx -------------------------------------
-        //-- Params Description-- p1 = PageName & P2=Emplpoyee Code &P3>>Report Address & P4=UserName & P5=Search From Date & P6=Search From Date & P7= Search Department & P8= Preview Or  DirectPrint
-
-        //-- Test_VacationsRequests ById Params>> /ManagementDoc?P1=P_VacationRequest&P2=35CC2F79-9EB6-4D80-99D5-F1D3410E29EB&P3=طلب%20اجازة&P4=admin
-        //-- Test_VacationsRequests ById Params>> /ManagementDoc?P1=P_VacationRequest&P2=eab8872c-72a4-4672-9107-2601fde2f5af&P3=طلب%20اجازة&P4=admin
-        //-- Test_VacationsRequests Department Params>> /ManagementDoc?P1=P_VacationRequest&P3=طلب%20اجازة&P4=admin&P7=العظام
-        //-- Test_VacationsRequests Date Params>> MM/dd/yyyy /ManagementDoc?P1=P_VacationRequest&P3=طلب%20اجازة&P4=admin&P5=5/13/2021&P6=8/28/2021&P7=العظام&P8=Preview
-        //-- Test_VacationsRequests Preview Department_LS Params>> /ManagementDoc?P1=P_VacationRequest_LS&P3=طلب%20اجازة&P4=admin&P7=العظام&p8=Preview
-        //-- Test_VacationsRequests Print Department_LS Params>> /ManagementDoc?P1=P_VacationRequest_LS&P3=طلب%20اجازة&P4=admin&P7=العظام
-        //--------- / xxطلب اجازة xx -------------------------------------
-
-
-
-
-
-
-
-
+        //-- Test_ApplyToJob   Params>> /ManagementDoc?P1=P_ApplyToJob&P2=379&P3=التقدم%20لوظيفة&P4=admin
 
         //---------  طلب اجازة  -------------------------------------
         //-- Params Description-- p1 = PageName & P2=Emplpoyee Code &P3>>Report Address & P4=UserName & P5=Search From Date & P6=Search To Date & P7= Search Department & P8= Preview Or  DirectPrint &P9=MachineNumber &P10=FingerPrintType &p11=EmployeeName &P12=Job
@@ -54,11 +36,20 @@ namespace ReportsProj.Controllers
         //-- Test_VacationsRequests Preview Params>> /ManagementDoc?P1=P_VacationRequest&P2=1187D3C3-B755-4942-8D03-CF20E69F9AED&P3=طلب%20اجازة&P4=admin&P5=4/20/2021&P6=8/28/2021&P7=الطبي&P8=Preview&P9=عاجل&P10=طلب&P11=الجمال&P12=جلد
         //-- Test_VacationsRequests Print Params>> /ManagementDoc?P1=P_VacationRequest&P2=1187D3C3-B755-4942-8D03-CF20E69F9AED&P3=طلب%20اجازة&P4=admin&P5=4/20/2021&P6=8/28/2021&P7=الطبي&P8=Print&P9=عاجل&P10=طلب&P11=الجمال&P12=جلد
 
-        //-- Test_VacationsRequests LS Preview Params>> /ManagementDoc?P1=P_VacationRequest_LS&P2=1187D3C3-B755-4942-8D03-CF20E69F9AED&P3=طلب%20اجازة&P4=admin&P5=4/20/2021&P6=8/28/2021&P7=الطبي&P8=Preview&P9=عاجل&P10=طلب&P11=الجمال&P12=جلد
-        //-- Test_VacationsRequests LS Print Params>> /ManagementDoc?P1=P_VacationRequest_LS&P2=1187D3C3-B755-4942-8D03-CF20E69F9AED&P3=طلب%20اجازة&P4=admin&P5=4/20/2021&P6=8/28/2021&P7=الطبي&P8=Print&P9=عاجل&P10=طلب&P11=الجمال&P12=جلد
+        //-- Test_VacationsRequests LS Preview Params>> /ManagementDoc?P1=P_VacationRequest_LS&P3=طلب%20اجازة&P4=admin&P8=Preview
+        //-- Test_VacationsRequests LS Print Params>> /ManagementDoc?P1=P_VacationRequest_LS&P3=طلب%20اجازة&P4=admin
 
 
         //--------- /  طلب اجازة  -------------------------------------
+
+        //--------- طلب اذن  -------------------------------------
+        //-- Test_AttendanceShiftRequest_All Preview Params>> /ManagementDoc?P1=P_AttendanceShiftRequest_LS&P3=طلب%20اذن&P4=admin&P8=Preview
+        //-- Test_AttendanceShiftRequest_All Print Params>> /ManagementDoc?P1=P_AttendanceShiftRequest_LS&P3=طلب%20اذن&P4=admin&P8=Print
+        //-- Test_AttendanceShiftRequest_Selected Preview Params>> /ManagementDoc?P1=P_AttendanceShiftRequest_Selected&P2=15,21&P3=طلب%20اذن&P4=admin&P8=Preview
+
+
+        //---------/ طلب اذن  -------------------------------------
+
         //--------- البصمات  -------------------------------------
         //-- Params Description-- p1 = PageName & P2=Emplpoyee Code &P3>>Report Address & P4=UserName & P5=Search From Date & P6=Search From Date & P7= Search Department & P8= Preview Or  DirectPrint &P9=MachineNumber &P10=FingerPrintType &p11=EmployeeName &P12=Job
 
@@ -205,12 +196,12 @@ namespace ReportsProj.Controllers
 
 
                 case "P_VacationRequest_LS":
-                    if (string.IsNullOrEmpty(P5) || string.IsNullOrEmpty(P6))
-                    {
-                        return View("ErrorPage");
-                    }
+                    //if (string.IsNullOrEmpty(P5) || string.IsNullOrEmpty(P6))
+                    //{
+                    //    return View("ErrorPage");
+                    //}
 
-                    if (P8 == "Preview" && !string.IsNullOrEmpty(P5))
+                    if (P8 == "Preview")
                     {
                         return View("VacationRequest_LS");
                     }
@@ -220,35 +211,97 @@ namespace ReportsProj.Controllers
                         //--Declare Report
                         ReportsProj.Reports.ManagementDoc.Rep_VacationRequest_LS MyReport = new ReportsProj.Reports.ManagementDoc.Rep_VacationRequest_LS();
 
-                        //-- FilterString
-                        string Query = "";
-                        Query = "[RequestToDate] >= #" + P5 + "# And [RequestToDate] <= #" + P6 + "#";
-                        if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P2))
-                        {
-                            Query = Query + "And [EmployeeCode] = {" + P2 + "}";
-                        }
-                        if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P7))
-                        {
-                            Query = Query + "And Contains([Department], '" + P7 + "')";
+                        ////-- FilterString
+                        //string Query = "";
+                        //Query = "[RequestToDate] >= #" + P5 + "# And [RequestToDate] <= #" + P6 + "#";
+                        //if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P2))
+                        //{
+                        //    Query = Query + "And [EmployeeCode] = {" + P2 + "}";
+                        //}
+                        //if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P7))
+                        //{
+                        //    Query = Query + "And Contains([Department], '" + P7 + "')";
 
-                        }
-                        if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P9))
-                        {
-                            Query = Query + "And Contains([Urgency], '" + P9 + "')";
-                        }
-                        if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P10))
-                        {
-                            Query = Query + "And Contains([RequestType], '" + P10 + "')";
-                        }
-                        if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P11))
-                        {
-                            Query = Query + "And Contains([Name], '" + P11 + "')";
-                        }
-                        if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P12))
-                        {
-                            Query = Query + "And Contains([Job], '" + P12 + "')";
-                        }
-                        MyReport.FilterString = Query;
+                        //}
+                        //if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P9))
+                        //{
+                        //    Query = Query + "And Contains([Urgency], '" + P9 + "')";
+                        //}
+                        //if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P10))
+                        //{
+                        //    Query = Query + "And Contains([RequestType], '" + P10 + "')";
+                        //}
+                        //if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P11))
+                        //{
+                        //    Query = Query + "And Contains([Name], '" + P11 + "')";
+                        //}
+                        //if (!string.IsNullOrEmpty(P5) && !string.IsNullOrEmpty(P12))
+                        //{
+                        //    Query = Query + "And Contains([Job], '" + P12 + "')";
+                        //}
+                        //MyReport.FilterString = Query;
+
+                        //--Set Header And Footer
+                        MyReport.Parameters["P_RepHeader"].Value = P3;
+                        MyReport.Parameters["P_UserName"].Value = P4;
+
+                        //--Invisible Parameters Block
+                        MyReport.RequestParameters = false;
+
+                        // Go To Print
+                        MyReport.CreateDocument();
+                        DevExpress.XtraPrinting.PrintToolBase tool = new DevExpress.XtraPrinting.PrintToolBase(MyReport.PrintingSystem);
+                        tool.Print();
+                        return Ok();
+
+                    }
+                    //############# / Direct Printing ##################################### 
+
+                    
+
+                    case "P_AttendanceShiftRequest_Selected":
+
+                    if (P8 == "Preview")
+                    {
+                        return View("AttendanceShiftRequest");
+                    }
+                    else
+                    {
+                        //#############  Direct Printing ##################################### 
+                        //--Declare Report
+                        ReportsProj.Reports.ManagementDoc.Rep_AttendanceShiftRequest MyReport = new ReportsProj.Reports.ManagementDoc.Rep_AttendanceShiftRequest();
+
+
+
+                        //--Set Header And Footer
+                        MyReport.Parameters["P_RepHeader"].Value = P3;
+                        MyReport.Parameters["P_UserName"].Value = P4;
+
+                        //--Invisible Parameters Block
+                        MyReport.RequestParameters = false;
+
+                        // Go To Print
+                        MyReport.CreateDocument();
+                        DevExpress.XtraPrinting.PrintToolBase tool = new DevExpress.XtraPrinting.PrintToolBase(MyReport.PrintingSystem);
+                        tool.Print();
+                        return Ok();
+
+                    }
+                //############# / Direct Printing ##################################### 
+
+                case "P_AttendanceShiftRequest_LS":
+
+                    if (P8 == "Preview")
+                    {
+                        return View("AttendanceShiftRequest_All");
+                    }
+                    else
+                    {
+                        //#############  Direct Printing ##################################### 
+                        //--Declare Report
+                        ReportsProj.Reports.ManagementDoc.Rep_AttendanceShiftRequest_All MyReport = new ReportsProj.Reports.ManagementDoc.Rep_AttendanceShiftRequest_All();
+
+                   
 
                         //--Set Header And Footer
                         MyReport.Parameters["P_RepHeader"].Value = P3;

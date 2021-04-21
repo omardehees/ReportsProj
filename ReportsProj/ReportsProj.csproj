@@ -29,6 +29,8 @@
     <None Remove="Reports\ManagementDoc\Rep_All_EmploymentAdvertizement.repx" />
     <None Remove="Reports\ManagementDoc\Rep_All_EmploymentContract.repx" />
     <None Remove="Reports\ManagementDoc\Rep_ApplyToJob.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_AttendanceShiftRequest.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_AttendanceShiftRequest_All.repx" />
     <None Remove="Reports\ManagementDoc\Rep_EmpCard_V1.repx" />
     <None Remove="Reports\ManagementDoc\Rep_EmpCard_V2.repx" />
     <None Remove="Reports\ManagementDoc\Rep_EmployemntContract.repx" />
@@ -63,6 +65,8 @@
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_All_EmploymentAdvertizement.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_All_EmploymentContract.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_ApplyToJob.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_AttendanceShiftRequest.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_AttendanceShiftRequest_All.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_EmpCard_V1.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_EmpCard_V2.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_EmployemntContract.repx" />
@@ -167,6 +171,18 @@
     </Compile>
     <Compile Update="Reports\ManagementDoc\Rep_ApplyToJob.Designer.cs">
       <DependentUpon>Rep_ApplyToJob.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_AttendanceShiftRequest.cs">
+      <DependentUpon>Rep_AttendanceShiftRequest.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_AttendanceShiftRequest.Designer.cs">
+      <DependentUpon>Rep_AttendanceShiftRequest.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_AttendanceShiftRequest_All.cs">
+      <DependentUpon>Rep_AttendanceShiftRequest_All.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_AttendanceShiftRequest_All.Designer.cs">
+      <DependentUpon>Rep_AttendanceShiftRequest_All.repx</DependentUpon>
     </Compile>
     <Compile Update="Reports\ManagementDoc\Rep_EmpCard_V1.cs">
       <DependentUpon>Rep_EmpCard_V1.repx</DependentUpon>
