@@ -22,7 +22,7 @@ namespace ReportsProj.Controllers
 
         //-- Test_adv_All  Params>> /ManagementDoc?P1=All&P3=اعلانات%20التوظيف&P4=admin  
         //-- Test_adv_Selected  Params>> /ManagementDoc?P1=Selected&P2=18,19,20&P3=اعلان%20التوظيف&P4=admin 
-        //-- Test_EmpCard_V1  Params>> /ManagementDoc?P1=P_EmpCard_V1&P2=863&P3=كارت%20الموظف&P4=admin 
+        //-- Test_EmpCard_V1  Params>> /ManagementDoc?P1=P_EmpCard_V1&P2=899&P3=كارت%20الموظف&P4=admin 
         //-- Test_EmpCard_V2  Params>> /ManagementDoc?P1=P_EmpCard_V2&P2=863&P3=كارت%20الموظف&P4=admin 
         //-- Test_EmployemntContract  Params>> /ManagementDoc?P1=P_EmployemntContract&P2=379&P3=عقد%20توظيف&P4=admin  
         //-- Test_EmployemntContract_All  Params>> /ManagementDoc?P1=P_All_EmploymentContract&P3=عقود%20التوظيف&P4=admin
