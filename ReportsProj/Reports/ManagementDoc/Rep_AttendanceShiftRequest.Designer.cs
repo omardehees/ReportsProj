@@ -24,10 +24,8 @@ namespace ReportsProj.Reports.ManagementDoc {
             this.label8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label8");
             this.label9 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label9");
             this.label10 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label10");
-            this.label38 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label38");
             this.label39 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label39");
             this.label40 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label40");
-            this.label41 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label41");
             this.label34 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label34");
             this.label35 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label35");
             this.label36 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label36");
@@ -58,7 +56,8 @@ namespace ReportsProj.Reports.ManagementDoc {
             this.line3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line3");
             this.label1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label1");
             this.label5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label5");
-            this.label2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label2");
+            this.label13 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label13");
+            this.label14 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label14");
 
             // Parameters
             this.P_RepHeader = reportInitializer.GetParameter("P_RepHeader");
@@ -79,10 +78,8 @@ namespace ReportsProj.Reports.ManagementDoc {
         private DevExpress.XtraReports.UI.XRLabel label8;
         private DevExpress.XtraReports.UI.XRLabel label9;
         private DevExpress.XtraReports.UI.XRLabel label10;
-        private DevExpress.XtraReports.UI.XRLabel label38;
         private DevExpress.XtraReports.UI.XRLabel label39;
         private DevExpress.XtraReports.UI.XRLabel label40;
-        private DevExpress.XtraReports.UI.XRLabel label41;
         private DevExpress.XtraReports.UI.XRLabel label34;
         private DevExpress.XtraReports.UI.XRLabel label35;
         private DevExpress.XtraReports.UI.XRLabel label36;
@@ -117,6 +114,7 @@ namespace ReportsProj.Reports.ManagementDoc {
         private DevExpress.XtraReports.UI.CalculatedField VacDaysNo;
         private DevExpress.XtraReports.Parameters.Parameter P_RepHeader;
         private DevExpress.XtraReports.Parameters.Parameter P_UserName;
-        private DevExpress.XtraReports.UI.XRLabel label2;
+        private DevExpress.XtraReports.UI.XRLabel label13;
+        private DevExpress.XtraReports.UI.XRLabel label14;
     }
 }
