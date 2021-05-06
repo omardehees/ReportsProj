@@ -1,0 +1,98 @@
+﻿@*<link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
+    <link rel="stylesheet" href="~/css/designer.part.bundle.css" />
+    <script src="~/js/viewer.part.bundle.js"></script>
+    <script src="~/js/designer.part.bundle.js"></script>
+
+    @{
+        //--Declare Report
+        ReportsProj.Reports.ManagementDoc.Rep_AttendancePlanPerEmployee MyReport = new ReportsProj.Reports.ManagementDoc.Rep_AttendancePlanPerEmployee();
+
+        //--Get Parmeters
+        string P2 = "", P3 = "", P4 = "", P5 = "", P6 = "", P7 = "", P9 = "", P10 = "", P11 = "", P12 = "";
+        P2 = TempData["P_Id"].ToString();
+        P3 = TempData["P_T_Header"].ToString();
+        P4 = TempData["P_User"].ToString();
+        P5 = TempData["P_P5"].ToString();
+        P6 = TempData["P_P6"].ToString();
+        P7 = TempData["P_P7"].ToString();
+        P9 = TempData["P_P9"].ToString();
+        P10 = TempData["P_P10"].ToString();
+        P11 = TempData["P_P11"].ToString();
+        P12 = TempData["P_P12"].ToString();
+
+        //-- FilterString
+        //--  P2=EmpId , p5=AttendanceDateTime from ,  p6=AttendanceDateTime to ,  p7=Department , p10=AttendanceType , p12=Job
+        string Query = "";
+
+
+        if (!string.IsNullOrEmpty(P5))
+        {
+            P6 = DateTime.Parse(P6).AddDays(1).ToString("MM/dd/yyyy");
+            Query = "[AttendanceDateTime] >= #" + P5 + "# And [AttendanceDateTime] <= #" + P6 + "#";
+        }
+
+
+        if (!string.IsNullOrEmpty(P2))
+        {
+            Query = Query + "And [EmployeeId] = " + P2 + "";
+        }
+
+
+
+        if (!string.IsNullOrEmpty(P7))
+        {
+            Query = Query + "And [Department] = '" + P7 + "'";
+        }
+
+        if (!string.IsNullOrEmpty(P10))
+        {
+            Query = Query + "And Contains([AttendanceType], '" + P10 + "')";
+        }
+
+        if (!string.IsNullOrEmpty(P12))
+        {
+            Query = Query + "And Contains([Job], '" + P12 + "')";
+        }
+        MyReport.FilterString = Query;
+
+        //--Set Header And Footer
+        MyReport.Parameters["P_RepHeader"].Value = P3;
+        MyReport.Parameters["P_UserName"].Value = P4;
+
+        //--Invisible Parameters Block
+        MyReport.RequestParameters = false;
+
+        // Go To Print
+        @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(MyReport)
+
+    }*@
+
+
+
+<link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
+<link rel="stylesheet" href="~/css/designer.part.bundle.css" />
+<script src="~/js/viewer.part.bundle.js"></script>
+<script src="~/js/designer.part.bundle.js"></script>
+
+@{
+    //Declare Report
+    ReportsProj.Reports.ManagementDoc.Rep_AttendancePlanPerEmployee MyReport = new ReportsProj.Reports.ManagementDoc.Rep_AttendancePlanPerEmployee();
+
+
+    // Specify the report properties
+    MyReport.FilterString = "[Id] In (" + TempData["P_Id"] + ")";
+    MyReport.Parameters["P_UserName"].Value = TempData["P_User"];
+    MyReport.Parameters["P_RepHeader"].Value = TempData["P_T_Header"];
+
+    MyReport.RequestParameters = false;
+
+    // Go To Print
+    @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(MyReport)
+
+    //--Invisible Parameters Block
+    MyReport.RequestParameters = false;
+
+    // Go To Print
+    @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(MyReport)
+
+}

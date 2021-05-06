@@ -54,7 +54,16 @@ namespace ReportsProj.Controllers
         //-- Test__FingerPrint Preview Params>> /ManagementDoc?P1=P_FingerPrint&P2=5&P3=سجل%20البصمات&P4=admin&P5=3/1/2021&P6=4/1/2021&P7=البرمجة&P8=Preview&P9=1&P10=حضور&P11=عمر
         //-- Test__FingerPrint Print Params>> /ManagementDoc?P1=P_FingerPrint&P2=5&P3=سجل%20البصمات&P4=admin&P5=3/1/2021&P6=4/1/2021&P7=البرمجة&P8=Print&P9=1&P10=حضور&P11=عمر
 
+
+        //-- Test__FingerPrint_Filterd Params>> /ManagementDoc?P1=P_FingerPrint_Filterd&P2=322989,322990,322991,322992
+
+
         //--------- / البصمات  -------------------------------------
+
+        //--------- خطط الحضور  -------------------------------------
+        //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_AttendancePlane&P2=12,13,14,15,16,17,18
+        //--------- / خطط الحضور  -------------------------------------
+
 
         public IActionResult Index(string P1 = "", string P2 = "", string P3 = "", string P4 = "", string P5 = "", string P6 = "", string P7 = "", string P8 = "", string P9 = "", string P10 = "", string P11 = "", string P12 = "")
         {
@@ -316,6 +325,17 @@ namespace ReportsProj.Controllers
                         return Ok();
 
                     }
+
+                 //--------- Attendance Plane per Employee ---------
+                  case "P_AttendancePlane":
+                  return View("AttendancePlane_All");
+                //--------- / Attendance Plane per Employee ---------
+
+                //--------- FingerPrint_Filterd ---------
+                case "P_FingerPrint_Filterd":
+                    return View("FingerPrint_Filterd");
+                //--------- / FingerPrint_Filterd ---------
+
                 //############# / Direct Printing ##################################### 
 
 
