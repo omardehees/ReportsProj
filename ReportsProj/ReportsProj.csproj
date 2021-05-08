@@ -30,6 +30,8 @@
     <None Remove="Reports\ManagementDoc\Rep_All_EmploymentContract.repx" />
     <None Remove="Reports\ManagementDoc\Rep_ApplyToJob.repx" />
     <None Remove="Reports\ManagementDoc\Rep_AttendancePlanPerEmployee.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_AttendancePlan_port_Ar.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_AttendancePlan_port_En.repx" />
     <None Remove="Reports\ManagementDoc\Rep_AttendanceShiftRequest.repx" />
     <None Remove="Reports\ManagementDoc\Rep_AttendanceShiftRequest_All.repx" />
     <None Remove="Reports\ManagementDoc\Rep_EmpCard_V1.repx" />
@@ -41,6 +43,7 @@
     <None Remove="Reports\ManagementDoc\Rep_TrainingContract.repx" />
     <None Remove="Reports\ManagementDoc\Rep_VacationRequest.repx" />
     <None Remove="Reports\ManagementDoc\Rep_VacationRequest_LS.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_VacationsSummary.repx" />
     <None Remove="Reports\MyInvoices.repx" />
     <None Remove="Reports\PM\Rep_EmployeeActions.repx" />
     <None Remove="Reports\Rep_CSRBarCodeQR - Copy.cs________" />
@@ -67,6 +70,8 @@
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_All_EmploymentAdvertizement.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_All_EmploymentContract.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_ApplyToJob.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_AttendancePlan_port_Ar.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_AttendancePlan_port_En.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_AttendanceShiftRequest.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_AttendanceShiftRequest_All.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_EmpCard_V1.repx" />
@@ -78,6 +83,7 @@
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_TrainingContract.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_VacationRequest.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_VacationRequest_LS.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_VacationsSummary.repx" />
     <EmbeddedResource Include="Reports\MyInvoices.repx" />
     <EmbeddedResource Include="Reports\PM\Rep_EmployeeActions.repx" />
     <EmbeddedResource Include="Reports\Rep_CSRQR_A.repx" />
@@ -180,6 +186,18 @@
     <Compile Update="Reports\ManagementDoc\Rep_ApplyToJob.Designer.cs">
       <DependentUpon>Rep_ApplyToJob.repx</DependentUpon>
     </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_AttendancePlan_port_Ar.cs">
+      <DependentUpon>Rep_AttendancePlan_port_Ar.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_AttendancePlan_port_Ar.Designer.cs">
+      <DependentUpon>Rep_AttendancePlan_port_Ar.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_AttendancePlan_port_En.cs">
+      <DependentUpon>Rep_AttendancePlan_port_En.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_AttendancePlan_port_En.Designer.cs">
+      <DependentUpon>Rep_AttendancePlan_port_En.repx</DependentUpon>
+    </Compile>
     <Compile Update="Reports\ManagementDoc\Rep_AttendanceShiftRequest.cs">
       <DependentUpon>Rep_AttendanceShiftRequest.repx</DependentUpon>
     </Compile>
@@ -245,6 +263,12 @@
     </Compile>
     <Compile Update="Reports\ManagementDoc\Rep_VacationRequest_LS.Designer.cs">
       <DependentUpon>Rep_VacationRequest_LS.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_VacationsSummary.cs">
+      <DependentUpon>Rep_VacationsSummary.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_VacationsSummary.Designer.cs">
+      <DependentUpon>Rep_VacationsSummary.repx</DependentUpon>
     </Compile>
     <Compile Update="Reports\MyInvoices.cs">
       <DependentUpon>MyInvoices.repx</DependentUpon>

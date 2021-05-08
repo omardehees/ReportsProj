@@ -64,6 +64,17 @@ namespace ReportsProj.Controllers
         //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_AttendancePlane&P2=12,13,14,15,16,17,18
         //--------- / خطط الحضور  -------------------------------------
 
+        //--------- خطط الحضور بورتريه عربي  -------------------------------------
+        //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_AttendancePlane_Port_Ar&P2=109,110,111,112
+        //--------- /خطط الحضور بورتريه عربي   -------------------------------------
+
+        //--------- خطط الحضور بورتريه انجليزي  -------------------------------------
+        //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_AttendancePlane_Port_En&P2=109,110,111,112
+        //--------- /خطط الحضور بورتريه انجليزي   -------------------------------------
+
+        //--------- ملخص الاجازات  -------------------------------------
+        //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_VacationsSummary
+        //--------- / ملخص الحضور  -------------------------------------
 
         public IActionResult Index(string P1 = "", string P2 = "", string P3 = "", string P4 = "", string P5 = "", string P6 = "", string P7 = "", string P8 = "", string P9 = "", string P10 = "", string P11 = "", string P12 = "")
         {
@@ -331,9 +342,24 @@ namespace ReportsProj.Controllers
                   return View("AttendancePlane_All");
                 //--------- / Attendance Plane per Employee ---------
 
+                //--------- Attendance Plane per Employee ---------
+                case "P_AttendancePlane_Port_Ar":
+                    return View("AttendancePlane_Port_Ar");
+                //--------- / Attendance Plane per Employee ---------
+
+                //--------- Attendance Plane per Employee ---------
+                case "P_AttendancePlane_Port_En":
+                    return View("AttendancePlane_Port_En");
+                //--------- / Attendance Plane per Employee ---------
+
                 //--------- FingerPrint_Filterd ---------
                 case "P_FingerPrint_Filterd":
                     return View("FingerPrint_Filterd");
+                //--------- / FingerPrint_Filterd ---------P_VacationsSummary
+
+                //--------- Vacations Summary ---------
+                case "P_VacationsSummary":
+                    return View("VacationsSummary");
                 //--------- / FingerPrint_Filterd ---------
 
                 //############# / Direct Printing ##################################### 
