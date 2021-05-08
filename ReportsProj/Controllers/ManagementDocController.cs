@@ -76,6 +76,11 @@ namespace ReportsProj.Controllers
         //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_VacationsSummary
         //--------- / ملخص الحضور  -------------------------------------
 
+        //--------- خطط الحضور1  -------------------------------------
+        //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_Schedule1&P3=جدول شهر مايو 2021
+        //--------- / 1خطط الحضور  -------------------------------------
+
+
         public IActionResult Index(string P1 = "", string P2 = "", string P3 = "", string P4 = "", string P5 = "", string P6 = "", string P7 = "", string P8 = "", string P9 = "", string P10 = "", string P11 = "", string P12 = "")
         {
             TempData["P_Id"] = P2;
@@ -361,6 +366,11 @@ namespace ReportsProj.Controllers
                 case "P_VacationsSummary":
                     return View("VacationsSummary");
                 //--------- / FingerPrint_Filterd ---------
+
+                //--------- Schedule1  ---------
+                case "P_Schedule1":
+                    return View("Schedule1");
+                //------ / Schedule1 --------
 
                 //############# / Direct Printing ##################################### 
 
