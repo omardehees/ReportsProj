@@ -5,10 +5,12 @@
 
 @{
     //Declare Report
-    ReportsProj.Reports.ManagementDoc.Rep_Schedule1 MyReport = new ReportsProj.Reports.ManagementDoc.Rep_Schedule1();
+    ReportsProj.Reports.ManagementDoc.Rep_Schedule_Friday MyReport = new ReportsProj.Reports.ManagementDoc.Rep_Schedule_Friday();
 
 
     // Specify the report properties
+
+
     MyReport.Parameters["P_RepHeader"].Value = TempData["P_T_Header"];
     MyReport.Parameters["P_UserName"].Value = TempData["P_User"];
 

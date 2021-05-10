@@ -3,9 +3,9 @@ using DevExpress.XtraReports.UI;
 
 namespace ReportsProj.Reports.ManagementDoc
 {
-    public partial class Rep_Schedule1
+    public partial class Rep_Schedule_Month
     {
-        public Rep_Schedule1()
+        public Rep_Schedule_Month()
         {
             InitializeComponent();
         }

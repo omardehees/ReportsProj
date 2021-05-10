@@ -40,7 +40,9 @@
     <None Remove="Reports\ManagementDoc\Rep_FingerPrint.repx" />
     <None Remove="Reports\ManagementDoc\Rep_Interviews.repx" />
     <None Remove="Reports\ManagementDoc\Rep_Interview_All.repx" />
-    <None Remove="Reports\ManagementDoc\Rep_Schedule1.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_Schedule_All.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_Schedule_Friday.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_Schedule_Month.repx" />
     <None Remove="Reports\ManagementDoc\Rep_TrainingContract.repx" />
     <None Remove="Reports\ManagementDoc\Rep_VacationRequest.repx" />
     <None Remove="Reports\ManagementDoc\Rep_VacationRequest_LS.repx" />
@@ -81,7 +83,9 @@
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_FingerPrint.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_Interviews.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_Interview_All.repx" />
-    <EmbeddedResource Include="Reports\ManagementDoc\Rep_Schedule1.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_Schedule_All.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_Schedule_Friday.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_Schedule_Month.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_TrainingContract.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_VacationRequest.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_VacationRequest_LS.repx" />
@@ -248,11 +252,23 @@
     <Compile Update="Reports\ManagementDoc\Rep_Interview_All.Designer.cs">
       <DependentUpon>Rep_Interview_All.repx</DependentUpon>
     </Compile>
-    <Compile Update="Reports\ManagementDoc\Rep_Schedule1.cs">
-      <DependentUpon>Rep_Schedule1.repx</DependentUpon>
+    <Compile Update="Reports\ManagementDoc\Rep_Schedule_All.cs">
+      <DependentUpon>Rep_Schedule_All.repx</DependentUpon>
     </Compile>
-    <Compile Update="Reports\ManagementDoc\Rep_Schedule1.Designer.cs">
-      <DependentUpon>Rep_Schedule1.repx</DependentUpon>
+    <Compile Update="Reports\ManagementDoc\Rep_Schedule_All.Designer.cs">
+      <DependentUpon>Rep_Schedule_All.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_Schedule_Friday.cs">
+      <DependentUpon>Rep_Schedule_Friday.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_Schedule_Friday.Designer.cs">
+      <DependentUpon>Rep_Schedule_Friday.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_Schedule_Month.cs">
+      <DependentUpon>Rep_Schedule_Month.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_Schedule_Month.Designer.cs">
+      <DependentUpon>Rep_Schedule_Month.repx</DependentUpon>
     </Compile>
     <Compile Update="Reports\ManagementDoc\Rep_TrainingContract.cs">
       <DependentUpon>Rep_TrainingContract.repx</DependentUpon>

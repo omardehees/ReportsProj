@@ -76,10 +76,17 @@ namespace ReportsProj.Controllers
         //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_VacationsSummary
         //--------- / ملخص الحضور  -------------------------------------
 
-        //--------- خطط الحضور1  -------------------------------------
-        //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_Schedule1&P3=جدول شهر مايو 2021
-        //--------- / 1خطط الحضور  -------------------------------------
+        //--------- خطط الحضورالشهري  -------------------------------------
+        //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_Schedule_Month&P3=جدول شهر مايو 2021      &P5=5/1/2021&P6=5/31/2021
+        //--------- / خطط الحضورالشهري  -------------------------------------
 
+        //--------- خطط الحضورالجمعة  -------------------------------------
+        //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_Schedule_Friday&P3=جدول شهر مايو 2021      &P5=5/1/2021&P6=5/31/2021
+        //--------- / خطط الحضورالجمعة  -------------------------------------
+
+        //--------- خطط الحضور الكل  -------------------------------------
+        //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_Schedule_All&P3=جدول شهر مايو 2021&P2=120,121     &P5=5/1/2021&P6=5/31/2021
+        //--------- /خطط الحضور الكل  -------------------------------------
 
         public IActionResult Index(string P1 = "", string P2 = "", string P3 = "", string P4 = "", string P5 = "", string P6 = "", string P7 = "", string P8 = "", string P9 = "", string P10 = "", string P11 = "", string P12 = "")
         {
@@ -367,10 +374,21 @@ namespace ReportsProj.Controllers
                     return View("VacationsSummary");
                 //--------- / FingerPrint_Filterd ---------
 
-                //--------- Schedule1  ---------
-                case "P_Schedule1":
-                    return View("Schedule1");
-                //------ / Schedule1 --------
+                //--------- Schedule_Month  ---------
+                case "P_Schedule_Month":
+                    return View("Schedule_Month");
+                //------ / Schedule_Month --------
+
+                //--------- Schedule_Friday  ---------
+                case "P_Schedule_Friday":
+                    return View("Schedule_Friday");
+                //------ / Schedule_Friday --------
+
+                //--------- Schedule_All  ---------
+                case "P_Schedule_All":
+                    return View("Schedule_All");
+                //------ / Schedule_All --------
+
 
                 //############# / Direct Printing ##################################### 
 
