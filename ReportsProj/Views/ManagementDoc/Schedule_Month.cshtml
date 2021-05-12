@@ -9,8 +9,16 @@
 
 
     // Specify the report properties
+    string MyDepartment = "";
+    MyDepartment = TempData["P_P7"] as string;
+    string query = "";
+    //MyReport.FilterString = " GetDayOfWeek([AttendanceDate]) <> 5 And[AttendanceDate] >= #" + TempData["P_P5"] + "# And [AttendanceDate] <= #" + TempData["P_P6"] + "# ";
 
-    //MyReport.FilterString = " [Id] = (SELECT min([Id]) FROM [DailyActivities_AttendancePlanPerEmployee2] WHERE EmployeeId = d.EmployeeId AND DATEPART(WEEKDAY,[AttendanceDate])<> 6 AND [AttendanceDate]>= #" + TempData["P_P5"] + "# AND [AttendanceDate]<=#" + TempData["P_P6"] + "#)";
+    if (!string.IsNullOrEmpty(MyDepartment) ) // || MyDepartment != "null")
+    {
+        query = " Contains([Department], '" + MyDepartment + "') ";
+    }
+    MyReport.FilterString = query;
 
     MyReport.Parameters["P_RepHeader"].Value = TempData["P_T_Header"];
     MyReport.Parameters["P_UserName"].Value = TempData["P_User"];

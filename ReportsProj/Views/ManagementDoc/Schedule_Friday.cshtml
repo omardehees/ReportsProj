@@ -7,9 +7,16 @@
     //Declare Report
     ReportsProj.Reports.ManagementDoc.Rep_Schedule_Friday MyReport = new ReportsProj.Reports.ManagementDoc.Rep_Schedule_Friday();
 
-
+    string MyDepartment = "";
+    MyDepartment = TempData["P_P7"] as string;
     // Specify the report properties
+    string query = " GetDayOfWeek([AttendanceDate]) = 5 And[AttendanceDate] >= #" + TempData["P_P5"] + "# And [AttendanceDate] <= #" + TempData["P_P6"] + "#  ";
+    if ( !string.IsNullOrEmpty(MyDepartment) )
+    {
+        query=query + " And Contains([Department], '" + MyDepartment + "') ";
+    }
 
+    MyReport.FilterString = query;
 
     MyReport.Parameters["P_RepHeader"].Value = TempData["P_T_Header"];
     MyReport.Parameters["P_UserName"].Value = TempData["P_User"];

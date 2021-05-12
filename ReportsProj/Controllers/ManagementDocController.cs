@@ -77,15 +77,15 @@ namespace ReportsProj.Controllers
         //--------- / ملخص الحضور  -------------------------------------
 
         //--------- خطط الحضورالشهري  -------------------------------------
-        //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_Schedule_Month&P3=جدول شهر مايو 2021      &P5=5/1/2021&P6=5/31/2021
+        //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_Schedule_Month&P3= جدول شهر مايو 2021 باستثناء يوم الجمعة&P7=برمج     &P5=5/1/2021&P6=5/31/2021
         //--------- / خطط الحضورالشهري  -------------------------------------
 
         //--------- خطط الحضورالجمعة  -------------------------------------
-        //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_Schedule_Friday&P3=جدول شهر مايو 2021      &P5=5/1/2021&P6=5/31/2021
+        //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_Schedule_Friday&P3=جدول شهر مايو-الجمعة 2021&P5=5/1/2021&P6=5/31/2021&P7=برمج
         //--------- / خطط الحضورالجمعة  -------------------------------------
 
         //--------- خطط الحضور الكل  -------------------------------------
-        //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_Schedule_All&P3=جدول شهر مايو 2021&P2=120,121     &P5=5/1/2021&P6=5/31/2021
+        //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_Schedule_All&P3=جدول شهر مايو 2021
         //--------- /خطط الحضور الكل  -------------------------------------
 
         public IActionResult Index(string P1 = "", string P2 = "", string P3 = "", string P4 = "", string P5 = "", string P6 = "", string P7 = "", string P8 = "", string P9 = "", string P10 = "", string P11 = "", string P12 = "")
