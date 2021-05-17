@@ -774,7 +774,7 @@
         <Item88 Ref="465" ControlType="XRLabel" Name="label12" RightToLeft="Yes" Text="اسم الموظف " TextAlignment="MiddleCenter" SizeF="160.422363,48.58705" LocationFloat="152.598877,167.393021" Font="Times New Roman, 12pt, style=Bold, charSet=0" Padding="2,2,0,0,100" BorderColor="Gray" Borders="All">
           <StylePriority Ref="466" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
         </Item88>
-        <Item89 Ref="467" ControlType="XRLabel" Name="xrLabel43" RightToLeft="Yes" Text="بيانات " TextAlignment="MiddleCenter" SizeF="395.8335,27.1666565" LocationFloat="400.593872,116.416626" Font="Times New Roman, 18pt, style=Bold, Underline, charSet=0" Padding="2,2,0,0,100">
+        <Item89 Ref="467" ControlType="XRLabel" Name="xrLabel43" RightToLeft="Yes" Text="بيانات " TextAlignment="MiddleCenter" SizeF="492.303131,27.1666489" LocationFloat="352.677216,116.416649" Font="Times New Roman, 18pt, style=Bold, Underline, charSet=0" Padding="2,2,0,0,100">
           <ExpressionBindings>
             <Item1 Ref="468" EventName="BeforePrint" PropertyName="Text" Expression="?P_RepHeader" />
           </ExpressionBindings>

@@ -193,6 +193,8 @@ namespace ReportsProj.Reports.ManagementDoc {
             // Parameters
             this.P_RepHeader = reportInitializer.GetParameter("P_RepHeader");
             this.P_UserName = reportInitializer.GetParameter("P_UserName");
+            this.P_DateFrom = reportInitializer.GetParameter("P_DateFrom");
+            this.P_DateTo = reportInitializer.GetParameter("P_DateTo");
 
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
@@ -388,5 +390,7 @@ namespace ReportsProj.Reports.ManagementDoc {
         private DevExpress.XtraReports.UI.CalculatedField VacDaysNo;
         private DevExpress.XtraReports.Parameters.Parameter P_RepHeader;
         private DevExpress.XtraReports.Parameters.Parameter P_UserName;
+        private DevExpress.XtraReports.Parameters.Parameter P_DateFrom;
+        private DevExpress.XtraReports.Parameters.Parameter P_DateTo;
     }
 }

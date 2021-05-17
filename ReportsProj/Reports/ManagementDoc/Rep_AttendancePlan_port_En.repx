@@ -96,7 +96,7 @@
         <Item9 Ref="52" ControlType="XRLabel" Name="label12" RightToLeft="Yes" Text="Employee Name" TextAlignment="MiddleCenter" SizeF="162.722656,47.9269257" LocationFloat="95.7067947,167.053162" Font="Times New Roman, 12pt, style=Bold, charSet=0" Padding="2,2,0,0,100" BorderColor="Gray" Borders="All">
           <StylePriority Ref="53" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
         </Item9>
-        <Item10 Ref="54" ControlType="XRLabel" Name="xrLabel43" RightToLeft="Yes" Text="Attendance Plans" TextAlignment="MiddleCenter" SizeF="259.375183,22.9999771" LocationFloat="290.078674,121.708282" Font="Times New Roman, 18pt, style=Bold, Underline, charSet=0" Padding="2,2,0,0,100">
+        <Item10 Ref="54" ControlType="XRLabel" Name="xrLabel43" RightToLeft="Yes" Text="Finger Prints" TextAlignment="MiddleCenter" SizeF="259.375183,22.9999771" LocationFloat="290.078674,121.708282" Font="Times New Roman, 18pt, style=Bold, Underline, charSet=0" Padding="2,2,0,0,100">
           <StylePriority Ref="55" UseFont="false" UseTextAlignment="false" />
         </Item10>
         <Item11 Ref="56" ControlType="XRLabel" Name="xrLabel66" Multiline="true" Text="ATTADAWE MEDICAL CLINICS" TextAlignment="TopCenter" SizeF="294.761871,25.12505" LocationFloat="12.7506809,10" Font="Arial, 14pt, style=Bold" Padding="2,2,0,0,100">

@@ -20,6 +20,9 @@
     }
     MyReport.FilterString = query;
 
+    MyReport.Parameters["P_DateFrom"].Value = TempData["P_P5"];
+    MyReport.Parameters["P_DateTo"].Value = TempData["P_P6"];
+
     MyReport.Parameters["P_RepHeader"].Value = TempData["P_T_Header"];
     MyReport.Parameters["P_UserName"].Value = TempData["P_User"];
 
