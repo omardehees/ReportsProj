@@ -26,6 +26,7 @@
     <None Remove="Reports\ManagementDef\Rep_ManagementAll.repx" />
     <None Remove="Reports\ManagementDef\Rep_ManagementSelected.repx" />
     <None Remove="Reports\ManagementDef\Rep_Management_DatailsSelected.repx" />
+    <None Remove="Reports\ManagementDoc\AttendancePlane_Permites_Ar.repx" />
     <None Remove="Reports\ManagementDoc\Rep_All_EmploymentAdvertizement.repx" />
     <None Remove="Reports\ManagementDoc\Rep_All_EmploymentContract.repx" />
     <None Remove="Reports\ManagementDoc\Rep_ApplyToJob.repx" />
@@ -73,6 +74,7 @@
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_All_EmploymentAdvertizement.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_All_EmploymentContract.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_ApplyToJob.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\AttendancePlane_Permites_Ar.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_AttendancePlan_port_Ar.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_AttendancePlan_port_En.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_AttendanceShiftRequest.repx" />
@@ -168,6 +170,12 @@
     <Compile Update="Reports\ManagementDef\Rep_Management_DatailsSelected.Designer.cs">
       <DependentUpon>Rep_Management_DatailsSelected.repx</DependentUpon>
     </Compile>
+    <Compile Update="Reports\ManagementDoc\AttendancePlane_Permites_Ar.cs">
+      <DependentUpon>AttendancePlane_Permites_Ar.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\AttendancePlane_Permites_Ar.Designer.cs">
+      <DependentUpon>AttendancePlane_Permites_Ar.repx</DependentUpon>
+    </Compile>
     <Compile Update="Reports\ManagementDoc\Rep_AttendancePlanPerEmployee.cs">
       <DependentUpon>Rep_AttendancePlanPerEmployee.repx</DependentUpon>
     </Compile>
@@ -191,6 +199,13 @@
     </Compile>
     <Compile Update="Reports\ManagementDoc\Rep_ApplyToJob.Designer.cs">
       <DependentUpon>Rep_ApplyToJob.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_AttendancePlan_port_Ar - Copy.cs">
+      <SubType>Component</SubType>
+      <DependentUpon>Rep_AttendancePlan_port_Ar.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_AttendancePlan_port_Ar - Copy.Designer.cs">
+      <DependentUpon>Rep_AttendancePlan_port_Ar.repx</DependentUpon>
     </Compile>
     <Compile Update="Reports\ManagementDoc\Rep_AttendancePlan_port_Ar.cs">
       <DependentUpon>Rep_AttendancePlan_port_Ar.repx</DependentUpon>

@@ -16,6 +16,7 @@ namespace ReportsProj.Management_Models
         public string? FullNameAr { get; set; }
         public string? Job { get; set; } = "";
         public string? JobPostionTree { get; set; } = "";
+        public string? Department { get; set; } = "";
         public DateTime DateTimeRecord { get; set; }
         public string? TheType { get; set; }
         public DateTime DateOnlyRecord

@@ -2,7 +2,10 @@
 <link rel="stylesheet" href="~/css/designer.part.bundle.css" />
 <script src="~/js/viewer.part.bundle.js"></script>
 <script src="~/js/designer.part.bundle.js"></script>
-
+@using ReportsProj.Management_Models;
+@using ReportsProj.DBC;
+@using System.Diagnostics;
+@inject Management_DBC _Context ;
 @{
     //Declare Report
     ReportsProj.Reports.ManagementDoc.Rep_Schedule_All MyReport = new ReportsProj.Reports.ManagementDoc.Rep_Schedule_All();
@@ -10,10 +13,36 @@
 
     // Specify the report properties
 
-    MyReport.FilterString = "[Id] In (" + TempData["P_Id"] + ")";
+    //MyReport.FilterString = "[Id] In (" + TempData["P_Id"] + ")";
     MyReport.Parameters["P_RepHeader"].Value = TempData["P_T_Header"];
     MyReport.Parameters["P_UserName"].Value = TempData["P_User"];
 
+    List<DailyActivities_AttendancePlanPerEmployee2> MyAll_Ids = _Context.DailyActivities_AttendancePlanPerEmployee2.Where(c => ("," + TempData["P_Id"] + "," ).ToString().Contains("," + c.Id.ToString() + ",")).ToList<DailyActivities_AttendancePlanPerEmployee2>();
+
+    List<DailyActivities_AttendancePlanPerEmployee2> MyDataSource = new List<DailyActivities_AttendancePlanPerEmployee2>();
+    string[] MyChecker_Ids = TempData["P_Id"].ToString().Split(",");
+    //Debug.WriteLine("************************************************************************************");
+    for (int counter = 0; counter < MyChecker_Ids.Count(); counter++)
+    {
+        //Debug.WriteLine("cuMyChecker_Idsent  id is " + MyChecker_Ids[counter] + ", loop count=" + MyAll_Ids.Count());
+        foreach (DailyActivities_AttendancePlanPerEmployee2  item in MyAll_Ids)
+        {
+            if (item.Id.ToString() == MyChecker_Ids[counter])
+            {
+                MyDataSource.Add(item);
+                MyAll_Ids.Remove(item);
+                //Debug.WriteLine("Id " + MyChecker_Ids[counter] + " was fount and loop breked");
+                break;
+            }
+            else
+            {
+                //Debug.WriteLine("Id " + MyChecker_Ids[counter] + "not fount");
+            }
+        }
+    }
+
+    //Debug.WriteLine("MyAll_IdsMyAll_IdsMyAll_IdsMyAll_Idscc" + MyAll_Ids.Count());
+    MyReport.DataSource = MyDataSource;
     MyReport.RequestParameters = false;
 
     // Go To Print

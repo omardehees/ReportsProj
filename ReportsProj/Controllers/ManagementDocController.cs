@@ -4,17 +4,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using ReportsProj.DBC;
 using DevExpress.XtraReports.Web.WebDocumentViewer;
+using ReportsProj.Management_Models;
+using System.Collections.Generic;
+
 namespace ReportsProj.Controllers
 {
     public class ManagementDocController : Controller
     {
         #region DI
         private readonly IConfiguration _Configuration;
-        private readonly Management_DBC _Management_DBC;
+        private readonly Management_DBC _Context;
         public ManagementDocController(IConfiguration Configuration, Management_DBC Management_DBC)
         {
             _Configuration = Configuration;
-            _Management_DBC = Management_DBC;
+            _Context = Management_DBC;
         }
         #endregion
 
@@ -59,6 +62,14 @@ namespace ReportsProj.Controllers
 
 
         //--------- / البصمات  -------------------------------------
+        //--------- التعديل على حضور الموظفين   -------------------------------------
+        //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_AttendancePlane_Permites_Ar&P2=109,110,111,112
+        //--------- /التعديل على حضور الموظفين   -------------------------------------
+
+
+
+
+
 
         //--------- خطط الحضور  -------------------------------------
         //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_AttendancePlane&P2=12,13,14,15,16,17,18
@@ -101,9 +112,10 @@ namespace ReportsProj.Controllers
             TempData["P_P11"] = P11;
             TempData["P_P12"] = P12;
 
+            //DailyActivities_AttendancePlanPerEmployee2 MyObject = new DailyActivities_AttendancePlanPerEmployee2();
 
-
-            string CompanyName = _Management_DBC.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.Company).FirstOrDefault();
+           IEnumerable<DailyActivities_AttendancePlanPerEmployee2> cccc= _Context.DailyActivities_AttendancePlanPerEmployee2.Where(c => c.Job == "مبرمج");
+            string CompanyName = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.Company).FirstOrDefault();
 
 
             switch (P1)
@@ -115,32 +127,32 @@ namespace ReportsProj.Controllers
                     return View("EmpAdvertisement_All");
 
                 case "Selected_TrainingContract":
-                    string TrainingIssuer = _Management_DBC.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.TrainingContractIssuedFrom).FirstOrDefault();
+                    string TrainingIssuer = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.TrainingContractIssuedFrom).FirstOrDefault();
 
                     TempData["Company_Name"] = CompanyName;
-                    TempData["TrainingIssuerJob"] = _Management_DBC.Def_Employee.Where(a => a.Name == TrainingIssuer).Select(s => s.TreePosition).FirstOrDefault();
-                    TempData["Company_Address"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Address).FirstOrDefault();
-                    TempData["Company_CommercialRecord"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.CommercialRecord).FirstOrDefault();
-                    TempData["Company_Neighborhood"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Neighborhood).FirstOrDefault();
-                    TempData["Company_Street"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Street).FirstOrDefault();
-                    TempData["Company_MailBox"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.MailBox).FirstOrDefault();
-                    TempData["Company_Fax"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Fax).FirstOrDefault();
+                    TempData["TrainingIssuerJob"] = _Context.Def_Employee.Where(a => a.Name == TrainingIssuer).Select(s => s.TreePosition).FirstOrDefault();
+                    TempData["Company_Address"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Address).FirstOrDefault();
+                    TempData["Company_CommercialRecord"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.CommercialRecord).FirstOrDefault();
+                    TempData["Company_Neighborhood"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Neighborhood).FirstOrDefault();
+                    TempData["Company_Street"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Street).FirstOrDefault();
+                    TempData["Company_MailBox"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.MailBox).FirstOrDefault();
+                    TempData["Company_Fax"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Fax).FirstOrDefault();
 
                     return View("TrainingContract");
 
                 case "P_EmployemntContract":
-                    string EmploymentIssuer = _Management_DBC.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractIssuedFrom).FirstOrDefault();
+                    string EmploymentIssuer = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractIssuedFrom).FirstOrDefault();
                     TempData["Company_Name"] = CompanyName;
-                    TempData["EmploymentIssuerJob"] = _Management_DBC.Def_Employee.Where(a => a.Name == EmploymentIssuer).Select(s => s.TreePosition).FirstOrDefault();
-                    TempData["Company_Address"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Address).FirstOrDefault();
-                    TempData["Company_CommercialRecord"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.CommercialRecord).FirstOrDefault();
-                    TempData["Company_Neighborhood"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Neighborhood).FirstOrDefault();
-                    TempData["Company_Street"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Street).FirstOrDefault();
-                    TempData["Company_MailBox"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.MailBox).FirstOrDefault();
-                    TempData["Company_Fax"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Fax).FirstOrDefault();
+                    TempData["EmploymentIssuerJob"] = _Context.Def_Employee.Where(a => a.Name == EmploymentIssuer).Select(s => s.TreePosition).FirstOrDefault();
+                    TempData["Company_Address"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Address).FirstOrDefault();
+                    TempData["Company_CommercialRecord"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.CommercialRecord).FirstOrDefault();
+                    TempData["Company_Neighborhood"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Neighborhood).FirstOrDefault();
+                    TempData["Company_Street"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Street).FirstOrDefault();
+                    TempData["Company_MailBox"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.MailBox).FirstOrDefault();
+                    TempData["Company_Fax"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Fax).FirstOrDefault();
 
-                    string StartIn = _Management_DBC.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractFirstDay).FirstOrDefault().Value.Year.ToString();
-                    string ExpireIn = _Management_DBC.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractExpireAt).FirstOrDefault().Value.Year.ToString();
+                    string StartIn = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractFirstDay).FirstOrDefault().Value.Year.ToString();
+                    string ExpireIn = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractExpireAt).FirstOrDefault().Value.Year.ToString();
                     TempData["EmploymentContractDuration"] = (int.Parse(ExpireIn) - int.Parse(StartIn)).ToString();
 
                     return View("EmployemntContract");
@@ -357,6 +369,21 @@ namespace ReportsProj.Controllers
                 //--------- Attendance Plane per Employee ---------
                 case "P_AttendancePlane_Port_Ar":
                     return View("AttendancePlane_Port_Ar");
+
+
+
+                //--------- Attendance Plane Permites ---------
+                case "P_AttendancePlane_Permites_Ar":
+                    return View("AttendancePlane_Permites_Ar");
+
+
+
+
+
+
+
+
+
                 //--------- / Attendance Plane per Employee ---------
 
                 //--------- Attendance Plane per Employee ---------
@@ -477,39 +504,39 @@ namespace ReportsProj.Controllers
             //    }        
             //    else if (P1 == "Selected_TrainingContract")
             //    {
-            //        string CompanyName = _Management_DBC.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.Company).FirstOrDefault();
-            //        string TrainingIssuer = _Management_DBC.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.TrainingContractIssuedFrom).FirstOrDefault();
+            //        string CompanyName = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.Company).FirstOrDefault();
+            //        string TrainingIssuer = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.TrainingContractIssuedFrom).FirstOrDefault();
 
             //        TempData["Company_Name"] = CompanyName;
-            //        TempData["TrainingIssuerJob"] = _Management_DBC.Def_Employee.Where(a => a.Name == TrainingIssuer).Select(s => s.TreePosition).FirstOrDefault();
-            //        TempData["Company_Address"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Address).FirstOrDefault();
-            //        TempData["Company_CommercialRecord"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.CommercialRecord).FirstOrDefault();
-            //        TempData["Company_Neighborhood"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Neighborhood).FirstOrDefault();
-            //        TempData["Company_Street"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Street).FirstOrDefault();
-            //        TempData["Company_MailBox"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.MailBox).FirstOrDefault();
-            //        TempData["Company_Fax"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Fax).FirstOrDefault();
+            //        TempData["TrainingIssuerJob"] = _Context.Def_Employee.Where(a => a.Name == TrainingIssuer).Select(s => s.TreePosition).FirstOrDefault();
+            //        TempData["Company_Address"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Address).FirstOrDefault();
+            //        TempData["Company_CommercialRecord"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.CommercialRecord).FirstOrDefault();
+            //        TempData["Company_Neighborhood"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Neighborhood).FirstOrDefault();
+            //        TempData["Company_Street"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Street).FirstOrDefault();
+            //        TempData["Company_MailBox"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.MailBox).FirstOrDefault();
+            //        TempData["Company_Fax"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Fax).FirstOrDefault();
 
             //        return View("TrainingContract");
             //    }
             //    else if (P1 == "P_EmployemntContract")
             //    {
-            //        string CompanyName = _Management_DBC.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.Company).FirstOrDefault();
-            //        string EmploymentIssuer = _Management_DBC.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractIssuedFrom).FirstOrDefault();
+            //        string CompanyName = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.Company).FirstOrDefault();
+            //        string EmploymentIssuer = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractIssuedFrom).FirstOrDefault();
 
             //        TempData["Company_Name"] = CompanyName;
-            //        TempData["EmploymentIssuerJob"] = _Management_DBC.Def_Employee.Where(a => a.Name == EmploymentIssuer).Select(s => s.TreePosition).FirstOrDefault();
-            //        TempData["Company_Address"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Address).FirstOrDefault();
-            //        TempData["Company_CommercialRecord"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.CommercialRecord).FirstOrDefault();
-            //        TempData["Company_Neighborhood"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Neighborhood).FirstOrDefault();
-            //        TempData["Company_Street"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Street).FirstOrDefault();
-            //        TempData["Company_MailBox"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.MailBox).FirstOrDefault();
-            //        TempData["Company_Fax"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Fax).FirstOrDefault();
+            //        TempData["EmploymentIssuerJob"] = _Context.Def_Employee.Where(a => a.Name == EmploymentIssuer).Select(s => s.TreePosition).FirstOrDefault();
+            //        TempData["Company_Address"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Address).FirstOrDefault();
+            //        TempData["Company_CommercialRecord"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.CommercialRecord).FirstOrDefault();
+            //        TempData["Company_Neighborhood"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Neighborhood).FirstOrDefault();
+            //        TempData["Company_Street"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Street).FirstOrDefault();
+            //        TempData["Company_MailBox"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.MailBox).FirstOrDefault();
+            //        TempData["Company_Fax"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Fax).FirstOrDefault();
 
-            //        string StartIn= _Management_DBC.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractFirstDay).FirstOrDefault().Value.Year.ToString();
-            //        string ExpireIn = _Management_DBC.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractExpireAt).FirstOrDefault().Value.Year.ToString();
+            //        string StartIn= _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractFirstDay).FirstOrDefault().Value.Year.ToString();
+            //        string ExpireIn = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractExpireAt).FirstOrDefault().Value.Year.ToString();
 
             //        TempData["EmploymentContractDuration"]  = (int.Parse(ExpireIn) - int.Parse(StartIn)).ToString();
-            //        //TempData["EmploymentContractDuration"] = _Management_DBC.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Fax).FirstOrDefault();
+            //        //TempData["EmploymentContractDuration"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Fax).FirstOrDefault();
 
 
             //        return View("EmployemntContract");

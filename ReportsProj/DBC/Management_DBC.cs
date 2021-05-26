@@ -50,6 +50,7 @@ namespace ReportsProj.DBC
         public DbSet<DailyActivities_DocType> DailyActivities_DocType { get; set; }
         public DbSet<DailyActivities_VacationRequest> DailyActivities_VacationRequest { get; set; }
         public DbSet<DailyActivities_FingerPrintLog> DailyActivities_FingerPrintLog { get; set; }
+        public DbSet<DailyActivities_AttendancePlanPerEmployee2> DailyActivities_AttendancePlanPerEmployee2 { get; set; }
 
 
     }

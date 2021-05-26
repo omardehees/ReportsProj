@@ -10,7 +10,7 @@
 
 @{
     //Declare Report
-    ReportsProj.Reports.ManagementDoc.Rep_AttendancePlan_port_Ar MyReport = new ReportsProj.Reports.ManagementDoc.Rep_AttendancePlan_port_Ar();
+    ReportsProj.Reports.ManagementDoc.AttendancePlane_Permites_Ar MyReport = new ReportsProj.Reports.ManagementDoc.AttendancePlane_Permites_Ar();
 
     //----- Get Same DataSource Of Grid Form  ----------------
     List<DailyActivities_AttendancePlanPerEmployee2> MyAll_Ids = _Context.DailyActivities_AttendancePlanPerEmployee2.Where(c => ("," + TempData["P_Id"] + ",").ToString().Contains("," + c.Id.ToString() + ",")).ToList<DailyActivities_AttendancePlanPerEmployee2>();
