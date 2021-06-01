@@ -6,19 +6,21 @@
 
 @using ReportsProj.Management_Models
 @using ReportsProj.DBC
-@inject Management_DBC _Context
+@*@inject Management_DBC _Context*@
+@inject ApplicationDbContextManagementOnline _Context
+
 
 @{
     //Declare Report
-    ReportsProj.Reports.ManagementDoc.Rep_AttendancePlan_port_Ar MyReport = new ReportsProj.Reports.ManagementDoc.Rep_AttendancePlan_port_Ar();
+    ReportsProj.Reports.ManagementDoc.Rep_ApplyToJob_All MyReport = new ReportsProj.Reports.ManagementDoc.Rep_ApplyToJob_All();
 
     //----- Get Same DataSource Of Grid Form  ----------------
-    List<DailyActivities_AttendancePlanPerEmployee2> My_rows = _Context.DailyActivities_AttendancePlanPerEmployee2.Where(c => ("," + TempData["P_Id"] + ",").ToString().Contains("," + c.Id.ToString() + ",")).ToList<DailyActivities_AttendancePlanPerEmployee2>();
-    List<DailyActivities_AttendancePlanPerEmployee2> MyDataSource = new List<DailyActivities_AttendancePlanPerEmployee2>();
+    List<Doc_CVs> My_rows = _Context.Doc_CVs.Where(c => ("," + TempData["P_Id"] + ",").ToString().Contains("," + c.Id.ToString() + ",")).ToList<Doc_CVs>();
+    List<Doc_CVs> MyDataSource = new List<Doc_CVs>();
     string[] MyChecker_Ids = TempData["P_Id"].ToString().Split(",");
     for (int counter = 0; counter < MyChecker_Ids.Count(); counter++)
     {
-        foreach (DailyActivities_AttendancePlanPerEmployee2 item in My_rows)
+        foreach (Doc_CVs item in My_rows)
         {
             if (item.Id.ToString() == MyChecker_Ids[counter])
             {

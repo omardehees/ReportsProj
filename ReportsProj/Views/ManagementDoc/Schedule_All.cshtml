@@ -17,20 +17,20 @@
     MyReport.Parameters["P_RepHeader"].Value = TempData["P_T_Header"];
     MyReport.Parameters["P_UserName"].Value = TempData["P_User"];
 
-    List<DailyActivities_AttendancePlanPerEmployee2> MyAll_Ids = _Context.DailyActivities_AttendancePlanPerEmployee2.Where(c => ("," + TempData["P_Id"] + "," ).ToString().Contains("," + c.Id.ToString() + ",")).ToList<DailyActivities_AttendancePlanPerEmployee2>();
+    List<DailyActivities_AttendancePlanPerEmployee2> My_rows = _Context.DailyActivities_AttendancePlanPerEmployee2.Where(c => ("," + TempData["P_Id"] + "," ).ToString().Contains("," + c.Id.ToString() + ",")).ToList<DailyActivities_AttendancePlanPerEmployee2>();
 
     List<DailyActivities_AttendancePlanPerEmployee2> MyDataSource = new List<DailyActivities_AttendancePlanPerEmployee2>();
     string[] MyChecker_Ids = TempData["P_Id"].ToString().Split(",");
     //Debug.WriteLine("************************************************************************************");
     for (int counter = 0; counter < MyChecker_Ids.Count(); counter++)
     {
-        //Debug.WriteLine("cuMyChecker_Idsent  id is " + MyChecker_Ids[counter] + ", loop count=" + MyAll_Ids.Count());
-        foreach (DailyActivities_AttendancePlanPerEmployee2  item in MyAll_Ids)
+        //Debug.WriteLine("cuMyChecker_Idsent  id is " + MyChecker_Ids[counter] + ", loop count=" + My_rows.Count());
+        foreach (DailyActivities_AttendancePlanPerEmployee2  item in My_rows)
         {
             if (item.Id.ToString() == MyChecker_Ids[counter])
             {
                 MyDataSource.Add(item);
-                MyAll_Ids.Remove(item);
+                My_rows.Remove(item);
                 //Debug.WriteLine("Id " + MyChecker_Ids[counter] + " was fount and loop breked");
                 break;
             }
@@ -41,7 +41,7 @@
         }
     }
 
-    //Debug.WriteLine("MyAll_IdsMyAll_IdsMyAll_IdsMyAll_Idscc" + MyAll_Ids.Count());
+    //Debug.WriteLine("My_rowsMy_rowsMy_rowsMy_rowscc" + My_rows.Count());
     MyReport.DataSource = MyDataSource;
     MyReport.RequestParameters = false;
 

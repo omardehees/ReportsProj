@@ -30,6 +30,7 @@
     <None Remove="Reports\ManagementDoc\Rep_All_EmploymentAdvertizement.repx" />
     <None Remove="Reports\ManagementDoc\Rep_All_EmploymentContract.repx" />
     <None Remove="Reports\ManagementDoc\Rep_ApplyToJob.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_ApplyToJob_All.repx" />
     <None Remove="Reports\ManagementDoc\Rep_AttendancePlanPerEmployee.repx" />
     <None Remove="Reports\ManagementDoc\Rep_AttendancePlan_port_Ar.repx" />
     <None Remove="Reports\ManagementDoc\Rep_AttendancePlan_port_En.repx" />
@@ -70,6 +71,7 @@
     <EmbeddedResource Include="Reports\ManagementDef\Rep_ManagementAll.repx" />
     <EmbeddedResource Include="Reports\ManagementDef\Rep_ManagementSelected.repx" />
     <EmbeddedResource Include="Reports\ManagementDef\Rep_Management_DatailsSelected.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_ApplyToJob_All.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_AttendancePlanPerEmployee.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_All_EmploymentAdvertizement.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_All_EmploymentContract.repx" />
@@ -175,6 +177,12 @@
     </Compile>
     <Compile Update="Reports\ManagementDoc\AttendancePlane_Permites_Ar.Designer.cs">
       <DependentUpon>AttendancePlane_Permites_Ar.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_ApplyToJob_All.cs">
+      <DependentUpon>Rep_ApplyToJob_All.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_ApplyToJob_All.Designer.cs">
+      <DependentUpon>Rep_ApplyToJob_All.repx</DependentUpon>
     </Compile>
     <Compile Update="Reports\ManagementDoc\Rep_AttendancePlanPerEmployee.cs">
       <DependentUpon>Rep_AttendancePlanPerEmployee.repx</DependentUpon>

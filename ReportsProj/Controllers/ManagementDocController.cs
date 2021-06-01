@@ -62,13 +62,16 @@ namespace ReportsProj.Controllers
 
 
         //--------- / البصمات  -------------------------------------
+
+        //--------- التقدم لوظيفة   ---------------------------------------
+        //-- Test__ApplyToJob_All Params>> /ManagementDoc?P1=P_ApplyToJob_All&P2=984,985,986
+        //--------- / التقدم لوظيفة   -------------------------------------
+
+
+
         //--------- التعديل على حضور الموظفين   -------------------------------------
         //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_AttendancePlane_Permites_Ar&P2=109,110,111,112
         //--------- /التعديل على حضور الموظفين   -------------------------------------
-
-
-
-
 
 
         //--------- خطط الحضور  -------------------------------------
@@ -372,24 +375,23 @@ namespace ReportsProj.Controllers
 
 
 
-                //--------- Attendance Plane Permites ---------
+                //--------- Attendance Plane Permites ar ---------
                 case "P_AttendancePlane_Permites_Ar":
                     return View("AttendancePlane_Permites_Ar");
 
+                //--------- / Attendance Plane Permites ar ---------
+
+                //--------- ApplyToJob_All ---------
+                case "P_ApplyToJob_All":
+                    return View("ApplyToJob_All");
+
+                //--------- / ApplyToJob_All ---------
 
 
-
-
-
-
-
-
-                //--------- / Attendance Plane per Employee ---------
-
-                //--------- Attendance Plane per Employee ---------
+                //--------- Attendance Plane per Employee en ---------
                 case "P_AttendancePlane_Port_En":
                     return View("AttendancePlane_Port_En");
-                //--------- / Attendance Plane per Employee ---------
+                //--------- / Attendance Plane per Employee en ---------
 
                 //--------- FingerPrint_Filterd ---------
                 case "P_FingerPrint_Filterd":

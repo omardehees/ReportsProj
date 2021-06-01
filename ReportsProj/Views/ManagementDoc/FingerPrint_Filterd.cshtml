@@ -13,17 +13,17 @@
     ReportsProj.Reports.ManagementDoc.Rep_FingerPrint MyReport = new ReportsProj.Reports.ManagementDoc.Rep_FingerPrint();
 
     //----- Get Same DataSource Of Grid Form  ----------------
-    List<DailyActivities_FingerPrintLog> MyAll_Ids = _Context.DailyActivities_FingerPrintLog.Where(c => ("," + TempData["P_Id"] + ",").ToString().Contains("," + c.Id.ToString() + ",")).ToList<DailyActivities_FingerPrintLog>();
+    List<DailyActivities_FingerPrintLog> My_rows = _Context.DailyActivities_FingerPrintLog.Where(c => ("," + TempData["P_Id"] + ",").ToString().Contains("," + c.Id.ToString() + ",")).ToList<DailyActivities_FingerPrintLog>();
     List<DailyActivities_FingerPrintLog> MyDataSource = new List<DailyActivities_FingerPrintLog>();
     string[] MyChecker_Ids = TempData["P_Id"].ToString().Split(",");
     for (int counter = 0; counter < MyChecker_Ids.Count(); counter++)
     {
-        foreach (DailyActivities_FingerPrintLog item in MyAll_Ids)
+        foreach (DailyActivities_FingerPrintLog item in My_rows)
         {
             if (item.Id.ToString() == MyChecker_Ids[counter])
             {
                 MyDataSource.Add(item);
-                MyAll_Ids.Remove(item);
+                My_rows.Remove(item);
                 break;
             }
         }
