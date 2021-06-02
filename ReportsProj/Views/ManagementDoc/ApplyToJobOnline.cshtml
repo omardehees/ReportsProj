@@ -1,0 +1,42 @@
+﻿
+<link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
+<link rel="stylesheet" href="~/css/designer.part.bundle.css" />
+<script src="~/js/viewer.part.bundle.js"></script>
+<script src="~/js/designer.part.bundle.js"></script>
+
+@using ReportsProj.Management_Models
+@using ReportsProj.DBC
+@*@inject Management_DBC _Context*@
+@inject ApplicationDbContextManagementOnline _Context
+
+
+@{
+    //Declare Report
+    ReportsProj.Reports.ManagementDoc.Rep_ApplyToJobOnline MyReport = new ReportsProj.Reports.ManagementDoc.Rep_ApplyToJobOnline();
+
+    //----- Get Same DataSource Of Grid Form  ----------------
+    List<Doc_CVs> My_rows = _Context.Doc_CVs.Where(c => ("," + TempData["P_Id"] + ",").ToString().Contains("," + c.Id.ToString() + ",")).ToList<Doc_CVs>();
+    List<Doc_CVs> MyDataSource = new List<Doc_CVs>();
+    string[] MyChecker_Ids = TempData["P_Id"].ToString().Split(",");
+    for (int counter = 0; counter < MyChecker_Ids.Count(); counter++)
+    {
+        foreach (Doc_CVs item in My_rows)
+        {
+            if (item.Id.ToString() == MyChecker_Ids[counter])
+            {
+                MyDataSource.Add(item);
+                My_rows.Remove(item);
+                break;
+            }
+        }
+    }
+
+    // Specify the report properties
+    MyReport.DataSource = MyDataSource;
+    MyReport.Parameters["P_UserName"].Value = TempData["P_User"];
+    MyReport.RequestParameters = false;
+
+    // Go To Print
+    @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(MyReport)
+
+}

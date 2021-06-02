@@ -63,11 +63,13 @@ namespace ReportsProj.Controllers
 
         //--------- / البصمات  -------------------------------------
 
-        //--------- التقدم لوظيفة   ---------------------------------------
+        //--------- التقدم لوظيفةالكل   ---------------------------------------
         //-- Test__ApplyToJob_All Params>> /ManagementDoc?P1=P_ApplyToJob_All&P2=984,985,986
-        //--------- / التقدم لوظيفة   -------------------------------------
+        //--------- / التقدم لوظيفةالكل   -------------------------------------
 
-
+        //--------- التقدم لوظيفةاونلاين   ---------------------------------------
+        //-- Test__ApplyToJobOnline. Params>> /ManagementDoc?P1=P_ApplyToJobOnline&P2=984
+        //--------- / التقدم لوظيفةاونلاين   -------------------------------------
 
         //--------- التعديل على حضور الموظفين   -------------------------------------
         //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_AttendancePlane_Permites_Ar&P2=109,110,111,112
@@ -385,7 +387,13 @@ namespace ReportsProj.Controllers
                 case "P_ApplyToJob_All":
                     return View("ApplyToJob_All");
 
-                //--------- / ApplyToJob_All ---------
+                //--------- / P_ApplyToJobOnline ---------
+
+                //--------- ApplyToJob_All ---------
+                case "P_ApplyToJobOnline":
+                    return View("ApplyToJobOnline");
+
+                //--------- / P_ApplyToJobOnline ---------
 
 
                 //--------- Attendance Plane per Employee en ---------

@@ -7,7 +7,7 @@ using ReportsProj.PM_Model;
 
 namespace ReportsProj.Management_Models
 {
-    public class Doc_CVs:_EntityBase
+    public class Doc_CVs : _EntityBase
     {
         //CodeTemplate                      drbdApplyToJobObj_Code
         //MaritalStatusTemplate              drbdApplyToJobObj_MaritalStatus
@@ -29,7 +29,11 @@ namespace ReportsProj.Management_Models
         public string FullNameEn { get; set; } = "";//*****************جديد
         public string Sex { get; set; }
         public string MaritalStatus { get; set; }//*****************جديد
+        public string MaritalStatusEn { get; set; }//*****************جديد
+        public int Kids { get; set; } = 0;//*****************جديد
+        public bool ResidentWife { get; set; } = false;//*****************جديد
         public string Country { get; set; }
+        public string CountryEn { get; set; }
         public string State { get; set; }
         public string City { get; set; }
         public string Address { get; set; }
@@ -48,11 +52,14 @@ namespace ReportsProj.Management_Models
         //public bool HaveDrivingLicense { get; set; } = false;///////////////////////////////////////////////////
         public string MilitaryServiceStatus { get; set; }
         public string BankTitle { get; set; } = "";//*****************جديد
+        public string BankTitleEn { get; set; } = "";//*****************جديد
+
         public string BankIBAN { get; set; } = "";//*****************جديد
         public string BankCurrency { get; set; } = "";//*****************جديد
         public string BankAccountNumber { get; set; } = "";//*****************جديد
         //Education       
         public string AcademicGradeType { get; set; }
+        public string AcademicGradeTypeEn { get; set; }
         public string Qualification { get; set; }
         public string Specialization { get; set; }
         public string Univeristy { get; set; }
@@ -60,8 +67,9 @@ namespace ReportsProj.Management_Models
         public string GraduationGrade { get; set; } = "";
         public string GraduationProject { get; set; } = "";
         public string GraduationProjectGrade { get; set; } = "";
-        public string ForeignLanguage { get; set; } = "";
         public string Religion { get; set; }
+        public DateTime? AvailableFrom { get; set; }
+        public Double? ExpectedSalary { get; set; }
         public string Certificates { get; set; } = "";
         public string Skills { get; set; } = "";
         //Current Job
@@ -71,6 +79,11 @@ namespace ReportsProj.Management_Models
         public string CurrentJobDescription { get; set; } = "";
         public DateTime? CurrentJobFrom { get; set; } = DateTime.Now;
         public decimal? CurrentJobSalary { get; set; } = 0;
+        public string PreviousCompanies { get; set; } = "";
+        public bool WorkedInOurFirmBefore { get; set; } = false;//*****************جديد
+        public DateTime? WorkedInOurFirmBeforeFrom { get; set; } //*****************جديد
+        public DateTime? WorkedInOurFirmBeforeTo { get; set; } //*****************جديد
+
         //The User
         public string TheUser { get; set; }
         public string Office { get; set; } = "";
@@ -152,9 +165,13 @@ namespace ReportsProj.Management_Models
         public string EmployeeAccountNumber { get; set; } = "";//*****************جديد
         public string Company { get; set; } = "";//*****************جديد
         public string Department { get; set; } = "";//*****************جديد
+        public string DepartmentEn { get; set; } = "";//*****************جديد
         public string Job { get; set; } = "";//*****************جديد
+        public string JobEn { get; set; } = "";//*****************جديد
         public string JobTreePosition { get; set; } = "";//*****************جديد
+        public string JobTreePositionEn { get; set; } = "";//*****************جديد
         public string JobDescription { get; set; } = "";//*****************جديد
+        public string JobDescriptionEn { get; set; } = "";//*****************جديد
         public string SaudiStandardJobCode { get; set; } = "";//*****************جديد
         public string EmploymentContractCode { get; set; } = "";//*****************جديد
         public string EmploymentContractType { get; set; } = "";//*****************جديد
@@ -173,6 +190,11 @@ namespace ReportsProj.Management_Models
         public int? EmploymentContractCumulativeEvaluationFrom100 { get; set; } = 0;//*****************جديد
         public decimal? EmploymentContractBasicSalary { get; set; } = 0;//*****************جديد
         public string EmploymentContractBasicSalaryTerm { get; set; } = "";//*****************جديد
+        public decimal? EmploymentContractIncomeShareValue { get; set; } = 0;//*****************جديد
+        public string EmploymentContractIncomeShareRoles { get; set; } = "";//*****************جديد
+        public decimal? EmploymentContractOOD { get; set; } = 0;//*****************جديد
+        public decimal? EmploymentContractSalaryIncreamentValue { get; set; } = 0;//*****************جديد
+        public string EmploymentContractSalaryIncreamentRole { get; set; } = "";//*****************جديد
         [Range(0, 200)]
         public int? AllowancesVacationPeriodInDays { get; set; } = 0;//*****************جديد
         public string EmploymentContractNotes { get; set; } = ""; //*****************جديد
@@ -199,6 +221,5 @@ namespace ReportsProj.Management_Models
         //[Range(0, 200)]---------------- تم النق لعقدج التوظيفة
         //public int? AllowancesVacationPeriodInDays { get; set; } = 0;//*****************جديد
         //public string AllowancesVacationNotes { get; set; } = ""; //*****************جديد  
-
     }
 }
