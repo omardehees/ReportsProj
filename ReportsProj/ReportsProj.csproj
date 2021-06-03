@@ -40,6 +40,7 @@
     <None Remove="Reports\ManagementDoc\Rep_EmpCard_V1.repx" />
     <None Remove="Reports\ManagementDoc\Rep_EmpCard_V2.repx" />
     <None Remove="Reports\ManagementDoc\Rep_EmployemntContract.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_EnApplyToJob_All.repx" />
     <None Remove="Reports\ManagementDoc\Rep_FingerPrint.repx" />
     <None Remove="Reports\ManagementDoc\Rep_Interviews.repx" />
     <None Remove="Reports\ManagementDoc\Rep_Interview_All.repx" />
@@ -86,6 +87,7 @@
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_EmpCard_V1.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_EmpCard_V2.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_EmployemntContract.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_EnApplyToJob_All.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_FingerPrint.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_Interviews.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_Interview_All.repx" />
@@ -264,6 +266,12 @@
     </Compile>
     <Compile Update="Reports\ManagementDoc\Rep_EmployemntContract.Designer.cs">
       <DependentUpon>Rep_EmployemntContract.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_EnApplyToJob_All.cs">
+      <DependentUpon>Rep_EnApplyToJob_All.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_EnApplyToJob_All.Designer.cs">
+      <DependentUpon>Rep_EnApplyToJob_All.repx</DependentUpon>
     </Compile>
     <Compile Update="Reports\ManagementDoc\Rep_FingerPrint.cs">
       <DependentUpon>Rep_FingerPrint.repx</DependentUpon>

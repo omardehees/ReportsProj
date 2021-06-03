@@ -64,11 +64,15 @@ namespace ReportsProj.Controllers
         //--------- / البصمات  -------------------------------------
 
         //--------- التقدم لوظيفةالكل   ---------------------------------------
-        //-- Test__ApplyToJob_All Params>> /ManagementDoc?P1=P_ApplyToJob_All&P2=984,985,986
+        //-- Test__ApplyToJob_All Params>> /ManagementDoc?P1=P_ApplyToJob_All&P2=984,985
         //--------- / التقدم لوظيفةالكل   -------------------------------------
 
+        //---------En التقدم لوظيفةالكل   ---------------------------------------
+        //-- Test__ApplyToJobEn_All Params>> /ManagementDoc?P1=P_ApplyToJobEn_All&P2=984,985,992
+        //--------- / En التقدم لوظيفةالكل   -------------------------------------
+
         //--------- التقدم لوظيفةاونلاين   ---------------------------------------
-        //-- Test__ApplyToJobOnline. Params>> /ManagementDoc?P1=P_ApplyToJobOnline&P2=984,985,986
+        //-- Test__ApplyToJobOnline. Params>> /ManagementDoc?P1=P_ApplyToJobOnline&P2=984,985
         //--------- / التقدم لوظيفةاونلاين   -------------------------------------
 
         //--------- التعديل على حضور الموظفين   -------------------------------------
@@ -387,9 +391,15 @@ namespace ReportsProj.Controllers
                 case "P_ApplyToJob_All":
                     return View("ApplyToJob_All");
 
-                //--------- / P_ApplyToJobOnline ---------
+                //--------- / ApplyToJob_All ---------
 
-                //--------- ApplyToJob_All ---------
+                //--------- ApplyToJobEn_All ---------
+                case "P_ApplyToJobEn_All":
+                    return View("ApplyToJobEn_All");
+
+                //--------- / ApplyToJobEn_All ---------
+
+                //--------- P_ApplyToJobOnline ---------
                 case "P_ApplyToJobOnline":
                     return View("ApplyToJobOnline");
 

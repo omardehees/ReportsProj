@@ -9,5 +9,10 @@ namespace ReportsProj.Reports.ManagementDoc
         {
             InitializeComponent();
         }
+
+        private void Rep_ApplyToJob_All_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+
+        }
     }
 }
