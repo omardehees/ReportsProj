@@ -54,7 +54,7 @@ namespace ReportsProj
             services.AddDbContext<PM_DBC>(options =>options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("PM").Value));
             services.AddDbContext<CSR_DBC>(options =>options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("CSR").Value));
             services.AddDbContext<Management_DBC>(options => options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("Management").Value));
-            services.AddDbContext<ApplicationDbContextManagementOnline>(options => options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("DefaultConnectionOnline").Value));
+            //services.AddDbContext<ApplicationDbContextManagementOnline>(options => options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("DefaultConnectionOnline").Value));
 
             services.AddControllersWithViews();
             services.AddDevExpressControls();

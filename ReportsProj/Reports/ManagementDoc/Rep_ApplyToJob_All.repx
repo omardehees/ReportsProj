@@ -68,7 +68,7 @@
                 </Item10>
                 <Item11 Ref="30" ControlType="XRTableCell" Name="tableCell3" Weight="1.0592025527562823" Multiline="true" Text="tableCell3">
                   <ExpressionBindings>
-                    <Item1 Ref="31" EventName="BeforePrint" PropertyName="Text" Expression="[Doc_CVs].[City]" />
+                    <Item1 Ref="31" EventName="BeforePrint" PropertyName="Text" Expression="[City]" />
                   </ExpressionBindings>
                 </Item11>
                 <Item12 Ref="32" ControlType="XRTableCell" Name="tableCell6" Weight="1.6317730014182437" Multiline="true" Text="tableCell6">

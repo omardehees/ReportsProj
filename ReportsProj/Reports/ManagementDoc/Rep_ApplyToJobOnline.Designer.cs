@@ -232,7 +232,7 @@ namespace ReportsProj.Reports.ManagementDoc {
         private DevExpress.XtraReports.UI.XRLine line3;
         private DevExpress.XtraReports.UI.XRLabel label1;
         private DevExpress.XtraReports.UI.XRLabel label5;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.Parameters.Parameter P_UserName;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
     }
 }

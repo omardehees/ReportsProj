@@ -68,7 +68,7 @@ namespace ReportsProj.Controllers
         //--------- / التقدم لوظيفةالكل   -------------------------------------
 
         //--------- التقدم لوظيفةاونلاين   ---------------------------------------
-        //-- Test__ApplyToJobOnline. Params>> /ManagementDoc?P1=P_ApplyToJobOnline&P2=984
+        //-- Test__ApplyToJobOnline. Params>> /ManagementDoc?P1=P_ApplyToJobOnline&P2=984,985,986
         //--------- / التقدم لوظيفةاونلاين   -------------------------------------
 
         //--------- التعديل على حضور الموظفين   -------------------------------------

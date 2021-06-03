@@ -9,5 +9,29 @@ namespace ReportsProj.Reports.ManagementDoc
         {
             InitializeComponent();
         }
+
+        private void label80_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            DevExpress.XtraReports.UI.XRLabel xrl = (DevExpress.XtraReports.UI.XRLabel)sender;
+            xrl.Text = xrl.Text.Replace("|", Environment.NewLine);
+        }
+
+        private void label85_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            DevExpress.XtraReports.UI.XRLabel xrl = (DevExpress.XtraReports.UI.XRLabel)sender;
+            xrl.Text = xrl.Text.Replace("|", Environment.NewLine);
+        }
+
+        private void label61_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            DevExpress.XtraReports.UI.XRLabel xrl = (DevExpress.XtraReports.UI.XRLabel)sender;
+            xrl.Text = xrl.Text.Replace("|", Environment.NewLine);
+        }
+
+        private void label28_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e)
+        {
+            DevExpress.XtraReports.UI.XRLabel xrl = (DevExpress.XtraReports.UI.XRLabel)sender;
+            xrl.Text = xrl.Text.Replace("|", Environment.NewLine);
+        }
     }
 }
