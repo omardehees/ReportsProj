@@ -25,22 +25,22 @@
         <Item4 Ref="13" ControlType="XRLabel" Name="label33" RightToLeft="Yes" Text="الراتب المتوقع:" TextAlignment="TopLeft" SizeF="105.234421,49.0001221" LocationFloat="86.08782,700.983459" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
           <StylePriority Ref="14" UseFont="false" UseTextAlignment="false" />
         </Item4>
-        <Item5 Ref="15" ControlType="XRLabel" Name="label30" RightToLeft="Yes" Text="متاح من:" TextAlignment="TopLeft" SizeF="67.98132,49.0001221" LocationFloat="123.340912,749.983643" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+        <Item5 Ref="15" ControlType="XRLabel" Name="label30" RightToLeft="Yes" Text="متاح من:" TextAlignment="TopLeft" SizeF="67.98132,49.0001221" LocationFloat="716.5103,749.9836" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
           <StylePriority Ref="16" UseFont="false" UseTextAlignment="false" />
         </Item5>
-        <Item6 Ref="17" ControlType="XRLabel" Name="label31" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="122.340889,49.0001221" LocationFloat="1.000007,749.983643" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+        <Item6 Ref="17" ControlType="XRLabel" Name="label31" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="122.340889,49.0001221" LocationFloat="594.169434,749.9836" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
           <ExpressionBindings>
             <Item1 Ref="18" EventName="BeforePrint" PropertyName="Text" Expression="[AvailableFrom]" />
           </ExpressionBindings>
           <StylePriority Ref="19" UseFont="false" UsePadding="false" UseTextAlignment="false" />
         </Item6>
-        <Item7 Ref="20" ControlType="XRLabel" Name="label28" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="476.7388,49.0001221" LocationFloat="191.322235,749.983643" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+        <Item7 Ref="20" ControlType="XRLabel" Name="label28" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="476.7388,49.0001221" LocationFloat="1.00000668,749.983643" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
           <ExpressionBindings>
             <Item1 Ref="21" EventName="BeforePrint" PropertyName="Text" Expression="[PreviousCompanies]" />
           </ExpressionBindings>
           <StylePriority Ref="22" UseFont="false" UsePadding="false" UseTextAlignment="false" />
         </Item7>
-        <Item8 Ref="23" ControlType="XRLabel" Name="label29" RightToLeft="Yes" Text="الشركات السابقة:" TextAlignment="TopLeft" SizeF="116.430847,49.0001221" LocationFloat="668.061035,749.983643" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+        <Item8 Ref="23" ControlType="XRLabel" Name="label29" RightToLeft="Yes" Text="الشركات السابقة:" TextAlignment="TopLeft" SizeF="116.430847,49.0001221" LocationFloat="477.738861,749.983643" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
           <StylePriority Ref="24" UseFont="false" UseTextAlignment="false" />
         </Item8>
         <Item9 Ref="25" ControlType="XRLabel" Name="label26" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="120.733017,47.625" LocationFloat="277.714569,699.9839" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
