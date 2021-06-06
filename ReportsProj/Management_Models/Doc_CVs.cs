@@ -15,32 +15,36 @@ namespace ReportsProj.Management_Models
         public Guid CVCode { get; set; }
         public string JobAdvertizementCode { get; set; } = "";
         //Basic Data
-        public string FirstNameAr { get; set; }
-        public string MiddleNameAr { get; set; }
-        public string LastNameAr { get; set; }
-        public string SurnameAr { get; set; }
+        public string FirstNameAr { get; set; } = "";
+        public string MiddleNameAr { get; set; } = "";
+        public string LastNameAr { get; set; } = "";
+        public string SurnameAr { get; set; } = "";
         public string FirstNameEn { get; set; } = "";
         public string MiddleNameEn { get; set; } = "";
         public string LastNameEn { get; set; } = "";
         public string SurnameEn { get; set; } = "";
         public string SocialSurnameAr { get; set; }
         public string SocialSurnameEn { get; set; } = "";
-        public string FullNameAr { get; set; }//*****************جديد
+        public string FullNameAr { get; set; } = "";//*****************جديد
         public string FullNameEn { get; set; } = "";//*****************جديد
-        public string Sex { get; set; }
-        public string MaritalStatus { get; set; }//*****************جديد
-        public string MaritalStatusEn { get; set; }//*****************جديد
+        public string Sex { get; set; } = "";
+        public string SexEn { get; set; } = "";
+        public string MaritalStatus { get; set; } = "";//*****************جديد
+        public string MaritalStatusEn { get; set; } = "";//*****************جديد
         public int Kids { get; set; } = 0;//*****************جديد
         public bool ResidentWife { get; set; } = false;//*****************جديد
-        public string Country { get; set; }
-        public string CountryEn { get; set; }
-        public string State { get; set; }
-        public string City { get; set; }
-        public string Address { get; set; }
-        public string Language { get; set; }
-        public string IDDocumentType { get; set; }
-        public string IDDocumentNumber { get; set; }
-        public string IDDocumentIssuedFrom { get; set; }//*****************جديد
+        public string Country { get; set; } = "";
+        public string CountryEn { get; set; } = "";
+        public string State { get; set; } = "";
+        public string City { get; set; } = "";
+        public string CityEn { get; set; } = "";
+        public string Address { get; set; } = "";
+        public string Language { get; set; } = "";
+        public string LanguageEn { get; set; } = "";
+        public string IDDocumentType { get; set; } = "";
+        public string IDDocumentTypeEn { get; set; } = "";
+        public string IDDocumentNumber { get; set; } = "";
+        public string IDDocumentIssuedFrom { get; set; } = "";//*****************جديد
         public DateTime? IDDocumentIssuedAt { get; set; } = DateTime.Now;//*****************جديد
         public DateTime? IDDocumentExpireAt { get; set; } = DateTime.Now;//*****************+++++++++++++++++++++++++++++++++++تعديل
         public string IDDocumentNotes { get; set; } = ""; //*****************جديد   
@@ -50,24 +54,26 @@ namespace ReportsProj.Management_Models
         public decimal? Weight { get; set; } = 0;
         public string Photo { get; set; } = "";
         //public bool HaveDrivingLicense { get; set; } = false;///////////////////////////////////////////////////
-        public string MilitaryServiceStatus { get; set; }
+        public string MilitaryServiceStatus { get; set; } = "";
         public string BankTitle { get; set; } = "";//*****************جديد
         public string BankTitleEn { get; set; } = "";//*****************جديد
-
         public string BankIBAN { get; set; } = "";//*****************جديد
         public string BankCurrency { get; set; } = "";//*****************جديد
         public string BankAccountNumber { get; set; } = "";//*****************جديد
         //Education       
-        public string AcademicGradeType { get; set; }
-        public string AcademicGradeTypeEn { get; set; }
-        public string Qualification { get; set; }
-        public string Specialization { get; set; }
-        public string Univeristy { get; set; }
+        public string AcademicGradeType { get; set; } = "";
+        public string AcademicGradeTypeEn { get; set; } = "";
+        public string Qualification { get; set; } = "";
+        public string QualificationEn { get; set; } = "";
+        public string Specialization { get; set; } = "";
+        public string Univeristy { get; set; } = "";
+        public string UniveristyEn { get; set; } = "";
         public DateTime? GraduationDate { get; set; } = DateTime.Now;
         public string GraduationGrade { get; set; } = "";
         public string GraduationProject { get; set; } = "";
         public string GraduationProjectGrade { get; set; } = "";
-        public string Religion { get; set; }
+        public string Religion { get; set; } = "";
+        public string ReligionEn { get; set; } = "";
         public DateTime? AvailableFrom { get; set; }
         public Double? ExpectedSalary { get; set; }
         public string Certificates { get; set; } = "";
@@ -85,7 +91,7 @@ namespace ReportsProj.Management_Models
         public DateTime? WorkedInOurFirmBeforeTo { get; set; } //*****************جديد
 
         //The User
-        public string TheUser { get; set; }
+        public string TheUser { get; set; } = "";
         public string Office { get; set; } = "";
         public string DeliveryMethod { get; set; } = "";
         public DateTime? TheDate { get; set; } = DateTime.Now;

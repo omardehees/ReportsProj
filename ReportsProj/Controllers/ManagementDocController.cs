@@ -56,12 +56,16 @@ namespace ReportsProj.Controllers
 
         //-- Test__FingerPrint Preview Params>> /ManagementDoc?P1=P_FingerPrint&P2=5&P3=سجل%20البصمات&P4=admin&P5=3/1/2021&P6=4/1/2021&P7=البرمجة&P8=Preview&P9=1&P10=حضور&P11=عمر
         //-- Test__FingerPrint Print Params>> /ManagementDoc?P1=P_FingerPrint&P2=5&P3=سجل%20البصمات&P4=admin&P5=3/1/2021&P6=4/1/2021&P7=البرمجة&P8=Print&P9=1&P10=حضور&P11=عمر
-
-
         //-- Test__FingerPrint_Filterd Params>> /ManagementDoc?P1=P_FingerPrint_Filterd&P2=322989,322990,322991,322992
-
-
         //--------- / البصمات  -------------------------------------
+
+        //--------- التقدم لوظيفةاونلاين   ---------------------------------------
+        //-- Test__ApplyToJobOnline. Params>> /ManagementDoc?P1=P_ApplyToJobOnline&P2=984,985
+        //--------- / التقدم لوظيفةاونلاين   -------------------------------------
+
+        //---------En التقدم لوظيفةاونلاين   ---------------------------------------
+        //-- Test__ApplyToJobOnline. Params>> /ManagementDoc?P1=P_ApplyToJobOnline_En&P2=984,985
+        //--------- /En التقدم لوظيفةاونلاين   -------------------------------------
 
         //--------- التقدم لوظيفةالكل   ---------------------------------------
         //-- Test__ApplyToJob_All Params>> /ManagementDoc?P1=P_ApplyToJob_All&P2=984,985
@@ -70,10 +74,6 @@ namespace ReportsProj.Controllers
         //---------En التقدم لوظيفةالكل   ---------------------------------------
         //-- Test__ApplyToJobEn_All Params>> /ManagementDoc?P1=P_ApplyToJobEn_All&P2=984,985,992
         //--------- / En التقدم لوظيفةالكل   -------------------------------------
-
-        //--------- التقدم لوظيفةاونلاين   ---------------------------------------
-        //-- Test__ApplyToJobOnline. Params>> /ManagementDoc?P1=P_ApplyToJobOnline&P2=984,985
-        //--------- / التقدم لوظيفةاونلاين   -------------------------------------
 
         //--------- التعديل على حضور الموظفين   -------------------------------------
         //-- Test__AttendancePlant Params>> /ManagementDoc?P1=P_AttendancePlane_Permites_Ar&P2=109,110,111,112
@@ -405,6 +405,12 @@ namespace ReportsProj.Controllers
 
                 //--------- / P_ApplyToJobOnline ---------
 
+
+                //--------- P_ApplyToJobOnline_En ---------
+                case "P_ApplyToJobOnline_En":
+                    return View("ApplyToJobOnline_En");
+
+                //--------- / P_ApplyToJobOnline_En ---------
 
                 //--------- Attendance Plane per Employee en ---------
                 case "P_AttendancePlane_Port_En":

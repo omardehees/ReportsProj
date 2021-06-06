@@ -27,7 +27,7 @@
                 </Item2>
                 <Item3 Ref="13" ControlType="XRTableCell" Name="tableCell13" Weight="1.0339632915310426" Multiline="true" Text="tableCell13">
                   <ExpressionBindings>
-                    <Item1 Ref="14" EventName="BeforePrint" PropertyName="Text" Expression="[Marital Status]" />
+                    <Item1 Ref="14" EventName="BeforePrint" PropertyName="Text" Expression="[MaritalStatusEn]" />
                   </ExpressionBindings>
                 </Item3>
                 <Item4 Ref="15" ControlType="XRTableCell" Name="tableCell12" Weight="0.99552091191896919" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="tableCell12">
