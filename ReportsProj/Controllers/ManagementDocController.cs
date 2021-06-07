@@ -60,11 +60,11 @@ namespace ReportsProj.Controllers
         //--------- / البصمات  -------------------------------------
 
         //--------- التقدم لوظيفةاونلاين   ---------------------------------------
-        //-- Test__ApplyToJobOnline. Params>> /ManagementDoc?P1=P_ApplyToJobOnline&P2=984,985
+        //-- Test__ApplyToJobOnline. Params>> /ManagementDoc?P1=P_ApplyToJobOnline&P2=992,984,985
         //--------- / التقدم لوظيفةاونلاين   -------------------------------------
 
         //---------En التقدم لوظيفةاونلاين   ---------------------------------------
-        //-- Test__ApplyToJobOnline. Params>> /ManagementDoc?P1=P_ApplyToJobOnline_En&P2=984,985
+        //-- Test__ApplyToJobOnline. Params>> /ManagementDoc?P1=P_ApplyToJobOnline_En&P2=992,984,985
         //--------- /En التقدم لوظيفةاونلاين   -------------------------------------
 
         //--------- التقدم لوظيفةالكل   ---------------------------------------
@@ -505,9 +505,9 @@ namespace ReportsProj.Controllers
                         DevExpress.XtraPrinting.PrintToolBase tool = new DevExpress.XtraPrinting.PrintToolBase(MyReport.PrintingSystem);
                         tool.Print();
                         return Ok();
+                        //############# / Direct Printing ##################################### 
 
                     }
-                //############# / Direct Printing ##################################### 
 
 
 
