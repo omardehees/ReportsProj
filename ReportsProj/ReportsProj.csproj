@@ -31,6 +31,7 @@
     <None Remove="Reports\ManagementDoc\Rep_All_EmploymentContract.repx" />
     <None Remove="Reports\ManagementDoc\Rep_ApplyToJob.repx" />
     <None Remove="Reports\ManagementDoc\Rep_ApplyToJobOnline.repx" />
+    <None Remove="Reports\ManagementDoc\Rep_ApplyToJobOnlinePage.repx" />
     <None Remove="Reports\ManagementDoc\Rep_ApplyToJobOnline_En.repx" />
     <None Remove="Reports\ManagementDoc\Rep_ApplyToJob_All.repx" />
     <None Remove="Reports\ManagementDoc\Rep_AttendancePlanPerEmployee.repx" />
@@ -75,6 +76,7 @@
     <EmbeddedResource Include="Reports\ManagementDef\Rep_ManagementSelected.repx" />
     <EmbeddedResource Include="Reports\ManagementDef\Rep_Management_DatailsSelected.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_ApplyToJobOnline.repx" />
+    <EmbeddedResource Include="Reports\ManagementDoc\Rep_ApplyToJobOnlinePage.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_ApplyToJobOnline_En.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_ApplyToJob_All.repx" />
     <EmbeddedResource Include="Reports\ManagementDoc\Rep_AttendancePlanPerEmployee.repx" />
@@ -189,6 +191,12 @@
     </Compile>
     <Compile Update="Reports\ManagementDoc\Rep_ApplyToJobOnline.Designer.cs">
       <DependentUpon>Rep_ApplyToJobOnline.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_ApplyToJobOnlinePage.cs">
+      <DependentUpon>Rep_ApplyToJobOnlinePage.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\ManagementDoc\Rep_ApplyToJobOnlinePage.Designer.cs">
+      <DependentUpon>Rep_ApplyToJobOnlinePage.repx</DependentUpon>
     </Compile>
     <Compile Update="Reports\ManagementDoc\Rep_ApplyToJobOnline_En.cs">
       <DependentUpon>Rep_ApplyToJobOnline_En.repx</DependentUpon>

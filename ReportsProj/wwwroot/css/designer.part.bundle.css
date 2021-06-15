@@ -1,8 +1,8 @@
 /**
 * DevExpress HTML/JS Query Builder (dx-querybuilder.css)
-* Version: 20.1.4
-* Build date: 2020-06-02
-* Copyright (c) 2012 - 2020 Developer Express Inc. ALL RIGHTS RESERVED
+* Version: 20.1.11
+* Build date: 2021-03-15
+* Copyright (c) 2012 - 2021 Developer Express Inc. ALL RIGHTS RESERVED
 * License: https://www.devexpress.com/Support/EULAs/NetComponents.xml
 */
 
@@ -1458,6 +1458,7 @@
 .dxrd-wizard .dxrd-wizard-content .dxrd-configure-query-parameters-page .dx-treelist-item .dx-treelist-caption .dx-treelist-action-container {
   margin-left: auto;
   margin-right: auto;
+  padding-right: 6px;
 }
 .dxrd-wizard .dxrd-wizard-content .dxrd-wizard-add-queries-page .dx-treelist-item .dx-treelist-caption .dx-treelist-selectedcontent,
 .dxrd-wizard .dxrd-wizard-content .dxrd-configure-query-parameters-page .dx-treelist-item .dx-treelist-caption .dx-treelist-selectedcontent {
@@ -1806,9 +1807,9 @@
 
 /**
 * DevExpress HTML/JS Reporting (dx-reportdesigner.css)
-* Version: 20.1.4
-* Build date: 2020-06-02
-* Copyright (c) 2012 - 2020 Developer Express Inc. ALL RIGHTS RESERVED
+* Version: 20.1.12
+* Build date: 2021-04-23
+* Copyright (c) 2012 - 2021 Developer Express Inc. ALL RIGHTS RESERVED
 * License: https://www.devexpress.com/Support/EULAs/NetComponents.xml
 */
 
@@ -1964,10 +1965,12 @@
 .dx-designer .dx-overlay-wrapper:after,
 .dx-designer .dx-overlay-wrapper:before {
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: content-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 .dx-designer .dx-radiogroup .dx-widget .dx-radiobutton-icon:before {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 .dx-designer .dx-searchbox .dx-icon-search:before,
@@ -1975,6 +1978,11 @@
 .dx-designer .dx-toolbar-item,
 .dx-designer .dx-toolbar-menu-container,
 .dx-designer .dx-overlay-content .dx-popup-content {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.ui-selectable-helper.dxrd-selection-content {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;

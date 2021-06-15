@@ -1,8 +1,8 @@
 /**
 * DevExpress HTML/JS Analytics Core (dx-analytics.common.css)
-* Version: 20.1.4
-* Build date: 2020-06-02
-* Copyright (c) 2012 - 2020 Developer Express Inc. ALL RIGHTS RESERVED
+* Version: 20.1.11
+* Build date: 2021-03-15
+* Copyright (c) 2012 - 2021 Developer Express Inc. ALL RIGHTS RESERVED
 * License: https://www.devexpress.com/Support/EULAs/NetComponents.xml
 */
 
@@ -850,6 +850,7 @@
   position: absolute;
   top: 18px;
   bottom: 0;
+  min-width: 609px;
   width: 100%;
 }
 .dx-expressioneditor .dx-expression-tree .dx-expressioneditor-tools .dx-expressioneditor-tools-tabs .dx-expressioneditor-tools-tab {
@@ -986,7 +987,7 @@
   float: left;
 }
 .dx-format-string .dx-format-string-content {
-  width: 100%;
+  width: 628px;
   height: 100%;
   padding: 3px 10px;
   line-height: normal;
@@ -2417,9 +2418,9 @@
 
 /**
 * DevExpress HTML/JS Analytics Core (dx-analytics.light.css)
-* Version: 20.1.4
-* Build date: 2020-06-02
-* Copyright (c) 2012 - 2020 Developer Express Inc. ALL RIGHTS RESERVED
+* Version: 20.1.11
+* Build date: 2021-03-15
+* Copyright (c) 2012 - 2021 Developer Express Inc. ALL RIGHTS RESERVED
 * License: https://www.devexpress.com/Support/EULAs/NetComponents.xml
 */
 
@@ -2628,9 +2629,9 @@
 
 /**
 * DevExpress HTML/JS Reporting (dx-webdocumentviewer.css)
-* Version: 20.1.4
-* Build date: 2020-06-02
-* Copyright (c) 2012 - 2020 Developer Express Inc. ALL RIGHTS RESERVED
+* Version: 20.1.12
+* Build date: 2021-04-23
+* Copyright (c) 2012 - 2021 Developer Express Inc. ALL RIGHTS RESERVED
 * License: https://www.devexpress.com/Support/EULAs/NetComponents.xml
 */
 
@@ -3289,7 +3290,7 @@
   overflow-y: auto;
   overflow-x: hidden;
 }
-.dxrd-selection-content {
+.ui-selectable-helper.dxrd-selection-content {
   position: absolute;
   border: 1px dotted black;
   z-index: 100;

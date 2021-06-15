@@ -1,0 +1,672 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XtraReportsLayoutSerializer SerializerVersion="20.1.4.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v20.1, Version=20.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Rep_ApplyToJobOnlinePage" Margins="20, 20, 20, 20" PaperKind="A4" PageWidth="827" PageHeight="1169" Version="20.1" FilterString="[EmployeeId] = ?P_EmployeeId" DataMember="Doc_CVs" DataSource="#Ref-0">
+  <Parameters>
+    <Item1 Ref="3" Description="P_UserName" Name="P_UserName" />
+    <Item2 Ref="4" Description="P_EmployeeId" Name="P_EmployeeId" />
+  </Parameters>
+  <Bands>
+    <Item1 Ref="5" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="20" />
+    <Item2 Ref="6" ControlType="DetailBand" Name="detailBand1" HeightF="986.6717" KeepTogether="true">
+      <Controls>
+        <Item1 Ref="7" ControlType="XRLabel" Name="xrLabel43" RightToLeft="Yes" Text="التقدم لوظيفة " TextAlignment="MiddleCenter" SizeF="228.559814,34.9999847" LocationFloat="284.6247,0" Font="Times New Roman, 18pt, style=Bold, Underline, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="8" UseFont="false" UseTextAlignment="false" />
+        </Item1>
+        <Item2 Ref="9" ControlType="XRLabel" Name="label36" RightToLeft="Yes" Text="فيس بوك:" TextAlignment="TopLeft" SizeF="72.0501862,38.4172363" LocationFloat="118.299606,948.254456" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="10" UseFont="false" UseTextAlignment="false" />
+        </Item2>
+        <Item3 Ref="11" ControlType="XRLabel" Name="label38" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="117.299591,38.4171753" LocationFloat="1.000007,948.254456" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="12" EventName="BeforePrint" PropertyName="Text" Expression="[Facebook]" />
+          </ExpressionBindings>
+          <StylePriority Ref="13" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="14" ControlType="XRLabel" Name="label34" RightToLeft="Yes" Text="رقم التأمينات:" TextAlignment="TopLeft" SizeF="94.9436,50.37474" LocationFloat="689.5481,307.461243" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="15" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="16" ControlType="XRLabel" Name="label35" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="163.088745,50.3748779" LocationFloat="526.459351,307.461243" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="17" EventName="BeforePrint" PropertyName="Text" Expression="[InsuranceNumber]" />
+          </ExpressionBindings>
+          <StylePriority Ref="18" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="19" ControlType="XRLabel" Name="label32" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="93.6698,49.0001831" LocationFloat="585.5874,808.0461" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="20" EventName="BeforePrint" PropertyName="Text" Expression="[ExpectedSalary]" />
+          </ExpressionBindings>
+          <StylePriority Ref="21" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item6>
+        <Item7 Ref="22" ControlType="XRLabel" Name="label33" RightToLeft="Yes" Text="الراتب المتوقع:" TextAlignment="TopLeft" SizeF="105.234421,49.0001221" LocationFloat="679.2572,808.046143" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="23" UseFont="false" UseTextAlignment="false" />
+        </Item7>
+        <Item8 Ref="24" ControlType="XRLabel" Name="label30" RightToLeft="Yes" Text="متاح من:" TextAlignment="TopLeft" SizeF="67.98132,49.0001221" LocationFloat="405.8106,808.046143" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="25" UseFont="false" UseTextAlignment="false" />
+        </Item8>
+        <Item9 Ref="26" ControlType="XRLabel" Name="label31" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="146.6399,49.0001221" LocationFloat="259.170715,808.046143" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="27" EventName="BeforePrint" PropertyName="Text" Expression="[AvailableFrom]" />
+          </ExpressionBindings>
+          <StylePriority Ref="28" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item9>
+        <Item10 Ref="29" ControlType="XRLabel" Name="label26" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="142.190628,47.625" LocationFloat="1.000004,758.046448" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="30" EventName="BeforePrint" PropertyName="Text" Expression="[WorkedInOurFirmBeforeTo]" />
+          </ExpressionBindings>
+          <StylePriority Ref="31" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item10>
+        <Item11 Ref="32" ControlType="XRLabel" Name="label27" RightToLeft="Yes" Text="إلي:" TextAlignment="TopLeft" SizeF="39.7939453,47.62494" LocationFloat="143.190567,758.0466" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="33" UseFont="false" UseTextAlignment="false" />
+        </Item11>
+        <Item12 Ref="34" ControlType="XRLabel" Name="label24" RightToLeft="Yes" Text="من:" TextAlignment="TopLeft" SizeF="39.7939453,49.9996338" LocationFloat="405.990082,758.046448" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="35" UseFont="false" UseTextAlignment="false" />
+        </Item12>
+        <Item13 Ref="36" ControlType="XRLabel" Name="label25" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="158.588242,49.9996338" LocationFloat="247.401962,758.046448" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="37" EventName="BeforePrint" PropertyName="Text" Expression="[WorkedInOurFirmBeforeFrom]" />
+          </ExpressionBindings>
+          <StylePriority Ref="38" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item13>
+        <Item14 Ref="39" ControlType="XRLabel" Name="label23" RightToLeft="Yes" Text="عملت لدينا من قبل:" TextAlignment="TopLeft" SizeF="133.083557,49.9996948" LocationFloat="651.4083,758.046448" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="40" UseFont="false" UseTextAlignment="false" />
+        </Item14>
+        <Item15 Ref="41" ControlType="XRCheckBox" Name="checkBox2" TextAlignment="TopRight" SizeF="26.383667,28.1246338" LocationFloat="625.024658,758.0466" Padding="2,2,0,0,100">
+          <GlyphOptions Ref="42" Style="StandardBox2" Alignment="Center" />
+          <ExpressionBindings>
+            <Item1 Ref="43" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="[WorkedInOurFirmBefore]" />
+          </ExpressionBindings>
+          <StylePriority Ref="44" UseTextAlignment="false" />
+        </Item15>
+        <Item16 Ref="45" ControlType="XRLabel" Name="label97" TextFormatString="{0}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="99.9863739,50.1893" LocationFloat="1.000007,457.1362" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="46" EventName="BeforePrint" PropertyName="Text" Expression="[GraduationProjectGrade]" />
+          </ExpressionBindings>
+          <StylePriority Ref="47" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item16>
+        <Item17 Ref="48" ControlType="XRLabel" Name="label100" RightToLeft="Yes" Text="تقدير مشروع التخرج:" TextAlignment="TopLeft" SizeF="146.415588,50.1893" LocationFloat="100.986382,457.1362" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="49" UseFont="false" UseTextAlignment="false" />
+        </Item17>
+        <Item18 Ref="50" ControlType="XRLabel" Name="label95" RightToLeft="Yes" Text="مشروع التخرج:" TextAlignment="TopLeft" SizeF="111.795288,50.18927" LocationFloat="405.8106,457.1362" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="51" UseFont="false" UseTextAlignment="false" />
+        </Item18>
+        <Item19 Ref="52" ControlType="XRLabel" Name="label96" TextFormatString="{0}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="158.408646,50.18927" LocationFloat="247.401962,457.1362" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="53" EventName="BeforePrint" PropertyName="Text" Expression="[GraduationProject]" />
+          </ExpressionBindings>
+          <StylePriority Ref="54" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item19>
+        <Item20 Ref="55" ControlType="XRLabel" Name="label93" RightToLeft="Yes" Text="الجامعة: " TextAlignment="TopLeft" SizeF="59.58252,50" LocationFloat="458.023376,407.1361" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="56" UseFont="false" UseTextAlignment="false" />
+        </Item20>
+        <Item21 Ref="57" ControlType="XRLabel" Name="label94" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="210.551865,50" LocationFloat="247.401962,407.1361" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="58" EventName="BeforePrint" PropertyName="Text" Expression="[Univeristy]" />
+          </ExpressionBindings>
+          <StylePriority Ref="59" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item21>
+        <Item22 Ref="60" ControlType="XRCheckBox" Name="checkBox1" TextAlignment="TopRight" SizeF="26.383728,23.9857788" LocationFloat="401.153137,307.4613" Padding="2,2,0,0,100">
+          <GlyphOptions Ref="61" Style="StandardBox2" Alignment="Center" />
+          <ExpressionBindings>
+            <Item1 Ref="62" EventName="BeforePrint" PropertyName="CheckBoxState" Expression="[ResidentWife]" />
+          </ExpressionBindings>
+          <StylePriority Ref="63" UseTextAlignment="false" />
+        </Item22>
+        <Item23 Ref="64" ControlType="XRLabel" Name="label92" RightToLeft="Yes" Text="الزوجة مقيمة:" TextAlignment="TopLeft" SizeF="98.92267,50.3747864" LocationFloat="427.536774,307.461273" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="65" UseFont="false" UseTextAlignment="false" />
+        </Item23>
+        <Item24 Ref="66" ControlType="XRLabel" Name="label16" RightToLeft="Yes" Text="عدد الأولاد:" TextAlignment="TopLeft" SizeF="88.0200958,50.3748169" LocationFloat="152.780411,307.461273" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="67" UseFont="false" UseTextAlignment="false" />
+        </Item24>
+        <Item25 Ref="68" ControlType="XRLabel" Name="label19" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="151.7804,50.3748474" LocationFloat="1.000004,307.461243" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="69" EventName="BeforePrint" PropertyName="Text" Expression="[Kids]" />
+          </ExpressionBindings>
+          <StylePriority Ref="70" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item25>
+        <Item26 Ref="71" ControlType="XRLabel" Name="label4" RightToLeft="Yes" Text="الحالة الإجتماعية: " TextAlignment="TopLeft" SizeF="126.3973,50.3748" LocationFloat="114.403206,257.086365" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="72" UseFont="false" UseTextAlignment="false" />
+        </Item26>
+        <Item27 Ref="73" ControlType="XRLabel" Name="label7" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="113.4032,50.3748474" LocationFloat="1.000004,257.086365" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="74" EventName="BeforePrint" PropertyName="Text" Expression="[MaritalStatus]" />
+          </ExpressionBindings>
+          <StylePriority Ref="75" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item27>
+        <Item28 Ref="76" ControlType="XRLabel" Name="label12" RightToLeft="Yes" Text="الإسم-عربي:" TextAlignment="TopLeft" SizeF="87.4519653,50.7916756" LocationFloat="697.0397,106.602615" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="77" UseFont="false" UseTextAlignment="false" />
+        </Item28>
+        <Item29 Ref="78" ControlType="XRLabel" Name="label43" RightToLeft="Yes" Text="الشركة الحالية:" TextAlignment="TopLeft" SizeF="111.615784,52.00006" LocationFloat="405.990173,656.0462" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="79" UseFont="false" UseTextAlignment="false" />
+        </Item29>
+        <Item30 Ref="80" ControlType="XRLabel" Name="label44" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="158.588242,52.00006" LocationFloat="247.401962,656.0462" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="81" EventName="BeforePrint" PropertyName="Text" Expression="[CurrentCompany]" />
+          </ExpressionBindings>
+          <StylePriority Ref="82" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item30>
+        <Item31 Ref="83" ControlType="XRLabel" Name="label37" RightToLeft="Yes" Text="وصف الوظيفة: " TextAlignment="TopLeft" SizeF="104.211319,49.9998779" LocationFloat="143.190567,708.0463" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="84" UseFont="false" UseTextAlignment="false" />
+        </Item31>
+        <Item32 Ref="85" ControlType="XRLabel" Name="label40" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="142.190582,49.99994" LocationFloat="0.9999982,708.0463" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="86" EventName="BeforePrint" PropertyName="Text" Expression="[CurrentJobDescription]" />
+          </ExpressionBindings>
+          <StylePriority Ref="87" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item32>
+        <Item33 Ref="88" ControlType="XRLabel" Name="label90" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="135.589172,50.37491" LocationFloat="1.000004,206.711456" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="89" EventName="BeforePrint" PropertyName="Text" Expression="[IDDocumentExpireAt]" />
+          </ExpressionBindings>
+          <StylePriority Ref="90" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item33>
+        <Item34 Ref="91" ControlType="XRLabel" Name="label88" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="230.294464,50.3748627" LocationFloat="240.8005,206.711578" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="92" EventName="BeforePrint" PropertyName="Text" Expression="[IDDocumentNumber]" />
+          </ExpressionBindings>
+          <StylePriority Ref="93" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item34>
+        <Item35 Ref="94" ControlType="XRLabel" Name="label53" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="211.520935,49.3154831" LocationFloat="286.659027,157.395966" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="95" EventName="BeforePrint" PropertyName="Text" Expression="[City]+' - '+[Country]" />
+          </ExpressionBindings>
+          <StylePriority Ref="96" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item35>
+        <Item36 Ref="97" ControlType="XRLabel" Name="label51" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="226.0765,49.3154221" LocationFloat="1.0000124,157.395966" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="98" EventName="BeforePrint" PropertyName="Text" Expression="[Address]" />
+          </ExpressionBindings>
+          <StylePriority Ref="99" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item36>
+        <Item37 Ref="100" ControlType="XRLabel" Name="label98" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="294.7619,50.79167" LocationFloat="0,106.604263" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,2,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="101" EventName="BeforePrint" PropertyName="Text" Expression="[FullNameEn]" />
+          </ExpressionBindings>
+          <StylePriority Ref="102" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item37>
+        <Item38 Ref="103" ControlType="XRLabel" Name="label99" RightToLeft="Yes" Text="الإسم-انجليزي:" TextAlignment="TopLeft" SizeF="102.2,50.79" LocationFloat="294.76178,106.604294" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="104" UseFont="false" UseTextAlignment="false" />
+        </Item38>
+        <Item39 Ref="105" ControlType="XRLabel" Name="label87" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="132.7262,50.3748474" LocationFloat="526.4596,206.711609" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="106" EventName="BeforePrint" PropertyName="Text" Expression="[IDDocumentType]" />
+          </ExpressionBindings>
+          <StylePriority Ref="107" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item39>
+        <Item40 Ref="108" ControlType="XRLabel" Name="label86" RightToLeft="Yes" Text="نوع مستد الهوية: " TextAlignment="TopLeft" SizeF="125.306274,50.3748" LocationFloat="659.1858,206.711609" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="109" UseFont="false" UseTextAlignment="false" />
+        </Item40>
+        <Item41 Ref="110" ControlType="XRLabel" Name="label89" RightToLeft="Yes" Text="تاريخ الانتهاء: " TextAlignment="TopLeft" SizeF="104.211334,50.3748169" LocationFloat="136.589172,206.711609" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="111" UseFont="false" UseTextAlignment="false" />
+        </Item41>
+        <Item42 Ref="112" ControlType="XRLabel" Name="label91" RightToLeft="Yes" Text="الرقم : " TextAlignment="TopLeft" SizeF="55.364563,50.3748169" LocationFloat="471.095,206.711609" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="113" UseFont="false" UseTextAlignment="false" />
+        </Item42>
+        <Item43 Ref="114" ControlType="XRLabel" Name="label61" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="706.537537,97.59558" LocationFloat="1.00001216,507.3255" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="115" EventName="BeforePrint" PropertyName="Text" Expression="[Specialization]" />
+          </ExpressionBindings>
+          <StylePriority Ref="116" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item43>
+        <Item44 Ref="117" ControlType="XRLabel" Name="label62" RightToLeft="Yes" Text="التخصص:" TextAlignment="TopLeft" SizeF="76.9541,97.59561" LocationFloat="707.537537,507.32547" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="118" UseFont="false" UseTextAlignment="false" />
+        </Item44>
+        <Item45 Ref="119" ControlType="XRLabel" Name="label67" RightToLeft="Yes" Text="   البيانات الأكاديمية" TextAlignment="MiddleLeft" SizeF="783.492065,36.54178" LocationFloat="1.000002,357.8361" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100">
+          <StylePriority Ref="120" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+        </Item45>
+        <Item46 Ref="121" ControlType="XRLabel" Name="label68" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="201.52124,50.00009" LocationFloat="517.606,407.136017" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="122" EventName="BeforePrint" PropertyName="Text" Expression="[Qualification]" />
+          </ExpressionBindings>
+          <StylePriority Ref="123" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item46>
+        <Item47 Ref="124" ControlType="XRLabel" Name="label73" RightToLeft="Yes" Text="المؤهل: " TextAlignment="TopLeft" SizeF="65.36481,50.00003" LocationFloat="719.127258,407.136017" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="125" UseFont="false" UseTextAlignment="false" />
+        </Item47>
+        <Item48 Ref="126" ControlType="XRLabel" Name="label74" RightToLeft="Yes" Text="تاريخ التخرج: " TextAlignment="TopLeft" SizeF="103.108093,50.18927" LocationFloat="681.384,457.1362" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="127" UseFont="false" UseTextAlignment="false" />
+        </Item48>
+        <Item49 Ref="128" ControlType="XRLabel" Name="label79" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="163.777954,50.18927" LocationFloat="517.606,457.1362" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="129" EventName="BeforePrint" PropertyName="Text" Expression="[GraduationDate]" />
+          </ExpressionBindings>
+          <StylePriority Ref="130" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item49>
+        <Item50 Ref="131" ControlType="XRLabel" Name="label82" RightToLeft="Yes" Text="التقدير : " TextAlignment="TopLeft" SizeF="65.36481,50" LocationFloat="182.03714,407.1361" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="132" UseFont="false" UseTextAlignment="false" />
+        </Item50>
+        <Item51 Ref="133" ControlType="XRLabel" Name="label83" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="181.037155,50" LocationFloat="1.000007,407.1361" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="134" EventName="BeforePrint" PropertyName="Text" Expression="[GraduationGrade]" />
+          </ExpressionBindings>
+          <StylePriority Ref="135" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item51>
+        <Item52 Ref="136" ControlType="XRLabel" Name="label77" RightToLeft="Yes" Text="تليجرام:" TextAlignment="TopLeft" SizeF="61.36821,38.4172363" LocationFloat="306.766724,948.2544" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="137" UseFont="false" UseTextAlignment="false" />
+        </Item52>
+        <Item53 Ref="138" ControlType="XRLabel" Name="label78" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="116.416992,38.4171753" LocationFloat="190.3498,948.254456" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="139" EventName="BeforePrint" PropertyName="Text" Expression="[Telegram]" />
+          </ExpressionBindings>
+          <StylePriority Ref="140" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item53>
+        <Item54 Ref="141" ControlType="XRLabel" Name="label69" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="137.569183,38.4171753" LocationFloat="368.134949,948.254456" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="142" EventName="BeforePrint" PropertyName="Text" Expression="[LinkedIn]" />
+          </ExpressionBindings>
+          <StylePriority Ref="143" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item54>
+        <Item55 Ref="144" ControlType="XRLabel" Name="label70" RightToLeft="Yes" Text="لينكد إن:" TextAlignment="TopLeft" SizeF="64.16632,38.4171143" LocationFloat="505.7041,948.254456" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="145" UseFont="false" UseTextAlignment="false" />
+        </Item55>
+        <Item56 Ref="146" ControlType="XRLabel" Name="label54" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="184.526825,41.66632" LocationFloat="277.714539,906.5881" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="147" EventName="BeforePrint" PropertyName="Text" Expression="[Phone]" />
+          </ExpressionBindings>
+          <StylePriority Ref="148" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item56>
+        <Item57 Ref="149" ControlType="XRLabel" Name="label55" RightToLeft="Yes" Text="الهاتف: " TextAlignment="TopLeft" SizeF="55.36447,41.66632" LocationFloat="462.2415,906.5881" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="150" UseFont="false" UseTextAlignment="false" />
+        </Item57>
+        <Item58 Ref="151" ControlType="XRLabel" Name="label56" RightToLeft="Yes" Text="   بيانات التواصل" TextAlignment="MiddleLeft" SizeF="783.492065,36.54181" LocationFloat="0.999999046,857.0463" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100">
+          <StylePriority Ref="152" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+        </Item58>
+        <Item59 Ref="153" ControlType="XRLabel" Name="label57" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="214.765259,41.66632" LocationFloat="517.605957,906.5881" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="154" EventName="BeforePrint" PropertyName="Text" Expression="[Mobile]" />
+          </ExpressionBindings>
+          <StylePriority Ref="155" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item59>
+        <Item60 Ref="156" ControlType="XRLabel" Name="label58" RightToLeft="Yes" Text="الچوال: " TextAlignment="TopLeft" SizeF="52.12079,41.6662" LocationFloat="732.3711,906.5881" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="157" UseFont="false" UseTextAlignment="false" />
+        </Item60>
+        <Item61 Ref="158" ControlType="XRLabel" Name="label59" RightToLeft="Yes" Text="واتس آب:" TextAlignment="TopLeft" SizeF="73.56586,38.4171753" LocationFloat="710.925842,948.2544" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="159" UseFont="false" UseTextAlignment="false" />
+        </Item61>
+        <Item62 Ref="160" ControlType="XRLabel" Name="label60" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="141.055481,38.4171753" LocationFloat="569.8704,948.254456" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="161" EventName="BeforePrint" PropertyName="Text" Expression="[WhatsApp]" />
+          </ExpressionBindings>
+          <StylePriority Ref="162" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item62>
+        <Item63 Ref="163" ControlType="XRLabel" Name="label63" RightToLeft="Yes" Text="البريد الإلكتروني: " TextAlignment="TopLeft" SizeF="121.180054,41.66626" LocationFloat="156.534485,906.5881" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="164" UseFont="false" UseTextAlignment="false" />
+        </Item63>
+        <Item64 Ref="165" ControlType="XRLabel" Name="label64" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="155.5345,41.66638" LocationFloat="1.000007,906.5882" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="166" EventName="BeforePrint" PropertyName="Text" Expression="[Email]" />
+          </ExpressionBindings>
+          <StylePriority Ref="167" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item64>
+        <Item65 Ref="168" ControlType="XRLabel" Name="label50" RightToLeft="Yes" Text="العنوان: " TextAlignment="TopLeft" SizeF="59.58261,49.3154221" LocationFloat="227.076462,157.396057" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="169" UseFont="false" UseTextAlignment="false" />
+        </Item65>
+        <Item66 Ref="170" ControlType="XRLabel" Name="label49" RightToLeft="Yes" Text="المدينة: " TextAlignment="TopLeft" SizeF="55.3646851,49.31553" LocationFloat="498.180084,157.395935" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="171" UseFont="false" UseTextAlignment="false" />
+        </Item66>
+        <Item67 Ref="172" ControlType="XRLabel" Name="label41" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="150.4552,49.99994" LocationFloat="517.605957,708.0463" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="173" EventName="BeforePrint" PropertyName="Text" Expression="[CurrentJobFrom]" />
+          </ExpressionBindings>
+          <StylePriority Ref="174" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item67>
+        <Item68 Ref="175" ControlType="XRLabel" Name="label42" RightToLeft="Yes" Text="في الوظيفة منذ: " TextAlignment="TopLeft" SizeF="116.430847,49.9998779" LocationFloat="668.061035,708.0463" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="176" UseFont="false" UseTextAlignment="false" />
+        </Item68>
+        <Item69 Ref="177" ControlType="XRLabel" Name="label21" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="142.190552,52" LocationFloat="0.9999982,656.0463" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="178" EventName="BeforePrint" PropertyName="Text" Expression="[CurrentJobSalary]" />
+          </ExpressionBindings>
+          <StylePriority Ref="179" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item69>
+        <Item70 Ref="180" ControlType="XRLabel" Name="label22" RightToLeft="Yes" Text="الراتب الحالي:" TextAlignment="TopLeft" SizeF="104.211258,52" LocationFloat="143.190567,656.0463" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="181" UseFont="false" UseTextAlignment="false" />
+        </Item70>
+        <Item71 Ref="182" ControlType="XRLabel" Name="label14" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="197.638885,50.3748932" LocationFloat="240.800568,257.086365" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="183" EventName="BeforePrint" PropertyName="Text" Expression="[PlaceOfBirth]" />
+          </ExpressionBindings>
+          <StylePriority Ref="184" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item71>
+        <Item72 Ref="185" ControlType="XRLabel" Name="label15" RightToLeft="Yes" Text="تاريخ الميلاد: " TextAlignment="TopLeft" SizeF="94.94397,50.3748169" LocationFloat="689.5481,257.086365" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="186" UseFont="false" UseTextAlignment="false" />
+        </Item72>
+        <Item73 Ref="187" ControlType="XRLabel" Name="label18" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="163.088562,50.3748474" LocationFloat="526.459534,257.086365" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="188" EventName="BeforePrint" PropertyName="Text" Expression="[DateOfBirth]" />
+          </ExpressionBindings>
+          <StylePriority Ref="189" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item73>
+        <Item74 Ref="190" ControlType="XRLabel" Name="label20" RightToLeft="Yes" Text="محل الميلاد:" TextAlignment="TopLeft" SizeF="88.02008,50.3748169" LocationFloat="438.439423,257.086365" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="191" UseFont="false" UseTextAlignment="false" />
+        </Item74>
+        <Item75 Ref="192" ControlType="XRLabel" Name="label8" RightToLeft="Yes" Text="الوظيفة الحالية: " TextAlignment="TopLeft" SizeF="111.615784,49.99994" LocationFloat="405.990173,708.0463" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="193" UseFont="false" UseTextAlignment="false" />
+        </Item75>
+        <Item76 Ref="194" ControlType="XRLabel" Name="label9" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="158.588287,49.99994" LocationFloat="247.401886,708.0463" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="195" EventName="BeforePrint" PropertyName="Text" Expression="[CurrentJob]" />
+          </ExpressionBindings>
+          <StylePriority Ref="196" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item76>
+        <Item77 Ref="197" ControlType="XRLabel" Name="label10" RightToLeft="Yes" Text="   البيانات المهنية " TextAlignment="MiddleLeft" SizeF="783.492,36.541687" LocationFloat="0.9999997,604.9211" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100">
+          <StylePriority Ref="198" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+        </Item77>
+        <Item78 Ref="199" ControlType="XRLabel" Name="label11" RightToLeft="Yes" Text="سنوات الخبرة:" TextAlignment="TopLeft" SizeF="103.108032,52.0001221" LocationFloat="681.384,656.0462" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="200" UseFont="false" UseTextAlignment="false" />
+        </Item78>
+        <Item79 Ref="201" ControlType="XRLabel" Name="label13" TextFormatString="{0:}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="163.778076,52" LocationFloat="517.605957,656.0463" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="202" EventName="BeforePrint" PropertyName="Text" Expression="[YearsOfExperience]" />
+          </ExpressionBindings>
+          <StylePriority Ref="203" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item79>
+        <Item80 Ref="204" ControlType="XRLabel" Name="label6" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="181.03717,49.31546" LocationFloat="553.5446,157.395935" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="205" EventName="BeforePrint" PropertyName="Text" Expression="[Sex]" />
+          </ExpressionBindings>
+          <StylePriority Ref="206" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item80>
+        <Item81 Ref="207" ControlType="XRLabel" Name="label3" RightToLeft="Yes" Text="النوع: " TextAlignment="TopLeft" SizeF="49.90979,49.3152771" LocationFloat="734.5818,157.394287" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="208" UseFont="false" UseTextAlignment="false" />
+        </Item81>
+        <Item82 Ref="209" ControlType="XRLabel" Name="label2" RightToLeft="Yes" Text="   البيانات الأساسية " TextAlignment="MiddleLeft" SizeF="783.492065,36.54169" LocationFloat="1,58.06256" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100">
+          <StylePriority Ref="210" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+        </Item82>
+        <Item83 Ref="211" ControlType="XRLabel" Name="xrLabel30" TextFormatString="{0:d/M/yyyy}" Multiline="true" Text="xrLabel11" TextAlignment="TopRight" SizeF="300.077881,50.7917023" LocationFloat="396.9618,106.604263" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,5,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="212" EventName="BeforePrint" PropertyName="Text" Expression="[FullNameAr]" />
+          </ExpressionBindings>
+          <StylePriority Ref="213" UseFont="false" UsePadding="false" UseTextAlignment="false" />
+        </Item83>
+      </Controls>
+    </Item2>
+    <Item3 Ref="214" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="20" />
+    <Item4 Ref="215" ControlType="PageHeaderBand" Name="PageHeader" HeightF="95.73063">
+      <Controls>
+        <Item1 Ref="216" ControlType="XRLine" Name="line1" SizeF="787,2.08333588" LocationFloat="0,89.62493" />
+        <Item2 Ref="217" ControlType="XRPictureBox" Name="pictureBox1" ImageSource="img,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" Sizing="Squeeze" SizeF="88.98746,79.08328" LocationFloat="355.664368,1.58945713E-05" />
+        <Item3 Ref="218" ControlType="XRLabel" Name="xrLabel53" Multiline="true" Text="القصيم - البكيرية " TextAlignment="TopCenter" SizeF="197.097351,32.95834" LocationFloat="589.902649,32.12497" Font="Microsoft Sans Serif, 9pt, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="219" UseFont="false" UseTextAlignment="false" />
+        </Item3>
+        <Item4 Ref="220" ControlType="XRLabel" Name="xrLabel39" Multiline="true" Text="مجمع التداوي الطبي" TextAlignment="TopCenter" SizeF="197.097412,26.1250038" LocationFloat="589.9026,6" Font="Arial, 14pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="221" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="222" ControlType="XRLabel" Name="xrLabel67" Multiline="true" Text="Al Qassim - Al Bukairyah" TextAlignment="TopCenter" SizeF="294.761841,33.9583244" LocationFloat="0,33.20833" Font="Microsoft Sans Serif, 9pt, style=Bold, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="223" UseFont="false" UseTextAlignment="false" />
+        </Item5>
+        <Item6 Ref="224" ControlType="XRLabel" Name="xrLabel66" Multiline="true" Text="ATTADAWE MEDICAL CLINICS" TextAlignment="TopCenter" SizeF="294.761871,25.12505" LocationFloat="0,8.083333" Font="Arial, 14pt, style=Bold" Padding="2,2,0,0,100">
+          <StylePriority Ref="225" UseFont="false" UseTextAlignment="false" />
+        </Item6>
+      </Controls>
+    </Item4>
+    <Item5 Ref="226" ControlType="PageFooterBand" Name="PageFooter" HeightF="26.665369">
+      <Controls>
+        <Item1 Ref="227" ControlType="XRPageInfo" Name="pageInfo3" SizeF="73.2832642,21.2917328" LocationFloat="388.9581,3.08329272" Font="Arial, 9.75pt, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="228" UseFont="false" />
+        </Item1>
+        <Item2 Ref="229" ControlType="XRPageInfo" Name="pageInfo4" PageInfo="DateTime" TextFormatString="{0:dd/MM/yyyy  hh:mm  tt }" SizeF="146.40625,22.29169" LocationFloat="638.0859,2.08330154" Font="Arial, 9.75pt, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="230" UseFont="false" />
+        </Item2>
+        <Item3 Ref="231" ControlType="XRLine" Name="line3" SizeF="784.49176,2.08335447" LocationFloat="0,0" />
+        <Item4 Ref="232" ControlType="XRLabel" Name="label1" RightToLeft="Yes" Text=":  Printed By " TextAlignment="MiddleLeft" SizeF="85.87487,22.2916355" LocationFloat="1.000007,2.08333325" Font="Arial, 9.75pt, charSet=0" Padding="2,2,0,0,100">
+          <StylePriority Ref="233" UseFont="false" UseTextAlignment="false" />
+        </Item4>
+        <Item5 Ref="234" ControlType="XRLabel" Name="label5" Multiline="true" Text="label5" SizeF="197.086288,22.2916279" LocationFloat="86.87486,2.08333325" Font="Arial, 9.75pt, charSet=0" Padding="2,2,0,0,100">
+          <ExpressionBindings>
+            <Item1 Ref="235" EventName="BeforePrint" PropertyName="Text" Expression="?P_UserName" />
+          </ExpressionBindings>
+          <StylePriority Ref="236" UseFont="false" />
+        </Item5>
+      </Controls>
+    </Item5>
+    <Item6 Ref="237" ControlType="DetailReportBand" Name="DetailReport1" Level="0" FilterString="[EmployeeId] = ?P_EmployeeId" DataMember="Rel_LanguageMastery" DataSource="#Ref-0">
+      <Bands>
+        <Item1 Ref="238" ControlType="DetailBand" Name="Detail1" HeightF="25">
+          <Controls>
+            <Item1 Ref="239" ControlType="XRTable" Name="table1" TextAlignment="MiddleCenter" SizeF="783.491638,25" LocationFloat="1.00000548,0" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,0,0,96" BorderColor="255,180,180,180" Borders="All">
+              <Rows>
+                <Item1 Ref="240" ControlType="XRTableRow" Name="tableRow1" Weight="1">
+                  <Cells>
+                    <Item1 Ref="241" ControlType="XRTableCell" Name="tableCell1" Weight="1" Multiline="true" Text="tableCell1">
+                      <ExpressionBindings>
+                        <Item1 Ref="242" EventName="BeforePrint" PropertyName="Text" Expression="[Mastery]" />
+                      </ExpressionBindings>
+                    </Item1>
+                    <Item2 Ref="243" ControlType="XRTableCell" Name="tableCell2" Weight="1" Multiline="true" Text="tableCell2">
+                      <ExpressionBindings>
+                        <Item1 Ref="244" EventName="BeforePrint" PropertyName="Text" Expression="[Language]" />
+                      </ExpressionBindings>
+                    </Item2>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="245" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="246" ControlType="GroupHeaderBand" Name="GroupHeader2" HeightF="95.52054">
+          <Controls>
+            <Item1 Ref="247" ControlType="XRTable" Name="table8" TextAlignment="MiddleCenter" SizeF="783.491638,24.9999962" LocationFloat="1.00000548,70.52054" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" BackColor="Gainsboro" Padding="2,2,0,0,96" BorderColor="DimGray" Borders="All">
+              <Rows>
+                <Item1 Ref="248" ControlType="XRTableRow" Name="tableRow8" Weight="1">
+                  <Cells>
+                    <Item1 Ref="249" ControlType="XRTableCell" Name="tableCell10" Weight="2.4999998441970446" Multiline="true" Text="المستوي" TextAlignment="MiddleCenter" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" BorderColor="DimGray" Borders="All">
+                      <StylePriority Ref="250" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="251" ControlType="XRTableCell" Name="tableCell12" Weight="2.5000001558029554" Multiline="true" Text="الاسم" TextAlignment="MiddleCenter" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" BorderColor="DimGray" Borders="All">
+                      <StylePriority Ref="252" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="253" UseFont="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="254" ControlType="XRLabel" Name="label65" RightToLeft="Yes" Text="اللغات" TextAlignment="MiddleLeft" SizeF="783.492065,36.54181" LocationFloat="0.999999046,33.97873" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100">
+              <StylePriority Ref="255" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+            </Item2>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item6>
+    <Item7 Ref="256" ControlType="DetailReportBand" Name="DetailReport" Level="1" FilterString="[EmployeeId] = ?P_EmployeeId" DataMember="Rel_Certificates" DataSource="#Ref-0">
+      <Bands>
+        <Item1 Ref="257" ControlType="DetailBand" Name="Detail" HeightF="25">
+          <Controls>
+            <Item1 Ref="258" ControlType="XRTable" Name="table2" TextAlignment="MiddleCenter" SizeF="783.4921,25" LocationFloat="0.999984741,0" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,0,0,96" BorderColor="255,180,180,180" Borders="All">
+              <Rows>
+                <Item1 Ref="259" ControlType="XRTableRow" Name="tableRow2" Weight="1">
+                  <Cells>
+                    <Item1 Ref="260" ControlType="XRTableCell" Name="tableCell9" Weight="1.2815449177691991" TextFormatString="{0:dd/MM/yyyy}" Multiline="true" Text="tableCell9" TextAlignment="MiddleCenter" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" BorderColor="Gainsboro" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="261" EventName="BeforePrint" PropertyName="Text" Expression="[IssuedAt]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="262" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="263" ControlType="XRTableCell" Name="tableCell3" Weight="1.2184551796075871" Multiline="true" Text="tableCell3" TextAlignment="MiddleCenter" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" BorderColor="Gainsboro" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="264" EventName="BeforePrint" PropertyName="Text" Expression="[IssuedFrom]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="265" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="266" ControlType="XRTableCell" Name="tableCell4" Weight="1.3257102565410908" Multiline="true" Text="tableCell4" TextAlignment="MiddleCenter" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" BorderColor="Gainsboro" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="267" EventName="BeforePrint" PropertyName="Text" Expression="[Grade]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="268" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="269" ControlType="XRTableCell" Name="tableCell5" Weight="1.1742896460821228" Multiline="true" Text="tableCell5" TextAlignment="MiddleCenter" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" BorderColor="Gainsboro" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="270" EventName="BeforePrint" PropertyName="Text" Expression="[Title]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="271" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item4>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="272" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="273" ControlType="GroupHeaderBand" Name="GroupHeader1" HeightF="88.3151">
+          <Controls>
+            <Item1 Ref="274" ControlType="XRTable" Name="table3" TextAlignment="MiddleCenter" SizeF="783.4917,24.9999962" LocationFloat="1,63.3151054" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" BackColor="Gainsboro" Padding="2,2,0,0,96" BorderColor="DimGray" Borders="All">
+              <Rows>
+                <Item1 Ref="275" ControlType="XRTableRow" Name="tableRow3" Weight="1">
+                  <Cells>
+                    <Item1 Ref="276" ControlType="XRTableCell" Name="tableCell11" Weight="1.2815444286114033" Multiline="true" Text="اصدرت في" TextAlignment="MiddleCenter" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" BorderColor="DimGray" Borders="All">
+                      <StylePriority Ref="277" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="278" ControlType="XRTableCell" Name="tableCell6" Weight="1.2184553474218662" Multiline="true" Text="اصدرت من" TextAlignment="MiddleCenter" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" BorderColor="DimGray" Borders="All">
+                      <StylePriority Ref="279" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="280" ControlType="XRTableCell" Name="tableCell7" Weight="1.3257104828426685" Multiline="true" Text="التقدير" TextAlignment="MiddleCenter" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" BorderColor="DimGray" Borders="All">
+                      <StylePriority Ref="281" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="282" ControlType="XRTableCell" Name="tableCell8" Weight="1.174289741124062" Multiline="true" Text="الاسم" TextAlignment="MiddleCenter" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" BorderColor="DimGray" Borders="All">
+                      <StylePriority Ref="283" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item4>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="284" UseFont="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="285" ControlType="XRLabel" Name="label39" RightToLeft="Yes" Text="الشهادات" TextAlignment="MiddleLeft" SizeF="783.492065,36.54181" LocationFloat="0.999999046,26.7732582" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100">
+              <StylePriority Ref="286" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+            </Item2>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item7>
+    <Item8 Ref="287" ControlType="DetailReportBand" Name="DetailReport2" Level="2" FilterString="[EmployeeId] = ?P_EmployeeId" DataMember="Rel_SkillMastery" DataSource="#Ref-0">
+      <Bands>
+        <Item1 Ref="288" ControlType="DetailBand" Name="Detail2" HeightF="25">
+          <Controls>
+            <Item1 Ref="289" ControlType="XRTable" Name="table5" TextAlignment="MiddleCenter" SizeF="783.4921,25" LocationFloat="0.9999906,0" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,0,0,96" BorderColor="255,180,180,180" Borders="All">
+              <Rows>
+                <Item1 Ref="290" ControlType="XRTableRow" Name="tableRow5" Weight="1">
+                  <Cells>
+                    <Item1 Ref="291" ControlType="XRTableCell" Name="tableCell21" Weight="2.4999990262321377" Multiline="true" Text="tableCell4" TextAlignment="MiddleCenter" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" BorderColor="Gainsboro" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="292" EventName="BeforePrint" PropertyName="Text" Expression="[Mastery]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="293" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="294" ControlType="XRTableCell" Name="tableCell22" Weight="2.5000009737678623" Multiline="true" Text="tableCell5" TextAlignment="MiddleCenter" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" BorderColor="Gainsboro" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="295" EventName="BeforePrint" PropertyName="Text" Expression="[Skill]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="296" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="297" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="298" ControlType="GroupHeaderBand" Name="GroupHeader3" HeightF="90.5059738">
+          <Controls>
+            <Item1 Ref="299" ControlType="XRTable" Name="table4" TextAlignment="MiddleCenter" SizeF="783.491638,24.9999962" LocationFloat="1.00000548,65.31511" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" Padding="2,2,0,0,96" BorderColor="DimGray" Borders="All">
+              <Rows>
+                <Item1 Ref="300" ControlType="XRTableRow" Name="tableRow4" Weight="1">
+                  <Cells>
+                    <Item1 Ref="301" ControlType="XRTableCell" Name="tableCell16" Weight="2.4999998441970446" Multiline="true" Text="المستوي" TextAlignment="MiddleCenter" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" BackColor="Gainsboro" BorderColor="DimGray" Borders="All">
+                      <StylePriority Ref="302" UseFont="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="303" ControlType="XRTableCell" Name="tableCell17" Weight="2.5000001558029554" Multiline="true" Text="الاسم" TextAlignment="MiddleCenter" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" BackColor="Gainsboro" BorderColor="DimGray" Borders="All">
+                      <StylePriority Ref="304" UseFont="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="305" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="306" ControlType="XRLabel" Name="label45" RightToLeft="Yes" Text="المهارات" TextAlignment="MiddleLeft" SizeF="783.492065,36.54181" LocationFloat="0.999999046,28.7732582" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100">
+              <StylePriority Ref="307" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+            </Item2>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item8>
+    <Item9 Ref="308" ControlType="DetailReportBand" Name="DetailReport3" Level="3" FilterString="[EmployeeId] = ?P_EmployeeId" DataMember="Rel_PreviousCompanies" DataSource="#Ref-0">
+      <Bands>
+        <Item1 Ref="309" ControlType="DetailBand" Name="Detail3" HeightF="25">
+          <Controls>
+            <Item1 Ref="310" ControlType="XRTable" Name="table7" TextAlignment="MiddleCenter" SizeF="783.4921,25" LocationFloat="0.9999906,0" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" Padding="2,2,0,0,96" BorderColor="255,180,180,180" Borders="All">
+              <Rows>
+                <Item1 Ref="311" ControlType="XRTableRow" Name="tableRow7" Weight="1">
+                  <Cells>
+                    <Item1 Ref="312" ControlType="XRTableCell" Name="tableCell20" Weight="1" TextFormatString="{0:dd/MM/yyyy}" Multiline="true" Text="tableCell10" TextAlignment="MiddleCenter" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" BorderColor="Gainsboro" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="313" EventName="BeforePrint" PropertyName="Text" Expression="[ToDate]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="314" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="315" ControlType="XRTableCell" Name="tableCell23" Weight="1" TextFormatString="{0:dd/MM/yyyy}" Multiline="true" Text="tableCell9" TextAlignment="MiddleCenter" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" BorderColor="Gainsboro" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="316" EventName="BeforePrint" PropertyName="Text" Expression="[FromDate]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="317" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="318" ControlType="XRTableCell" Name="tableCell24" Weight="1" Multiline="true" Text="tableCell3" TextAlignment="MiddleCenter" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" BorderColor="Gainsboro" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="319" EventName="BeforePrint" PropertyName="Text" Expression="[JobDescription]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="320" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="321" ControlType="XRTableCell" Name="tableCell25" Weight="1" Multiline="true" Text="tableCell4" TextAlignment="MiddleCenter" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" BorderColor="Gainsboro" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="322" EventName="BeforePrint" PropertyName="Text" Expression="[Job]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="323" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="324" ControlType="XRTableCell" Name="tableCell26" Weight="1" Multiline="true" Text="tableCell5" TextAlignment="MiddleCenter" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" BorderColor="Gainsboro" Borders="All">
+                      <ExpressionBindings>
+                        <Item1 Ref="325" EventName="BeforePrint" PropertyName="Text" Expression="[Company]" />
+                      </ExpressionBindings>
+                      <StylePriority Ref="326" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item5>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="327" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item1>
+          </Controls>
+        </Item1>
+        <Item2 Ref="328" ControlType="GroupHeaderBand" Name="GroupHeader4" HeightF="91.31511">
+          <Controls>
+            <Item1 Ref="329" ControlType="XRLabel" Name="label46" RightToLeft="Yes" Text="الوظائف السابقة" TextAlignment="MiddleLeft" SizeF="783.492065,36.54181" LocationFloat="0.999999046,29.7732582" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" BackColor="LightGray" Padding="2,2,0,0,100">
+              <StylePriority Ref="330" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
+            </Item1>
+            <Item2 Ref="331" ControlType="XRTable" Name="table6" TextAlignment="MiddleCenter" SizeF="783.491638,24.9999962" LocationFloat="1.00000548,66.31511" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" BackColor="Gainsboro" Padding="2,2,0,0,96" BorderColor="DimGray" Borders="All">
+              <Rows>
+                <Item1 Ref="332" ControlType="XRTableRow" Name="tableRow6" Weight="1">
+                  <Cells>
+                    <Item1 Ref="333" ControlType="XRTableCell" Name="tableCell13" Weight="1" Multiline="true" Text="إلي" TextAlignment="MiddleCenter" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" BorderColor="DimGray" Borders="All">
+                      <StylePriority Ref="334" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item1>
+                    <Item2 Ref="335" ControlType="XRTableCell" Name="tableCell14" Weight="1" Multiline="true" Text="من" TextAlignment="MiddleCenter" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" BorderColor="DimGray" Borders="All">
+                      <StylePriority Ref="336" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item2>
+                    <Item3 Ref="337" ControlType="XRTableCell" Name="tableCell15" Weight="1" Multiline="true" Text="وصف الوظيفة" TextAlignment="MiddleCenter" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" BorderColor="DimGray" Borders="All">
+                      <StylePriority Ref="338" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item3>
+                    <Item4 Ref="339" ControlType="XRTableCell" Name="tableCell18" Weight="1" Multiline="true" Text="الوظيفة" TextAlignment="MiddleCenter" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" BorderColor="DimGray" Borders="All">
+                      <StylePriority Ref="340" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item4>
+                    <Item5 Ref="341" ControlType="XRTableCell" Name="tableCell19" Weight="1" Multiline="true" Text="الجهة" TextAlignment="MiddleCenter" Font="Times New Roman, 12.75pt, style=Bold, charSet=0" BorderColor="DimGray" Borders="All">
+                      <StylePriority Ref="342" UseFont="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+                    </Item5>
+                  </Cells>
+                </Item1>
+              </Rows>
+              <StylePriority Ref="343" UseFont="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
+            </Item2>
+          </Controls>
+        </Item2>
+      </Bands>
+    </Item9>
+  </Bands>
+  <Watermark Ref="344" ImageSource="img,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" ImageViewMode="Zoom" ImageTransparency="230" />
+  <ComponentStorage>
+    <Item1 Ref="0" ObjectType="DevExpress.DataAccess.Sql.SqlDataSource,DevExpress.DataAccess.v20.1" Name="sqlDataSource1" Base64="PFNxbERhdGFTb3VyY2UgTmFtZT0ic3FsRGF0YVNvdXJjZTEiPjxDb25uZWN0aW9uIE5hbWU9Ik1hbmFnZW1lbnQiIEZyb21BcHBDb25maWc9InRydWUiIC8+PFF1ZXJ5IFR5cGU9IlNlbGVjdFF1ZXJ5IiBOYW1lPSJEb2NfQ1ZzIj48VGFibGVzPjxUYWJsZSBOYW1lPSJEb2NfQ1ZzIiBYPSIzMCIgWT0iMzAiIFdpZHRoPSIxMjUiIEhlaWdodD0iMzg2MyIgLz48L1RhYmxlcz48Q29sdW1ucz48QWxsQ29sdW1ucyBUYWJsZT0iRG9jX0NWcyIgLz48L0NvbHVtbnM+PC9RdWVyeT48UXVlcnkgVHlwZT0iU2VsZWN0UXVlcnkiIE5hbWU9IlJlbF9DZXJ0aWZpY2F0ZXMiPjxUYWJsZXM+PFRhYmxlIE5hbWU9IlJlbF9DZXJ0aWZpY2F0ZXMiIFg9IjMwIiBZPSIzMCIgV2lkdGg9IjEyNSIgSGVpZ2h0PSIzMjMiIC8+PC9UYWJsZXM+PENvbHVtbnM+PEFsbENvbHVtbnMgVGFibGU9IlJlbF9DZXJ0aWZpY2F0ZXMiIC8+PC9Db2x1bW5zPjwvUXVlcnk+PFF1ZXJ5IFR5cGU9IlNlbGVjdFF1ZXJ5IiBOYW1lPSJSZWxfTGFuZ3VhZ2VNYXN0ZXJ5Ij48VGFibGVzPjxUYWJsZSBOYW1lPSJSZWxfTGFuZ3VhZ2VNYXN0ZXJ5IiBYPSIzMCIgWT0iMzAiIFdpZHRoPSIxMjUiIEhlaWdodD0iMjgzIiAvPjwvVGFibGVzPjxDb2x1bW5zPjxBbGxDb2x1bW5zIFRhYmxlPSJSZWxfTGFuZ3VhZ2VNYXN0ZXJ5IiAvPjwvQ29sdW1ucz48L1F1ZXJ5PjxRdWVyeSBUeXBlPSJTZWxlY3RRdWVyeSIgTmFtZT0iUmVsX1NraWxsTWFzdGVyeSI+PFRhYmxlcz48VGFibGUgTmFtZT0iUmVsX1NraWxsTWFzdGVyeSIgWD0iMzAiIFk9IjMwIiBXaWR0aD0iMTI1IiBIZWlnaHQ9IjI4MyIgLz48L1RhYmxlcz48Q29sdW1ucz48QWxsQ29sdW1ucyBUYWJsZT0iUmVsX1NraWxsTWFzdGVyeSIgLz48L0NvbHVtbnM+PC9RdWVyeT48UXVlcnkgVHlwZT0iU2VsZWN0UXVlcnkiIE5hbWU9IlJlbF9QcmV2aW91c0NvbXBhbmllcyI+PFRhYmxlcz48VGFibGUgTmFtZT0iUmVsX1ByZXZpb3VzQ29tcGFuaWVzIiBYPSIzMCIgWT0iMzAiIFdpZHRoPSIxMjUiIEhlaWdodD0iMzYzIiAvPjwvVGFibGVzPjxDb2x1bW5zPjxBbGxDb2x1bW5zIFRhYmxlPSJSZWxfUHJldmlvdXNDb21wYW5pZXMiIC8+PC9Db2x1bW5zPjwvUXVlcnk+PFJlc3VsdFNjaGVtYT48RGF0YVNldCBOYW1lPSJzcWxEYXRhU291cmNlMSI+PFZpZXcgTmFtZT0iRG9jX0NWcyI+PEZpZWxkIE5hbWU9IklkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iQ1ZDb2RlIiBUeXBlPSJHdWlkIiAvPjxGaWVsZCBOYW1lPSJGaXJzdE5hbWVBciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJNaWRkbGVOYW1lQXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTGFzdE5hbWVBciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTdXJuYW1lQXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRmlyc3ROYW1lRW4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTWlkZGxlTmFtZUVuIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ikxhc3ROYW1lRW4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU3VybmFtZUVuIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNvY2lhbFN1cm5hbWVBciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTb2NpYWxTdXJuYW1lRW4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRnVsbE5hbWVBciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGdWxsTmFtZUVuIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNleCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTZXhFbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJNYXJpdGFsU3RhdHVzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik1hcml0YWxTdGF0dXNFbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJLaWRzIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iUmVzaWRlbnRXaWZlIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJDb3VudHJ5IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNvdW50cnlFbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTdGF0ZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDaXR5IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNpdHlFbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBZGRyZXNzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ikxhbmd1YWdlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ikxhbmd1YWdlRW4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSUREb2N1bWVudFR5cGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSUREb2N1bWVudFR5cGVFbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJJRERvY3VtZW50TnVtYmVyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IklERG9jdW1lbnRJc3N1ZWRGcm9tIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IklERG9jdW1lbnRJc3N1ZWRBdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IklERG9jdW1lbnRFeHBpcmVBdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IklERG9jdW1lbnROb3RlcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEYXRlT2ZCaXJ0aCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IlBsYWNlT2ZCaXJ0aCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJIZWlnaHQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IldlaWdodCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iUGhvdG8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTWlsaXRhcnlTZXJ2aWNlU3RhdHVzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFjYWRlbWljR3JhZGVUeXBlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFjYWRlbWljR3JhZGVUeXBlRW4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUXVhbGlmaWNhdGlvbkVuIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlF1YWxpZmljYXRpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU3BlY2lhbGl6YXRpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ2VydGlmaWNhdGVzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNraWxscyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJVbml2ZXJpc3R5IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlVuaXZlcmlzdHlFbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJHcmFkdWF0aW9uRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkdyYWR1YXRpb25HcmFkZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJHcmFkdWF0aW9uUHJvamVjdCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJHcmFkdWF0aW9uUHJvamVjdEdyYWRlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlJlbGlnaW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlJlbGlnaW9uRW4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQXZhaWxhYmxlRnJvbSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkV4cGVjdGVkU2FsYXJ5IiBUeXBlPSJEb3VibGUiIC8+PEZpZWxkIE5hbWU9IlllYXJzT2ZFeHBlcmllbmNlIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iQ3VycmVudENvbXBhbnkiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ3VycmVudEpvYiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDdXJyZW50Sm9iRGVzY3JpcHRpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ3VycmVudEpvYkZyb20iIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJDdXJyZW50Sm9iU2FsYXJ5IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJQcmV2aW91c0NvbXBhbmllcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJXb3JrZWRJbk91ckZpcm1CZWZvcmUiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IldvcmtlZEluT3VyRmlybUJlZm9yZUZyb20iIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJXb3JrZWRJbk91ckZpcm1CZWZvcmVUbyIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IlRoZVVzZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iT2ZmaWNlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRlbGl2ZXJ5TWV0aG9kIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRoZURhdGUiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJKb2JBZHZlcnRpemVtZW50Q29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQaG9uZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJNb2JpbGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRW1haWwiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iR29vZ2xlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IllvdVR1YmUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTWljcm9zb2Z0IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkZhY2Vib29rIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ikluc3RhZ3JhbSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJUZWxlZ3JhbSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJXaGF0c0FwcCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJMaW5rZWRJbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJFbXBsb3llZUlkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkVtcGxveWVlQWNjb3VudE51bWJlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDb21wYW55IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRlcGFydG1lbnQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRGVwYXJ0bWVudEVuIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlByYWN0aWNlTGljZW5zZUlzc3VlZEZyb20iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUHJhY3RpY2VMaWNlbnNlTnVtYmVyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlByYWN0aWNlTGljZW5zZUlzc3VlZEF0IiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iUHJhY3RpY2VMaWNlbnNlRXhwaXJlQXQiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJQcmFjdGljZUxpY2Vuc2VOb3RlcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTeW5kaWNhdGVJc3N1ZWRGcm9tIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlN5bmRpY2F0ZU51bWJlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTeW5kaWNhdGVJc3N1ZWRBdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IlN5bmRpY2F0ZUV4cGlyZUF0IiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iU3luZGljYXRlTm90ZXMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUGFzc3BvcnRJc3N1ZWRGcm9tIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlBhc3Nwb3J0TnVtYmVyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlBhc3Nwb3J0SXNzdWVkQXQiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJQYXNzcG9ydEV4cGlyZUF0IiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iUGFzc3BvcnROb3RlcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJWaXNhSXNzdWVkRnJvbSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJWaXNhTnVtYmVyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlZpc2FJc3N1ZWRBdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IlZpc2FFeHBpcmVBdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IlZpc2FOb3RlcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJSZXNpZGVuY2VJc3N1ZWRGcm9tIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlJlc2lkZW5jZU51bWJlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJSZXNpZGVuY2VJc3N1ZWRBdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IlJlc2lkZW5jZUV4cGlyZUF0IiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iUmVzaWRlbmNlTm90ZXMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSW5zdXJhbmNlSXNzdWVkRnJvbSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJJbnN1cmFuY2VDbGFzcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJJbnN1cmFuY2VOdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSW5zdXJhbmNlVGVybSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJJbnN1cmFuY2VWYWx1ZSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iSW5zdXJhbmNlSXNzdWVkQXQiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJJbnN1cmFuY2VFeHBpcmVBdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9Ikluc3VyYW5jZUVtcGxveWVlU2hhcmVQZXJjZW50YWdlIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJJbnN1cmFuY2VOb3RlcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEcml2aW5nTGljZW5jZUlzc3VlZEZyb20iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRHJpdmluZ0xpY2VuY2VDbGFzcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEcml2aW5nTGljZW5jZU51bWJlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEcml2aW5nTGljZW5jZUlzc3VlZEF0IiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iRHJpdmluZ0xpY2VuY2VFeHBpcmVBdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkRyaXZpbmdMaWNlbmNlTm90ZXMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSm9iIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkpvYlRyZWVQb3NpdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJKb2JEZXNjcmlwdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJKb2JFbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJKb2JUcmVlUG9zaXRpb25FbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJKb2JEZXNjcmlwdGlvbkVuIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNhdWRpU3RhbmRhcmRKb2JDb2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRyYWluaW5nQ29udHJhY3RDb2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRyYWluaW5nQ29udHJhY3RUeXBlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRyYWluaW5nQ29udHJhY3RXZWVrRGF5cyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJUcmFpbmluZ0NvbnRyYWN0V2Vla0hvdXJzIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iVHJhaW5pbmdDb250cmFjdElzc3VlZEZyb20iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVHJhaW5pbmdDb250cmFjdElzc3VlZEF0IiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iVHJhaW5pbmdDb250cmFjdEV4cGlyZUF0IiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iVHJhaW5pbmdDb250cmFjdFN0YXR1cyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJUcmFpbmluZ0NvbnRyYWN0TGF0ZXN0RGF5IiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iVHJhaW5pbmdDb250cmFjdEZpbmFsRXZhbHVhdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJUcmFpbmluZ0NvbnRyYWN0RmluYWxFdmFsdWF0aW9uRnJvbTEwMCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlRyYWluaW5nQ29udHJhY3RCYXNpY1NhbGFyeSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iVHJhaW5pbmdDb250cmFjdEJhc2ljVGVybSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJUcmFpbmluZ0NvbnRyYWN0Tm90ZXMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRW1wbG95bWVudENvbnRyYWN0Q29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJFbXBsb3ltZW50Q29udHJhY3RUeXBlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkVtcGxveW1lbnRDb250cmFjdFdlZWtEYXlzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkVtcGxveW1lbnRDb250cmFjdFdlZWtIb3VycyIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkVtcGxveW1lbnRDb250cmFjdElzc3VlZEZyb20iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRW1wbG95bWVudENvbnRyYWN0SXNzdWVkQXQiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJFbXBsb3ltZW50Q29udHJhY3RGaXJzdERheSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkVtcGxveW1lbnRDb250cmFjdEV4cGlyZUF0IiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iRW1wbG95bWVudENvbnRyYWN0U3RhdHVzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkVtcGxveW1lbnRDb250cmFjdExhdGVzdERheSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkVtcGxveW1lbnRDb250cmFjdExhc3RFdmFsdWF0aW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkVtcGxveW1lbnRDb250cmFjdEN1bXVsYXRpdmVFdmFsdWF0aW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkVtcGxveW1lbnRDb250cmFjdEN1bXVsYXRpdmVFdmFsdWF0aW9uRnJvbTEwMCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkVtcGxveW1lbnRDb250cmFjdEJhc2ljU2FsYXJ5IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJFbXBsb3ltZW50Q29udHJhY3RCYXNpY1NhbGFyeVRlcm0iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRW1wbG95bWVudENvbnRyYWN0SW5jb21lU2hhcmVWYWx1ZSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iRW1wbG95bWVudENvbnRyYWN0SW5jb21lU2hhcmVSb2xlcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJFbXBsb3ltZW50Q29udHJhY3RPT0QiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkVtcGxveW1lbnRDb250cmFjdFNhbGFyeUluY3JlYW1lbnRWYWx1ZSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iRW1wbG95bWVudENvbnRyYWN0U2FsYXJ5SW5jcmVhbWVudFJvbGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQWxsb3dhbmNlc1ZhY2F0aW9uUGVyaW9kSW5EYXlzIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iRW1wbG95bWVudENvbnRyYWN0Tm90ZXMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQWxsb3dhbmNlc0hvdXNpbmdFeGlzdHMiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IkFsbG93YW5jZXNIb3VzaW5nVGVybSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBbGxvd2FuY2VzSG91c2luZ1ZhbHVlIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJBbGxvd2FuY2VzSG91c2luZ05vdGVzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFsbG93YW5jZXNUcmFuc2ZlckV4aXN0cyIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iQWxsb3dhbmNlc1RyYW5zZmVyVGVybSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBbGxvd2FuY2VzVHJhbnNmZXJWYWx1ZSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iQWxsb3dhbmNlc1RyYW5zZmVyTm90ZXMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQWxsb3dhbmNlc0Zvb2RFeGlzdHMiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IkFsbG93YW5jZXNGb29kVGVybSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBbGxvd2FuY2VzRm9vZFZhbHVlIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJBbGxvd2FuY2VzRm9vZE5vdGVzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFsbG93YW5jZXNGbGlnaHRUaWNrZXRFeGlzdHMiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IkFsbG93YW5jZXNGbGlnaHRUaWNrZXRUZXJtIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFsbG93YW5jZXNGbGlnaHRUaWNrZXRWYWx1ZSIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iQWxsb3dhbmNlc0ZsaWdodFRpY2tldE5vdGVzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkJhbmtUaXRsZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJCYW5rVGl0bGVFbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJCYW5rSUJBTiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJCYW5rQ3VycmVuY3kiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQmFua0FjY291bnROdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSXNFbmFibGVkIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJJc0RlZmF1bHQiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9Ik5vdGVzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFsbG93ZWRVc2VycyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBbGxvd2VkQnJhbmNoZXMiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iUmVsX0NlcnRpZmljYXRlcyI+PEZpZWxkIE5hbWU9IklkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iRW1wbG95ZWVJZCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJUaXRsZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJUaXRsZUVuIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Iklzc3VlZEZyb20iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVVJMIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Iklzc3VlZEF0IiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iR3JhZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSXNFbmFibGVkIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJJc0RlZmF1bHQiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9Ik5vdGVzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFsbG93ZWRVc2VycyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBbGxvd2VkQnJhbmNoZXMiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iUmVsX0xhbmd1YWdlTWFzdGVyeSI+PEZpZWxkIE5hbWU9IklkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iRW1wbG95ZWVJZCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJMYW5ndWFnZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJMYW5ndWFnZUVuIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik1hc3RlcnkiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTWFzdGVyeUVuIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IklzRW5hYmxlZCIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iSXNEZWZhdWx0IiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJOb3RlcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBbGxvd2VkVXNlcnMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQWxsb3dlZEJyYW5jaGVzIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjxWaWV3IE5hbWU9IlJlbF9Ta2lsbE1hc3RlcnkiPjxGaWVsZCBOYW1lPSJJZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkVtcGxveWVlSWQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU2tpbGwiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU2tpbGxFbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJNYXN0ZXJ5IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik1hc3RlcnlFbiIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJJc0VuYWJsZWQiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IklzRGVmYXVsdCIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iTm90ZXMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQWxsb3dlZFVzZXJzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFsbG93ZWRCcmFuY2hlcyIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48VmlldyBOYW1lPSJSZWxfUHJldmlvdXNDb21wYW5pZXMiPjxGaWVsZCBOYW1lPSJJZCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkVtcGxveWVlSWQiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29tcGFueSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDb21wYW55RW4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRnJvbURhdGUiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJUb0RhdGUiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJKb2IiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSm9iRW4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSm9iRGVzY3JpcHRpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU2FsYXJ5IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJJc0VuYWJsZWQiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IklzRGVmYXVsdCIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iTm90ZXMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQWxsb3dlZFVzZXJzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkFsbG93ZWRCcmFuY2hlcyIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+PC9SZXN1bHRTY2hlbWE+PENvbm5lY3Rpb25PcHRpb25zIENsb3NlQ29ubmVjdGlvbj0idHJ1ZSIgLz48L1NxbERhdGFTb3VyY2U+" />
+  </ComponentStorage>
+</XtraReportsLayoutSerializer>
