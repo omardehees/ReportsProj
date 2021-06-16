@@ -1,0 +1,18 @@
+﻿
+<link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
+<link rel="stylesheet" href="~/css/designer.part.bundle.css" />
+<script src="~/js/viewer.part.bundle.js"></script>
+<script src="~/js/designer.part.bundle.js"></script>
+
+@{
+    //Declare Report
+    ReportsProj.Reports.ManagementDoc.Rep_ApplyToJobOnlinePage_En MyReport = new ReportsProj.Reports.ManagementDoc.Rep_ApplyToJobOnlinePage_En();
+
+    // Specify the report properties
+    MyReport.Parameters["P_EmployeeId"].Value = TempData["P_Id"];
+    MyReport.Parameters["P_UserName"].Value = TempData["P_User"];
+    MyReport.RequestParameters = false;
+
+    // Go To Print
+    @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(MyReport)
+}

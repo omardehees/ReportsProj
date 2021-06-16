@@ -62,9 +62,14 @@ namespace ReportsProj.Controllers
         //--------- التقدم لوظيفةاونلاين   ---------------------------------------
         //-- Test__ApplyToJobOnline. Params>> /ManagementDoc?P1=P_ApplyToJobOnline&P2=992,984,985
         //--------- / التقدم لوظيفةاونلاين   -------------------------------------
+
         //--------- التقدم لوظيفة صفحةاونلاين   ---------------------------------------
         //-- Test__ApplyToJobOnline. Params>> /ManagementDoc?P1=P_ApplyToJobOnlinePage&P2=615084805
         //--------- / التقدم لوظيفةصفحةاونلاين   -------------------------------------
+        //--------- Enالتقدم لوظيفة صفحةاونلاين   ---------------------------------------
+        //-- Test__ApplyToJobOnline. Params>> /ManagementDoc?P1=P_ApplyToJobOnlinePage_En&P2=615084805
+        //--------- / Enالتقدم لوظيفةصفحةاونلاين   -------------------------------------
+
         //---------En التقدم لوظيفةاونلاين   ---------------------------------------
         //-- Test__ApplyToJobOnline. Params>> /ManagementDoc?P1=P_ApplyToJobOnline_En&P2=2017
         //--------- /En التقدم لوظيفةاونلاين   -------------------------------------
@@ -411,7 +416,13 @@ namespace ReportsProj.Controllers
                 case "P_ApplyToJobOnlinePage":
                     return View("ApplyToJobOnlinePage");
 
-                //--------- / P_ApplyToJobOnline ---------
+                //--------- / P_ApplyToJobOnlinePage ---------
+
+                //--------- P_ApplyToJobOnlinePage_En ---------
+                case "P_ApplyToJobOnlinePage_En":
+                    return View("ApplyToJobOnlinePage_En");
+
+                //--------- / P_ApplyToJobOnlinePage_En ---------
 
                 //--------- P_ApplyToJobOnline_En ---------
                 case "P_ApplyToJobOnline_En":
