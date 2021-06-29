@@ -20,12 +20,18 @@ namespace ReportsProj.Reports.ManagementDoc {
             this.bottomMarginBand1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.BottomMarginBand>("bottomMarginBand1");
             this.PageHeader = reportInitializer.GetControl<DevExpress.XtraReports.UI.PageHeaderBand>("PageHeader");
             this.PageFooter = reportInitializer.GetControl<DevExpress.XtraReports.UI.PageFooterBand>("PageFooter");
+            this.label20 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label20");
+            this.label17 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label17");
+            this.label18 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label18");
             this.label14 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label14");
             this.label16 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label16");
             this.label9 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label9");
             this.label11 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label11");
             this.label4 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label4");
             this.label6 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label6");
+            this.label19 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label19");
+            this.label2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label2");
+            this.label7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label7");
             this.label15 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label15");
             this.label13 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label13");
             this.label8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label8");
@@ -44,12 +50,6 @@ namespace ReportsProj.Reports.ManagementDoc {
             this.line3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line3");
             this.label1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label1");
             this.label5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label5");
-            this.label2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label2");
-            this.label7 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label7");
-            this.label17 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label17");
-            this.label18 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label18");
-            this.label19 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label19");
-            this.label20 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label20");
 
             // Parameters
             this.P_UserName = reportInitializer.GetParameter("P_UserName");
@@ -65,12 +65,18 @@ namespace ReportsProj.Reports.ManagementDoc {
         private DevExpress.XtraReports.UI.BottomMarginBand bottomMarginBand1;
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
         private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
+        private DevExpress.XtraReports.UI.XRLabel label20;
+        private DevExpress.XtraReports.UI.XRLabel label17;
+        private DevExpress.XtraReports.UI.XRLabel label18;
         private DevExpress.XtraReports.UI.XRLabel label14;
         private DevExpress.XtraReports.UI.XRLabel label16;
         private DevExpress.XtraReports.UI.XRLabel label9;
         private DevExpress.XtraReports.UI.XRLabel label11;
         private DevExpress.XtraReports.UI.XRLabel label4;
         private DevExpress.XtraReports.UI.XRLabel label6;
+        private DevExpress.XtraReports.UI.XRLabel label19;
+        private DevExpress.XtraReports.UI.XRLabel label2;
+        private DevExpress.XtraReports.UI.XRLabel label7;
         private DevExpress.XtraReports.UI.XRLabel label15;
         private DevExpress.XtraReports.UI.XRLabel label13;
         private DevExpress.XtraReports.UI.XRLabel label8;
@@ -89,14 +95,8 @@ namespace ReportsProj.Reports.ManagementDoc {
         private DevExpress.XtraReports.UI.XRLine line3;
         private DevExpress.XtraReports.UI.XRLabel label1;
         private DevExpress.XtraReports.UI.XRLabel label5;
+        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.CalculatedField VacDaysNo;
         private DevExpress.XtraReports.Parameters.Parameter P_UserName;
-        private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
-        private DevExpress.XtraReports.UI.XRLabel label2;
-        private DevExpress.XtraReports.UI.XRLabel label7;
-        private DevExpress.XtraReports.UI.XRLabel label17;
-        private DevExpress.XtraReports.UI.XRLabel label18;
-        private DevExpress.XtraReports.UI.XRLabel label19;
-        private DevExpress.XtraReports.UI.XRLabel label20;
     }
 }
