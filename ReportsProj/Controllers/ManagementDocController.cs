@@ -31,7 +31,6 @@ namespace ReportsProj.Controllers
         //-- Test_EmployemntContract_All  Params>> /ManagementDoc?P1=P_All_EmploymentContract&P3=عقود%20التوظيف&P4=admin
         //-- Test_Interviews   Params>> /ManagementDoc?P1=P_Interviews&P2=1,2,3&P3=المقابلات&P4=admin
         //-- Test_Interviews_All   Params>> /ManagementDoc?P1=P_Interview_All&P3=المقابلات&P4=admin
-        //-- Test_ApplyToJob   Params>> /ManagementDoc?P1=P_ApplyToJob&P2=379&P3=التقدم%20لوظيفة&P4=admin
 
         //---------  طلب اجازة  -------------------------------------
         //-- Params Description-- p1 = PageName & P2=Emplpoyee Code &P3>>Report Address & P4=UserName & P5=Search From Date & P6=Search To Date & P7= Search Department & P8= Preview Or  DirectPrint &P9=MachineNumber &P10=FingerPrintType &p11=EmployeeName &P12=Job
@@ -191,8 +190,6 @@ namespace ReportsProj.Controllers
                 case "P_Interview_All":
                     return View("Interview_All");
 
-                case "P_ApplyToJob":
-                    return View("ApplyToJob");
                 case "P_All_EmploymentContract":
                     return View("All_EmploymentContract");
 
@@ -541,116 +538,6 @@ namespace ReportsProj.Controllers
 
             }
 
-            #region peer switch
-            //if (!string.IsNullOrEmpty(P1))
-            //{
-            //    if (P1 == "Selected")
-            //    {
-            //        return View("EmpAdvertisement_Selected");
-            //    }
-            //    else if (P1 == "All")
-            //    {
-            //        return View("EmpAdvertisement_All");
-            //    }        
-            //    else if (P1 == "Selected_TrainingContract")
-            //    {
-            //        string CompanyName = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.Company).FirstOrDefault();
-            //        string TrainingIssuer = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.TrainingContractIssuedFrom).FirstOrDefault();
-
-            //        TempData["Company_Name"] = CompanyName;
-            //        TempData["TrainingIssuerJob"] = _Context.Def_Employee.Where(a => a.Name == TrainingIssuer).Select(s => s.TreePosition).FirstOrDefault();
-            //        TempData["Company_Address"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Address).FirstOrDefault();
-            //        TempData["Company_CommercialRecord"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.CommercialRecord).FirstOrDefault();
-            //        TempData["Company_Neighborhood"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Neighborhood).FirstOrDefault();
-            //        TempData["Company_Street"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Street).FirstOrDefault();
-            //        TempData["Company_MailBox"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.MailBox).FirstOrDefault();
-            //        TempData["Company_Fax"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Fax).FirstOrDefault();
-
-            //        return View("TrainingContract");
-            //    }
-            //    else if (P1 == "P_EmployemntContract")
-            //    {
-            //        string CompanyName = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.Company).FirstOrDefault();
-            //        string EmploymentIssuer = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractIssuedFrom).FirstOrDefault();
-
-            //        TempData["Company_Name"] = CompanyName;
-            //        TempData["EmploymentIssuerJob"] = _Context.Def_Employee.Where(a => a.Name == EmploymentIssuer).Select(s => s.TreePosition).FirstOrDefault();
-            //        TempData["Company_Address"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Address).FirstOrDefault();
-            //        TempData["Company_CommercialRecord"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.CommercialRecord).FirstOrDefault();
-            //        TempData["Company_Neighborhood"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Neighborhood).FirstOrDefault();
-            //        TempData["Company_Street"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Street).FirstOrDefault();
-            //        TempData["Company_MailBox"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.MailBox).FirstOrDefault();
-            //        TempData["Company_Fax"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Fax).FirstOrDefault();
-
-            //        string StartIn= _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractFirstDay).FirstOrDefault().Value.Year.ToString();
-            //        string ExpireIn = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractExpireAt).FirstOrDefault().Value.Year.ToString();
-
-            //        TempData["EmploymentContractDuration"]  = (int.Parse(ExpireIn) - int.Parse(StartIn)).ToString();
-            //        //TempData["EmploymentContractDuration"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Fax).FirstOrDefault();
-
-
-            //        return View("EmployemntContract");
-            //    }
-            //    else if (P1 == "P_EmpCard_V1")
-            //    {
-            //        return View("EmpCard_V1");
-
-
-            //        ////****  Direct Printing  *****
-            //        ////--- Declare Report
-            //        //ReportsProj.Reports.ManagementDoc.Rep_EmpCard_V1 MyReport = new ReportsProj.Reports.ManagementDoc.Rep_EmpCard_V1();
-            //        ////--- Specify the report properties
-            //        //MyReport.FilterString = "[Id] In (" + TempData["P_Id"] + ")";
-            //        //MyReport.Parameters["P_UserName"].Value = TempData["P_User"];
-            //        //MyReport.Parameters["P_RepHeader"].Value = TempData["P_T_Header"];
-            //        //MyReport.RequestParameters = false;
-            //        ////--- Go To Print
-            //        //MyReport.CreateDocument();
-            //        //DevExpress.XtraPrinting.PrintToolBase tool = new DevExpress.XtraPrinting.PrintToolBase(MyReport.PrintingSystem);
-            //        //tool.Print();
-            //        //return Ok();
-            //        ////**** / Direct Printing  *****
-
-            //    }
-            //    else if (P1 == "P_EmpCard_V2")
-            //    {
-            //        return View("EmpCard_V2");
-
-
-            //        ////****  Direct Printing  *****
-            //        ////--- Declare Report
-            //        //ReportsProj.Reports.ManagementDoc.Rep_EmpCard_V2 MyReport = new ReportsProj.Reports.ManagementDoc.Rep_EmpCard_V2();
-            //        ////--- Specify the report properties
-            //        //MyReport.FilterString = "[Id] In (" + TempData["P_Id"] + ")";
-            //        //MyReport.Parameters["P_UserName"].Value = TempData["P_User"];
-            //        //MyReport.Parameters["P_RepHeader"].Value = TempData["P_T_Header"];
-            //        //MyReport.RequestParameters = false;
-            //        ////--- Go To Print
-            //        //MyReport.CreateDocument();
-            //        //DevExpress.XtraPrinting.PrintToolBase tool = new DevExpress.XtraPrinting.PrintToolBase(MyReport.PrintingSystem);
-            //        //tool.Print();
-            //        //return Ok();
-            //        ////**** / Direct Printing  ***** 
-
-            //    }
-            //    else if (P1 == "P_Interviews")
-            //    {
-            //        return View("Interview");
-            //    }
-            //    else if (P1 == "P_Interviews_All")
-            //    {
-            //        return View("Interviews_All");
-            //    }
-            //    else if (P1 == "P_ApplyToJob")
-            //    {
-            //        return View("ApplyToJob");
-            //    }
-            //    else
-            //    {
-            //        return View("ErrorPage");
-            //    }
-            //}
-            #endregion
         }
     }
 }
