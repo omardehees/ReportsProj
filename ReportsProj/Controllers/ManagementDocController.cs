@@ -172,7 +172,7 @@ namespace ReportsProj.Controllers
                     TempData["Company_MailBox"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.MailBox).FirstOrDefault();
                     TempData["Company_Fax"] = _Context.Def_Company.Where(a => a.Title == CompanyName).Select(s => s.Fax).FirstOrDefault();
 
-                    string StartIn = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractFirstDay).FirstOrDefault().Value.Year.ToString();
+                    string StartIn = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractIssuedAt).FirstOrDefault().Value.Year.ToString();
                     string ExpireIn = _Context.Doc_CVs.Where(a => a.Id.ToString() == P2).Select(d => d.EmploymentContractExpireAt).FirstOrDefault().Value.Year.ToString();
                     TempData["EmploymentContractDuration"] = (int.Parse(ExpireIn) - int.Parse(StartIn)).ToString();
 
