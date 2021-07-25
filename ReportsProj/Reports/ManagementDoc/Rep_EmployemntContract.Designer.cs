@@ -89,6 +89,11 @@ namespace ReportsProj.Reports.ManagementDoc {
             this.label2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label2");
             this.xrLabel30 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel30");
             this.xrLabel44 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel44");
+            this.xrLabel66 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel66");
+            this.xrLabel67 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel67");
+            this.xrLabel39 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel39");
+            this.xrLabel53 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel53");
+            this.pictureBox1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox1");
             this.xrLabel43 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel43");
             this.line1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line1");
             this.pageInfo3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPageInfo>("pageInfo3");
@@ -96,11 +101,6 @@ namespace ReportsProj.Reports.ManagementDoc {
             this.line3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line3");
             this.label1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label1");
             this.label5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label5");
-            this.xrLabel66 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel66");
-            this.xrLabel67 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel67");
-            this.xrLabel39 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel39");
-            this.xrLabel53 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel53");
-            this.pictureBox1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox1");
 
             // Parameters
             this.P_RepHeader = reportInitializer.GetParameter("P_RepHeader");
@@ -192,6 +192,11 @@ namespace ReportsProj.Reports.ManagementDoc {
         private DevExpress.XtraReports.UI.XRLabel label2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel30;
         private DevExpress.XtraReports.UI.XRLabel xrLabel44;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel66;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel67;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel39;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel53;
+        private DevExpress.XtraReports.UI.XRPictureBox pictureBox1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel43;
         private DevExpress.XtraReports.UI.XRLine line1;
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo3;
@@ -211,10 +216,5 @@ namespace ReportsProj.Reports.ManagementDoc {
         private DevExpress.XtraReports.Parameters.Parameter P_Address;
         private DevExpress.XtraReports.Parameters.Parameter P_EmploymentIssuerJob;
         private DevExpress.XtraReports.Parameters.Parameter P_EmploymentContractDuration;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel66;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel67;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel39;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel53;
-        private DevExpress.XtraReports.UI.XRPictureBox pictureBox1;
     }
 }
