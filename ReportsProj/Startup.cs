@@ -58,7 +58,7 @@ namespace ReportsProj
 
             services.AddControllersWithViews();
             services.AddDevExpressControls();
-            services.AddScoped<ReportStorageWebExtension, CustomReportStorageWebExtension>();
+           // services.AddScoped<ReportStorageWebExtension, CustomReportStorageWebExtension>(); ////-- Excluded His File From Project From Root >> Services
             services.AddMvc().AddNewtonsoftJson().SetCompatibilityVersion(Microsoft.AspNetCore.Mvc.CompatibilityVersion.Version_3_0);
             services.ConfigureReportingServices(configurator => {
                 configurator.ConfigureReportDesigner(designerConfigurator => {
