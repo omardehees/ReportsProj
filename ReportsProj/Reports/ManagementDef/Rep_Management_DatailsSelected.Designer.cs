@@ -32,21 +32,17 @@ namespace ReportsProj.Reports.ManagementDef {
             this.xrLabel37 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel37");
             this.xrLabel44 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel44");
             this.xrLabel43 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel43");
-            this.xrLabel64 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel64");
-            this.xrLabel52 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel52");
-            this.xrLabel66 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel66");
-            this.xrLabel67 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel67");
-            this.xrLabel38 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel38");
-            this.xrLabel39 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel39");
-            this.xrLabel53 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel53");
-            this.xrLabel65 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel65");
-            this.pictureBox1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox1");
             this.line1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line1");
             this.pageInfo3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPageInfo>("pageInfo3");
             this.pageInfo4 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPageInfo>("pageInfo4");
             this.line3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line3");
             this.label1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label1");
             this.label5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label5");
+            this.pictureBox1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox1");
+            this.xrLabel53 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel53");
+            this.xrLabel39 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel39");
+            this.xrLabel67 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel67");
+            this.xrLabel66 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel66");
 
             // Parameters
             this.Col1 = reportInitializer.GetParameter("Col1");
@@ -74,15 +70,6 @@ namespace ReportsProj.Reports.ManagementDef {
         private DevExpress.XtraReports.UI.XRLabel xrLabel37;
         private DevExpress.XtraReports.UI.XRLabel xrLabel44;
         private DevExpress.XtraReports.UI.XRLabel xrLabel43;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel64;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel52;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel66;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel67;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel38;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel39;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel53;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel65;
-        private DevExpress.XtraReports.UI.XRPictureBox pictureBox1;
         private DevExpress.XtraReports.UI.XRLine line1;
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo3;
         private DevExpress.XtraReports.UI.XRPageInfo pageInfo4;
@@ -96,5 +83,10 @@ namespace ReportsProj.Reports.ManagementDef {
         private DevExpress.XtraReports.Parameters.Parameter Col5;
         private DevExpress.XtraReports.Parameters.Parameter P_RepHeader;
         private DevExpress.XtraReports.Parameters.Parameter P_UserName;
+        private DevExpress.XtraReports.UI.XRPictureBox pictureBox1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel53;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel39;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel67;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel66;
     }
 }
