@@ -13,6 +13,8 @@ namespace ReportsProj.Management_Models
         //MaritalStatusTemplate              drbdApplyToJobObj_MaritalStatus
         //BasicData---------------------------------------------------
         public Guid CVCode { get; set; }
+        public string ApplyAvailableJob { get; set; }
+        public string ApplyAvailableJobEn { get; set; }
         public string JobAdvertizementCode { get; set; } = "";
         //Basic Data
         public string FirstNameAr { get; set; } = "";
@@ -31,7 +33,7 @@ namespace ReportsProj.Management_Models
         public string SexEn { get; set; } = "";
         public string MaritalStatus { get; set; } = "";//*****************جديد
         public string MaritalStatusEn { get; set; } = "";//*****************جديد
-        public int Kids { get; set; } //*****************جديد
+        public int Kids { get; set; } = 0; //*****************جديد
         public bool ResidentWife { get; set; } = false;//*****************جديد
         public string Country { get; set; } = "";
         public string CountryEn { get; set; } = "";
@@ -50,8 +52,8 @@ namespace ReportsProj.Management_Models
         public string IDDocumentNotes { get; set; } = ""; //*****************جديد   
         public DateTime? DateOfBirth { get; set; }
         public string PlaceOfBirth { get; set; } = "";
-        public decimal? Height { get; set; }
-        public decimal? Weight { get; set; }
+        public decimal? Height { get; set; } = 0;
+        public decimal? Weight { get; set; } = 0;
         public string Photo { get; set; } = "";
         //public bool HaveDrivingLicense { get; set; } = false;///////////////////////////////////////////////////
         public string MilitaryServiceStatus { get; set; } = "";
@@ -79,12 +81,12 @@ namespace ReportsProj.Management_Models
         public string Certificates { get; set; } = "";
         public string Skills { get; set; } = "";
         //Current Job
-        public int? YearsOfExperience { get; set; }
+        public int? YearsOfExperience { get; set; } = 0;
         public string CurrentCompany { get; set; } = "";
         public string CurrentJob { get; set; } = "";
         public string CurrentJobDescription { get; set; } = "";
         public DateTime? CurrentJobFrom { get; set; }
-        public decimal? CurrentJobSalary { get; set; }
+        public decimal? CurrentJobSalary { get; set; } = 0;
         public string PreviousCompanies { get; set; } = "";
         public bool WorkedInOurFirmBefore { get; set; } = false;//*****************جديد
         public DateTime? WorkedInOurFirmBeforeFrom { get; set; } //*****************جديد
@@ -137,8 +139,8 @@ namespace ReportsProj.Management_Models
         public string InsuranceClass { get; set; } = "";//*****************جديد
         public string InsuranceNumber { get; set; } = "";//*****************جديد
         public string InsuranceTerm { get; set; } = "";//*****************جديد
-        public decimal? InsuranceValue { get; set; } //*****************جديد
-        public decimal? InsuranceEmployeeSharePercentage { get; set; } //*****************جديد
+        public decimal? InsuranceValue { get; set; } = 0; //*****************جديد
+        public decimal? InsuranceEmployeeSharePercentage { get; set; } = 0; //*****************جديد
         public DateTime? InsuranceIssuedAt { get; set; } //*****************جديد
         public DateTime? InsuranceExpireAt { get; set; } //*****************جديد
         public string InsuranceNotes { get; set; } = ""; //*****************جديد
@@ -152,15 +154,15 @@ namespace ReportsProj.Management_Models
         public string TrainingContractCode { get; set; } = "";//*****************جديد
         public string TrainingContractType { get; set; } = "";//*****************جديد
         public string TrainingContractWeekDays { get; set; } = "";//*****************جديد
-        public int? TrainingContractWeekHours { get; set; } //*****************جديد
+        public int? TrainingContractWeekHours { get; set; } = 0;//*****************جديد
         public string TrainingContractIssuedFrom { get; set; } = ""; //*****************جديد
         public DateTime? TrainingContractIssuedAt { get; set; }//*****************جديد
         public DateTime? TrainingContractExpireAt { get; set; }//*****************جديد
         public string TrainingContractStatus { get; set; } = "";//*****************جديد
         public DateTime? TrainingContractLatestDay { get; set; } //*****************جديد
         public string TrainingContractFinalEvaluation { get; set; } = "";//*****************جديد
-        public int? TrainingContractFinalEvaluationFrom100 { get; set; } //*****************جديد
-        public decimal? TrainingContractBasicSalary { get; set; } //*****************جديد
+        public int? TrainingContractFinalEvaluationFrom100 { get; set; } = 0; //*****************جديد
+        public decimal? TrainingContractBasicSalary { get; set; } = 0; //*****************جديد
         public string TrainingContractBasicTerm { get; set; } = "";//*****************جديد
         public string TrainingContractNotes { get; set; } = ""; //*****************جديد
         //job Details . --------------------------------------------------------------------
@@ -180,7 +182,7 @@ namespace ReportsProj.Management_Models
         public string EmploymentContractType { get; set; } = "";//*****************جديد
         public string EmploymentContractWeekDays { get; set; } = "";//*****************جديد
         [Range(0, 112)]//maximun 16 every weekday
-        public int? EmploymentContractWeekHours { get; set; } //*****************جديد
+        public int? EmploymentContractWeekHours { get; set; } = 0;//*****************جديد
         public string EmploymentContractIssuedFrom { get; set; } = ""; //*****************جديد
         public DateTime? EmploymentContractIssuedAt { get; set; } //*****************جديد
         public DateTime? EmploymentContractFirstDay { get; set; } //*****************جديد
@@ -190,34 +192,35 @@ namespace ReportsProj.Management_Models
         public string EmploymentContractLastEvaluation { get; set; } = "";//*****************جديد
         public string EmploymentContractCumulativeEvaluation { get; set; } = "";//*****************جديد
         [Range(0, 100)]
-        public int? EmploymentContractCumulativeEvaluationFrom100 { get; set; } //*****************جديد
-        public decimal? EmploymentContractBasicSalary { get; set; } //*****************جديد
+        public int? EmploymentContractCumulativeEvaluationFrom100 { get; set; } = 0;//*****************جديد
+        public decimal? EmploymentContractBasicSalary { get; set; } = 0;//*****************جديد
         public string EmploymentContractBasicSalaryTerm { get; set; } = "";//*****************جديد
-        public decimal? EmploymentContractIncomeShareValue { get; set; } //*****************جديد
+        public decimal? EmploymentContractIncomeShareValue { get; set; } = 0; //*****************جديد
         public string EmploymentContractIncomeShareRoles { get; set; } = "";//*****************جديد
-        public decimal? EmploymentContractOOD { get; set; } //*****************جديد
-        public decimal? EmploymentContractSalaryIncreamentValue { get; set; } //*****************جديد
+        public decimal? EmploymentContractOOD { get; set; } = 0; //*****************جديد
+        public decimal? EmploymentContractSalaryIncreamentValue { get; set; } = 0; //*****************جديد
         public string EmploymentContractSalaryIncreamentRole { get; set; } = "";//*****************جديد
         [Range(0, 200)]
-        public int? AllowancesVacationPeriodInDays { get; set; } //*****************جديد
-        public int? AllowancesVacationPeriodInDays_Sickness { get; set; } //*****************جديد
+        public int? AllowancesVacationPeriodInDays { get; set; } = 0;//*****************جديد
+        public int? AllowancesVacationPeriodInDays_Sickness { get; set; } = 0; //*****************جديد
+        public int? AllowancesVacationBonus { get; set; } = 0; //*****************جديد
         public string EmploymentContractNotes { get; set; } = ""; //*****************جديد
         //Badalaaaaaaaaaaaaaaaaat
         public bool AllowancesHousingExists { get; set; } = false;//*****************جديد
         public string AllowancesHousingTerm { get; set; } = "";//*****************جديد
-        public decimal? AllowancesHousingValue { get; set; } //*****************جديد
+        public decimal? AllowancesHousingValue { get; set; } = 0;//*****************جديد
         public string AllowancesHousingNotes { get; set; } = ""; //*****************جديد
         public bool AllowancesTransferExists { get; set; } = false;//*****************جديد
         public string AllowancesTransferTerm { get; set; } = "";//*****************جديد
-        public decimal? AllowancesTransferValue { get; set; } //*****************جديد
+        public decimal? AllowancesTransferValue { get; set; } = 0; //*****************جديد
         public string AllowancesTransferNotes { get; set; } = ""; //*****************جديد
         public bool AllowancesFoodExists { get; set; } = false;//*****************جديد
         public string AllowancesFoodTerm { get; set; } = "";//*****************جديد
-        public decimal? AllowancesFoodValue { get; set; } //*****************جديد
+        public decimal? AllowancesFoodValue { get; set; } = 0; //*****************جديد
         public string AllowancesFoodNotes { get; set; } = ""; //*****************جديد
         public bool AllowancesFlightTicketExists { get; set; } = false;//*****************جديد
         public string AllowancesFlightTicketTerm { get; set; } = "";//*****************جديد
-        public decimal? AllowancesFlightTicketValue { get; set; } //*****************جديد
+        public decimal? AllowancesFlightTicketValue { get; set; } = 0;//*****************جديد
         public string AllowancesFlightTicketNotes { get; set; } = ""; //*****************جديد
         //public bool AllowancesVacationExists { get; set; } = false;//*****************جديد
         //public string AllowancesVacationType { get; set; } = "";//*****************جديد

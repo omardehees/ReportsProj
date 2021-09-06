@@ -34,6 +34,8 @@ namespace ReportsProj.Reports.ManagementDoc {
             this.tableCell5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell5");
             this.tableCell3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell3");
             this.tableCell8 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell8");
+            this.tableCell1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell1");
+            this.label3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label3");
             this.label16 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label16");
             this.label15 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label15");
             this.label14 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label14");
@@ -58,8 +60,6 @@ namespace ReportsProj.Reports.ManagementDoc {
             this.line3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line3");
             this.label1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label1");
             this.label5 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label5");
-            this.label3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label3");
-            this.tableCell1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell1");
 
             // Parameters
             this.P_UserName = reportInitializer.GetParameter("P_UserName");
@@ -90,6 +90,8 @@ namespace ReportsProj.Reports.ManagementDoc {
         private DevExpress.XtraReports.UI.XRTableCell tableCell5;
         private DevExpress.XtraReports.UI.XRTableCell tableCell3;
         private DevExpress.XtraReports.UI.XRTableCell tableCell8;
+        private DevExpress.XtraReports.UI.XRTableCell tableCell1;
+        private DevExpress.XtraReports.UI.XRLabel label3;
         private DevExpress.XtraReports.UI.XRLabel label16;
         private DevExpress.XtraReports.UI.XRLabel label15;
         private DevExpress.XtraReports.UI.XRLabel label14;
@@ -118,7 +120,5 @@ namespace ReportsProj.Reports.ManagementDoc {
         private DevExpress.XtraReports.UI.CalculatedField TotalShift;
         private DevExpress.XtraReports.Parameters.Parameter P_UserName;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
-        private DevExpress.XtraReports.UI.XRLabel label3;
-        private DevExpress.XtraReports.UI.XRTableCell tableCell1;
     }
 }
