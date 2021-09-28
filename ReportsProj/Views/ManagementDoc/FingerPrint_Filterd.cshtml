@@ -39,33 +39,3 @@
     @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(MyReport)
 
 }
-
-
-
-@*<link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
-<link rel="stylesheet" href="~/css/designer.part.bundle.css" />
-<script src="~/js/viewer.part.bundle.js"></script>
-<script src="~/js/designer.part.bundle.js"></script>
-
-@{
-    //Declare Report
-    ReportsProj.Reports.ManagementDoc.Rep_FingerPrint MyReport = new ReportsProj.Reports.ManagementDoc.Rep_FingerPrint();
-
-
-    // Specify the report properties
-    MyReport.FilterString = "[Id] In (" + TempData["P_Id"] + ")";
-    MyReport.Parameters["P_UserName"].Value = TempData["P_User"];
-    MyReport.Parameters["P_RepHeader"].Value = TempData["P_T_Header"];
-
-    MyReport.RequestParameters = false;
-
-    // Go To Print
-    @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(MyReport)
-
-    //--Invisible Parameters Block
-    MyReport.RequestParameters = false;
-
-    // Go To Print
-    @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(MyReport)*@
-
-}
