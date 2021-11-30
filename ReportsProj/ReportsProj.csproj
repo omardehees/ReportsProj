@@ -23,6 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Reports\Attadawe\Rep_Clinics.vsrepx" />
+    <None Remove="Reports\Attadawe\Rep_Pharm.vsrepx" />
     <None Remove="Reports\CSR\Rep_CRS_All.repx" />
     <None Remove="Reports\CSR\Rep_CRS_Ls.repx" />
     <None Remove="Reports\CSR\Rep_CSR_Id.repx" />
@@ -72,6 +74,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Reports\Attadawe\Rep_Clinics.vsrepx" />
+    <EmbeddedResource Include="Reports\Attadawe\Rep_Pharm.vsrepx" />
     <EmbeddedResource Include="Reports\CSR\Rep_CRS_All.repx" />
     <EmbeddedResource Include="Reports\CSR\Rep_CRS_Ls.repx" />
     <EmbeddedResource Include="Reports\CSR\Rep_CSR_Id.repx" />
@@ -142,6 +146,30 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Reports\Attadawe\Clinics.cs">
+      <DependentUpon>Clinics.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Attadawe\Clinics.Designer.cs">
+      <DependentUpon>Clinics.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Attadawe\Pharm.cs">
+      <DependentUpon>Pharm.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Attadawe\Pharm.Designer.cs">
+      <DependentUpon>Pharm.repx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Attadawe\Rep_Clinics.cs">
+      <DependentUpon>Rep_Clinics.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Attadawe\Rep_Clinics.Designer.cs">
+      <DependentUpon>Rep_Clinics.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Attadawe\Rep_Pharm.cs">
+      <DependentUpon>Rep_Pharm.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Attadawe\Rep_Pharm.Designer.cs">
+      <DependentUpon>Rep_Pharm.vsrepx</DependentUpon>
+    </Compile>
     <Compile Update="Reports\CSR\Rep_CRS_All.cs">
       <DependentUpon>Rep_CRS_All.repx</DependentUpon>
     </Compile>

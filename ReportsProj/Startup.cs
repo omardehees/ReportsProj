@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using DevExpress.DashboardAspNetCore;//Dashboard
 using DevExpress.DashboardWeb;//Dashboard
 using Microsoft.Extensions.FileProviders;//Dashboard
+using DevExpress.XtraReports.Web.ClientControls;
 
 namespace ReportsProj
 {
@@ -53,6 +54,8 @@ namespace ReportsProj
             
             services.AddDbContext<PM_DBC>(options =>options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("PM").Value));
             services.AddDbContext<CSR_DBC>(options =>options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("CSR").Value));
+            services.AddDbContext<Pharmacy_DBC>(options =>options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("Pharm_Connection").Value));
+            services.AddDbContext<Clinics_DBC>(options =>options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("CLINIC_Connection").Value));
             //services.AddDbContext<Management_DBC>(options => options.UseSqlServer(Configuration.GetSection("ConnectionStrings").GetSection("Management").Value));
             services.AddDbContext<Management_DBC>(options => options.UseSqlServer(this.Configuration.GetConnectionString("Management"),sqlServerOptions => sqlServerOptions.CommandTimeout(600)));
 
@@ -96,10 +99,11 @@ namespace ReportsProj
                 // Bleow Line To Maps the dashboard route .
                 EndpointRouteBuilderExtension.MapDashboardRoute(endpoints, "api/dashboards");
 
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapControllerRoute(name: "default",pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
+            //-- To Log Error DevExpress.XtraReports
+            DevExpress.XtraReports.Web.ClientControls.LoggerService.Initialize(new LoggerService());
         }
         // ...
 
