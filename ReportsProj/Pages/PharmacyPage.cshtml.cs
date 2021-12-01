@@ -18,14 +18,16 @@ namespace ReportsProj.Pages
         #endregion
         public XtraReport MyReport { get; set; }
 
-        public void OnGet(int Code)
+        public void OnGet(int Code,int YId)
         {
             //--Declare Report
             MyReport = new Rep_Pharm();
 
             // --Specify report properties
             Code = (Code - 35097) / 37;
-            int Get_MyId = _Context.journal_h.Where(a => a.code == Code).Select(a => a.id).FirstOrDefault();
+            YId = (YId - 35097) / 37;
+
+            int Get_MyId = _Context.journal_h.Where(a => a.code == Code && a.year_id == YId).Select(a => a.id).FirstOrDefault();
             MyReport.Parameters["MyId"].Value = Get_MyId;
             MyReport.RequestParameters = false;
         }
