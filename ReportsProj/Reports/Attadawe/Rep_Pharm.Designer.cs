@@ -101,9 +101,11 @@ namespace ReportsProj.Reports.Attadawe {
             this.tableCell29 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell29");
             this.tableCell30 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell30");
             this.tableCell20 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell20");
+            this.barCode1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRBarCode>("barCode1");
 
             // Parameters
             this.MyId = reportInitializer.GetParameter("MyId");
+            this.QRCode = reportInitializer.GetParameter("QRCode");
 
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
@@ -210,5 +212,7 @@ namespace ReportsProj.Reports.Attadawe {
         private DevExpress.XtraReports.UI.CalculatedField Sum_VatAmnt;
         private DevExpress.XtraReports.UI.CalculatedField Amnt_BeforDisc;
         private DevExpress.XtraReports.Parameters.Parameter MyId;
+        private DevExpress.XtraReports.UI.XRBarCode barCode1;
+        private DevExpress.XtraReports.Parameters.Parameter QRCode;
     }
 }
