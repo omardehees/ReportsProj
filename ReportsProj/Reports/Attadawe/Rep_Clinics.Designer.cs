@@ -71,6 +71,7 @@ namespace ReportsProj.Reports.Attadawe {
             this.tableCell9 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell9");
             this.tableCell10 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell10");
             this.pictureBox1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox1");
+            this.barCode1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRBarCode>("barCode1");
             this.panel1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPanel>("panel1");
             this.line1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line1");
             this.panel2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPanel>("panel2");
@@ -113,7 +114,6 @@ namespace ReportsProj.Reports.Attadawe {
             this.tableCell29 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell29");
             this.tableCell30 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell30");
             this.tableCell20 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell20");
-            this.barCode1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRBarCode>("barCode1");
 
             // Parameters
             this.MyId = reportInitializer.GetParameter("MyId");
@@ -186,6 +186,7 @@ namespace ReportsProj.Reports.Attadawe {
         private DevExpress.XtraReports.UI.XRTableCell tableCell9;
         private DevExpress.XtraReports.UI.XRTableCell tableCell10;
         private DevExpress.XtraReports.UI.XRPictureBox pictureBox1;
+        private DevExpress.XtraReports.UI.XRBarCode barCode1;
         private DevExpress.XtraReports.UI.XRPanel panel1;
         private DevExpress.XtraReports.UI.XRLine line1;
         private DevExpress.XtraReports.UI.XRPanel panel2;
@@ -236,7 +237,6 @@ namespace ReportsProj.Reports.Attadawe {
         private DevExpress.XtraReports.UI.CalculatedField Pat_Vat;
         private DevExpress.XtraReports.UI.CalculatedField Co_Vat;
         private DevExpress.XtraReports.Parameters.Parameter MyId;
-        private DevExpress.XtraReports.UI.XRBarCode barCode1;
         private DevExpress.XtraReports.Parameters.Parameter QRCode;
     }
 }

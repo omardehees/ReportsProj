@@ -66,6 +66,7 @@ namespace ReportsProj.Reports.Attadawe {
             this.xrLabel30 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("xrLabel30");
             this.label3 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label3");
             this.label4 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label4");
+            this.barCode1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRBarCode>("barCode1");
             this.table2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTable>("table2");
             this.label37 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label37");
             this.label36 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label36");
@@ -101,7 +102,6 @@ namespace ReportsProj.Reports.Attadawe {
             this.tableCell29 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell29");
             this.tableCell30 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell30");
             this.tableCell20 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell20");
-            this.barCode1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRBarCode>("barCode1");
 
             // Parameters
             this.MyId = reportInitializer.GetParameter("MyId");
@@ -169,6 +169,7 @@ namespace ReportsProj.Reports.Attadawe {
         private DevExpress.XtraReports.UI.XRLabel xrLabel30;
         private DevExpress.XtraReports.UI.XRLabel label3;
         private DevExpress.XtraReports.UI.XRLabel label4;
+        private DevExpress.XtraReports.UI.XRBarCode barCode1;
         private DevExpress.XtraReports.UI.XRTable table2;
         private DevExpress.XtraReports.UI.XRLabel label37;
         private DevExpress.XtraReports.UI.XRLabel label36;
@@ -212,7 +213,6 @@ namespace ReportsProj.Reports.Attadawe {
         private DevExpress.XtraReports.UI.CalculatedField Sum_VatAmnt;
         private DevExpress.XtraReports.UI.CalculatedField Amnt_BeforDisc;
         private DevExpress.XtraReports.Parameters.Parameter MyId;
-        private DevExpress.XtraReports.UI.XRBarCode barCode1;
         private DevExpress.XtraReports.Parameters.Parameter QRCode;
     }
 }

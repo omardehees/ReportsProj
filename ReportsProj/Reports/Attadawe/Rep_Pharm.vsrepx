@@ -4,7 +4,7 @@
     <Item1 Ref="2" Key="VSReportExtInfo" Value=".vsrepx" />
   </Extensions>
   <Parameters>
-    <Item1 Ref="4" Description="MyId" ValueInfo="0" Name="MyId" Type="#Ref-3" />
+    <Item1 Ref="4" Visible="false" Description="MyId" ValueInfo="0" Name="MyId" Type="#Ref-3" />
     <Item2 Ref="6" Visible="false" Description="QRCode" Name="QRCode">
       <ExpressionBindings>
         <Item1 Ref="7" PropertyName="Value" Expression="'مجمع التداوي الطبي   '+'    '+&#xA;'الرقم الضريبي : 300441588500003'+' '+&#xA;'التاريخ'+GetDate(LocalDateTimeToday())" />
@@ -207,7 +207,7 @@
     </Item4>
     <Item5 Ref="119" ControlType="GroupFooterBand" Name="GroupFooter1" HeightF="158.074631">
       <Controls>
-        <Item1 Ref="120" ControlType="XRBarCode" Name="barCode1" AutoModule="true" ShowText="false" SizeF="128.505554,104.453323" LocationFloat="820.0778,43.6212769" Padding="10,10,0,0,96">
+        <Item1 Ref="120" ControlType="XRBarCode" Name="barCode1" AutoModule="true" ShowText="false" SizeF="128.505554,104.453323" LocationFloat="820.0778,43.6212769" Padding="10,10,0,0,100">
           <Symbology Ref="121" Name="QRCode" CompactionMode="Byte" ErrorCorrectionLevel="M" IncludeQuietZone="false" Version="Version1" />
           <ExpressionBindings>
             <Item1 Ref="122" EventName="BeforePrint" PropertyName="Text" Expression="?QRCode +NewLine()+&#xA;'الاجمالي:'+[net_amnt]+NewLine()+&#xA;'الضريبة:'+[VATAmnt]+NewLine()+&#xA;'http://attadawe.servebeer.com:1812/PharmacyPage?Code='" />
