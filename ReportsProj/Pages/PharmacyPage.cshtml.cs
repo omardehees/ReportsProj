@@ -33,8 +33,8 @@ namespace ReportsProj.Pages
                 // --Specify report properties
                 try
                 {
-                    Int_Code = Convert.ToInt32(Code);
-                    Int_YId = Convert.ToInt32(YId);
+                    Int_Code = Convert.ToInt32(Convert.ToDouble(Code));
+                    Int_YId = Convert.ToInt32(Convert.ToDouble(YId));
                 }
                 catch (Exception)
                 {

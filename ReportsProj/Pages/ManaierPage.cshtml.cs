@@ -21,7 +21,7 @@ namespace ReportsProj.Pages
                 // --Specify report properties
                 try
                 {
-                    Int_Code = Convert.ToInt32(Code);
+                    Int_Code = Convert.ToInt32(Convert.ToDouble(Code));
                 }
                 catch (Exception)
                 {
