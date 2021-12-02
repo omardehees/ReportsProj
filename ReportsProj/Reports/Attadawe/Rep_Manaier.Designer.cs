@@ -91,10 +91,12 @@ namespace ReportsProj.Reports.Attadawe {
             // Parameters
             this.MyCode = reportInitializer.GetParameter("MyCode");
             this.QRCode = reportInitializer.GetParameter("QRCode");
-            this.Sum_qty = reportInitializer.GetParameter("Sum_qty");
 
             // Data Sources
             this.sqlDataSource1 = reportInitializer.GetDataSource<DevExpress.DataAccess.Sql.SqlDataSource>("sqlDataSource1");
+
+            // Calculated Fields
+            this.RemainAmnt = reportInitializer.GetCalculatedField("RemainAmnt");
         }
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
         private DevExpress.XtraReports.UI.BottomMarginBand BottomMargin;
@@ -170,7 +172,7 @@ namespace ReportsProj.Reports.Attadawe {
         private DevExpress.XtraReports.UI.XRBarCode barCode1;
         private DevExpress.XtraReports.Parameters.Parameter QRCode;
         private DevExpress.XtraReports.UI.XRLabel label12;
-        private DevExpress.XtraReports.Parameters.Parameter Sum_qty;
         private DevExpress.XtraReports.UI.XRLabel label25;
+        private DevExpress.XtraReports.UI.CalculatedField RemainAmnt;
     }
 }
