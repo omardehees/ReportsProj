@@ -10,7 +10,7 @@ namespace ReportsProj.Pages
     public class ManaierPageModel : PageModel
     {
         public XtraReport MyReport { get; set; }
-        public IActionResult OnGet(string Code)
+        public IActionResult OnGet(string C)
         {
             try
             {
@@ -21,20 +21,16 @@ namespace ReportsProj.Pages
                 // --Specify report properties
                 try
                 {
-                    Int_Code = Convert.ToInt32(Convert.ToDouble(Code));
+                    Int_Code = Convert.ToInt32(Convert.ToDouble(C));
                 }
                 catch (Exception)
-                {
-                    return new RedirectToPageResult("InvalidParam");
-                }
-                if ((Int_Code - 35097) % 37 != 0)
                 {
                     return new RedirectToPageResult("InvalidParam");
                 }
 
                 if (Int_Code > 0)
                 {
-                    Int_Code = (Int_Code - 35097) / 37;
+                    //Int_Code = (Int_Code - 35097) / 37;
                     MyReport.Parameters["MyCode"].Value = Int_Code;
                     MyReport.RequestParameters = false;
                 }

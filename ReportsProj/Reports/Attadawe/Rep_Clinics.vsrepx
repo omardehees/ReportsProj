@@ -234,7 +234,7 @@
         <Item1 Ref="133" ControlType="XRBarCode" Name="barCode1" AutoModule="true" ShowText="false" SizeF="128.505554,104.453323" LocationFloat="676.494446,92.66731" Padding="10,10,0,0,100">
           <Symbology Ref="134" Name="QRCode" CompactionMode="Byte" ErrorCorrectionLevel="M" IncludeQuietZone="false" Version="Version1" />
           <ExpressionBindings>
-            <Item1 Ref="135" EventName="BeforePrint" PropertyName="Text" Expression="?QRCode +NewLine()+&#xA;'التاريخ:'+[inv_dt]+NewLine()+&#xA;'الاجمالي:'+[net_amnt]+NewLine()+&#xA;'الضريبة:'+[VATAmnt]+NewLine()+&#xA;'http://attadawe.servebeer.com:1812/ClinicsPage?Code='" />
+            <Item1 Ref="135" EventName="BeforePrint" PropertyName="Text" Expression="?QRCode +NewLine()+&#xA;'التاريخ:'+[inv_dt]+NewLine()+&#xA;'الاجمالي:'+[net_amnt]+NewLine()+&#xA;'الضريبة:'+[VATAmnt]+NewLine()+&#xA;'http://attadawe.servebeer.com:1812/ClinicsPage?Code=' + ((37*[code]) + 35097)" />
           </ExpressionBindings>
         </Item1>
         <Item2 Ref="136" ControlType="XRPanel" Name="panel1" SizeF="158.155823,38.9999962" LocationFloat="646.8442,10.0000048" BorderColor="IndianRed" Borders="All">
