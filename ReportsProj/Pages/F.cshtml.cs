@@ -7,7 +7,7 @@ using System;
 
 namespace ReportsProj.Pages
 {
-    public class ManaierPageModel : PageModel
+    public class FanateerPageModel : PageModel
     {
         public XtraReport MyReport { get; set; }
         public IActionResult OnGet(string C)
@@ -15,7 +15,7 @@ namespace ReportsProj.Pages
             try
             {
                 //--Declare Report
-                MyReport = new Rep_Manaier();
+                MyReport = new Rep_Fanateer();
                 int Int_Code = 0;
 
                 // --Specify report properties

@@ -33,6 +33,7 @@ namespace ReportsProj.Pages
                 // --Specify report properties
                 try
                 {
+                    //Int_YId = Int_YId.Replace("TRIAL", "");
                     Int_Code = Convert.ToInt32(Convert.ToDouble(Code));
                     Int_YId = Convert.ToInt32(Convert.ToDouble(YId));
                 }

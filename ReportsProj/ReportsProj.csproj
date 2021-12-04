@@ -24,6 +24,7 @@
 
   <ItemGroup>
     <None Remove="Reports\Attadawe\Rep_Clinics.vsrepx" />
+    <None Remove="Reports\Attadawe\Rep_Fanateer.vsrepx" />
     <None Remove="Reports\Attadawe\Rep_Manaier.vsrepx" />
     <None Remove="Reports\Attadawe\Rep_Pharm.vsrepx" />
     <None Remove="Reports\CSR\Rep_CRS_All.repx" />
@@ -76,6 +77,7 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Reports\Attadawe\Rep_Clinics.vsrepx" />
+    <EmbeddedResource Include="Reports\Attadawe\Rep_Fanateer.vsrepx" />
     <EmbeddedResource Include="Reports\Attadawe\Rep_Manaier.vsrepx" />
     <EmbeddedResource Include="Reports\Attadawe\Rep_Pharm.vsrepx" />
     <EmbeddedResource Include="Reports\CSR\Rep_CRS_All.repx" />
@@ -148,6 +150,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Pages\M - Copy.cshtml.cs">
+      <DependentUpon>M.cshtml.cs</DependentUpon>
+    </Compile>
     <Compile Update="Reports\Attadawe\Clinics.cs">
       <DependentUpon>Clinics.repx</DependentUpon>
     </Compile>
@@ -165,6 +170,19 @@
     </Compile>
     <Compile Update="Reports\Attadawe\Rep_Clinics.Designer.cs">
       <DependentUpon>Rep_Clinics.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Attadawe\Rep_Fanateer.cs">
+      <DependentUpon>Rep_Fanateer.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Attadawe\Rep_Fanateer.Designer.cs">
+      <DependentUpon>Rep_Fanateer.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Attadawe\Rep_Manaier - Copy.cs">
+      <SubType>Component</SubType>
+      <DependentUpon>Rep_Manaier.vsrepx</DependentUpon>
+    </Compile>
+    <Compile Update="Reports\Attadawe\Rep_Manaier - Copy.Designer.cs">
+      <DependentUpon>Rep_Manaier.vsrepx</DependentUpon>
     </Compile>
     <Compile Update="Reports\Attadawe\Rep_Manaier.cs">
       <DependentUpon>Rep_Manaier.vsrepx</DependentUpon>

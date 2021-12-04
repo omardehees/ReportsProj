@@ -1,0 +1,15 @@
+﻿@page
+@model ReportsProj.Pages.FanateerPageModel
+@using DevExpress.AspNetCore;
+
+<link rel="stylesheet" href="~/css/thirdparty.bundle.css" />
+<link rel="stylesheet" href="~/css/site.css" />
+<script src="~/js/thirdparty.bundle.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+<link rel="stylesheet" href="~/css/viewer.part.bundle.css" />
+<script src="~/js/viewer.part.bundle.js"></script>
+
+@{
+    // Go To Viewer To Preview or Print
+    @Html.DevExpress().WebDocumentViewer("DocumentViewer").Height("1000px").Bind(Model.MyReport)
+}

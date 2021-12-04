@@ -32,6 +32,7 @@ namespace ReportsProj.Pages
                 // --Specify report properties
                 try
                 {
+                    //Code = Code.Replace("TRIAL", "");
                     Int_Code = Convert.ToInt32(Convert.ToDouble(Code));
                 }
                 catch (Exception)
