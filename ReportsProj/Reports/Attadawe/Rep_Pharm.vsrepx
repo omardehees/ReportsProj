@@ -28,34 +28,34 @@
           <Rows>
             <Item1 Ref="18" ControlType="XRTableRow" Name="tableRow1" Weight="1">
               <Cells>
-                <Item1 Ref="19" ControlType="XRTableCell" Name="tableCell1" Weight="0.74744981201730432" Multiline="true" Text="القيمة المضافة" BorderColor="Silver" Borders="All">
+                <Item1 Ref="19" ControlType="XRTableCell" Name="tableCell1" Weight="0.63491325421977385" Multiline="true" Text="القيمة المضافة" BorderColor="Silver" Borders="All">
                   <StylePriority Ref="20" UseBorderColor="false" UseBorders="false" />
                 </Item1>
-                <Item2 Ref="21" ControlType="XRTableCell" Name="tableCell2" Weight="0.44005003218040839" Multiline="true" Text="الإجمالي" BorderColor="Silver" Borders="All">
+                <Item2 Ref="21" ControlType="XRTableCell" Name="tableCell2" Weight="0.55258658997793886" Multiline="true" Text="الإجمالي" BorderColor="Silver" Borders="All">
                   <StylePriority Ref="22" UseBorderColor="false" UseBorders="false" />
                 </Item2>
                 <Item3 Ref="23" ControlType="XRTableCell" Name="tableCell3" Weight="0.31249990535797" Multiline="true" Text="خصم" BorderColor="Silver" Borders="All">
                   <StylePriority Ref="24" UseBorderColor="false" UseBorders="false" />
                 </Item3>
-                <Item4 Ref="25" ControlType="XRTableCell" Name="tableCell4" Weight="0.51041675669561581" Multiline="true" Text="خصم%" BorderColor="Silver" Borders="All">
+                <Item4 Ref="25" ControlType="XRTableCell" Name="tableCell4" Weight="0.42385013231847707" Multiline="true" Text="خصم%" BorderColor="Silver" Borders="All">
                   <StylePriority Ref="26" UseBorderColor="false" UseBorders="false" />
                 </Item4>
-                <Item5 Ref="27" ControlType="XRTableCell" Name="tableCell5" Weight="0.32090422370478977" Multiline="true" Text="المبلغ" BorderColor="Silver" Borders="All">
+                <Item5 Ref="27" ControlType="XRTableCell" Name="tableCell5" Weight="0.51135064516673057" Multiline="true" Text="المبلغ" BorderColor="Silver" Borders="All">
                   <StylePriority Ref="28" UseBorderColor="false" UseBorders="false" />
                 </Item5>
-                <Item6 Ref="29" ControlType="XRTableCell" Name="tableCell6" Weight="0.3435583519232227" Multiline="true" Text="السعر" BorderColor="Silver" Borders="All">
+                <Item6 Ref="29" ControlType="XRTableCell" Name="tableCell6" Weight="0.46475220936098038" Multiline="true" Text="السعر" BorderColor="Silver" Borders="All">
                   <StylePriority Ref="30" UseBorderColor="false" UseBorders="false" />
                 </Item6>
-                <Item7 Ref="31" ControlType="XRTableCell" Name="tableCell7" Weight="0.40625003363814161" Multiline="true" Text="الكمية" BorderColor="Silver" Borders="All">
+                <Item7 Ref="31" ControlType="XRTableCell" Name="tableCell7" Weight="0.31102607791915804" Multiline="true" Text="الكمية" BorderColor="Silver" Borders="All">
                   <StylePriority Ref="32" UseBorderColor="false" UseBorders="false" />
                 </Item7>
-                <Item8 Ref="33" ControlType="XRTableCell" Name="tableCell8" Weight="0.816479848210077" Multiline="true" Text="تاريخ الصلاحية" BorderColor="Silver" Borders="All">
+                <Item8 Ref="33" ControlType="XRTableCell" Name="tableCell8" Weight="0.6866301494065008" Multiline="true" Text="تاريخ الصلاحية" BorderColor="Silver" Borders="All">
                   <StylePriority Ref="34" UseBorderColor="false" UseBorders="false" />
                 </Item8>
-                <Item9 Ref="35" ControlType="XRTableCell" Name="tableCell9" Weight="3.059581297227854" Multiline="true" Text="الإسم" BorderColor="Silver" Borders="All">
+                <Item9 Ref="35" ControlType="XRTableCell" Name="tableCell9" Weight="3.1973666717506708" Multiline="true" Text="الإسم" BorderColor="Silver" Borders="All">
                   <StylePriority Ref="36" UseBorderColor="false" UseBorders="false" />
                 </Item9>
-                <Item10 Ref="37" ControlType="XRTableCell" Name="tableCell10" Weight="0.81548994301051148" Multiline="true" Text="رقم الصنف" BorderColor="Silver" Borders="All">
+                <Item10 Ref="37" ControlType="XRTableCell" Name="tableCell10" Weight="0.67770456848769467" Multiline="true" Text="رقم الصنف" BorderColor="Silver" Borders="All">
                   <StylePriority Ref="38" UseBorderColor="false" UseBorders="false" />
                 </Item10>
               </Cells>
@@ -217,13 +217,13 @@
           <Rows>
             <Item1 Ref="124" ControlType="XRTableRow" Name="tableRow2" Weight="1">
               <Cells>
-                <Item1 Ref="125" ControlType="XRTableCell" Name="tableCell11" Weight="0.74744985059229163" TextFormatString="{0:0.00}" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
+                <Item1 Ref="125" ControlType="XRTableCell" Name="tableCell11" Weight="0.63491329421981268" TextFormatString="{0:0.00}" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
                   <ExpressionBindings>
                     <Item1 Ref="126" EventName="BeforePrint" PropertyName="Text" Expression="[VW_PharmInvoice_d].[Sum_VatAmnt]" />
                   </ExpressionBindings>
                   <StylePriority Ref="127" UseBorderColor="false" UseBorders="false" />
                 </Item1>
-                <Item2 Ref="128" ControlType="XRTableCell" Name="tableCell12" Weight="0.44004999360542119" TextFormatString="{0:0.00}" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
+                <Item2 Ref="128" ControlType="XRTableCell" Name="tableCell12" Weight="0.55258654997790013" TextFormatString="{0:0.00}" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
                   <ExpressionBindings>
                     <Item1 Ref="129" EventName="BeforePrint" PropertyName="Text" Expression="[VW_PharmInvoice_d].[Sum_Amount]" />
                   </ExpressionBindings>
@@ -235,25 +235,25 @@
                   </ExpressionBindings>
                   <StylePriority Ref="133" UseBorderColor="false" UseBorders="false" />
                 </Item3>
-                <Item4 Ref="134" ControlType="XRTableCell" Name="tableCell14" Weight="0.51041675537655107" Multiline="true" BorderColor="Silver" Borders="All">
+                <Item4 Ref="134" ControlType="XRTableCell" Name="tableCell14" Weight="0.42385010039398918" Multiline="true" BorderColor="Silver" Borders="All">
                   <StylePriority Ref="135" UseBorderColor="false" UseBorders="false" />
                 </Item4>
-                <Item5 Ref="136" ControlType="XRTableCell" Name="tableCell15" Weight="0.32090422357288689" TextFormatString="{0:0.00}" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
+                <Item5 Ref="136" ControlType="XRTableCell" Name="tableCell15" Weight="0.51135064262320284" TextFormatString="{0:0.00}" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
                   <ExpressionBindings>
                     <Item1 Ref="137" EventName="BeforePrint" PropertyName="Text" Expression="[VW_PharmInvoice_d].[Sum_AmntBeforDisc]" />
                   </ExpressionBindings>
                   <StylePriority Ref="138" UseBorderColor="false" UseBorders="false" />
                 </Item5>
-                <Item6 Ref="139" ControlType="XRTableCell" Name="tableCell16" Weight="0.34355835168731791" TextFormatString="{0:#.00}" Multiline="true" BorderColor="Silver" Borders="All">
+                <Item6 Ref="139" ControlType="XRTableCell" Name="tableCell16" Weight="0.46475223929201381" TextFormatString="{0:#.00}" Multiline="true" BorderColor="Silver" Borders="All">
                   <StylePriority Ref="140" UseBorderColor="false" UseBorders="false" />
                 </Item6>
-                <Item7 Ref="141" ControlType="XRTableCell" Name="tableCell17" Weight="0.4062500327147982" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
+                <Item7 Ref="141" ControlType="XRTableCell" Name="tableCell17" Weight="0.31102607820163652" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
                   <ExpressionBindings>
                     <Item1 Ref="142" EventName="BeforePrint" PropertyName="Text" Expression="[VW_PharmInvoice_d].[Sum_qty]" />
                   </ExpressionBindings>
                   <StylePriority Ref="143" UseBorderColor="false" UseBorders="false" />
                 </Item7>
-                <Item8 Ref="144" ControlType="XRTableCell" Name="tableCell18" Weight="0.81647984778644522" Multiline="true" BorderColor="Silver" Borders="All">
+                <Item8 Ref="144" ControlType="XRTableCell" Name="tableCell18" Weight="0.686630150627157" Multiline="true" BorderColor="Silver" Borders="All">
                   <StylePriority Ref="145" UseBorderColor="false" UseBorders="false" />
                 </Item8>
                 <Item9 Ref="146" ControlType="XRTableCell" Name="tableCell19" Weight="3.8750711448466877" Multiline="true" Text="الإجمالي" BorderColor="Silver" Borders="All">
@@ -313,13 +313,13 @@
               <Rows>
                 <Item1 Ref="175" ControlType="XRTableRow" Name="tableRow3" Weight="1">
                   <Cells>
-                    <Item1 Ref="176" ControlType="XRTableCell" Name="tableCell21" Weight="0.74744981201730432" TextFormatString="{0:0.00}" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
+                    <Item1 Ref="176" ControlType="XRTableCell" Name="tableCell21" Weight="0.63491325421977385" TextFormatString="{0:0.00}" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
                       <ExpressionBindings>
                         <Item1 Ref="177" EventName="BeforePrint" PropertyName="Text" Expression="[VATAmnt]" />
                       </ExpressionBindings>
                       <StylePriority Ref="178" UseBorderColor="false" UseBorders="false" />
                     </Item1>
-                    <Item2 Ref="179" ControlType="XRTableCell" Name="tableCell22" Weight="0.44005003218040839" TextFormatString="{0:0.00}" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
+                    <Item2 Ref="179" ControlType="XRTableCell" Name="tableCell22" Weight="0.55258658997793886" TextFormatString="{0:0.00}" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
                       <ExpressionBindings>
                         <Item1 Ref="180" EventName="BeforePrint" PropertyName="Text" Expression="[amount]" />
                       </ExpressionBindings>
@@ -331,49 +331,49 @@
                       </ExpressionBindings>
                       <StylePriority Ref="184" UseBorderColor="false" UseBorders="false" />
                     </Item3>
-                    <Item4 Ref="185" ControlType="XRTableCell" Name="tableCell24" Weight="0.51041675669561581" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
+                    <Item4 Ref="185" ControlType="XRTableCell" Name="tableCell24" Weight="0.42385013231847712" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
                       <ExpressionBindings>
                         <Item1 Ref="186" EventName="BeforePrint" PropertyName="Text" Expression="[disc_P]" />
                       </ExpressionBindings>
                       <StylePriority Ref="187" UseBorderColor="false" UseBorders="false" />
                     </Item4>
-                    <Item5 Ref="188" ControlType="XRTableCell" Name="tableCell25" Weight="0.32090422370478977" TextFormatString="{0:0.00}" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
+                    <Item5 Ref="188" ControlType="XRTableCell" Name="tableCell25" Weight="0.51135064516673057" TextFormatString="{0:0.00}" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
                       <ExpressionBindings>
                         <Item1 Ref="189" EventName="BeforePrint" PropertyName="Text" Expression="[Amnt_BeforDisc]" />
                       </ExpressionBindings>
                       <StylePriority Ref="190" UseBorderColor="false" UseBorders="false" />
                     </Item5>
-                    <Item6 Ref="191" ControlType="XRTableCell" Name="tableCell26" Weight="0.3435583519232227" TextFormatString="{0:0.00}" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
+                    <Item6 Ref="191" ControlType="XRTableCell" Name="tableCell26" Weight="0.46475220936098038" TextFormatString="{0:0.00}" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
                       <ExpressionBindings>
                         <Item1 Ref="192" EventName="BeforePrint" PropertyName="Text" Expression="[price]" />
                       </ExpressionBindings>
                       <StylePriority Ref="193" UseBorderColor="false" UseBorders="false" />
                     </Item6>
-                    <Item7 Ref="194" ControlType="XRTableCell" Name="tableCell27" Weight="0.40625003363814161" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
+                    <Item7 Ref="194" ControlType="XRTableCell" Name="tableCell27" Weight="0.31102607791915804" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
                       <ExpressionBindings>
                         <Item1 Ref="195" EventName="BeforePrint" PropertyName="Text" Expression="[qty]" />
                       </ExpressionBindings>
                       <StylePriority Ref="196" UseBorderColor="false" UseBorders="false" />
                     </Item7>
-                    <Item8 Ref="197" ControlType="XRTableCell" Name="tableCell28" Weight="0.816479848210077" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
+                    <Item8 Ref="197" ControlType="XRTableCell" Name="tableCell28" Weight="0.6866301494065008" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
                       <ExpressionBindings>
                         <Item1 Ref="198" EventName="BeforePrint" PropertyName="Text" Expression="[exp_dt]" />
                       </ExpressionBindings>
                       <StylePriority Ref="199" UseBorderColor="false" UseBorders="false" />
                     </Item8>
-                    <Item9 Ref="200" ControlType="XRTableCell" Name="tableCell29" Weight="1.4989773780416669" Multiline="true" Text="xx en" BorderColor="Silver" Borders="All">
+                    <Item9 Ref="200" ControlType="XRTableCell" Name="tableCell29" Weight="1.5855437171042475" Multiline="true" Text="xx en" BorderColor="Silver" Borders="All">
                       <ExpressionBindings>
                         <Item1 Ref="201" EventName="BeforePrint" PropertyName="Text" Expression="[name_e]" />
                       </ExpressionBindings>
                       <StylePriority Ref="202" UseBorderColor="false" UseBorders="false" />
                     </Item9>
-                    <Item10 Ref="203" ControlType="XRTableCell" Name="tableCell30" Weight="1.5606034094174874" Multiline="true" Text="xx ar" BorderColor="Silver" Borders="All">
+                    <Item10 Ref="203" ControlType="XRTableCell" Name="tableCell30" Weight="1.6118224448777236" Multiline="true" Text="xx ar" BorderColor="Silver" Borders="All">
                       <ExpressionBindings>
                         <Item1 Ref="204" EventName="BeforePrint" PropertyName="Text" Expression="[name_a]" />
                       </ExpressionBindings>
                       <StylePriority Ref="205" UseBorderColor="false" UseBorders="false" />
                     </Item10>
-                    <Item11 Ref="206" ControlType="XRTableCell" Name="tableCell20" Weight="0.81549045277921106" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
+                    <Item11 Ref="206" ControlType="XRTableCell" Name="tableCell20" Weight="0.67770507825639426" Multiline="true" Text="xx" BorderColor="Silver" Borders="All">
                       <ExpressionBindings>
                         <Item1 Ref="207" EventName="BeforePrint" PropertyName="Text" Expression="[rowno]" />
                       </ExpressionBindings>
