@@ -7,7 +7,7 @@
     <Item1 Ref="4" Visible="false" Description="MyCode" ValueInfo="0" Name="MyCode" Type="#Ref-3" />
     <Item2 Ref="6" Visible="false" Description="QRCode" Name="QRCode">
       <ExpressionBindings>
-        <Item1 Ref="7" PropertyName="Value" Expression="'منايير'+'    '+&#xA;'الرقم الضريبي : 300441588500003'&#xA;" />
+        <Item1 Ref="7" PropertyName="Value" Expression="'الفناتير'+'    '+&#xA;'الرقم الضريبي : 300441588500003'&#xA;" />
       </ExpressionBindings>
     </Item2>
   </Parameters>

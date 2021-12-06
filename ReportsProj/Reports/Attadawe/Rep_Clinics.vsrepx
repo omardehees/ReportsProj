@@ -7,7 +7,7 @@
     <Item1 Ref="4" Visible="false" Description="MyId" ValueInfo="0" Name="MyId" Type="#Ref-3" />
     <Item2 Ref="6" Visible="false" Description="QRCode" Name="QRCode">
       <ExpressionBindings>
-        <Item1 Ref="7" PropertyName="Value" Expression="'مجمع التداوي الطبي   '+'    '+&#xA;'الرقم الضريبي : 300441588500003'" />
+        <Item1 Ref="7" PropertyName="Value" Expression="'مجمع التداوي الطبي&#xA;الرقم الضريبي : 300441588500003'" />
       </ExpressionBindings>
     </Item2>
   </Parameters>
@@ -226,7 +226,7 @@
     </Item3>
     <Item4 Ref="130" ControlType="PageHeaderBand" Name="PageHeader" HeightF="139.843719">
       <Controls>
-        <Item1 Ref="131" ControlType="XRBarCode" Name="barCode1" AutoModule="true" ShowText="false" SizeF="120.163177,90.911644" LocationFloat="432.7498,31.9320679" Padding="10,10,0,0,100">
+        <Item1 Ref="131" ControlType="XRBarCode" Name="barCode1" AutoModule="true" ShowText="false" SizeF="120.163177,90.911644" LocationFloat="429.7498,31.9320679" Padding="10,10,0,0,100">
           <Symbology Ref="132" Name="QRCode" CompactionMode="Byte" ErrorCorrectionLevel="M" IncludeQuietZone="false" Version="Version1" />
           <ExpressionBindings>
             <Item1 Ref="133" EventName="BeforePrint" PropertyName="Text" Expression="?QRCode +NewLine()+&#xA;'التاريخ:'+[inv_dt]+NewLine()+&#xA;'الاجمالي:'+[net_amnt]+NewLine()+&#xA;'الضريبة:'+[VATAmnt]+NewLine()+&#xA;'http://attadawe.servebeer.com:1812/ClinicsPage?Code=' + ((37*[code]) + 35097)" />
