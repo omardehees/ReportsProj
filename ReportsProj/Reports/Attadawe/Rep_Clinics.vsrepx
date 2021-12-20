@@ -224,9 +224,9 @@
         </Item39>
       </Controls>
     </Item3>
-    <Item4 Ref="130" ControlType="PageHeaderBand" Name="PageHeader" HeightF="139.843719">
+    <Item4 Ref="130" ControlType="PageHeaderBand" Name="PageHeader" HeightF="139.843735">
       <Controls>
-        <Item1 Ref="131" ControlType="XRBarCode" Name="barCode1" AutoModule="true" ShowText="false" SizeF="120.163177,90.911644" LocationFloat="461.97995,46.0000038" Padding="10,10,0,0,100">
+        <Item1 Ref="131" ControlType="XRBarCode" Name="barCode1" AutoModule="true" ShowText="false" SizeF="100.629547,83.84372" LocationFloat="236.298187,56.00001" Padding="10,10,0,0,100">
           <Symbology Ref="132" Name="QRCode" CompactionMode="Byte" ErrorCorrectionLevel="M" IncludeQuietZone="false" Version="Version1" />
           <ExpressionBindings>
             <Item1 Ref="133" EventName="BeforePrint" PropertyName="Text" Expression="?QRCode +NewLine()+&#xA;'التاريخ:'+[inv_dt]+NewLine()+&#xA;'الاجمالي:'+[net_amnt]+NewLine()+&#xA;'الضريبة:'+[VATAmnt]+NewLine()+&#xA;'http://attadawe.servebeer.com:1812/ClinicsPage?Code=' + ((37*[code]) + 35097)" />
@@ -239,7 +239,7 @@
         <Item4 Ref="137" ControlType="XRLabel" Name="label70" RightToLeft="Yes" Text="تليفون : ٠١٦٣٣٥١١٢٢ - فاكس : ٠١٦٣٣٥٨٤٩٦" TextAlignment="MiddleLeft" SizeF="247.023438,23.0000038" LocationFloat="555.97644,46.0000038" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" ForeColor="MidnightBlue" Padding="2,2,0,0,100">
           <StylePriority Ref="138" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
         </Item4>
-        <Item5 Ref="139" ControlType="XRLabel" Name="label69" RightToLeft="Yes" Text="www.attadawe.com, @attadaweclinic" TextAlignment="MiddleRight" SizeF="342.8802,23" LocationFloat="1.88541222,102" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" ForeColor="MidnightBlue" Padding="2,2,0,0,100">
+        <Item5 Ref="139" ControlType="XRLabel" Name="label69" RightToLeft="Yes" Text="www.attadawe.com, @attadaweclinic" TextAlignment="MiddleRight" SizeF="234.412781,23" LocationFloat="1.88540614,101.999985" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" ForeColor="MidnightBlue" Padding="2,2,0,0,100">
           <StylePriority Ref="140" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
         </Item5>
         <Item6 Ref="141" ControlType="XRLabel" Name="label64" RightToLeft="Yes" Text="مجمع التداوي الطبي" TextAlignment="MiddleLeft" SizeF="247.023438,23" LocationFloat="555.9765,0" Font="Times New Roman, 15.75pt, style=Bold, charSet=0" ForeColor="MidnightBlue" Padding="2,2,0,0,100">
@@ -254,10 +254,10 @@
         <Item9 Ref="147" ControlType="XRLabel" Name="label68" RightToLeft="Yes" Text="للتواصل / جوال : ٠٥٠٣٣٦١١٢٢" TextAlignment="MiddleLeft" SizeF="192.85675,23" LocationFloat="610.1431,91.99998" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" ForeColor="MidnightBlue" Padding="2,2,0,0,100">
           <StylePriority Ref="148" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
         </Item9>
-        <Item10 Ref="149" ControlType="XRLabel" Name="label65" RightToLeft="Yes" Text="VAT NO : 311099670700003" TextAlignment="MiddleRight" SizeF="342.8802,23" LocationFloat="1.87870026,79" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" ForeColor="MidnightBlue" Padding="2,2,0,0,100">
+        <Item10 Ref="149" ControlType="XRLabel" Name="label65" RightToLeft="Yes" Text="VAT NO : 311099670700003" TextAlignment="MiddleRight" SizeF="234.412781,23" LocationFloat="1.87869871,79" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" ForeColor="MidnightBlue" Padding="2,2,0,0,100">
           <StylePriority Ref="150" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
         </Item10>
-        <Item11 Ref="151" ControlType="XRLabel" Name="label63" RightToLeft="Yes" Text="TEL: 016 3351122, FAX: 016 3358496" TextAlignment="MiddleRight" SizeF="342.880249,23.0000038" LocationFloat="1.87870026,56.00001" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" ForeColor="MidnightBlue" Padding="2,2,0,0,100">
+        <Item11 Ref="151" ControlType="XRLabel" Name="label63" RightToLeft="Yes" Text="TEL: 016 3351122, FAX: 016 3358496" TextAlignment="MiddleRight" SizeF="234.412842,23.0000038" LocationFloat="1.87869871,56.00001" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" ForeColor="MidnightBlue" Padding="2,2,0,0,100">
           <StylePriority Ref="152" UseFont="false" UseForeColor="false" UseTextAlignment="false" />
         </Item11>
         <Item12 Ref="153" ControlType="XRLabel" Name="label62" RightToLeft="Yes" Text="AL GASSIM - AL BUKAIRIAH , LIC.NO.631041112117" TextAlignment="MiddleRight" SizeF="342.880249,23" LocationFloat="1.87870026,33.0000076" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" ForeColor="MidnightBlue" Padding="2,2,0,0,100">
