@@ -7,7 +7,7 @@
     <Item1 Ref="4" Visible="false" Description="MyCode" ValueInfo="0" Name="MyCode" Type="#Ref-3" />
     <Item2 Ref="6" Visible="false" Description="QRCode" Name="QRCode">
       <ExpressionBindings>
-        <Item1 Ref="7" PropertyName="Value" Expression="'منايير'+'    '+&#xA;'الرقم الضريبي : 300441588500003'&#xA;" />
+        <Item1 Ref="7" PropertyName="Value" Expression="'شركة منايير للملابس'+&#xA;'الرقم الضريبي : 311099670700003'&#xA;" />
       </ExpressionBindings>
     </Item2>
   </Parameters>
@@ -95,10 +95,10 @@
         <Item17 Ref="56" ControlType="XRLabel" Name="label31" RightToLeft="Yes" Text="فاتورة المبيعات" TextAlignment="MiddleCenter" SizeF="197.70752,46.3070068" LocationFloat="329.283325,169.198517" Dpi="254" Font="Times New Roman, 8.25pt, style=Bold, charSet=0" Padding="5,5,0,0,254">
           <StylePriority Ref="57" UseFont="false" UseTextAlignment="false" />
         </Item17>
-        <Item18 Ref="58" ControlType="XRLabel" Name="label1" RightToLeft="Yes" Text="الرقم الضريبي : 300441588500003" TextAlignment="MiddleCenter" SizeF="404.841217,54.6173248" LocationFloat="122.14962,114.581192" Dpi="254" Font="Times New Roman, 8.25pt, style=Bold, charSet=0" BackColor="WhiteSmoke" Padding="5,5,0,0,254" BorderColor="DarkGray" Borders="All">
+        <Item18 Ref="58" ControlType="XRLabel" Name="label1" RightToLeft="Yes" Text="الرقم الضريبي : 311099670700003" TextAlignment="MiddleCenter" SizeF="404.841217,54.6173248" LocationFloat="122.14962,114.581192" Dpi="254" Font="Times New Roman, 8.25pt, style=Bold, charSet=0" BackColor="WhiteSmoke" Padding="5,5,0,0,254" BorderColor="DarkGray" Borders="All">
           <StylePriority Ref="59" UseFont="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
         </Item18>
-        <Item19 Ref="60" ControlType="XRLabel" Name="label2" RightToLeft="Yes" Text="منايير للملابس" TextAlignment="MiddleCenter" SizeF="600,95.22121" LocationFloat="24.9999981,19.3599815" Dpi="254" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" BackColor="LightGray" Padding="5,5,0,0,254">
+        <Item19 Ref="60" ControlType="XRLabel" Name="label2" RightToLeft="Yes" Text="شركة منايير للملابس" TextAlignment="MiddleCenter" SizeF="600,95.22121" LocationFloat="24.9999981,19.3599815" Dpi="254" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" BackColor="LightGray" Padding="5,5,0,0,254">
           <StylePriority Ref="61" UseFont="false" UseBackColor="false" UseTextAlignment="false" />
         </Item19>
       </Controls>

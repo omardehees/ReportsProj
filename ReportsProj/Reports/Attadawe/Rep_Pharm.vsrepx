@@ -7,7 +7,7 @@
     <Item1 Ref="4" Visible="false" Description="MyId" ValueInfo="0" Name="MyId" Type="#Ref-3" />
     <Item2 Ref="6" Visible="false" Description="QRCode" Name="QRCode">
       <ExpressionBindings>
-        <Item1 Ref="7" PropertyName="Value" Expression="'صيدلية التداوي &#xA; الرقم الضريبي : 300441588500003'" />
+        <Item1 Ref="7" PropertyName="Value" Expression="'صيدلية التداوي &#xA; الرقم الضريبي : 311099670700003'" />
       </ExpressionBindings>
     </Item2>
   </Parameters>
@@ -188,7 +188,7 @@
         <Item4 Ref="108" ControlType="XRLabel" Name="label1" RightToLeft="Yes" Text="فاتورة رقم" TextAlignment="MiddleCenter" SizeF="81.54895,34.76042" LocationFloat="867.0344,97.416626" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" BackColor="WhiteSmoke" Padding="2,2,0,0,100" BorderColor="DarkGray" Borders="All">
           <StylePriority Ref="109" UseFont="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
         </Item4>
-        <Item5 Ref="110" ControlType="XRLabel" Name="label2" RightToLeft="Yes" Text="الرقم الضريبي : 300441588500003" TextAlignment="MiddleLeft" SizeF="267.4879,34.7604446" LocationFloat="13.2866383,97.4166" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" BackColor="WhiteSmoke" Padding="2,2,0,0,100" BorderColor="DarkGray" Borders="All">
+        <Item5 Ref="110" ControlType="XRLabel" Name="label2" RightToLeft="Yes" Text="الرقم الضريبي : 311099670700003" TextAlignment="MiddleLeft" SizeF="267.4879,34.7604446" LocationFloat="13.2866383,97.4166" Font="Times New Roman, 14.25pt, style=Bold, charSet=0" BackColor="WhiteSmoke" Padding="2,2,0,0,100" BorderColor="DarkGray" Borders="All">
           <StylePriority Ref="111" UseFont="false" UseBackColor="false" UseBorderColor="false" UseBorders="false" UseTextAlignment="false" />
         </Item5>
         <Item6 Ref="112" ControlType="XRLabel" Name="xrLabel30" TextFormatString="{0}" Multiline="true" Text="xrLabel11" TextAlignment="MiddleCenter" SizeF="126.29657,34.7604523" LocationFloat="740.737854,97.4165955" Font="Times New Roman, 9.75pt, style=Bold, charSet=0" BackColor="WhiteSmoke" Padding="2,2,0,0,100" BorderColor="DarkGray" Borders="All">

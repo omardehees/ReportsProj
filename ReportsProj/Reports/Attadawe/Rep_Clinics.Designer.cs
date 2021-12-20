@@ -71,7 +71,6 @@ namespace ReportsProj.Reports.Attadawe {
             this.tableCell9 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell9");
             this.tableCell10 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell10");
             this.barCode1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRBarCode>("barCode1");
-            this.pictureBox1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox1");
             this.panel1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPanel>("panel1");
             this.line1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLine>("line1");
             this.panel2 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPanel>("panel2");
@@ -114,6 +113,18 @@ namespace ReportsProj.Reports.Attadawe {
             this.tableCell29 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell29");
             this.tableCell30 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell30");
             this.tableCell20 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRTableCell>("tableCell20");
+            this.label61 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label61");
+            this.label62 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label62");
+            this.label63 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label63");
+            this.label65 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label65");
+            this.label64 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label64");
+            this.label66 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label66");
+            this.label67 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label67");
+            this.label68 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label68");
+            this.label69 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label69");
+            this.label70 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label70");
+            this.label71 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRLabel>("label71");
+            this.pictureBox1 = reportInitializer.GetControl<DevExpress.XtraReports.UI.XRPictureBox>("pictureBox1");
 
             // Parameters
             this.MyId = reportInitializer.GetParameter("MyId");
@@ -186,7 +197,6 @@ namespace ReportsProj.Reports.Attadawe {
         private DevExpress.XtraReports.UI.XRTableCell tableCell9;
         private DevExpress.XtraReports.UI.XRTableCell tableCell10;
         private DevExpress.XtraReports.UI.XRBarCode barCode1;
-        private DevExpress.XtraReports.UI.XRPictureBox pictureBox1;
         private DevExpress.XtraReports.UI.XRPanel panel1;
         private DevExpress.XtraReports.UI.XRLine line1;
         private DevExpress.XtraReports.UI.XRPanel panel2;
@@ -238,5 +248,17 @@ namespace ReportsProj.Reports.Attadawe {
         private DevExpress.XtraReports.UI.CalculatedField Co_Vat;
         private DevExpress.XtraReports.Parameters.Parameter MyId;
         private DevExpress.XtraReports.Parameters.Parameter QRCode;
+        private DevExpress.XtraReports.UI.XRLabel label61;
+        private DevExpress.XtraReports.UI.XRLabel label62;
+        private DevExpress.XtraReports.UI.XRLabel label63;
+        private DevExpress.XtraReports.UI.XRLabel label65;
+        private DevExpress.XtraReports.UI.XRLabel label64;
+        private DevExpress.XtraReports.UI.XRLabel label66;
+        private DevExpress.XtraReports.UI.XRLabel label67;
+        private DevExpress.XtraReports.UI.XRLabel label68;
+        private DevExpress.XtraReports.UI.XRLabel label69;
+        private DevExpress.XtraReports.UI.XRLabel label70;
+        private DevExpress.XtraReports.UI.XRLabel label71;
+        private DevExpress.XtraReports.UI.XRPictureBox pictureBox1;
     }
 }
